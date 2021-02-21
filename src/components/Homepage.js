@@ -17,7 +17,7 @@ class Homepage extends Component {
         );
 
         this.setState({ cityInfo: response.data.location });
-        /*console.log(text);*/
+        /*console.log(response.data);*/
         console.log(this.state.cityInfo);
     }
 
