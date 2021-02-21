@@ -1,6 +1,5 @@
 @import url('https://fonts.googleapis.com/css?family=Roboto');
 
-/* Global Styles */
 :root {
   --dark-color: #333333;
   --white: #f4f4f4;
@@ -131,6 +130,11 @@ button {
 
 .navbar a:hover {
   color: var(--white);
+}
+
+.spinner-wrapper {
+  position: absolute;
+  margin: 0 auto;
 }
 
 /* Mobile */
