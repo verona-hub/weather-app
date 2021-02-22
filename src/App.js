@@ -1,6 +1,6 @@
-import React from 'react';
+import React, { Component } from 'react';
 import './App.css';
-import { Route, Switch } from 'react-router-dom';
+import { BrowserRouter, Route, Switch } from 'react-router-dom';
 
 // Components
 import About from './components/About';
@@ -9,16 +9,21 @@ import Navbar from './components/Navbar';
 
 
 
-function App() {
-    return (
-        <div>
-            <Navbar />
-            <Switch>
-                <Route exact path="/" component={Homepage}/>
-                <Route path="/about" component={About} />
-            </Switch>
-        </div>
-    );
+class App extends Component {
+    render () {
+        return (
+            <BrowserRouter>
+                <div>
+                    <Navbar/>
+                    <Switch>
+                        <Route exact path="/" component={Homepage}/>
+                        <Route path="/about" component={About}/>
+                    </Switch>
+                </div>
+            </BrowserRouter>
+        );
+    }
+
 }
 
 export default App;

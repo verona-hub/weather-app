@@ -3,10 +3,8 @@ import Spinner from "./Spinner";
 import * as _ from 'underscore';
 
 
-const Container = (props) => {
-    /*console.log(_.size(props.cityInfoProp));*/
-
-    const { name, country, region, lat, lon, localtime, tz_id } = props.cityInfoProp;
+const CityInfo = (props) => {
+    const { name, region, country, lat, lon, localtime, tz_id } = props.cityInfoProp;
 
     if (props.spinner) {
         return <Spinner />
@@ -15,10 +13,10 @@ const Container = (props) => {
     else {
         if (_.size(props.cityInfoProp) > 0) {
             return (
-                <div>
+                <div className="CityInfo">
                     <h1> City: {name} </h1>
-                    <h1> Country: {country}</h1>
                     <h1> Region: {region} </h1>
+                    <h1> Country: {country}</h1>
                     <h2> Latitude: {lat} </h2>
                     <h2> Longitude: {lon} </h2>
                     <h3> Local Time: {localtime} </h3>
@@ -34,4 +32,4 @@ const Container = (props) => {
 }
 
 
-export default Container;
+export default CityInfo;

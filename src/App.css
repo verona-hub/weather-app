@@ -132,17 +132,9 @@ button {
   color: var(--white);
 }
 
-
-/*
-.spinner-wrapper {
-  align-items: center;
-  background-color: red;
-  display: flex;
-  height: 100%;
-  justify-content: center;
-  margin-top: 40vh;
+.CityInfo {
+  margin: 5vh auto;
 }
-*/
 
 /* Mobile */
 @media (max-width: 760px) {

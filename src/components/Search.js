@@ -17,6 +17,7 @@ class Search extends Component {
         })
     }
 
+
     render() {
         return (
             <div>
@@ -30,6 +31,15 @@ class Search extends Component {
                            value="Search City"
                            className="button button-dark button-block"
                     />
+                    {
+                        this.props.showClearButton && (
+                            <button
+                                className="button button-white button-block"
+                                onClick={this.props.clearContent}
+                            > Clear
+                            </button>
+                        )
+                    }
                 </form>
             </div>
         );
