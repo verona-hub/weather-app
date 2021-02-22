@@ -24,14 +24,30 @@ class App extends Component {
     searchCity = async (text) => {
         this.setState({ spinner: true })
 
-        const response = await axios.get(
-            `http://api.weatherapi.com/v1/current.json?key=${process.env.REACT_APP_WEATHER_API_KEY}&q=${text}`
-        ).then(x => new Promise(resolve => setTimeout(() => resolve(x), 1500)));
+        try {
+            const response = await axios.get(
+                `http://api.weatherapi.com/v1/current.json?key=${process.env.REACT_APP_WEATHER_API_KEY}&q=${text}`
+            ).then(x => new Promise(resolve => setTimeout(() => resolve(x), 1500)));
 
-        this.setState({
-            cityInfo: response.data.location,
-            spinner: false
-        });
+            this.setState({
+                cityInfo: response.data.location,
+                spinner: false
+            });
+
+        } catch(err) {
+            if(err.response){
+                console.log(`Error response data:  ${JSON.stringify(err.response.data.error.message)}`);
+                console.log(`Error response status: ${err.response.status}`);
+                console.log(`Error response header: ${JSON.stringify(err.response.headers)}`);
+            }
+            else if(err.request){
+                console.log(err.request);
+            }
+            else {
+                console.log(err.message);
+            }
+            console.log(err.config);
+        }
 
         /*console.log(response.data);*/
         /*console.log(this.state.cityInfo);*/
@@ -55,7 +71,7 @@ class App extends Component {
                                        <Search
                                            searchCity={this.searchCity}
                                            showClearButton={_.size(this.state.cityInfo) > 0}
-                                           clearContent={this.clearContent}
+                                           clearText={this.clearContent}
                                        />
                                        <CityInfo
                                            cityInfoProp={this.state.cityInfo}
