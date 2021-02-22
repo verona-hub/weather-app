@@ -6,13 +6,12 @@ import FadeLoader from "react-spinners/FadeLoader";
 const Spinner = () => {
     const override = css`
         display: block;
-        margin: 0 auto;
+        margin: 37vh auto;
         `;
 
     return (
         <Fragment>
-            <FadeLoader color={'grey'} css={override}/>
-            {/*<PacmanLoader color={'green'} css={override} size={40}/>*/}
+            <FadeLoader color={'#333333'} css={override} size={80} />
         </Fragment>
     )
 }

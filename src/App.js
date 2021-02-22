@@ -10,15 +10,15 @@ import Navbar from './components/Navbar';
 
 
 function App() {
-  return (
-    <div>
-      <Navbar />
-      <Switch>
-          <Route exact path="/" component={Homepage} />
-          <Route path="/about" component={About} />
-      </Switch>
-    </div>
-  );
+    return (
+        <div>
+            <Navbar />
+            <Switch>
+                <Route exact path="/" component={Homepage}/>
+                <Route path="/about" component={About} />
+            </Switch>
+        </div>
+    );
 }
 
 export default App;
