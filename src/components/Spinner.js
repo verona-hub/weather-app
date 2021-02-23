@@ -6,9 +6,7 @@ import FadeLoader from "react-spinners/FadeLoader";
 const Spinner = () => {
     const override = css`
         display: block;
-        position: absolute;
-        top: 40vh;
-        left: 50vw;
+        margin: 20vh auto;
         `;
 
     return (

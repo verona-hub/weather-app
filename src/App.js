@@ -1,6 +1,6 @@
 import React, { Fragment, Component } from 'react';
-import './App.css';
 import { BrowserRouter, Route, Switch } from 'react-router-dom';
+import './App.css';
 
 // Modules
 import axios from "axios";
@@ -11,6 +11,7 @@ import About from './components/About';
 import CityInfo from './components/CityInfo';
 import Navbar from './components/Navbar';
 import Search from "./components/Search";
+import WeatherInfo from './components/WeatherInfo';
 
 
 
@@ -31,22 +32,20 @@ class App extends Component {
 
             this.setState({
                 cityInfo: response.data.location,
+                weatherInfo: response.data.current,
                 spinner: false
             });
 
         } catch(err) {
-            if(err.response){
-                console.log(`Error response data:  ${JSON.stringify(err.response.data.error.message)}`);
-                console.log(`Error response status: ${err.response.status}`);
-                console.log(`Error response header: ${JSON.stringify(err.response.headers)}`);
+            if (err.response.status === 400) {
+                // alert(err.message);
+                this.setState({
+                    cityInfo: [],
+                    weatherInfo: [],
+                    spinner: false
+                })
             }
-            else if(err.request){
-                console.log(err.request);
-            }
-            else {
-                console.log(err.message);
-            }
-            console.log(err.config);
+
         }
 
         /*console.log(response.data);*/
@@ -71,12 +70,15 @@ class App extends Component {
                                        <Search
                                            searchCity={this.searchCity}
                                            showClearButton={_.size(this.state.cityInfo) > 0}
-                                           clearText={this.clearContent}
+                                           clearContent={this.clearContent}
                                        />
-                                       <CityInfo
-                                           cityInfoProp={this.state.cityInfo}
-                                           spinner={this.state.spinner}
-                                       />
+                                       <div className="grid-2">
+                                           <CityInfo
+                                               cityInfoProp={this.state.cityInfo}
+                                               spinner={this.state.spinner}
+                                           />
+                                           <WeatherInfo weatherInfoProp={this.state.weatherInfo}/>
+                                       </div>
                                    </Fragment>
                                )}
                         />

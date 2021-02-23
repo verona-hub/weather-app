@@ -132,9 +132,21 @@ button {
   color: var(--white);
 }
 
-.CityInfo {
+
+
+/* Components */
+.CityInfo,
+.WeatherInfo {
   margin: 5vh auto;
 }
+.CityInfo {
+  background-color: lightblue;
+}
+.WeatherInfo {
+  background-color: orange;
+}
+
+
 
 /* Mobile */
 @media (max-width: 760px) {

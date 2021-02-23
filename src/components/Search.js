@@ -17,9 +17,9 @@ class Search extends Component {
         })
     }
 
-    clearText = () => {
-        this.props.clearText(this.state.text);
-        this.setState({ text: '' })
+    clearContent = () => {
+        this.props.clearContent(this.state.text);
+        this.setState({ text: '' });
     }
 
 
@@ -40,7 +40,7 @@ class Search extends Component {
                         this.props.showClearButton && (
                             <button
                                 className="button button-white button-block"
-                                onClick={this.clearText}
+                                onClick={this.clearContent}
                             > Clear
                             </button>
                         )
