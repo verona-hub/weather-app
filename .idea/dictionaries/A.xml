@@ -2,7 +2,10 @@
   <dictionary name="A">
     <words>
       <w>axios</w>
+      <w>feelslike</w>
+      <w>mbar</w>
       <w>navbar</w>
+      <w>precip</w>
     </words>
   </dictionary>
 </component>

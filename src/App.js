@@ -16,13 +16,16 @@ import WeatherInfo from './components/WeatherInfo';
 
 
 class App extends Component {
+
     state = {
         cityInfo: [],
         weatherInfo: [],
+        weatherInfoCondition: [],
         spinner: false
     }
 
     searchCity = async (text) => {
+
         this.setState({ spinner: true })
 
         try {
@@ -33,6 +36,7 @@ class App extends Component {
             this.setState({
                 cityInfo: response.data.location,
                 weatherInfo: response.data.current,
+                weatherInfoCondition: response.data.current.condition,
                 spinner: false
             });
 
@@ -45,16 +49,16 @@ class App extends Component {
                     spinner: false
                 })
             }
-
         }
-
         /*console.log(response.data);*/
         /*console.log(this.state.cityInfo);*/
     }
 
     clearContent = () => {
         this.setState({
-            cityInfo: []
+            cityInfo: [],
+            weatherInfo: [],
+            weatherInfoCondition: []
         });
     }
 
@@ -69,7 +73,7 @@ class App extends Component {
                                    <Fragment>
                                        <Search
                                            searchCity={this.searchCity}
-                                           showClearButton={_.size(this.state.cityInfo) > 0}
+                                           showClearButton={_.size(this.state.cityInfo) > 0 && _.size(this.state.weatherInfo) > 0}
                                            clearContent={this.clearContent}
                                        />
                                        <div className="grid-2">
@@ -77,7 +81,11 @@ class App extends Component {
                                                cityInfoProp={this.state.cityInfo}
                                                spinner={this.state.spinner}
                                            />
-                                           <WeatherInfo weatherInfoProp={this.state.weatherInfo}/>
+                                           <WeatherInfo
+                                               weatherInfoProp={this.state.weatherInfo}
+                                               weatherInfoCondition={this.state.weatherInfoCondition}
+                                               clearContent={this.clearContent}
+                                           />
                                        </div>
                                    </Fragment>
                                )}
