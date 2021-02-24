@@ -8,11 +8,9 @@ import * as _ from 'underscore';
 
 // Components
 import About from './components/About';
-import CityInfo from './components/CityInfo';
+import MainInfo from './components/MainInfo';
 import Navbar from './components/Navbar';
 import Search from "./components/Search";
-import WeatherInfo from './components/WeatherInfo';
-
 
 
 class App extends Component {
@@ -73,31 +71,26 @@ class App extends Component {
                                    <Fragment>
                                        <Search
                                            searchCity={this.searchCity}
-                                           showClearButton={_.size(this.state.cityInfo) > 0 && _.size(this.state.weatherInfo) > 0}
                                            clearContent={this.clearContent}
+                                           showClearButton={_.size(this.state.cityInfo) > 0 && _.size(this.state.weatherInfo) > 0}
                                        />
-                                       <div className="grid-2">
-                                           <CityInfo
-                                               cityInfoProp={this.state.cityInfo}
-                                               spinner={this.state.spinner}
-                                           />
-                                           <WeatherInfo
-                                               weatherInfoProp={this.state.weatherInfo}
-                                               weatherInfoCondition={this.state.weatherInfoCondition}
-                                               clearContent={this.clearContent}
-                                           />
-                                       </div>
+                                       <MainInfo
+                                           cityInfoProp={this.state.cityInfo}
+                                           weatherInfoProp={this.state.weatherInfo}
+                                           weatherInfoCondition={this.state.weatherInfoCondition}
+                                           clearContent={this.clearContent}
+                                           spinner={this.state.spinner}
+                                       />
                                    </Fragment>
                                )}
                         />
-
                         <Route path="/about" component={About}/>
                     </Switch>
                 </div>
             </BrowserRouter>
         );
     }
-
 }
+
 
 export default App;
