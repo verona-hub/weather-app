@@ -8,6 +8,7 @@ class Search extends Component {
 
     onSubmit = (e) => {
         this.props.searchCity(this.state.text);
+        this.setState({ text: '' });
         e.preventDefault();
     }
 

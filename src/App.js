@@ -72,13 +72,12 @@ class App extends Component {
                                        <Search
                                            searchCity={this.searchCity}
                                            clearContent={this.clearContent}
-                                           showClearButton={_.size(this.state.cityInfo) > 0 && _.size(this.state.weatherInfo) > 0}
+                                           showClearButton={_.size(this.state.cityInfo) > 0 && _.size(this.state.weatherInfo) > 0 && !this.state.spinner}
                                        />
                                        <MainInfo
                                            cityInfoProp={this.state.cityInfo}
                                            weatherInfoProp={this.state.weatherInfo}
                                            weatherInfoCondition={this.state.weatherInfoCondition}
-                                           clearContent={this.clearContent}
                                            spinner={this.state.spinner}
                                        />
                                    </Fragment>
