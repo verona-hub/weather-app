@@ -132,6 +132,13 @@ button {
   color: var(--white);
 }
 
+.alert {
+  padding: 0.7rem;
+  margin: 1rem 0;
+  opacity: 0.9;
+  background: lightgray;
+  color: #333333;
+}
 
 
 /* Components */

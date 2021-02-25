@@ -8,9 +8,11 @@ import * as _ from 'underscore';
 
 // Components
 import About from './components/About';
-import MainInfo from './components/MainInfo';
+import Alert from './components/Errors+Alerts/Alert';
+import MainInfo from './components/Info/MainInfo';
 import Navbar from './components/Navbar';
 import Search from "./components/Search";
+import ErrorApi from "./components/Errors+Alerts/ErrorApi";
 
 
 class App extends Component {
@@ -19,7 +21,10 @@ class App extends Component {
         cityInfo: [],
         weatherInfo: [],
         weatherInfoCondition: [],
-        spinner: false
+        spinner: false,
+        errorAlert: null,
+        errorMessage: [],
+        alert: null
     }
 
     searchCity = async (text) => {
@@ -35,21 +40,25 @@ class App extends Component {
                 cityInfo: response.data.location,
                 weatherInfo: response.data.current,
                 weatherInfoCondition: response.data.current.condition,
-                spinner: false
+                spinner: false,
+                errorMessage: [],
+                alert: null
             });
 
         } catch(err) {
             if (err.response.status === 400) {
-                // alert(err.message);
                 this.setState({
                     cityInfo: [],
                     weatherInfo: [],
-                    spinner: false
-                })
+                    spinner: false,
+                    errorMessage: err.response.data.error.message
+                });
             }
         }
-        /*console.log(response.data);*/
-        /*console.log(this.state.cityInfo);*/
+
+        // console.log(this.state.errorMessage);
+        // console.log(response.data);
+        // console.log(this.state.cityInfo);
     }
 
     clearContent = () => {
@@ -60,7 +69,17 @@ class App extends Component {
         });
     }
 
+    setAlert = (message) => {
+        // Put alert inside state by passing it inside the object
+        this.setState({ alert: { message } });
+
+        setTimeout(() => this.setState({ alert: null}), 1500);
+    }
+
     render () {
+        const {cityInfo, weatherInfo, weatherInfoCondition, spinner, errorMessage} = this.state;
+        const { searchCity, clearContent} = this;
+
         return (
             <BrowserRouter>
                 <Navbar/>
@@ -70,15 +89,23 @@ class App extends Component {
                                render={ () => (
                                    <Fragment>
                                        <Search
-                                           searchCity={this.searchCity}
-                                           clearContent={this.clearContent}
-                                           showClearButton={_.size(this.state.cityInfo) > 0 && _.size(this.state.weatherInfo) > 0 && !this.state.spinner}
+                                           searchCity={searchCity}
+                                           clearContent={clearContent}
+                                           showClearButton={ _.size(cityInfo) > 0 && _.size(weatherInfo) > 0 && !spinner }
+                                           setAlert={this.setAlert}
+                                       />
+                                       <Alert
+                                           alert={this.state.alert}
+                                       />
+                                       <ErrorApi
+                                           errorVisible={ _.size(errorMessage) > 0 }
+                                           errorMessage={errorMessage}
                                        />
                                        <MainInfo
-                                           cityInfoProp={this.state.cityInfo}
-                                           weatherInfoProp={this.state.weatherInfo}
-                                           weatherInfoCondition={this.state.weatherInfoCondition}
-                                           spinner={this.state.spinner}
+                                           cityInfoProp={cityInfo}
+                                           weatherInfoProp={weatherInfo}
+                                           weatherInfoCondition={weatherInfoCondition}
+                                           spinner={spinner}
                                        />
                                    </Fragment>
                                )}

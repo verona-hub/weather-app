@@ -7,8 +7,12 @@ class Search extends Component {
     }
 
     onSubmit = (e) => {
-        this.props.searchCity(this.state.text);
-        this.setState({ text: '' });
+        if (this.state.text === '') {
+            this.props.setAlert('Please enter a city, input is empty');
+        } else {
+            this.props.searchCity(this.state.text);
+            this.setState({ text: '' });
+        }
         e.preventDefault();
     }
 

@@ -1,7 +1,7 @@
 import React from 'react';
 import * as _ from 'underscore';
 import CityInfo from "./CityInfo";
-import Spinner from "./Spinner";
+import Spinner from "../Spinner";
 import WeatherInfo from "./WeatherInfo";
 
 
