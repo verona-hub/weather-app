@@ -1,9 +1,9 @@
 import React from 'react';
 
 
-const CityInfo = (props) => {
+const CityInfo = ({ cityInfoProp }) => {
 
-    const { name, region, country, lat, lon, localtime, tz_id } = props.cityInfoProp;
+    const { name, region, country, lat, lon, localtime, tz_id } = cityInfoProp;
 
     return (
         <div className="CityInfo">

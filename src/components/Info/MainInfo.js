@@ -5,22 +5,22 @@ import Spinner from "../Spinner";
 import WeatherInfo from "./WeatherInfo";
 
 
-const MainInfo = (props) => {
+const MainInfo = ({ spinner, cityInfoProp, weatherInfoProp, weatherInfoCondition }) => {
 
-    if (props.spinner) {
+    if (spinner) {
         return <Spinner />
     }
 
     else {
-        if (_.size(props.cityInfoProp) > 0 || _.size(props.weatherInfoProp) > 0) {
+        if (_.size(cityInfoProp) > 0 || _.size(weatherInfoProp) > 0) {
             return (
                 <div className="grid-2">
                     <CityInfo
-                        cityInfoProp={props.cityInfoProp}
+                        cityInfoProp={cityInfoProp}
                     />
                     <WeatherInfo
-                        weatherInfoProp={props.weatherInfoProp}
-                        weatherInfoCondition={props.weatherInfoCondition}
+                        weatherInfoProp={weatherInfoProp}
+                        weatherInfoCondition={weatherInfoCondition}
                     />
                 </div>
             );

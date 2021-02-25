@@ -1,13 +1,13 @@
 import React from 'react';
 
 
-const WeatherInfo = (props) => {
+const WeatherInfo = ({ weatherInfoProp, weatherInfoCondition}) => {
     /*console.log(props.weatherInfoProp);*/
     /*console.log(props.weatherInfoProp.condition);*/
 
     const { temp_c, feelslike_c, humidity, precip_mm, uv, vis_km,
-        pressure_mb, wind_kph, wind_dir } = props.weatherInfoProp;
-    const { icon, text } = props.weatherInfoCondition;
+        pressure_mb, wind_kph, wind_dir } = weatherInfoProp;
+    const { icon, text } = weatherInfoCondition;
 
     return (
         <div className="WeatherInfo">

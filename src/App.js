@@ -12,7 +12,6 @@ import Alert from './components/Errors+Alerts/Alert';
 import MainInfo from './components/Info/MainInfo';
 import Navbar from './components/Navbar';
 import Search from "./components/Search";
-import ErrorApi from "./components/Errors+Alerts/ErrorApi";
 
 
 class App extends Component {
@@ -22,7 +21,6 @@ class App extends Component {
         weatherInfo: [],
         weatherInfoCondition: [],
         spinner: false,
-        errorAlert: null,
         errorMessage: [],
         alert: null
     }
@@ -54,6 +52,7 @@ class App extends Component {
                     errorMessage: err.response.data.error.message
                 });
             }
+            setTimeout(() => this.setState({ errorMessage: [] }), 1500);
         }
 
         // console.log(this.state.errorMessage);
@@ -70,11 +69,10 @@ class App extends Component {
     }
 
     setAlert = (message) => {
-        // Put alert inside state by passing it inside the object
         this.setState({ alert: { message } });
-
-        setTimeout(() => this.setState({ alert: null}), 1500);
+        setTimeout(() => this.setState({ alert: null }), 1500);
     }
+
 
     render () {
         const {cityInfo, weatherInfo, weatherInfoCondition, spinner, errorMessage} = this.state;
@@ -96,9 +94,7 @@ class App extends Component {
                                        />
                                        <Alert
                                            alert={this.state.alert}
-                                       />
-                                       <ErrorApi
-                                           errorVisible={ _.size(errorMessage) > 0 }
+                                           errorMessageVisibility={_.size(errorMessage) > 0}
                                            errorMessage={errorMessage}
                                        />
                                        <MainInfo
