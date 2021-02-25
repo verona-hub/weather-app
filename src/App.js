@@ -70,7 +70,12 @@ class App extends Component {
     }
 
     setAlert = (message) => {
-        this.setState({ alert: { message } });
+        this.setState({
+            alert: { message },
+            cityInfo: [],
+            weatherInfo: [],
+            weatherInfoCondition: []
+        });
         setTimeout(() => this.setState({ alert: null }), 1500);
     }
 
@@ -82,7 +87,7 @@ class App extends Component {
         return (
             <BrowserRouter>
                 <Navbar/>
-                <div className="container text-center">
+                <div className="container">
                     <Switch>
                         <Route exact path="/"
                                render={ () => (

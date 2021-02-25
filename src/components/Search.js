@@ -8,7 +8,7 @@ class Search extends Component {
 
     onSubmit = (e) => {
         if (this.state.text === '') {
-            this.props.setAlert('Please enter a city, input is empty');
+            this.props.setAlert('Search box is empty. Please enter a city');
         } else {
             this.props.searchCity(this.state.text);
             this.setState({ text: '' });
@@ -31,11 +31,13 @@ class Search extends Component {
     render() {
         return (
             <div>
+                <h1 className="title"> Weather forecast </h1>
                 <form onSubmit={this.onSubmit} className="form">
                     <input type="text"
                            value={this.state.text}
                            onChange={this.onChange}
                            name="text"
+                           placeholder="Search the city here..."
                     />
                     <input type="submit"
                            value="Search City"
@@ -44,7 +46,7 @@ class Search extends Component {
                     {
                         this.props.showClearButton && (
                             <button
-                                className="button button-white button-block"
+                                className="button button-clear button-block"
                                 onClick={this.clearContent}
                             > Clear
                             </button>

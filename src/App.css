@@ -4,6 +4,9 @@
   --dark-color: #333333;
   --white: #f4f4f4;
   --green: #28a745;
+  --orange: #f2ba6d;
+  --pink: #db4b90;
+  --blue: #a66bdb;
 }
 
 * {
@@ -13,10 +16,10 @@
 }
 
 body {
+  background-color: lightgrey;
   font-family: 'Roboto', sans-serif;
   font-size: 1rem;
   line-height: 1.6;
-  background-color: #fff;
   color: #333;
 }
 
@@ -42,26 +45,10 @@ img {
   margin: auto;
   overflow: hidden;
   padding: 0 2rem;
-}
-
-.text-center {
   text-align: center;
 }
 
-.list {
-  margin: 0.5rem 0;
-}
-
-.list li {
-  padding-bottom: 0.3rem;
-}
-
-.grid-2 {
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  grid-gap: 1rem;
-}
-
+/* Button */
 .button {
   display: inline-block;
   background: var(--white);
@@ -70,7 +57,6 @@ img {
   font-size: 1rem;
   border: none;
   cursor: pointer;
-  margin-right: 0.5rem;
   transition: opacity 0.2s ease-in;
   outline: none;
 }
@@ -82,13 +68,21 @@ img {
 
 .button-dark {
   background: var(--dark-color);
-  color: #fff;
+  color: var(--white);
+}
+
+.button-clear {
+  background-color: var(--pink);
+  color: var(--white);
+  padding: 0.6rem;
+  font-size: 20px;
 }
 
 .button:hover {
-  opacity: 0.8;
+  opacity: 0.95;
 }
 
+/* Input */
 input {
   margin: 1.2rem 0;
 }
@@ -96,7 +90,7 @@ input {
 input[type='text'] {
   display: block;
   width: 100%;
-  padding: 0.4rem;
+  padding: 0.8rem;
   font-size: 1.2rem;
   border: 1px solid #ccc;
 }
@@ -104,83 +98,161 @@ input[type='text'] {
 input[type='submit'],
 button {
   font: inherit;
+  font-size: 20px;
+  padding: 0.6rem;
 }
 
+/* Navbar */
 .navbar {
-  background-color: var(--green);
+  background-color: var(--dark-color);
   display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 0.7rem 2rem;
-  z-index: 1;
+  justify-content: center;
+  padding: 0.7rem;
   width: 100%;
-  opacity: 0.9;
   margin-bottom: 1rem;
+  font-size: 1.2rem;
 }
 
-.navbar ul {
-  display: flex;
+.nav-item {
+  padding: 0 10px;
 }
 
 .navbar a {
-  color: #fff;
+  color: var(--white);
   padding: 0.45rem;
   margin: 0 0.25rem;
 }
 
 .navbar a:hover {
-  color: var(--white);
+  color: var(--pink);
 }
+
 
 .alert {
-  padding: 0.7rem;
+  padding: 0.6rem;
   margin: 1rem 0;
   opacity: 0.9;
-  background: lightgray;
+  background: #c4231d;
+  background: #d73358;
+
   color: #333333;
+  color: var(--white);
+  font-size: 20px;
 }
 
+/* Style */
+p {
+  font-size: 18px;
+}
 
 /* Components */
-.MainInfo-header {
-  border-top: 2px solid darkslategrey;
-  border-bottom: 2px solid darkslategrey;
-  margin: 3vw;
+/* MainInfo */
+.title {
+  font-size: 48px;
+  margin: 3vh 0;
 }
 
+.MainInfo-header {
+  align-items: center;
+  background-color: var(--white);
+  border: 2px solid darkslategrey;
+  border: 1px solid #3b3b3b;
+  display: flex;
+  flex-direction: column;
+  height: 100px;
+  justify-content: center;
+  margin: 3vw 0;
+  width: 100%;
+}
+
+/* WeatherInfo */
 .card {
+  align-items: center;
+  background-color: var(--white);
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  justify-content: center;
   margin: 5vh auto;
 }
 
-.card-header {
+.top-content,
+.bottom-content {
+  width: 100%;
+}
+
+.top-content {
+  align-items: center;
+ /* background-color: lightsteelblue;*/
+  display: flex;
+  flex-wrap: wrap;
+  min-height: 20vh;
+  justify-content: space-around;
+  padding: 20px;
+}
+
+.card-top-header,
+.card-top-content {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  min-height: 20vh;
+  padding: 0 10vw;
+}
+
+.card-top-header {
+
+}
+
+.time-wrapper {
+  padding-bottom: 2vh;
+}
+
+.card-top-content {
+}
+
+.bottom-content {
+  padding: 5px 15px;
+}
+
+.bottom-card-details {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+}
+
+.bottom-left,
+.bottom-right {
+  width: calc(50% - 15px);
+}
+
+.spaced {
+  border-top: 1px solid dimgrey;
+  padding: 10px 0;
+}
+
+.spaced:first-child {
+  border-top: none;
 }
 
 
-.CityInfo {
-  background-color: lightblue;
-}
 .WeatherInfo {
-  background-color: lightsteelblue;
+  /*background-color: lightsteelblue;*/
+  border: 1px solid #3b3b3b;
 }
 
 .WeatherInfo img {
-  width: 160px;
+  width: 100px;
 }
+
+.CityInfo {
+  /*background-color: lightblue;*/
+  border: 1px solid #3b3b3b;
+}
+
+
 
 
 /* Mobile */
 @media (max-width: 760px) {
-  .grid-2 {
-    grid-template-columns: 1fr;
-  }
-
-  .navbar {
-    display: block;
-    text-align: center;
-  }
-
-  .navbar ul {
-    text-align: center;
-    justify-content: center;
-  }
 }
