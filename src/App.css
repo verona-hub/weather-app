@@ -142,17 +142,30 @@ button {
 
 
 /* Components */
-.CityInfo,
-.WeatherInfo {
+.MainInfo-header {
+  border-top: 2px solid darkslategrey;
+  border-bottom: 2px solid darkslategrey;
+  margin: 3vw;
+}
+
+.card {
   margin: 5vh auto;
 }
+
+.card-header {
+}
+
+
 .CityInfo {
   background-color: lightblue;
 }
 .WeatherInfo {
-  background-color: orange;
+  background-color: lightsteelblue;
 }
 
+.WeatherInfo img {
+  width: 160px;
+}
 
 
 /* Mobile */

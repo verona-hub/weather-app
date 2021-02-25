@@ -6,7 +6,7 @@ const CityInfo = ({ cityInfoProp }) => {
     const { name, region, country, lat, lon, localtime, tz_id } = cityInfoProp;
 
     return (
-        <div className="CityInfo">
+        <div className="CityInfo card">
             <h1> City: {name} </h1>
             <h1> Region: {region} </h1>
             <h1> Country: {country}</h1>

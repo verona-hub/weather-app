@@ -32,7 +32,7 @@ class App extends Component {
         try {
             const response = await axios.get(
                 `http://api.weatherapi.com/v1/current.json?key=${process.env.REACT_APP_WEATHER_API_KEY}&q=${text}`
-            ).then(x => new Promise(resolve => setTimeout(() => resolve(x), 1500)));
+            ).then(x => new Promise(resolve => setTimeout(() => resolve(x), 1000)));
 
             this.setState({
                 cityInfo: response.data.location,
@@ -42,6 +42,7 @@ class App extends Component {
                 errorMessage: [],
                 alert: null
             });
+            // console.log(response.data);
 
         } catch(err) {
             if (err.response.status === 400) {
@@ -52,11 +53,11 @@ class App extends Component {
                     errorMessage: err.response.data.error.message
                 });
             }
-            setTimeout(() => this.setState({ errorMessage: [] }), 1500);
+            setTimeout(() => this.setState({ errorMessage: [] }), 2500);
+
         }
 
         // console.log(this.state.errorMessage);
-        // console.log(response.data);
         // console.log(this.state.cityInfo);
     }
 

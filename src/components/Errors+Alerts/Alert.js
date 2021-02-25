@@ -2,7 +2,7 @@ import React from 'react';
 
 
 const Alert = ({ alert, errorMessageVisibility, errorMessage }) => {
-    console.log(errorMessage);
+    // console.log(errorMessage);
 
     if (alert !== null) {
         return (
@@ -14,7 +14,7 @@ const Alert = ({ alert, errorMessageVisibility, errorMessage }) => {
     else if (errorMessageVisibility !== false) {
         return (
             <div className="alert">
-                { errorMessage }
+                { errorMessage } Please enter a valid city.
             </div>
         )
     }
@@ -23,5 +23,6 @@ const Alert = ({ alert, errorMessageVisibility, errorMessage }) => {
     }
 
 };
+
 
 export default Alert;
