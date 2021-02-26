@@ -40,7 +40,7 @@ class Search extends Component {
                            placeholder="Search the city here..."
                     />
                     <input type="submit"
-                           value="Search City"
+                           value="Search"
                            className="button button-dark button-block"
                     />
                     {

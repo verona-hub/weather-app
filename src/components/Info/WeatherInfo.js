@@ -1,8 +1,7 @@
 import React from 'react';
-import Moment from 'react-moment';
 
 
-const WeatherInfo = ({ weatherInfoProp, weatherInfoCondition}) => {
+const WeatherInfo = ({ weatherInfoProp, weatherInfoCondition }) => {
     // console.log(weatherInfoProp);
     // console.log(weatherInfoProp.condition);
 
@@ -15,32 +14,25 @@ const WeatherInfo = ({ weatherInfoProp, weatherInfoCondition}) => {
             <div className="top-content">
                 <div className="card-top-header">
                     <img src={ icon } alt=""/>
-                    <div className="time-wrapper">
-                        <p> Current time: </p>
-                        <Moment interval={ 1000 } format="HH:mm:ss" local>
-                        </Moment>
-                    </div>
                 </div>
-
-                <div className="card-top-content">
+                <div className="card-top-main">
                     <h1>  { text } { temp_c } &#8451; </h1>
                     <h3> Feels like: { feelslike_c } &#8451; </h3>
                 </div>
             </div>
             <div className="bottom-content">
-                <div className="bottom-card-details">
                     <div className="bottom-left">
-                        <div className="spaced"><p> Cloud cover: { cloud }&#37; </p></div>
-                        <div className="spaced"><p> Humidity: { humidity }&#37; </p></div>
-                        <div className="spaced"><p> Precipitation: { precip_mm }mm </p></div>
-                        <div className="spaced"><p> Uv index: { uv } of 10 </p></div>
+                        <div className="spaced"><span> Cloud cover:</span> { cloud }&#37;</div>
+                        <div className="spaced"><span> Wind speed:</span> { wind_kph }km/h </div>
+                        <div className="spaced"><span> Atmospheric pressure:</span> { pressure_mb }mbar </div>
+                        <div className="spaced"><span> Humidity:</span> { humidity }&#37; </div>
                     </div>
                     <div className="bottom-right">
-                        <div className="spaced"><p> Visibility: { vis_km }km </p></div>
-                        <div className="spaced"><p> Atmospheric pressure: { pressure_mb }mbar </p></div>
-                        <div className="spaced"><p> Wind: { wind_kph }km/h from { wind_dir } </p></div>
+                        <div className="spaced"><span> Precipitation:</span> { precip_mm }mm </div>
+                        <div className="spaced"><span> Wind direction:</span> from { wind_dir } </div>
+                        <div className="spaced"><span> Visibility:</span> { vis_km }km </div>
+                        <div className="spaced"><span> Uv index:</span> { uv } of 10 </div>
                     </div>
-                </div>
             </div>
         </div>
     );

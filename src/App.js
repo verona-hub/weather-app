@@ -70,13 +70,8 @@ class App extends Component {
     }
 
     setAlert = (message) => {
-        this.setState({
-            alert: { message },
-            cityInfo: [],
-            weatherInfo: [],
-            weatherInfoCondition: []
-        });
-        setTimeout(() => this.setState({ alert: null }), 1500);
+        this.setState({ alert: { message } });
+        setTimeout(() => this.setState({ alert: null }), 2500);
     }
 
 
