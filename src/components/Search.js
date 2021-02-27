@@ -1,5 +1,5 @@
 import React, {Component} from 'react';
-
+import icon from '../img/search.svg';
 
 class Search extends Component {
     state = {
@@ -30,28 +30,32 @@ class Search extends Component {
 
     render() {
         return (
-            <div>
-                <h1 className="title"> Weather forecast </h1>
+            <div className="Search">
                 <form onSubmit={this.onSubmit} className="form">
-                    <input type="text"
-                           value={this.state.text}
-                           onChange={this.onChange}
-                           name="text"
-                           placeholder="Search the city here..."
-                    />
-                    <input type="submit"
-                           value="Search"
-                           className="button button-dark button-block"
-                    />
-                    {
-                        this.props.showClearButton && (
-                            <button
-                                className="button button-clear button-block"
-                                onClick={this.clearContent}
-                            > Clear
-                            </button>
-                        )
-                    }
+                    <div className="form-content">
+                        <img src={ icon } alt="search icon" className="search-icon"/>
+                        <input
+                            type="text"
+                            value={ this.state.text }
+                            onChange={ this.onChange }
+                            name="text"
+                            placeholder="Search a city here..."
+                        />
+                        <input
+                            type="submit"
+                            value="Search"
+                            className="button button-dark button-block"
+                        />
+                        {
+                            this.props.showClearButton && (
+                                <button
+                                    className="button button-clear button-block"
+                                    onClick={ this.clearContent }
+                                > Clear
+                                </button>
+                            )
+                        }
+                    </div>
                 </form>
             </div>
         );

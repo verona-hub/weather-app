@@ -21,10 +21,11 @@
 
 body {
   background-color: lightgrey;
+  color: #333;
   font-family: 'Roboto', sans-serif;
   font-size: 1rem;
   line-height: 1.6;
-  color: #333;
+  overflow-y: scroll;
 }
 
 a {
@@ -52,6 +53,35 @@ img {
   text-align: center;
 }
 
+/* Navbar */
+.navbar {
+  /*background-color: var(--dark-grey);*/
+  display: flex;
+  font-size: 1.2rem;
+  justify-content: center;
+  padding: 0.7rem;
+  text-transform: uppercase;
+  width: 100%;
+}
+
+.nav-item {
+  padding: 0 10px;
+}
+
+.navbar a {
+  color: var(--white);
+  margin: 0 0.25rem;
+  padding: 0.45rem;
+}
+
+.navbar a:hover {
+  /*color: var(--teal);*/
+}
+
+.navbar .active {
+  color: var(--orange);
+}
+
 /* Button */
 .button {
   display: inline-block;
@@ -67,12 +97,14 @@ img {
 
 .button-block {
   display: block;
-  width: 100%;
+  margin: auto;
+  width: 30%;
 }
 
 .button-dark {
   background: var(--dark-grey);
   color: var(--white);
+  margin: 4vh auto 2vh;
 }
 
 .button-clear {
@@ -80,25 +112,54 @@ img {
   background-color: #286ba2 ;
   background-color: #339ca2;
   color: var(--white);
-  padding: 0.6rem;
   font-size: 20px;
+  padding: 0.6rem;
 }
 
 .button:hover {
   opacity: 0.9;
 }
 
+/* Search */
+.Search {
+  margin: 1.2rem auto 0;
+}
+
+.form {
+  left: 0;
+  margin-left: auto;
+  margin-right: auto;
+  position: absolute;
+  right: 0;
+  text-align: center;
+  top: 80px;
+  width: 50%;
+}
+
+.form-content {
+  position:relative;
+}
+
 /* Input */
+.search-icon {
+  left: 10px;
+  position: absolute;
+  top: 10px;
+  width: 35px;
+}
+
 input {
   margin: 1.2rem 0;
 }
 
 input[type='text'] {
+  /*border: 1px solid #ccc;*/
+  border: none;
+  border-radius: 4px;
   display: block;
-  width: 100%;
-  padding: 0.8rem;
   font-size: 1.2rem;
-  border: 1px solid #ccc;
+  padding: 1rem 1rem 1rem 4rem;
+  width: 100%;
 }
 
 input[type='submit'],
@@ -108,35 +169,6 @@ button {
   padding: 0.6rem;
 }
 
-/* Navbar */
-.navbar {
-  background-color: var(--dark-grey);
-  display: flex;
-  font-size: 1rem;
-  justify-content: center;
-  margin-bottom: 1rem;
-  padding: 0.7rem;
-  width: 100%;
-}
-
-.nav-item {
-  padding: 0 10px;
-}
-
-
-.navbar a {
-  color: var(--white);
-  padding: 0.45rem;
-  margin: 0 0.25rem;
-}
-
-.navbar a:hover {
-  /*color: var(--teal);*/
-}
-
-.navbar .active {
-  color: var(--teal);
-}
 
 
 /* Alert */
@@ -152,14 +184,27 @@ button {
 /* Style */
 span {
   font-size: 18px;
+  text-align: left;
 }
 
 /* Components */
-/* MainInfo */
-.title {
-  font-size: 3rem;
-  margin: 3vh 0;
+/* Navbar */
+.header {
+  background: url(img/sky2-toon.jpg);
+  background: url(img/sky.jpg);
+  background: url(img/sky.webp);
+  background: url(img/sky4.jpg);
+  background: url(img/sky3.jpg);
+  background: url(img/sky6.jpg);
+  background: url(img/sky5.jpg);
+  background-repeat: no-repeat;
+  background-size: 100vw 80vh;
+  background-position: left;
+  height: 360px;
 }
+
+
+/* MainInfo */
 
 .MainInfo-header {
   align-items: center;
@@ -167,10 +212,9 @@ span {
   border: 1px solid #3b3b3b;
   display: flex;
   flex-direction: column;
-  height: 100px;
   justify-content: center;
-  min-height: 20vh;
-  margin: 3vw 0;
+  margin: 5vh auto;
+  padding: 3vh;
   width: 100%;
 }
 
@@ -191,7 +235,7 @@ span {
 
 .WeatherInfo .top-content {
   flex-wrap: wrap;
-  margin: 20px;
+  margin-top: 20px;
   min-height: 20vh;
 }
 
@@ -214,12 +258,17 @@ span {
 
 
 .WeatherInfo .bottom-left,
-.WeatherInfo .bottom-right {
+.WeatherInfo .bottom-right,
+.CityInfo-main {
   margin: 5vw 1vw;
   width: calc(50% - 60px);
 }
 
-.WeatherInfo .spaced {
+.WeatherInfo img {
+  width: 100px;
+}
+
+.spaced {
   align-items: center;
   border-top: 1px solid dimgrey;
   display: flex;
@@ -227,25 +276,31 @@ span {
   padding: 5px 0;
 }
 
-.WeatherInfo .spaced:first-child {
+.spaced:first-child {
   border-top: none;
 }
 
 
-
-
-.WeatherInfo img {
-  width: 100px;
-}
-
+/* CityInfo */
 .CityInfo {
-  /*background-color: lightblue;*/
   border: 1px solid #3b3b3b;
 }
 
 
 
 
+
+
 /* Mobile */
 @media (max-width: 760px) {
+  .WeatherInfo .bottom-content {
+    display: block;
+  }
+
+  .WeatherInfo .bottom-left,
+  .WeatherInfo .bottom-right,
+  .CityInfo-main {
+    margin: 5vh auto;
+    width: 80%;
+  }
 }

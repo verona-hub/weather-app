@@ -7,13 +7,15 @@ const CityInfo = ({ cityInfoProp }) => {
 
     return (
         <div className="CityInfo card">
-            <h1> City: {name} </h1>
-            <h1> Region: {region} </h1>
-            <h1> Country: {country}</h1>
-            <h2> Latitude: {lat} </h2>
-            <h2> Longitude: {lon} </h2>
-            <h3> Local Time: {localtime} </h3>
-            <h3> Timezone: {tz_id}</h3>
+            <div className="CityInfo-main">
+                <div className="spaced"><span> City:</span> { name } </div>
+                <div className="spaced"><span> Region:</span> { region } </div>
+                <div className="spaced"><span> Country:</span> { country }</div>
+                <div className="spaced"><span> Latitude:</span> { lat } </div>
+                <div className="spaced"><span> Longitude:</span> { lon } </div>
+                <div className="spaced"><span> Local Time:</span> { localtime } </div>
+                <div className="spaced"><span> Timezone:</span> { tz_id }</div>
+            </div>
         </div>
     );
 
