@@ -1,5 +1,7 @@
 import React, {Component} from 'react';
 import icon from '../img/search.svg';
+import x from '../img/x.svg';
+
 
 class Search extends Component {
     state = {
@@ -27,33 +29,42 @@ class Search extends Component {
         this.setState({ text: '' });
     }
 
+    clearInput = () => {
+        this.setState({ text: '' });
+    }
+
 
     render() {
+        const { text } = this.state;
+        const { onSubmit, onChange, clearContent, clearInput } = this;
+
         return (
             <div className="Search">
-                <form onSubmit={this.onSubmit} className="form">
+                <form onSubmit={ onSubmit } className="form">
                     <div className="form-content">
-                        <img src={ icon } alt="search icon" className="search-icon"/>
+                        <img src={ icon } alt="search icon" className="search-icon"
+                             onClick={ onSubmit } />
                         <input
                             type="text"
-                            value={ this.state.text }
-                            onChange={ this.onChange }
+                            value={ text }
+                            onChange={ onChange }
                             name="text"
-                            placeholder="Search a city here..."
+                            placeholder="Search a location..."
                         />
                         <input
                             type="submit"
                             value="Search"
                             className="button button-dark button-block"
                         />
-                        {
-                            this.props.showClearButton && (
-                                <button
-                                    className="button button-clear button-block"
-                                    onClick={ this.clearContent }
-                                > Clear
-                                </button>
-                            )
+                        { this.props.showClearButton && (
+                            <button
+                                className="button button-clear button-block"
+                                onClick={ clearContent }> Clear
+                            </button> )
+                        }
+                        { text.length > 0 && (
+                                <img src={x} alt="close icon" className="close-icon"
+                                     onClick={ clearInput } /> )
                         }
                     </div>
                 </form>

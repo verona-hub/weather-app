@@ -31,11 +31,11 @@ const MainInfo = ({ spinner, cityInfoProp, weatherInfoProp, weatherInfoCondition
                         </Moment>
                     </div>
                     <WeatherInfo
-                        weatherInfoProp={weatherInfoProp}
-                        weatherInfoCondition={weatherInfoCondition}
+                        weatherInfoProp={ weatherInfoProp }
+                        weatherInfoCondition={ weatherInfoCondition }
                     />
                     <CityInfo
-                        cityInfoProp={cityInfoProp}
+                        cityInfoProp={ cityInfoProp }
                     />
                 </div>
             );

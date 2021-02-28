@@ -76,8 +76,8 @@ class App extends Component {
 
 
     render () {
-        const {cityInfo, weatherInfo, weatherInfoCondition, spinner, errorMessage} = this.state;
-        const { searchCity, clearContent} = this;
+        const {cityInfo, weatherInfo, weatherInfoCondition, spinner, errorMessage, alert} = this.state;
+        const { searchCity, clearContent, setAlert } = this;
 
         return (
             <BrowserRouter>
@@ -88,26 +88,26 @@ class App extends Component {
                                render={ () => (
                                    <Fragment>
                                        <Search
-                                           searchCity={searchCity}
-                                           clearContent={clearContent}
+                                           searchCity={ searchCity }
+                                           clearContent={ clearContent }
                                            showClearButton={ _.size(cityInfo) > 0 && _.size(weatherInfo) > 0 && !spinner }
-                                           setAlert={this.setAlert}
+                                           setAlert={ setAlert }
                                        />
                                        <Alert
-                                           alert={this.state.alert}
+                                           alert={ alert }
                                            errorMessageVisibility={_.size(errorMessage) > 0}
-                                           errorMessage={errorMessage}
+                                           errorMessage={ errorMessage }
                                        />
                                        <MainInfo
-                                           cityInfoProp={cityInfo}
-                                           weatherInfoProp={weatherInfo}
-                                           weatherInfoCondition={weatherInfoCondition}
-                                           spinner={spinner}
+                                           cityInfoProp={ cityInfo }
+                                           weatherInfoProp={ weatherInfo }
+                                           weatherInfoCondition={ weatherInfoCondition }
+                                           spinner={ spinner }
                                        />
                                    </Fragment>
                                )}
                         />
-                        <Route path="/about" component={About}/>
+                        <Route path="/about" component={ About }/>
                     </Switch>
                 </div>
             </BrowserRouter>

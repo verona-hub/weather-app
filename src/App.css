@@ -7,7 +7,6 @@
   --orange: #f2ba6d;
   --pink: #db4b90;
   --violet: #a66bdb;
-
   --light-blue: #3388a2;
   --dark-blue: #286ba2;
   --teal: #339ca2;
@@ -37,10 +36,6 @@ a:hover {
   color: #666;
 }
 
-ul {
-  list-style: none;
-}
-
 img {
   width: 100%;
 }
@@ -54,8 +49,26 @@ img {
 }
 
 /* Navbar */
+.header {
+  background: url(img/sky3.jpg);
+  background: url(img/sky5.jpg);
+
+  background: url(img/n1.jpg);
+  background: url(img/n3.jpg);
+
+  background: url(img/p2.jpg);
+  background: url(img/p4.jpg);
+  background: url(img/p5.jpg);
+
+  background-repeat: no-repeat;
+  background-size: 100vw 80vh;
+  background-position: top;
+  height: 50vh;
+}
+
 .navbar {
-  /*background-color: var(--dark-grey);*/
+  align-items: center;
+  background-color: rgba(0,0,0, 0.3);
   display: flex;
   font-size: 1.2rem;
   justify-content: center;
@@ -64,8 +77,22 @@ img {
   width: 100%;
 }
 
-.nav-item {
+.logo-wrapper {
+  align-items: center;
+  display: flex;
+}
+
+.logo-img {
+  margin-right: 3px;
+  width: 35px;
+}
+
+.nav-link-item {
   padding: 0 10px;
+}
+
+.nav-link-item.about {
+  margin-right: 35px;
 }
 
 .navbar a {
@@ -76,48 +103,11 @@ img {
 
 .navbar a:hover {
   /*color: var(--teal);*/
+  opacity: 0.9;
 }
 
 .navbar .active {
-  color: var(--orange);
-}
-
-/* Button */
-.button {
-  display: inline-block;
-  background: var(--white);
-  color: #333;
-  padding: 0.4rem 1.3rem;
-  font-size: 1rem;
-  border: none;
-  cursor: pointer;
-  transition: opacity 0.2s ease-in;
-  outline: none;
-}
-
-.button-block {
-  display: block;
-  margin: auto;
-  width: 30%;
-}
-
-.button-dark {
-  background: var(--dark-grey);
-  color: var(--white);
-  margin: 4vh auto 2vh;
-}
-
-.button-clear {
-  background-color: #3388a2;
-  background-color: #286ba2 ;
-  background-color: #339ca2;
-  color: var(--white);
-  font-size: 20px;
-  padding: 0.6rem;
-}
-
-.button:hover {
-  opacity: 0.9;
+  color: var(--teal);
 }
 
 /* Search */
@@ -125,14 +115,14 @@ img {
   margin: 1.2rem auto 0;
 }
 
-.form {
+form {
   left: 0;
   margin-left: auto;
   margin-right: auto;
   position: absolute;
   right: 0;
   text-align: center;
-  top: 80px;
+  top: 15vh;
   width: 50%;
 }
 
@@ -141,11 +131,22 @@ img {
 }
 
 /* Input */
-.search-icon {
-  left: 10px;
+.search-icon,
+.close-icon {
+  cursor: pointer;
   position: absolute;
+}
+
+.search-icon {
+  left: 14px;
   top: 10px;
   width: 35px;
+}
+
+.close-icon {
+  right: 14px;
+  top: 16px;
+  width: 25px;
 }
 
 input {
@@ -162,13 +163,58 @@ input[type='text'] {
   width: 100%;
 }
 
+input[type='text']:focus {
+  opacity: 0.7;
+}
+
 input[type='submit'],
 button {
   font: inherit;
-  font-size: 20px;
+  font-size: 1rem;
   padding: 0.6rem;
 }
 
+/* Button */
+.button {
+  background: var(--white);
+  border: none;
+  border-radius: 4px;
+  color: #333;
+  cursor: pointer;
+  display: inline-block;
+  font-size: 0.5rem;
+  outline: none;
+  padding: 0.4rem 1.3rem;
+}
+
+.button-block {
+  display: block;
+  margin: auto;
+  width: 25%;
+}
+
+.button-dark {
+  background: var(--dark-grey);
+  color: var(--white);
+  margin: 4vh auto 2vh;
+}
+
+.button-dark:hover {
+  background-color: #3b3b3b;
+}
+
+.button-clear {
+  background-color: #3388a2;
+  background-color: #286ba2 ;
+  background-color: #339ca2;
+  color: var(--white);
+  font-size: 1rem;
+  padding: 0.6rem;
+}
+
+.button-clear:hover {
+  opacity: 0.9;
+}
 
 
 /* Alert */
@@ -188,24 +234,10 @@ span {
 }
 
 /* Components */
-/* Navbar */
-.header {
-  background: url(img/sky2-toon.jpg);
-  background: url(img/sky.jpg);
-  background: url(img/sky.webp);
-  background: url(img/sky4.jpg);
-  background: url(img/sky3.jpg);
-  background: url(img/sky6.jpg);
-  background: url(img/sky5.jpg);
-  background-repeat: no-repeat;
-  background-size: 100vw 80vh;
-  background-position: left;
-  height: 360px;
-}
+
 
 
 /* MainInfo */
-
 .MainInfo-header {
   align-items: center;
   background-color: var(--white);
@@ -256,7 +288,6 @@ span {
   width: 100%;
 }
 
-
 .WeatherInfo .bottom-left,
 .WeatherInfo .bottom-right,
 .CityInfo-main {
@@ -280,19 +311,18 @@ span {
   border-top: none;
 }
 
-
 /* CityInfo */
 .CityInfo {
   border: 1px solid #3b3b3b;
 }
 
 
-
-
-
-
 /* Mobile */
 @media (max-width: 760px) {
+  form {
+    width: 70%;
+  }
+
   .WeatherInfo .bottom-content {
     display: block;
   }
