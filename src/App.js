@@ -21,8 +21,10 @@ class App extends Component {
         weatherInfo: [],
         weatherInfoCondition: [],
         spinner: false,
-        errorMessage: [],
-        alert: null
+        alert: null,
+        errorResponse: null,
+        errorMessage: null,
+        errorData: []
     }
 
     searchCity = async (text) => {
@@ -34,26 +36,45 @@ class App extends Component {
                 `http://api.weatherapi.com/v1/current.json?key=${process.env.REACT_APP_WEATHER_API_KEY}&q=${text}`
             ).then(x => new Promise(resolve => setTimeout(() => resolve(x), 1000)));
 
+            const autocomplete = await axios.get(
+                `http://api.weatherapi.com/v1/search.json?key=011e53609c2a4350aed01926212002&q=mia`
+            );
+            // console.log(autocomplete);
+
             this.setState({
                 cityInfo: response.data.location,
                 weatherInfo: response.data.current,
                 weatherInfoCondition: response.data.current.condition,
                 spinner: false,
-                errorMessage: [],
-                alert: null
+                alert: null,
+                errorMessage: []
             });
             // console.log(response.data);
 
         } catch(err) {
-            if (err.response.status === 400) {
-                this.setState({
-                    cityInfo: [],
-                    weatherInfo: [],
-                    spinner: false,
-                    errorMessage: err.response.data.error.message
-                });
-            }
-            setTimeout(() => this.setState({ errorMessage: [] }), 2500);
+            // console.log(err.response);
+            this.setState({
+                cityInfo: [],
+                weatherInfo: [],
+                spinner: false,
+                errorResponse: err.response,
+                errorMessage: err.response.data.error.message,
+                errorData: [err.response.data.error]
+            });
+
+            /*
+             if (err.response.status === 400) {
+                 this.setState({
+                     cityInfo: [],
+                     weatherInfo: [],
+                     spinner: false,
+                     errorMessage: err.response.data.error.message
+                 });
+             } else if (err.response.data.error.code === 1003) {
+                 alert('yee');
+             }
+             setTimeout(() => this.setState({ errorMessage: [] }), 2500);
+             */
 
         }
 
@@ -76,7 +97,8 @@ class App extends Component {
 
 
     render () {
-        const {cityInfo, weatherInfo, weatherInfoCondition, spinner, errorMessage, alert} = this.state;
+        const {cityInfo, weatherInfo, weatherInfoCondition, spinner,
+               errorMessage, errorResponse, errorData, alert} = this.state;
         const { searchCity, clearContent, setAlert } = this;
 
         return (
@@ -95,8 +117,10 @@ class App extends Component {
                                        />
                                        <Alert
                                            alert={ alert }
-                                           errorMessageVisibility={_.size(errorMessage) > 0}
+                                           // errorMessageVisibility={_.size(errorMessage) > 0}
                                            errorMessage={ errorMessage }
+                                           errorResponse={ errorResponse }
+                                           errorData={ errorData }
                                        />
                                        <MainInfo
                                            cityInfoProp={ cityInfo }

@@ -1,8 +1,12 @@
 import React from 'react';
+import * as _ from 'underscore';
 
 
-const Alert = ({ alert, errorMessageVisibility, errorMessage }) => {
-    // console.log(errorMessage);
+const Alert = ({ alert, errorResponse, errorMessage, errorData }) => {
+    // console.log(errorData[0].code);
+    // const { code } = errorData.code;
+    const errorCode = [errorData][0][0];
+    console.log(errorCode);
 
     if (alert !== null) {
         return (
@@ -11,7 +15,16 @@ const Alert = ({ alert, errorMessageVisibility, errorMessage }) => {
             </div>
         )
     }
-    else if (errorMessageVisibility !== false) {
+    /*else if (errorData[0].code === 1003) {
+        console.log('Yes!');
+    }*/
+
+    else if (_.size(errorMessage) > 0) {
+        /*
+        switch (errorMessage) {
+            case ''
+        }
+        */
         return (
             <div className="alert">
                 { errorMessage } Please enter a valid city.
