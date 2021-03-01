@@ -45,12 +45,12 @@ class Search extends Component {
                             value={ text }
                             onChange={ onChange }
                             name="text"
-                            placeholder="Search for a location..."
+                            placeholder="Enter a location..."
                         />
                         <input
                             type="submit"
                             value="Search"
-                            className="button button-dark button-block"
+                            className="button button-search button-block"
                         />
                         { this.props.showClearButton && (
                             <button

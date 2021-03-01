@@ -2,7 +2,6 @@ import React from 'react';
 
 // Modules
 import * as _ from 'underscore';
-import Moment from 'react-moment';
 
 // Components
 import CityInfo from "./CityInfo";
@@ -24,11 +23,6 @@ const MainInfo = ({ spinner, cityInfoProp, weatherInfoProp, weatherInfoCondition
                 <div>
                     <div className="MainInfo-header">
                         <h2> Weather conditions for: { name }, { country } </h2>
-                        <Moment format="dddd, DD MMMM YYYY" local>
-                        </Moment>
-                        <p> Current time: </p>
-                        <Moment interval={ 1000 } format="HH:mm:ss" local>
-                        </Moment>
                     </div>
                     <WeatherInfo
                         weatherInfoProp={ weatherInfoProp }

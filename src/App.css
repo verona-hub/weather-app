@@ -1,15 +1,18 @@
 @import url('https://fonts.googleapis.com/css?family=Roboto');
+@import url('https://fonts.googleapis.com/css?family=Nunito');
+@import url('https://fonts.googleapis.com/css?family=Playfair+Display');
 
 :root {
-  --dark-grey: #333333;
   --white: #f4f4f4;
-  --green: #28a745;
-  --orange: #f2ba6d;
-  --pink: #db4b90;
-  --violet: #a66bdb;
-  --light-blue: #3388a2;
+  --grey: #d3d3d3;
+  --dark-grey: #333333;
+  --green: #008952;
+  --light-green: #50BF84;
+  --orange: #FA9138;
+  --pink: #F26A69;
+  --red: #c4231d;
+  --blue: #00A7D8;
   --dark-blue: #286ba2;
-  --teal: #339ca2;
 }
 
 * {
@@ -19,10 +22,12 @@
 }
 
 body {
-  background-color: lightgrey;
+  background: var(--grey);
   color: #333;
+
   font-family: 'Roboto', sans-serif;
-  font-size: 1rem;
+  font-family: 'Nunito', sans-serif;
+
   line-height: 1.6;
   overflow-y: scroll;
 }
@@ -50,25 +55,14 @@ img {
 
 /* Navbar */
 .header {
-  background: url(img/sky3.jpg);
-  background: url(img/sky5.jpg);
-
-  background: url(img/n1.jpg);
-  background: url(img/n3.jpg);
-
-  background: url(img/p2.jpg);
-  background: url(img/p4.jpg);
-  background: url(img/p5.jpg);
-
-  background-repeat: no-repeat;
-  background-size: 100vw 80vh;
-  background-position: top;
+  background: url(img/sky.jpg) no-repeat top;
+  background-size: 100vw 90vh;
   height: 50vh;
 }
 
 .navbar {
   align-items: center;
-  background-color: rgba(0,0,0, 0.3);
+  background-color: rgba(0,0,0, 0.2);
   display: flex;
   font-size: 1.2rem;
   justify-content: center;
@@ -103,6 +97,8 @@ img {
 
 .navbar .active {
   color: #33a2a8;
+  color: var(--light-green);
+  color: var(--orange);
 }
 
 /* Search */
@@ -145,21 +141,22 @@ form {
 }
 
 input {
+  font-family: 'Nunito', sans-serif;
   margin: 1.2rem 0;
 }
 
 input[type='text'] {
-  /*border: 2px solid var(--teal);*/
   border: none;
   border-radius: 4px;
   display: block;
   font-size: 1.2rem;
   padding: 1rem 1rem 1rem 4rem;
   width: 100%;
+  letter-spacing: 1px;
 }
 
 input[type='text']:focus {
-  /*background-color: #e8fffb;*/
+  background-color: rgba(255, 255, 255, 0.9);
 }
 
 input[type='submit'],
@@ -188,20 +185,28 @@ button {
   width: 25%;
 }
 
-.button-dark {
+.button-search {
   background: var(--dark-grey);
+
+  background: var(--orange);
+  background: var(--blue);
+
+  background: var(--light-green);
+  background: var(--green);
+
   color: var(--white);
   margin: 4vh auto 2vh;
 }
 
-.button-dark:hover {
-  background-color: #3b3b3b;
+.button-search:hover {
+  opacity: 0.95;
 }
 
 .button-clear {
-  background-color: #3388a2;
-  background-color: #286ba2 ;
-  background-color: #339ca2;
+  background: var(--blue);
+  background: var(--pink);
+
+
   color: var(--white);
   font-size: 1rem;
   padding: 0.6rem;
@@ -213,7 +218,7 @@ button {
 
 /* Errors */
 .alert {
-  background: #c4231d;
+  background: var(--red);
   color: var(--white);
   font-size: 20px;
   margin: 1rem 0;
@@ -308,8 +313,26 @@ span {
   border: 1px solid #3b3b3b;
 }
 
+ /* About */
+.about-text {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.react-logo {
+  margin-left: 10px;
+  width: 40px;
+}
 
 /* Mobile */
+@media (max-width: 1240px) {
+  .button-block {
+    width: 50%;
+  }
+}
+
+
 @media (max-width: 760px) {
   form {
     width: 70%;
