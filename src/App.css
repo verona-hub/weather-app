@@ -37,17 +37,13 @@ a {
   text-decoration: none;
 }
 
-a:hover {
-  color: #666;
-}
-
 img {
   width: 100%;
 }
 
 .container {
-  max-width: 1100px;
   margin: auto;
+  max-width: 1100px;
   overflow: hidden;
   padding: 0 2rem;
   text-align: center;
@@ -97,7 +93,6 @@ img {
 
 .navbar .active {
   color: #33a2a8;
-  color: var(--light-green);
   color: var(--orange);
 }
 
@@ -150,9 +145,10 @@ input[type='text'] {
   border-radius: 4px;
   display: block;
   font-size: 1.2rem;
-  padding: 1rem 1rem 1rem 4rem;
-  width: 100%;
   letter-spacing: 1px;
+  padding: 1rem 1rem 1rem 4rem;
+  text-transform: capitalize;
+  width: 100%;
 }
 
 input[type='text']:focus {
@@ -187,12 +183,10 @@ button {
 
 .button-search {
   background: var(--dark-grey);
-
-  background: var(--orange);
-  background: var(--blue);
-
   background: var(--light-green);
+  background: var(--orange);
   background: var(--green);
+  background: var(--blue);
 
   color: var(--white);
   margin: 4vh auto 2vh;
@@ -203,9 +197,8 @@ button {
 }
 
 .button-clear {
-  background: var(--blue);
   background: var(--pink);
-
+  background: var(--orange);
 
   color: var(--white);
   font-size: 1rem;
@@ -227,18 +220,25 @@ button {
 }
 
 /* Style */
-span {
-  font-size: 18px;
-  text-align: left;
+.italic {
+  font-style: italic;
 }
 
+
 /* Components */
+.MainInfo-header,
+.WeatherInfo,
+.CityInfo{
+  box-shadow: 1px 1px 12px 6px rgb(165, 164, 164);
+}
+
 
 /* MainInfo */
 .MainInfo-header {
   align-items: center;
   background-color: var(--white);
-  border: 1px solid #3b3b3b;
+  /*border-radius: 4px;*/
+  /*border: 1px solid #3b3b3b;*/
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -259,7 +259,8 @@ span {
 
 /* WeatherInfo */
 .WeatherInfo {
-  border: 1px solid #3b3b3b;
+  /*border: 1px solid #3b3b3b;*/
+  border-radius: 16px;
 }
 
 .WeatherInfo .top-content {
@@ -292,6 +293,12 @@ span {
   width: calc(50% - 60px);
 }
 
+.WeatherInfo span,
+.CityInfo span {
+  font-size: 18px;
+  text-align: left;
+}
+
 .WeatherInfo img {
   width: 100px;
 }
@@ -310,20 +317,56 @@ span {
 
 /* CityInfo */
 .CityInfo {
-  border: 1px solid #3b3b3b;
+  /*border: 1px solid #3b3b3b;*/
+  border-radius: 16px;
 }
 
  /* About */
-.about-text {
-  display: flex;
-  justify-content: center;
-  align-items: center;
+.About section:not(.about-header) {
+  margin: 15vh 0;
+}
+
+.title {
+  margin: 5vh 0 10vh;
+}
+
+.love-icon {
+  width: 60px;
 }
 
 .react-logo {
-  margin-left: 10px;
-  width: 40px;
+  margin: 2vh;
+  width: 100px;
 }
+
+.source-text {
+  margin-bottom: 3vh;
+}
+
+.github-logo {
+  opacity: 0.7;
+  width: 100px;
+}
+
+.github p {
+  margin: 0 auto;
+  opacity: 0.7;
+  width: 30%;
+}
+
+.github-logo:hover,
+.github p:hover{
+  opacity: 1;
+}
+
+
+
+
+
+
+
+
+
 
 /* Mobile */
 @media (max-width: 1240px) {
