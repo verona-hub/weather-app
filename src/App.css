@@ -101,13 +101,8 @@ img {
   padding: 0.45rem;
 }
 
-.navbar a:hover {
-  /*color: var(--teal);*/
-  opacity: 0.9;
-}
-
 .navbar .active {
-  color: var(--teal);
+  color: #33a2a8;
 }
 
 /* Search */
@@ -154,7 +149,7 @@ input {
 }
 
 input[type='text'] {
-  /*border: 1px solid #ccc;*/
+  /*border: 2px solid var(--teal);*/
   border: none;
   border-radius: 4px;
   display: block;
@@ -216,8 +211,7 @@ button {
   opacity: 0.9;
 }
 
-
-/* Alert */
+/* Errors */
 .alert {
   background: #c4231d;
   color: var(--white);
@@ -234,8 +228,6 @@ span {
 }
 
 /* Components */
-
-
 
 /* MainInfo */
 .MainInfo-header {

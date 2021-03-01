@@ -9,12 +9,8 @@ class Search extends Component {
     }
 
     onSubmit = (e) => {
-        if (this.state.text === '') {
-            this.props.setAlert('Search box is empty. Please enter a city');
-        } else {
-            this.props.searchCity(this.state.text);
-            this.setState({ text: '' });
-        }
+        this.props.searchCity(this.state.text);
+        this.setState({ text: '' });
         e.preventDefault();
     }
 
@@ -49,7 +45,7 @@ class Search extends Component {
                             value={ text }
                             onChange={ onChange }
                             name="text"
-                            placeholder="Search a location..."
+                            placeholder="Search for a location..."
                         />
                         <input
                             type="submit"
@@ -63,8 +59,8 @@ class Search extends Component {
                             </button> )
                         }
                         { text.length > 0 && (
-                                <img src={x} alt="close icon" className="close-icon"
-                                     onClick={ clearInput } /> )
+                            <img src={x} alt="close icon" className="close-icon"
+                                 onClick={ clearInput } /> )
                         }
                     </div>
                 </form>

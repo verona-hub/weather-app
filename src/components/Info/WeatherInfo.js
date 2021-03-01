@@ -2,8 +2,6 @@ import React from 'react';
 
 
 const WeatherInfo = ({ weatherInfoProp, weatherInfoCondition }) => {
-    // console.log(weatherInfoProp);
-    // console.log(weatherInfoProp.condition);
 
     const { cloud, temp_c, feelslike_c, humidity, precip_mm, uv, vis_km,
         pressure_mb, wind_kph, wind_dir } = weatherInfoProp;

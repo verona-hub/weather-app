@@ -8,7 +8,7 @@ import * as _ from 'underscore';
 
 // Components
 import About from './components/About';
-import Alert from './components/Errors+Alerts/Alert';
+import Errors from './components/Error/Errors';
 import MainInfo from './components/Info/MainInfo';
 import Navbar from './components/Navbar';
 import Search from "./components/Search";
@@ -21,10 +21,8 @@ class App extends Component {
         weatherInfo: [],
         weatherInfoCondition: [],
         spinner: false,
-        alert: null,
-        errorResponse: null,
         errorMessage: null,
-        errorData: []
+        errorCode: null
     }
 
     searchCity = async (text) => {
@@ -33,8 +31,10 @@ class App extends Component {
 
         try {
             const response = await axios.get(
-                `http://api.weatherapi.com/v1/current.json?key=${process.env.REACT_APP_WEATHER_API_KEY}&q=${text}`
-            ).then(x => new Promise(resolve => setTimeout(() => resolve(x), 1000)));
+                `http://api.weatherapi.com/v1/current.json?key=
+                ${process.env.REACT_APP_WEATHER_API_KEY}
+                &q=${text}`)
+                .then(x => new Promise(resolve => setTimeout(() => resolve(x), 1000)));
 
             const autocomplete = await axios.get(
                 `http://api.weatherapi.com/v1/search.json?key=011e53609c2a4350aed01926212002&q=mia`
@@ -46,40 +46,20 @@ class App extends Component {
                 weatherInfo: response.data.current,
                 weatherInfoCondition: response.data.current.condition,
                 spinner: false,
-                alert: null,
-                errorMessage: []
+                errorMessage: null
             });
-            // console.log(response.data);
 
         } catch(err) {
-            // console.log(err.response);
             this.setState({
                 cityInfo: [],
                 weatherInfo: [],
                 spinner: false,
-                errorResponse: err.response,
                 errorMessage: err.response.data.error.message,
-                errorData: [err.response.data.error]
+                errorCode: Object.entries(err.response.data.error)[0][1]
             });
 
-            /*
-             if (err.response.status === 400) {
-                 this.setState({
-                     cityInfo: [],
-                     weatherInfo: [],
-                     spinner: false,
-                     errorMessage: err.response.data.error.message
-                 });
-             } else if (err.response.data.error.code === 1003) {
-                 alert('yee');
-             }
-             setTimeout(() => this.setState({ errorMessage: [] }), 2500);
-             */
-
+            setTimeout(() => this.setState({ errorMessage: null }), 2500);
         }
-
-        // console.log(this.state.errorMessage);
-        // console.log(this.state.cityInfo);
     }
 
     clearContent = () => {
@@ -90,16 +70,10 @@ class App extends Component {
         });
     }
 
-    setAlert = (message) => {
-        this.setState({ alert: { message } });
-        setTimeout(() => this.setState({ alert: null }), 2500);
-    }
-
-
     render () {
         const {cityInfo, weatherInfo, weatherInfoCondition, spinner,
-               errorMessage, errorResponse, errorData, alert} = this.state;
-        const { searchCity, clearContent, setAlert } = this;
+               errorMessage, errorCode} = this.state;
+        const { searchCity, clearContent } = this;
 
         return (
             <BrowserRouter>
@@ -113,14 +87,10 @@ class App extends Component {
                                            searchCity={ searchCity }
                                            clearContent={ clearContent }
                                            showClearButton={ _.size(cityInfo) > 0 && _.size(weatherInfo) > 0 && !spinner }
-                                           setAlert={ setAlert }
                                        />
-                                       <Alert
-                                           alert={ alert }
-                                           // errorMessageVisibility={_.size(errorMessage) > 0}
+                                       <Errors
                                            errorMessage={ errorMessage }
-                                           errorResponse={ errorResponse }
-                                           errorData={ errorData }
+                                           errorCode={ errorCode }
                                        />
                                        <MainInfo
                                            cityInfoProp={ cityInfo }
