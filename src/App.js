@@ -13,6 +13,7 @@ import MainInfo from './components/Info/MainInfo';
 import Navbar from './components/Navbar';
 import Search from "./components/Search";
 
+console.log(process.env);
 
 class App extends Component {
 
