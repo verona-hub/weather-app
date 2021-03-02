@@ -19,8 +19,9 @@
     <select>
       <path>
         <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
-        <item name="LOCAL_ROOT" type="e8cecc67:BranchNodeDescriptor" />
-        <item name="BRANCH:master" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="REMOTE_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="GROUP_NODE:origin" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="BRANCH:origin/master" type="e8cecc67:BranchNodeDescriptor" />
       </path>
     </select>
   </component>
@@ -151,7 +152,7 @@
       <workItem from="1614627900835" duration="8497000" />
       <workItem from="1614696868741" duration="6205000" />
       <workItem from="1614719812790" duration="1732000" />
-      <workItem from="1614721611905" duration="1216000" />
+      <workItem from="1614721611905" duration="1582000" />
     </task>
     <task id="LOCAL-00001" summary="First upload:&#10;- created components&#10;- created state&#10;- Weather Api is linked">
       <created>1613873022531</created>
@@ -440,7 +441,14 @@
       <option name="project" value="LOCAL" />
       <updated>1614722228955</updated>
     </task>
-    <option name="localTasksCounter" value="42" />
+    <task id="LOCAL-00042" summary="Changes: &#10;- small change">
+      <created>1614722857863</created>
+      <option name="number" value="00042" />
+      <option name="presentableId" value="LOCAL-00042" />
+      <option name="project" value="LOCAL" />
+      <updated>1614722857863</updated>
+    </task>
+    <option name="localTasksCounter" value="43" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -467,7 +475,7 @@
                   <entry key="branch">
                     <value>
                       <list>
-                        <option value="master" />
+                        <option value="origin/master" />
                       </list>
                     </value>
                   </entry>
@@ -481,7 +489,6 @@
     <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="Revert &quot;Changes: - removed Homepage.js component and moved everything into App.js - Clear button also clears the input text on button click&quot;&#10;&#10;This reverts commit 6e30ccf3" />
     <MESSAGE value="Changes: &#10;- Spinner removed absolute positioning and set to false if axios response status is: 400&#10;- created WeatherInfo.js component" />
     <MESSAGE value="Changes: &#10;- Spinner position changed&#10;- added all info inside WeatherInfo.js" />
     <MESSAGE value="Changes: &#10;- created MainInfo.js component and from there CityInfo and WeatherInfo are called (spinner logic is now tied to MainInfo)" />
@@ -506,7 +513,8 @@
     <MESSAGE value="Changes: &#10;- removed .idea folder from gitignore" />
     <MESSAGE value="Changes: &#10;- added gitignore" />
     <MESSAGE value="Changes: &#10;- removed autocomplete section" />
-    <option name="LAST_COMMIT_MESSAGE" value="Changes: &#10;- removed autocomplete section" />
+    <MESSAGE value="Changes: &#10;- small change" />
+    <option name="LAST_COMMIT_MESSAGE" value="Changes: &#10;- small change" />
   </component>
   <component name="WindowStateProjectService">
     <state x="858" y="418" key="#ESLint" timestamp="1613846038927">
@@ -529,10 +537,10 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="624" y="207" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1614613047865" />
-    <state x="433" y="0" width="1088" height="1040" key="CommitChangelistDialog2" timestamp="1614722227487">
+    <state x="433" y="0" width="1088" height="1040" key="CommitChangelistDialog2" timestamp="1614722856739">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="433" y="0" width="1088" height="1040" key="CommitChangelistDialog2/0.0.1920.1040@0.0.1920.1040" timestamp="1614722227487" />
+    <state x="433" y="0" width="1088" height="1040" key="CommitChangelistDialog2/0.0.1920.1040@0.0.1920.1040" timestamp="1614722856739" />
     <state x="787" y="100" width="1031" height="843" key="DiffContextDialog" timestamp="1614012197913">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
@@ -545,22 +553,22 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="801" y="399" key="Github.ShareDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1613872855671" />
-    <state width="1452" height="251" key="GridCell.Tab.0.bottom" timestamp="1614722443424">
+    <state width="1452" height="251" key="GridCell.Tab.0.bottom" timestamp="1614722887805">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1452" height="251" key="GridCell.Tab.0.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1614722443424" />
-    <state width="1452" height="251" key="GridCell.Tab.0.center" timestamp="1614722443424">
+    <state width="1452" height="251" key="GridCell.Tab.0.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1614722887805" />
+    <state width="1452" height="251" key="GridCell.Tab.0.center" timestamp="1614722887805">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1452" height="251" key="GridCell.Tab.0.center/0.0.1920.1040@0.0.1920.1040" timestamp="1614722443424" />
-    <state width="1452" height="251" key="GridCell.Tab.0.left" timestamp="1614722443423">
+    <state width="1452" height="251" key="GridCell.Tab.0.center/0.0.1920.1040@0.0.1920.1040" timestamp="1614722887805" />
+    <state width="1452" height="251" key="GridCell.Tab.0.left" timestamp="1614722887805">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1452" height="251" key="GridCell.Tab.0.left/0.0.1920.1040@0.0.1920.1040" timestamp="1614722443423" />
-    <state width="1452" height="251" key="GridCell.Tab.0.right" timestamp="1614722443424">
+    <state width="1452" height="251" key="GridCell.Tab.0.left/0.0.1920.1040@0.0.1920.1040" timestamp="1614722887805" />
+    <state width="1452" height="251" key="GridCell.Tab.0.right" timestamp="1614722887805">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1452" height="251" key="GridCell.Tab.0.right/0.0.1920.1040@0.0.1920.1040" timestamp="1614722443424" />
+    <state width="1452" height="251" key="GridCell.Tab.0.right/0.0.1920.1040@0.0.1920.1040" timestamp="1614722887805" />
     <state x="686" y="194" key="IDE.errors.dialog" timestamp="1614721631668">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
@@ -577,10 +585,10 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="1098" y="403" key="VCS.EditChangelistDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1613944259997" />
-    <state x="452" y="189" key="Vcs.Push.Dialog.v2" timestamp="1614722237472">
+    <state x="452" y="189" key="Vcs.Push.Dialog.v2" timestamp="1614722930637">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="452" y="189" key="Vcs.Push.Dialog.v2/0.0.1920.1040@0.0.1920.1040" timestamp="1614722237472" />
+    <state x="452" y="189" key="Vcs.Push.Dialog.v2/0.0.1920.1040@0.0.1920.1040" timestamp="1614722930637" />
     <state x="1051" y="416" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1614555462555">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
