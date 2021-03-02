@@ -1,0 +1,577 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="BranchesTreeState">
+    <expand>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="LOCAL_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="REMOTE_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="REMOTE_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="GROUP_NODE:origin" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+    </expand>
+    <select>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="LOCAL_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="BRANCH:master" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+    </select>
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="91688631-f2a5-4013-94aa-b5015acd594f" name="Default Changelist" comment="" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="JavaScript File" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="GithubDefaultAccount">
+    <option name="defaultAccountId" value="46ea88b2-370d-412c-8626-7236d3df9320" />
+  </component>
+  <component name="GithubPullRequestsUISettings">
+    <option name="hiddenUrls">
+      <set>
+        <option value="https://github.com/verona-hub/weather-app.git" />
+      </set>
+    </option>
+  </component>
+  <component name="JsBowerSettings">
+    <node-interpreter value="project" />
+    <bower-package value="" />
+    <bower.json value="" />
+  </component>
+  <component name="JsFlowSettings">
+    <service-enabled>true</service-enabled>
+    <exe-path />
+    <other-services-enabled>true</other-services-enabled>
+    <auto-save>true</auto-save>
+  </component>
+  <component name="ProjectId" id="1oixXmpMNqAkbVkt5qr1SC5gXEE" />
+  <component name="ProjectLevelVcsManager">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
+    <property name="full.screen.before.presentation.mode" value="false" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/src/img" />
+    <property name="node.js.detected.package.eslint" value="true" />
+    <property name="node.js.detected.package.jscs" value="true" />
+    <property name="node.js.detected.package.standard" value="true" />
+    <property name="node.js.path.for.package.eslint" value="project" />
+    <property name="node.js.path.for.package.jscs" value="project" />
+    <property name="node.js.path.for.package.standard" value="project" />
+    <property name="node.js.selected.package.eslint" value="(autodetect)" />
+    <property name="node.js.selected.package.jscs" value="" />
+    <property name="node.js.selected.package.standard" value="" />
+    <property name="nodejs_package_manager_path" value="npm" />
+    <property name="settings.editor.selected.configurable" value="preferences.pluginManager" />
+  </component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="D:\My Documents\Atom\my-Practice\React\Practice React\My Training\weather-app\src\img" />
+      <recent name="D:\My Documents\Atom\my-Practice\React\Practice React\My Training\weather-app\public" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="D:\My Documents\Atom\my-Practice\React\Practice React\My Training\weather-app\src\img" />
+      <recent name="D:\My Documents\Atom\my-Practice\React\Practice React\My Training\weather-app\src" />
+      <recent name="D:\My Documents\Atom\my-Practice\React\Practice React\My Training\weather-app\src\components\Errors+Alerts" />
+      <recent name="D:\My Documents\Atom\my-Practice\React\Practice React\My Training\weather-app\src\components\Info" />
+    </key>
+  </component>
+  <component name="RunManager">
+    <configuration name="start" type="js.build_tools.npm" nameIsGenerated="true">
+      <package-json value="$PROJECT_DIR$/package.json" />
+      <command value="run" />
+      <scripts>
+        <script value="start" />
+      </scripts>
+      <node-interpreter value="project" />
+      <envs />
+      <method v="2" />
+    </configuration>
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="91688631-f2a5-4013-94aa-b5015acd594f" name="Default Changelist" comment="" />
+      <created>1613783253901</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1613783253901</updated>
+      <workItem from="1613783255278" duration="3517000" />
+      <workItem from="1613826285610" duration="5861000" />
+      <workItem from="1613845942907" duration="3302000" />
+      <workItem from="1613849272454" duration="2397000" />
+      <workItem from="1613862558863" duration="6964000" />
+      <workItem from="1613870174918" duration="4979000" />
+      <workItem from="1613928592409" duration="1122000" />
+      <workItem from="1613929787716" duration="873000" />
+      <workItem from="1613930688737" duration="25168000" />
+      <workItem from="1614007781679" duration="647000" />
+      <workItem from="1614008536665" duration="3667000" />
+      <workItem from="1614012237892" duration="17000" />
+      <workItem from="1614031151243" duration="554000" />
+      <workItem from="1614032352686" duration="10960000" />
+      <workItem from="1614125115662" duration="789000" />
+      <workItem from="1614192457960" duration="23475000" />
+      <workItem from="1614218203404" duration="84000" />
+      <workItem from="1614262524374" duration="15135000" />
+      <workItem from="1614283116498" duration="4206000" />
+      <workItem from="1614355506811" duration="4543000" />
+      <workItem from="1614360764555" duration="9000" />
+      <workItem from="1614364777603" duration="7918000" />
+      <workItem from="1614382889239" duration="8880000" />
+      <workItem from="1614443104662" duration="5884000" />
+      <workItem from="1614466175617" duration="10042000" />
+      <workItem from="1614546093075" duration="10789000" />
+      <workItem from="1614603617488" duration="12592000" />
+      <workItem from="1614627900835" duration="8497000" />
+      <workItem from="1614696868741" duration="6205000" />
+      <workItem from="1614719812790" duration="1732000" />
+    </task>
+    <task id="LOCAL-00001" summary="First upload:&#10;- created components&#10;- created state&#10;- Weather Api is linked">
+      <created>1613873022531</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1613873022531</updated>
+    </task>
+    <task id="LOCAL-00002" summary="First upload:&#10;- created components&#10;- created state&#10;- Weather Api is linked">
+      <created>1613873137965</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1613873137965</updated>
+    </task>
+    <task id="LOCAL-00003" summary="First upload:&#10;- created components&#10;- created state&#10;- Weather Api is linked">
+      <created>1613930344570</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1613930344570</updated>
+    </task>
+    <task id="LOCAL-00004" summary="Second upload:&#10;- added Axios">
+      <created>1613930901368</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1613930901368</updated>
+    </task>
+    <task id="LOCAL-00005" summary="Changes:&#10;- added react router dom&#10;- added browser router">
+      <created>1613932073224</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1613932073224</updated>
+    </task>
+    <task id="LOCAL-00006" summary="Changes:&#10;- test">
+      <created>1613932516202</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1613932516202</updated>
+    </task>
+    <task id="LOCAL-00007" summary="Changes:&#10;- added css rules&#10;- added Switch and Route to Homepage component">
+      <created>1613933599780</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1613933599780</updated>
+    </task>
+    <task id="LOCAL-00008" summary="Changes:&#10;- added css rules">
+      <created>1613935601138</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1613935601138</updated>
+    </task>
+    <task id="LOCAL-00009" summary="Changes:&#10;- added Spinner component">
+      <created>1613943401182</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1613943401182</updated>
+    </task>
+    <task id="LOCAL-00010" summary="Changes:&#10;- updated gitignore">
+      <created>1613944236042</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1613944236042</updated>
+    </task>
+    <task id="LOCAL-00011" summary="Changes:&#10;- added underscore library module&#10;- Spinner size and position adjusted to be in the middle of the screen&#10;- Container content is invisible and appears only after search is made (info appears if cityInfoProp's object length is &gt; 0)">
+      <created>1613952050871</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1613952050871</updated>
+    </task>
+    <task id="LOCAL-00012" summary="Changes:&#10;- Spinner position set to absolute&#10;- Spinner logic set inside Container.js component (spinner appears only while fetching data)&#10;- added delay to axios request&#10;- Container.js renamed to CityInfo.js&#10;- moved BrowserRouter to App.js&#10;- refactored App.js from function into class">
+      <created>1613956732373</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1613956732373</updated>
+    </task>
+    <task id="LOCAL-00013" summary="Changes:&#10;- minor changes">
+      <created>1613957674951</created>
+      <option name="number" value="00013" />
+      <option name="presentableId" value="LOCAL-00013" />
+      <option name="project" value="LOCAL" />
+      <updated>1613957674951</updated>
+    </task>
+    <task id="LOCAL-00014" summary="Changes:&#10;- removed Homepage.js component and moved everything into App.js">
+      <created>1614008951982</created>
+      <option name="number" value="00014" />
+      <option name="presentableId" value="LOCAL-00014" />
+      <option name="project" value="LOCAL" />
+      <updated>1614008951982</updated>
+    </task>
+    <task id="LOCAL-00015" summary="Changes:&#10;- removed Homepage.js component and moved everything into App.js&#10;- Clear button also clears the input text on button click">
+      <created>1614011926568</created>
+      <option name="number" value="00015" />
+      <option name="presentableId" value="LOCAL-00015" />
+      <option name="project" value="LOCAL" />
+      <updated>1614011926568</updated>
+    </task>
+    <task id="LOCAL-00016" summary="Revert &quot;Changes: - removed Homepage.js component and moved everything into App.js - Clear button also clears the input text on button click&quot;&#10;&#10;This reverts commit 6e30ccf3">
+      <created>1614011994872</created>
+      <option name="number" value="00016" />
+      <option name="presentableId" value="LOCAL-00016" />
+      <option name="project" value="LOCAL" />
+      <updated>1614011994872</updated>
+    </task>
+    <task id="LOCAL-00017" summary="Changes: &#10;- Spinner removed absolute positioning and set to false if axios response status is: 400&#10;- created WeatherInfo.js component">
+      <created>1614041797528</created>
+      <option name="number" value="00017" />
+      <option name="presentableId" value="LOCAL-00017" />
+      <option name="project" value="LOCAL" />
+      <updated>1614041797528</updated>
+    </task>
+    <task id="LOCAL-00018" summary="Changes: &#10;- Spinner position changed&#10;- added all info inside WeatherInfo.js">
+      <created>1614044439091</created>
+      <option name="number" value="00018" />
+      <option name="presentableId" value="LOCAL-00018" />
+      <option name="project" value="LOCAL" />
+      <updated>1614044439091</updated>
+    </task>
+    <task id="LOCAL-00019" summary="Changes: &#10;- created MainInfo.js component and from there CityInfo and WeatherInfo are called (spinner logic is now tied to MainInfo)">
+      <created>1614194073395</created>
+      <option name="number" value="00019" />
+      <option name="presentableId" value="LOCAL-00019" />
+      <option name="project" value="LOCAL" />
+      <updated>1614194073395</updated>
+    </task>
+    <task id="LOCAL-00020" summary="Changes: &#10;- added favicon.svg&#10;- input text is set to empty after form is submitted&#10;- showClearButton is true if spinner is set to false (clear button does not show while spinner is present on screen)">
+      <created>1614196928546</created>
+      <option name="number" value="00020" />
+      <option name="presentableId" value="LOCAL-00020" />
+      <option name="project" value="LOCAL" />
+      <updated>1614196928546</updated>
+    </task>
+    <task id="LOCAL-00021" summary="Changes: &#10;- added favicon.svg">
+      <created>1614197015493</created>
+      <option name="number" value="00021" />
+      <option name="presentableId" value="LOCAL-00021" />
+      <option name="project" value="LOCAL" />
+      <updated>1614197015493</updated>
+    </task>
+    <task id="LOCAL-00022" summary="Changes: &#10;- created ErrorApi.js to handle '400:bad request' api error and display to the user&#10;- created alert if search input is empty&#10;- moved components to folders">
+      <created>1614211875198</created>
+      <option name="number" value="00022" />
+      <option name="presentableId" value="LOCAL-00022" />
+      <option name="project" value="LOCAL" />
+      <updated>1614211875198</updated>
+    </task>
+    <task id="LOCAL-00023" summary="Changes: &#10;- removed ErrorApi.js and placed content inside Alert.js&#10;- refactored Info folder&#10;- added setTimeout on errorMessage inside catch(err) response">
+      <created>1614217799476</created>
+      <option name="number" value="00023" />
+      <option name="presentableId" value="LOCAL-00023" />
+      <option name="project" value="LOCAL" />
+      <updated>1614217799476</updated>
+    </task>
+    <task id="LOCAL-00024" summary="Changes: &#10;- added current Date and Time&#10;- styling Info components">
+      <created>1614271593309</created>
+      <option name="number" value="00024" />
+      <option name="presentableId" value="LOCAL-00024" />
+      <option name="project" value="LOCAL" />
+      <updated>1614271593309</updated>
+    </task>
+    <task id="LOCAL-00025" summary="Changes: &#10;- styling components&#10;- when an empty search or a search with an error is made, the components state is reset to empty">
+      <created>1614286574279</created>
+      <option name="number" value="00025" />
+      <option name="presentableId" value="LOCAL-00025" />
+      <option name="project" value="LOCAL" />
+      <updated>1614286574279</updated>
+    </task>
+    <task id="LOCAL-00026" summary="Changes: &#10;- styling components&#10;- Link replaced with Navlink&#10;- added activeClass to Navlink&#10;- moved current time to MainInfo.js component">
+      <created>1614369871888</created>
+      <option name="number" value="00026" />
+      <option name="presentableId" value="LOCAL-00026" />
+      <option name="project" value="LOCAL" />
+      <updated>1614369871888</updated>
+    </task>
+    <task id="LOCAL-00027" summary="Changes: &#10;- styling components&#10;- CityInfo.js styled&#10;- added search icon inside text input&#10;- added hero section">
+      <created>1614391804756</created>
+      <option name="number" value="00027" />
+      <option name="presentableId" value="LOCAL-00027" />
+      <option name="project" value="LOCAL" />
+      <updated>1614391804756</updated>
+    </task>
+    <task id="LOCAL-00028" summary="Changes: &#10;- added logo, search and close icon&#10;- clicking on search icon submits the form&#10;- clicking on x icon clears the input text&#10;- x icon does not appear if input text is empty&#10;- destructured components">
+      <created>1614475208922</created>
+      <option name="number" value="00028" />
+      <option name="presentableId" value="LOCAL-00028" />
+      <option name="project" value="LOCAL" />
+      <updated>1614475208922</updated>
+    </task>
+    <task id="LOCAL-00029" summary="Changes: &#10;- started autocomplete on input&#10;- moved error data from App.js to Alert.js">
+      <created>1614551428712</created>
+      <option name="number" value="00029" />
+      <option name="presentableId" value="LOCAL-00029" />
+      <option name="project" value="LOCAL" />
+      <updated>1614551428712</updated>
+    </task>
+    <task id="LOCAL-00030" summary="Changes: &#10;- removed Alert.js and all alerts starting from Search.js component, to props and state... moved the rest to Errors.js&#10;- completed switch statement for error codes">
+      <created>1614558354186</created>
+      <option name="number" value="00030" />
+      <option name="presentableId" value="LOCAL-00030" />
+      <option name="project" value="LOCAL" />
+      <updated>1614558354186</updated>
+    </task>
+    <task id="LOCAL-00031" summary="Changes: &#10;- removed current date and time&#10;- changed buttons color&#10;- changed body font&#10;- added credits for photo, icons, and logos">
+      <created>1614616363887</created>
+      <option name="number" value="00031" />
+      <option name="presentableId" value="LOCAL-00031" />
+      <option name="project" value="LOCAL" />
+      <updated>1614616363887</updated>
+    </task>
+    <task id="LOCAL-00032" summary="Changes: &#10;- About page modifications&#10;- card items changes">
+      <created>1614636561192</created>
+      <option name="number" value="00032" />
+      <option name="presentableId" value="LOCAL-00032" />
+      <option name="project" value="LOCAL" />
+      <updated>1614636561192</updated>
+    </task>
+    <task id="LOCAL-00033" summary="Changes: &#10;- added favicon and icons">
+      <created>1614636622745</created>
+      <option name="number" value="00033" />
+      <option name="presentableId" value="LOCAL-00033" />
+      <option name="project" value="LOCAL" />
+      <updated>1614636622745</updated>
+    </task>
+    <task id="LOCAL-00034" summary="Changes: &#10;- added htpps as blocked request after deployment">
+      <created>1614699604240</created>
+      <option name="number" value="00034" />
+      <option name="presentableId" value="LOCAL-00034" />
+      <option name="project" value="LOCAL" />
+      <updated>1614699604240</updated>
+    </task>
+    <task id="LOCAL-00035" summary="Changes: &#10;- added meta tag in index.html for upgrade-insecure-requests">
+      <created>1614699793701</created>
+      <option name="number" value="00035" />
+      <option name="presentableId" value="LOCAL-00035" />
+      <option name="project" value="LOCAL" />
+      <updated>1614699793701</updated>
+    </task>
+    <task id="LOCAL-00036" summary="Changes: &#10;- added http instead of https because not displaying after deployment">
+      <created>1614700011760</created>
+      <option name="number" value="00036" />
+      <option name="presentableId" value="LOCAL-00036" />
+      <option name="project" value="LOCAL" />
+      <updated>1614700011760</updated>
+    </task>
+    <task id="LOCAL-00037" summary="Changes: &#10;- added .idea folder to gitignore">
+      <created>1614720545516</created>
+      <option name="number" value="00037" />
+      <option name="presentableId" value="LOCAL-00037" />
+      <option name="project" value="LOCAL" />
+      <updated>1614720545516</updated>
+    </task>
+    <task id="LOCAL-00038" summary="Changes: &#10;- removed .idea folder from gitignore">
+      <created>1614721388701</created>
+      <option name="number" value="00038" />
+      <option name="presentableId" value="LOCAL-00038" />
+      <option name="project" value="LOCAL" />
+      <updated>1614721388701</updated>
+    </task>
+    <option name="localTasksCounter" value="39" />
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="2" />
+  </component>
+  <component name="Vcs.Log.History.Properties">
+    <option name="COLUMN_ORDER">
+      <list>
+        <option value="0" />
+        <option value="2" />
+        <option value="3" />
+        <option value="1" />
+      </list>
+    </option>
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State>
+              <option name="FILTERS">
+                <map>
+                  <entry key="branch">
+                    <value>
+                      <list>
+                        <option value="master" />
+                      </list>
+                    </value>
+                  </entry>
+                </map>
+              </option>
+            </State>
+          </value>
+        </entry>
+      </map>
+    </option>
+    <option name="oldMeFiltersMigrated" value="true" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="Changes:&#10;- removed Homepage.js component and moved everything into App.js" />
+    <MESSAGE value="Changes:&#10;- removed Homepage.js component and moved everything into App.js&#10;- Clear button also clears the input text on button click" />
+    <MESSAGE value="Revert &quot;Changes: - removed Homepage.js component and moved everything into App.js - Clear button also clears the input text on button click&quot;&#10;&#10;This reverts commit 6e30ccf3" />
+    <MESSAGE value="Changes: &#10;- Spinner removed absolute positioning and set to false if axios response status is: 400&#10;- created WeatherInfo.js component" />
+    <MESSAGE value="Changes: &#10;- Spinner position changed&#10;- added all info inside WeatherInfo.js" />
+    <MESSAGE value="Changes: &#10;- created MainInfo.js component and from there CityInfo and WeatherInfo are called (spinner logic is now tied to MainInfo)" />
+    <MESSAGE value="Changes: &#10;- added favicon.svg&#10;- input text is set to empty after form is submitted&#10;- showClearButton is true if spinner is set to false (clear button does not show while spinner is present on screen)" />
+    <MESSAGE value="Changes: &#10;- added favicon.svg" />
+    <MESSAGE value="Changes: &#10;- created ErrorApi.js to handle '400:bad request' api error and display to the user&#10;- created alert if search input is empty&#10;- moved components to folders" />
+    <MESSAGE value="Changes: &#10;- removed ErrorApi.js and placed content inside Alert.js&#10;- refactored Info folder&#10;- added setTimeout on errorMessage inside catch(err) response" />
+    <MESSAGE value="Changes: &#10;- added current Date and Time&#10;- styling Info components" />
+    <MESSAGE value="Changes: &#10;- styling components&#10;- when an empty search or a search with an error is made, the components state is reset to empty" />
+    <MESSAGE value="Changes: &#10;- styling components&#10;- Link replaced with Navlink&#10;- added activeClass to Navlink&#10;- moved current time to MainInfo.js component" />
+    <MESSAGE value="Changes: &#10;- styling components&#10;- CityInfo.js styled&#10;- added search icon inside text input&#10;- added hero section" />
+    <MESSAGE value="Changes: &#10;- added logo, search and close icon&#10;- clicking on search icon submits the form&#10;- clicking on x icon clears the input text&#10;- x icon does not appear if input text is empty&#10;- destructured components" />
+    <MESSAGE value="Changes: &#10;- started autocomplete on input&#10;- moved error data from App.js to Alert.js" />
+    <MESSAGE value="Changes: &#10;- removed Alert.js and all alerts starting from Search.js component, to props and state... moved the rest to Errors.js&#10;- completed switch statement for error codes" />
+    <MESSAGE value="Changes: &#10;- removed current date and time&#10;- changed buttons color&#10;- changed body font&#10;- added credits for photo, icons, and logos" />
+    <MESSAGE value="Changes: &#10;- About page modifications&#10;- card items changes" />
+    <MESSAGE value="Changes: &#10;- added favicon and icons" />
+    <MESSAGE value="Changes: &#10;- added htpps as blocked request after deployment" />
+    <MESSAGE value="Changes: &#10;- added meta tag in index.html for upgrade-insecure-requests" />
+    <MESSAGE value="Changes: &#10;- added http instead of https because not displaying after deployment" />
+    <MESSAGE value="Changes: &#10;- added .idea folder to gitignore" />
+    <MESSAGE value="Changes: &#10;- removed .idea folder from gitignore" />
+    <option name="LAST_COMMIT_MESSAGE" value="Changes: &#10;- removed .idea folder from gitignore" />
+  </component>
+  <component name="WindowStateProjectService">
+    <state x="858" y="418" key="#ESLint" timestamp="1613846038927">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="858" y="418" key="#ESLint/0.0.1920.1040@0.0.1920.1040" timestamp="1613846038927" />
+    <state x="1151" y="329" key="#Notifications" timestamp="1613871061270">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="1151" y="329" key="#Notifications/0.0.1920.1040@0.0.1920.1040" timestamp="1613871061270" />
+    <state x="410" y="106" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1613783749094">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="410" y="106" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1613783749094" />
+    <state x="763" y="232" key="#com.intellij.ide.util.ExportDialog" timestamp="1614196665074">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="763" y="232" key="#com.intellij.ide.util.ExportDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1614196665074" />
+    <state x="624" y="207" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog" timestamp="1614613047865">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="624" y="207" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1614613047865" />
+    <state x="433" y="0" width="1088" height="1040" key="CommitChangelistDialog2" timestamp="1614721387279">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="433" y="0" width="1088" height="1040" key="CommitChangelistDialog2/0.0.1920.1040@0.0.1920.1040" timestamp="1614721387279" />
+    <state x="787" y="100" width="1031" height="843" key="DiffContextDialog" timestamp="1614012197913">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="787" y="100" width="1031" height="843" key="DiffContextDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1614012197913" />
+    <state x="1001" y="217" key="FileChooserDialogImpl" timestamp="1613827297361">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="1001" y="217" key="FileChooserDialogImpl/0.0.1920.1040@0.0.1920.1040" timestamp="1613827297361" />
+    <state x="801" y="399" key="Github.ShareDialog" timestamp="1613872855671">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="801" y="399" key="Github.ShareDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1613872855671" />
+    <state width="1452" height="251" key="GridCell.Tab.0.bottom" timestamp="1614721592479">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state width="1452" height="251" key="GridCell.Tab.0.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1614721592479" />
+    <state width="1452" height="251" key="GridCell.Tab.0.center" timestamp="1614721592479">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state width="1452" height="251" key="GridCell.Tab.0.center/0.0.1920.1040@0.0.1920.1040" timestamp="1614721592479" />
+    <state width="1452" height="251" key="GridCell.Tab.0.left" timestamp="1614721592479">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state width="1452" height="251" key="GridCell.Tab.0.left/0.0.1920.1040@0.0.1920.1040" timestamp="1614721592479" />
+    <state width="1452" height="251" key="GridCell.Tab.0.right" timestamp="1614721592479">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state width="1452" height="251" key="GridCell.Tab.0.right/0.0.1920.1040@0.0.1920.1040" timestamp="1614721592479" />
+    <state x="686" y="194" key="IDE.errors.dialog" timestamp="1614719915003">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="686" y="194" key="IDE.errors.dialog/0.0.1920.1040@0.0.1920.1040" timestamp="1614719915003" />
+    <state x="122" y="82" width="1295" height="913" key="SettingsEditor" timestamp="1614610239963">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="122" y="82" width="1295" height="913" key="SettingsEditor/0.0.1920.1040@0.0.1920.1040" timestamp="1614610239963" />
+    <state x="798" y="415" key="VCS.ChangelistChooser" timestamp="1614012049040">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="798" y="415" key="VCS.ChangelistChooser/0.0.1920.1040@0.0.1920.1040" timestamp="1614012049040" />
+    <state x="1098" y="403" key="VCS.EditChangelistDialog" timestamp="1613944259997">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="1098" y="403" key="VCS.EditChangelistDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1613944259997" />
+    <state x="452" y="189" key="Vcs.Push.Dialog.v2" timestamp="1614721402857">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="452" y="189" key="Vcs.Push.Dialog.v2/0.0.1920.1040@0.0.1920.1040" timestamp="1614721402857" />
+    <state x="1051" y="416" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1614555462555">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="1051" y="416" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.0.1920.1040@0.0.1920.1040" timestamp="1614555462555" />
+    <state x="851" y="63" width="1067" height="975" key="dock-window-1" timestamp="1614008227738">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="851" y="63" width="1067" height="975" key="dock-window-1/0.0.1920.1040@0.0.1920.1040" timestamp="1614008227738" />
+    <state x="665" y="233" key="run.anything.popup" timestamp="1614554619870">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="665" y="233" key="run.anything.popup/0.0.1920.1040@0.0.1920.1040" timestamp="1614554619870" />
+    <state x="923" y="5" width="840" height="1034" key="search.everywhere.popup" timestamp="1614630980050">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="923" y="5" width="840" height="1034" key="search.everywhere.popup/0.0.1920.1040@0.0.1920.1040" timestamp="1614630980050" />
+  </component>
+</project>
