@@ -13,7 +13,6 @@ import MainInfo from './components/Info/MainInfo';
 import Navbar from './components/Navbar';
 import Search from "./components/Search";
 
-console.log(process.env);
 
 class App extends Component {
 
@@ -32,7 +31,7 @@ class App extends Component {
 
         try {
             const response = await axios.get(
-                `http://api.weatherapi.com/v1/current.json?key=
+                `https://api.weatherapi.com/v1/current.json?key=
                 ${process.env.REACT_APP_WEATHER_API_KEY}
                 &q=${text}`)
                 .then(x => new Promise(resolve => setTimeout(() => resolve(x), 1000)));
