@@ -37,12 +37,6 @@ class App extends Component {
                 &q=${text}`)
                 .then(x => new Promise(resolve => setTimeout(() => resolve(x), 1000)));
 
-            /* const autocomplete = await axios.get(
-                 `http://api.weatherapi.com/v1/search.json?key=${process.env.REACT_APP_WEATHER_API_KEY}&q=mia`
-             );
-             console.log(autocomplete);
-            */
-
             this.setState({
                 cityInfo: response.data.location,
                 weatherInfo: response.data.current,
