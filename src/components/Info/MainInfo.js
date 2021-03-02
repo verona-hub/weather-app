@@ -22,7 +22,8 @@ const MainInfo = ({ spinner, cityInfoProp, weatherInfoProp, weatherInfoCondition
             return (
                 <div>
                     <div className="MainInfo-header">
-                        <h2> Current weather conditions in: { name }, { country } </h2>
+                        <h2> Current weather conditions in: </h2>
+                        <h2> { name }, { country } </h2>
                     </div>
                     <WeatherInfo
                         weatherInfoProp={ weatherInfoProp }
