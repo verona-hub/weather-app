@@ -25,7 +25,12 @@
     </select>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="91688631-f2a5-4013-94aa-b5015acd594f" name="Default Changelist" comment="" />
+    <list default="true" id="91688631-f2a5-4013-94aa-b5015acd594f" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/.idea/codeStyles/codeStyleConfig.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/dictionaries/A.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -149,6 +154,7 @@
       <workItem from="1614627900835" duration="8497000" />
       <workItem from="1614696868741" duration="6205000" />
       <workItem from="1614719812790" duration="1732000" />
+      <workItem from="1614721611905" duration="277000" />
     </task>
     <task id="LOCAL-00001" summary="First upload:&#10;- created components&#10;- created state&#10;- Weather Api is linked">
       <created>1613873022531</created>
@@ -416,7 +422,14 @@
       <option name="project" value="LOCAL" />
       <updated>1614721388701</updated>
     </task>
-    <option name="localTasksCounter" value="39" />
+    <task id="LOCAL-00039" summary="Changes: &#10;- removed .idea folder from gitignore">
+      <created>1614721664383</created>
+      <option name="number" value="00039" />
+      <option name="presentableId" value="LOCAL-00039" />
+      <option name="project" value="LOCAL" />
+      <updated>1614721664383</updated>
+    </task>
+    <option name="localTasksCounter" value="40" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -505,10 +518,10 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="624" y="207" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1614613047865" />
-    <state x="433" y="0" width="1088" height="1040" key="CommitChangelistDialog2" timestamp="1614721387279">
+    <state x="433" y="0" width="1088" height="1040" key="CommitChangelistDialog2" timestamp="1614721663109">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="433" y="0" width="1088" height="1040" key="CommitChangelistDialog2/0.0.1920.1040@0.0.1920.1040" timestamp="1614721387279" />
+    <state x="433" y="0" width="1088" height="1040" key="CommitChangelistDialog2/0.0.1920.1040@0.0.1920.1040" timestamp="1614721663109" />
     <state x="787" y="100" width="1031" height="843" key="DiffContextDialog" timestamp="1614012197913">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
@@ -537,10 +550,10 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state width="1452" height="251" key="GridCell.Tab.0.right/0.0.1920.1040@0.0.1920.1040" timestamp="1614721592479" />
-    <state x="686" y="194" key="IDE.errors.dialog" timestamp="1614719915003">
+    <state x="686" y="194" key="IDE.errors.dialog" timestamp="1614721631668">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="686" y="194" key="IDE.errors.dialog/0.0.1920.1040@0.0.1920.1040" timestamp="1614719915003" />
+    <state x="686" y="194" key="IDE.errors.dialog/0.0.1920.1040@0.0.1920.1040" timestamp="1614721631668" />
     <state x="122" y="82" width="1295" height="913" key="SettingsEditor" timestamp="1614610239963">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
@@ -553,10 +566,10 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="1098" y="403" key="VCS.EditChangelistDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1613944259997" />
-    <state x="452" y="189" key="Vcs.Push.Dialog.v2" timestamp="1614721402857">
+    <state x="452" y="189" key="Vcs.Push.Dialog.v2" timestamp="1614721673017">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="452" y="189" key="Vcs.Push.Dialog.v2/0.0.1920.1040@0.0.1920.1040" timestamp="1614721402857" />
+    <state x="452" y="189" key="Vcs.Push.Dialog.v2/0.0.1920.1040@0.0.1920.1040" timestamp="1614721673017" />
     <state x="1051" y="416" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1614555462555">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
