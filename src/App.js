@@ -37,10 +37,11 @@ class App extends Component {
                 &q=${text}`)
                 .then(x => new Promise(resolve => setTimeout(() => resolve(x), 1000)));
 
-            const autocomplete = await axios.get(
-                `http://api.weatherapi.com/v1/search.json?key=011e53609c2a4350aed01926212002&q=mia`
-            );
-            // console.log(autocomplete);
+            /* const autocomplete = await axios.get(
+                 `http://api.weatherapi.com/v1/search.json?key=${process.env.REACT_APP_WEATHER_API_KEY}&q=mia`
+             );
+             console.log(autocomplete);
+            */
 
             this.setState({
                 cityInfo: response.data.location,
@@ -73,7 +74,7 @@ class App extends Component {
 
     render () {
         const {cityInfo, weatherInfo, weatherInfoCondition, spinner,
-               errorMessage, errorCode} = this.state;
+            errorMessage, errorCode} = this.state;
         const { searchCity, clearContent } = this;
 
         return (
