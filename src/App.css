@@ -45,13 +45,11 @@ img {
   text-align: center;
 }
 
-.flex {
-  display: flex;
-  flex-wrap: wrap;
-}
 
 
-/* Navbar */
+/*
++ Navbar
+*/
 .header {
   background: url(img/sky.jpg) no-repeat top;
   background-size: 100vw 90vh;
@@ -100,7 +98,9 @@ img {
 
 
 
-/* Search */
+/*
++ Search
+*/
 .Search {
   margin: 1.2rem auto 0;
 }
@@ -122,7 +122,9 @@ form {
 
 
 
-/* Input */
+/*
++ Input
+*/
 .search-icon,
 .close-icon {
   cursor: pointer;
@@ -170,7 +172,9 @@ button {
 
 
 
-/* Button */
+/*
++ Button
+*/
 .button {
   background: var(--white);
   border: none;
@@ -219,7 +223,9 @@ button {
 
 
 
-/* Errors */
+/*
++ Alert
+*/
 .alert {
   background: var(--red);
   color: var(--white);
@@ -231,14 +237,18 @@ button {
 
 
 
-/* Style */
+/*
++ Style
+*/
 .italic {
   font-style: italic;
 }
 
 
 
-/* Components */
+/*
++ Components
+*/
 .MainInfo-header,
 .WeatherInfo,
 .CityInfo{
@@ -248,7 +258,9 @@ button {
 
 
 
-/* MainInfo */
+/*
++ MainInfo
+*/
 .card {
   align-items: center;
   background-color: var(--white);
@@ -274,7 +286,9 @@ button {
 
 
 
-/* WeatherInfo */
+/*
++ WeatherInfo
+*/
 .WeatherInfo {
   /*border: 1px solid #3b3b3b;*/
 }
@@ -334,40 +348,50 @@ button {
 
 
 
-/* CityInfo */
-.CityInfo {
-  /*border: 1px solid #3b3b3b;*/
-}
-
+/*
++ CityInfo
+*/
 .CityInfo .title,
-.AirQualityInfo .title {
+.AirQualityInfo .title,
+.Astronomy .title {
   margin: 3vw;
 }
 
 .CityInfo .main,
-.AirQualityInfo .main {
+.AirQualityInfo .main,
+.Astronomy .main {
   margin: 0 0 3vw;
   width: calc(50% - 60px);
 }
 
 
- /*  AirQualityInfo  */
-.AirQualityInfo {
-   width: 50%;
+/*
++ AirQualityInfo
++ Astronomy
+
+*/
+.air-astro {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  margin: 5vh auto;
+  width: 100%;
 }
-.AirQualityInfo .main {
+
+.AirQualityInfo,
+.Astronomy {
+  margin: 0;
+  width: 48%;
+}
+.AirQualityInfo .main,
+.Astronomy .main {
   width: 70%;
 }
 
 
-
-/* Astronomy */
-.Astronomy {
-  width: 50%;
-}
-
-
- /* About */
+/*
++ About
+*/
 .About section:not(.about-header) {
   margin: 15vh 0;
 }
@@ -410,11 +434,20 @@ button {
 
 
 
-/* Mobile */
+/*
++ Mobile
+*/
 @media (max-width: 1240px) {
   .button-block {
     width: 50%;
   }
+
+  .AirQualityInfo,
+  .Astronomy {
+    margin-bottom: 5vh;
+    width: 100%;
+  }
+
 }
 
 
@@ -422,7 +455,6 @@ button {
   form {
     width: 70%;
   }
-
   .WeatherInfo .bottom-content {
     display: block;
   }
@@ -434,4 +466,5 @@ button {
     margin: 5vh auto;
     width: 80%;
   }
+
 }

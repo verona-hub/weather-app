@@ -34,7 +34,7 @@ const MainInfo = ({ weatherInfoProp, weatherInfoCondition, cityInfoProp, airQual
                     <CityInfo
                         cityInfoProp={ cityInfoProp }
                     />
-                    <div className="flex">
+                    <div className="air-astro">
                         <AirQualityInfo
                             airQuality={ airQuality }
                         />
