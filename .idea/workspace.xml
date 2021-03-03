@@ -26,8 +26,14 @@
     </select>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="91688631-f2a5-4013-94aa-b5015acd594f" name="Default Changelist" comment="">
+    <list default="true" id="91688631-f2a5-4013-94aa-b5015acd594f" name="Default Changelist" comment="Changes: &#10;- created AirQualityInfo.js">
+      <change afterPath="$PROJECT_DIR$/src/components/Info/AirQualityInfo.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/public/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/App.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/App.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/App.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/App.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Info/CityInfo.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Info/CityInfo.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Info/MainInfo.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Info/MainInfo.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -152,7 +158,7 @@
       <workItem from="1614627900835" duration="8497000" />
       <workItem from="1614696868741" duration="6205000" />
       <workItem from="1614719812790" duration="1732000" />
-      <workItem from="1614721611905" duration="3065000" />
+      <workItem from="1614721611905" duration="11167000" />
     </task>
     <task id="LOCAL-00001" summary="First upload:&#10;- created components&#10;- created state&#10;- Weather Api is linked">
       <created>1613873022531</created>
@@ -462,7 +468,14 @@
       <option name="project" value="LOCAL" />
       <updated>1614724764850</updated>
     </task>
-    <option name="localTasksCounter" value="45" />
+    <task id="LOCAL-00045" summary="Changes: &#10;- added https instead of http">
+      <created>1614725591622</created>
+      <option name="number" value="00045" />
+      <option name="presentableId" value="LOCAL-00045" />
+      <option name="project" value="LOCAL" />
+      <updated>1614725591622</updated>
+    </task>
+    <option name="localTasksCounter" value="46" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -503,7 +516,6 @@
     <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="Changes: &#10;- created MainInfo.js component and from there CityInfo and WeatherInfo are called (spinner logic is now tied to MainInfo)" />
     <MESSAGE value="Changes: &#10;- added favicon.svg&#10;- input text is set to empty after form is submitted&#10;- showClearButton is true if spinner is set to false (clear button does not show while spinner is present on screen)" />
     <MESSAGE value="Changes: &#10;- added favicon.svg" />
     <MESSAGE value="Changes: &#10;- created ErrorApi.js to handle '400:bad request' api error and display to the user&#10;- created alert if search input is empty&#10;- moved components to folders" />
@@ -528,7 +540,8 @@
     <MESSAGE value="Changes: &#10;- small change" />
     <MESSAGE value="Changes: &#10;- http instead of https" />
     <MESSAGE value="Changes: &#10;- added unsecure request" />
-    <option name="LAST_COMMIT_MESSAGE" value="Changes: &#10;- added unsecure request" />
+    <MESSAGE value="Changes: &#10;- added https instead of http" />
+    <option name="LAST_COMMIT_MESSAGE" value="Changes: &#10;- added https instead of http" />
   </component>
   <component name="WindowStateProjectService">
     <state x="858" y="418" key="#ESLint" timestamp="1613846038927">
@@ -551,10 +564,10 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="624" y="207" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1614613047865" />
-    <state x="433" y="0" width="1088" height="1040" key="CommitChangelistDialog2" timestamp="1614724763525">
+    <state x="433" y="0" width="1088" height="1040" key="CommitChangelistDialog2" timestamp="1614729156140">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="433" y="0" width="1088" height="1040" key="CommitChangelistDialog2/0.0.1920.1040@0.0.1920.1040" timestamp="1614724763525" />
+    <state x="433" y="0" width="1088" height="1040" key="CommitChangelistDialog2/0.0.1920.1040@0.0.1920.1040" timestamp="1614729156140" />
     <state x="787" y="100" width="1031" height="843" key="DiffContextDialog" timestamp="1614012197913">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
@@ -567,22 +580,22 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="801" y="399" key="Github.ShareDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1613872855671" />
-    <state width="1452" height="251" key="GridCell.Tab.0.bottom" timestamp="1614722887805">
+    <state width="1864" height="256" key="GridCell.Tab.0.bottom" timestamp="1614733380823">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1452" height="251" key="GridCell.Tab.0.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1614722887805" />
-    <state width="1452" height="251" key="GridCell.Tab.0.center" timestamp="1614722887805">
+    <state width="1864" height="256" key="GridCell.Tab.0.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1614733380823" />
+    <state width="1864" height="256" key="GridCell.Tab.0.center" timestamp="1614733380823">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1452" height="251" key="GridCell.Tab.0.center/0.0.1920.1040@0.0.1920.1040" timestamp="1614722887805" />
-    <state width="1452" height="251" key="GridCell.Tab.0.left" timestamp="1614722887805">
+    <state width="1864" height="256" key="GridCell.Tab.0.center/0.0.1920.1040@0.0.1920.1040" timestamp="1614733380823" />
+    <state width="1864" height="256" key="GridCell.Tab.0.left" timestamp="1614733380823">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1452" height="251" key="GridCell.Tab.0.left/0.0.1920.1040@0.0.1920.1040" timestamp="1614722887805" />
-    <state width="1452" height="251" key="GridCell.Tab.0.right" timestamp="1614722887805">
+    <state width="1864" height="256" key="GridCell.Tab.0.left/0.0.1920.1040@0.0.1920.1040" timestamp="1614733380823" />
+    <state width="1864" height="256" key="GridCell.Tab.0.right" timestamp="1614733380823">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1452" height="251" key="GridCell.Tab.0.right/0.0.1920.1040@0.0.1920.1040" timestamp="1614722887805" />
+    <state width="1864" height="256" key="GridCell.Tab.0.right/0.0.1920.1040@0.0.1920.1040" timestamp="1614733380823" />
     <state x="686" y="194" key="IDE.errors.dialog" timestamp="1614721631668">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
@@ -599,10 +612,10 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="1098" y="403" key="VCS.EditChangelistDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1613944259997" />
-    <state x="452" y="189" key="Vcs.Push.Dialog.v2" timestamp="1614724768426">
+    <state x="452" y="189" key="Vcs.Push.Dialog.v2" timestamp="1614725595315">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="452" y="189" key="Vcs.Push.Dialog.v2/0.0.1920.1040@0.0.1920.1040" timestamp="1614724768426" />
+    <state x="452" y="189" key="Vcs.Push.Dialog.v2/0.0.1920.1040@0.0.1920.1040" timestamp="1614725595315" />
     <state x="1051" y="416" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1614555462555">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>

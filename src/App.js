@@ -20,6 +20,7 @@ class App extends Component {
         cityInfo: [],
         weatherInfo: [],
         weatherInfoCondition: [],
+        airQuality: [],
         spinner: false,
         errorMessage: null,
         errorCode: null
@@ -33,13 +34,16 @@ class App extends Component {
             const response = await axios.get(
                 `https://api.weatherapi.com/v1/current.json?key=
                 ${process.env.REACT_APP_WEATHER_API_KEY}
-                &q=${text}`)
+                &q=${text}
+                &aqi=yes`)
                 .then(x => new Promise(resolve => setTimeout(() => resolve(x), 1000)));
+
 
             this.setState({
                 cityInfo: response.data.location,
                 weatherInfo: response.data.current,
                 weatherInfoCondition: response.data.current.condition,
+                airQuality: response.data.current.air_quality,
                 spinner: false,
                 errorMessage: null
             });
@@ -56,6 +60,8 @@ class App extends Component {
             setTimeout(() => this.setState({ errorMessage: null }), 2500);
         }
     }
+
+
 
     clearContent = () => {
         this.setState({
@@ -88,9 +94,10 @@ class App extends Component {
                                            errorCode={ errorCode }
                                        />
                                        <MainInfo
-                                           cityInfoProp={ cityInfo }
+                                           airQuality={this.state.airQuality}
                                            weatherInfoProp={ weatherInfo }
                                            weatherInfoCondition={ weatherInfoCondition }
+                                           cityInfoProp={ cityInfo }
                                            spinner={ spinner }
                                        />
                                    </Fragment>

@@ -7,7 +7,8 @@ const CityInfo = ({ cityInfoProp }) => {
 
     return (
         <div className="CityInfo card">
-            <div className="CityInfo-main">
+            <h2 className="title"> Location details </h2>
+            <div className="main">
                 <div className="spaced"><span> City:</span> { name } </div>
                 <div className="spaced"><span> Region:</span> { region } </div>
                 <div className="spaced"><span> Country:</span> { country }</div>

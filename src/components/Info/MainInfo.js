@@ -4,12 +4,13 @@ import React from 'react';
 import * as _ from 'underscore';
 
 // Components
+import AirQualityInfo from "./AirQualityInfo";
 import CityInfo from "./CityInfo";
 import Spinner from "../Spinner";
 import WeatherInfo from "./WeatherInfo";
 
 
-const MainInfo = ({ spinner, cityInfoProp, weatherInfoProp, weatherInfoCondition }) => {
+const MainInfo = ({ airQuality, weatherInfoProp, weatherInfoCondition, cityInfoProp, spinner }) => {
     const { name, country } = cityInfoProp;
 
 
@@ -21,8 +22,11 @@ const MainInfo = ({ spinner, cityInfoProp, weatherInfoProp, weatherInfoCondition
         if (_.size(cityInfoProp) > 0 || _.size(weatherInfoProp) > 0) {
             return (
                 <div>
-                    <div className="MainInfo-header">
-                        <h2> Current weather conditions in: </h2>
+                    <AirQualityInfo
+                        airQuality={ airQuality }
+                    />
+                    <div className="MainInfo-header card">
+                        <h2> Realtime weather conditions in: </h2>
                         <h2> { name }, { country } </h2>
                     </div>
                     <WeatherInfo
