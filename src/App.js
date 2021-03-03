@@ -21,6 +21,7 @@ class App extends Component {
         weatherInfo: [],
         weatherInfoCondition: [],
         airQuality: [],
+        astronomy: [],
         spinner: false,
         errorMessage: null,
         errorCode: null
@@ -31,19 +32,23 @@ class App extends Component {
         this.setState({ spinner: true })
 
         try {
-            const response = await axios.get(
-                `https://api.weatherapi.com/v1/current.json?key=
+            const response = await axios.all([
+                axios.get(`https://api.weatherapi.com/v1/current.json?key=
                 ${process.env.REACT_APP_WEATHER_API_KEY}
                 &q=${text}
-                &aqi=yes`)
-                .then(x => new Promise(resolve => setTimeout(() => resolve(x), 1000)));
-
+                &aqi=yes`),
+                axios.get(`http://api.weatherapi.com/v1/astronomy.json?key=
+                ${process.env.REACT_APP_WEATHER_API_KEY}
+                &q=${text}
+                `)
+            ]).then(x => new Promise(resolve => setTimeout(() => resolve(x), 1000)));
 
             this.setState({
-                cityInfo: response.data.location,
-                weatherInfo: response.data.current,
-                weatherInfoCondition: response.data.current.condition,
-                airQuality: response.data.current.air_quality,
+                cityInfo: response[0].data.location,
+                weatherInfo: response[0].data.current,
+                weatherInfoCondition: response[0].data.current.condition,
+                airQuality: response[0].data.current.air_quality,
+                astronomy: response[1].data.astronomy.astro,
                 spinner: false,
                 errorMessage: null
             });
@@ -60,7 +65,6 @@ class App extends Component {
             setTimeout(() => this.setState({ errorMessage: null }), 2500);
         }
     }
-
 
 
     clearContent = () => {
@@ -94,10 +98,11 @@ class App extends Component {
                                            errorCode={ errorCode }
                                        />
                                        <MainInfo
-                                           airQuality={this.state.airQuality}
                                            weatherInfoProp={ weatherInfo }
                                            weatherInfoCondition={ weatherInfoCondition }
                                            cityInfoProp={ cityInfo }
+                                           airQuality={ this.state.airQuality }
+                                           astronomy={ this.state.astronomy }
                                            spinner={ spinner }
                                        />
                                    </Fragment>

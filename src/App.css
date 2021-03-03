@@ -45,6 +45,10 @@ img {
   text-align: center;
 }
 
+.flex {
+  display: flex;
+  flex-wrap: wrap;
+}
 
 
 /* Navbar */
@@ -306,7 +310,8 @@ button {
 
 .WeatherInfo span,
 .CityInfo span,
-.AirQualityInfo span {
+.AirQualityInfo span,
+.Astronomy span {
   font-size: 18px;
   text-align: left;
 }
@@ -348,12 +353,18 @@ button {
 
  /*  AirQualityInfo  */
 .AirQualityInfo {
-  width: 50%;
+   width: 50%;
 }
 .AirQualityInfo .main {
   width: 70%;
 }
 
+
+
+/* Astronomy */
+.Astronomy {
+  width: 50%;
+}
 
 
  /* About */
