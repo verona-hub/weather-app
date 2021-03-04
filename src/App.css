@@ -14,6 +14,10 @@
   --dark-blue: #286ba2;
 }
 
+.greenClass {
+  background: green;
+}
+
 * {
   box-sizing: border-box;
   margin: 0;
@@ -31,6 +35,11 @@ body {
 a {
   color: var(--dark-grey);
   text-decoration: none;
+}
+
+.credits a:hover {
+  color: var(--dark-blue) ;
+  opacity: 0.6;
 }
 
 img {
@@ -368,8 +377,13 @@ button {
 /*
 + AirQualityInfo
 + Astronomy
-
 */
+
+.AirQualityInfo .value {
+  padding: 5px 0;
+}
+
+
 .air-astro {
   display: flex;
   flex-wrap: wrap;
@@ -393,7 +407,7 @@ button {
 + About
 */
 .About section:not(.about-header) {
-  margin: 15vh 0;
+  margin: 15vh 0 3vh;
 }
 
 .About .title {
@@ -429,7 +443,20 @@ button {
   opacity: 1;
 }
 
+.api {
+  margin-top: 15vh;
+}
 
+.api-img {
+  margin: 0 20px;
+  position: relative;
+  top: 10px;
+  width: 80px;
+}
+
+.api a img:hover {
+  opacity: 1;
+}
 
 
 

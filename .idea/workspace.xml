@@ -26,12 +26,12 @@
     </select>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="91688631-f2a5-4013-94aa-b5015acd594f" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/dictionaries/A.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dictionaries/A.xml" afterDir="false" />
+    <list default="true" id="91688631-f2a5-4013-94aa-b5015acd594f" name="Default Changelist" comment="Changes: &#10;- created background color for Nitrogen Dioxide based on its value">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/App.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/App.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Info/Astronomy.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Info/Astronomy.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Info/MainInfo.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Info/MainInfo.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/App.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/App.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/About.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/About.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Info/AirQualityInfo.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Info/AirQualityInfo.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -82,6 +82,7 @@
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="full.screen.before.presentation.mode" value="false" />
+    <property name="js.last.introduce.type" value="LET" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$/src/img" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.detected.package.jscs" value="true" />
@@ -158,7 +159,7 @@
       <workItem from="1614719812790" duration="1732000" />
       <workItem from="1614721611905" duration="11348000" />
       <workItem from="1614784365765" duration="6234000" />
-      <workItem from="1614799379358" duration="3868000" />
+      <workItem from="1614799379358" duration="14322000" />
     </task>
     <task id="LOCAL-00001" summary="First upload:&#10;- created components&#10;- created state&#10;- Weather Api is linked">
       <created>1613873022531</created>
@@ -489,7 +490,14 @@
       <option name="project" value="LOCAL" />
       <updated>1614790692530</updated>
     </task>
-    <option name="localTasksCounter" value="48" />
+    <task id="LOCAL-00048" summary="Changes: &#10;- styling components&#10;- added .idea directory to gitignore">
+      <created>1614803750904</created>
+      <option name="number" value="00048" />
+      <option name="presentableId" value="LOCAL-00048" />
+      <option name="project" value="LOCAL" />
+      <updated>1614803750904</updated>
+    </task>
+    <option name="localTasksCounter" value="49" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -530,7 +538,6 @@
     <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="Changes: &#10;- created ErrorApi.js to handle '400:bad request' api error and display to the user&#10;- created alert if search input is empty&#10;- moved components to folders" />
     <MESSAGE value="Changes: &#10;- removed ErrorApi.js and placed content inside Alert.js&#10;- refactored Info folder&#10;- added setTimeout on errorMessage inside catch(err) response" />
     <MESSAGE value="Changes: &#10;- added current Date and Time&#10;- styling Info components" />
     <MESSAGE value="Changes: &#10;- styling components&#10;- when an empty search or a search with an error is made, the components state is reset to empty" />
@@ -555,7 +562,8 @@
     <MESSAGE value="Changes: &#10;- added https instead of http" />
     <MESSAGE value="Changes: &#10;- created AirQualityInfo.js" />
     <MESSAGE value="Changes: &#10;- created Astronomy.js with current sun and moon information" />
-    <option name="LAST_COMMIT_MESSAGE" value="Changes: &#10;- created Astronomy.js with current sun and moon information" />
+    <MESSAGE value="Changes: &#10;- styling components&#10;- added .idea directory to gitignore" />
+    <option name="LAST_COMMIT_MESSAGE" value="Changes: &#10;- styling components&#10;- added .idea directory to gitignore" />
   </component>
   <component name="WindowStateProjectService">
     <state x="858" y="418" key="#ESLint" timestamp="1613846038927">
@@ -574,14 +582,14 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="763" y="232" key="#com.intellij.ide.util.ExportDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1614196665074" />
-    <state x="624" y="207" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog" timestamp="1614613047865">
+    <state x="624" y="207" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog" timestamp="1614816839340">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="624" y="207" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1614613047865" />
-    <state x="433" y="0" width="1088" height="1040" key="CommitChangelistDialog2" timestamp="1614790690590">
+    <state x="624" y="207" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1614816839340" />
+    <state x="433" y="0" width="1088" height="1040" key="CommitChangelistDialog2" timestamp="1614813555503">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="433" y="0" width="1088" height="1040" key="CommitChangelistDialog2/0.0.1920.1040@0.0.1920.1040" timestamp="1614790690590" />
+    <state x="433" y="0" width="1088" height="1040" key="CommitChangelistDialog2/0.0.1920.1040@0.0.1920.1040" timestamp="1614813555503" />
     <state x="787" y="100" width="1031" height="843" key="DiffContextDialog" timestamp="1614012197913">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
@@ -626,10 +634,10 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="1098" y="403" key="VCS.EditChangelistDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1613944259997" />
-    <state x="452" y="189" key="Vcs.Push.Dialog.v2" timestamp="1614790695962">
+    <state x="452" y="189" key="Vcs.Push.Dialog.v2" timestamp="1614803755184">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="452" y="189" key="Vcs.Push.Dialog.v2/0.0.1920.1040@0.0.1920.1040" timestamp="1614790695962" />
+    <state x="452" y="189" key="Vcs.Push.Dialog.v2/0.0.1920.1040@0.0.1920.1040" timestamp="1614803755184" />
     <state x="1051" y="416" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1614555462555">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>

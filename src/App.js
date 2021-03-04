@@ -74,8 +74,8 @@ class App extends Component {
             weatherInfoCondition: []
         });
     }
-
     render () {
+
         const {cityInfo, weatherInfo, weatherInfoCondition, spinner,
             errorMessage, errorCode} = this.state;
         const { searchCity, clearContent } = this;

@@ -34,6 +34,13 @@ const About = () => {
                     <p>Main photo by: <a href="https://unsplash.com/@thesollers?utm_source=unsplash&amp;utm_medium=referral&amp;utm_content=creditCopyText">Anton Darius</a> on <a href="https://unsplash.com/?utm_source=unsplash&amp;utm_medium=referral&amp;utm_content=creditCopyText">Unsplash</a></p>
                     <p>Main app logo, search icon, "x" icon, love icon, and Github icon by: <a href="https://www.freepik.com" title="Freepik">Freepik</a> from <a href="https://www.flaticon.com/" title="Flaticon">www.flaticon.com</a></p>
                     <p>React logo by: <a href="https://www.flaticon.com/authors/kiranshastry" title="Kiranshastry">Kiranshastry</a> from <a href="https://www.flaticon.com/" title="Flaticon">www.flaticon.com</a></p>
+
+                    <div className="api">
+                        Powered by <a href="https://www.weatherapi.com/" title="Free Weather API">WeatherAPI.com</a>
+                        <a href="https://www.weatherapi.com/" title="Free Weather API">
+                            <img src='//cdn.weatherapi.com/v4/images/weatherapi_logo.png' alt="Weather data by WeatherAPI.com" className="api-img"/>
+                        </a>
+                    </div>
                 </section>
             </div>
         </div>
