@@ -4,14 +4,14 @@ import React from 'react';
 import * as _ from 'underscore';
 
 // Components
-import AirQualityInfo from "./AirQualityInfo";
+import AirQuality from "./AirQuality";
 import Astronomy from './Astronomy';
 import CityInfo from "./CityInfo";
 import Spinner from "../Spinner";
-import WeatherInfo from "./WeatherInfo";
+import Weather from "./Weather";
 
 
-const MainInfo = ({ weatherInfoProp, weatherInfoCondition, cityInfoProp, airQuality, astronomy, spinner }) => {
+const MainInfo = ({ weatherProp, weatherCondition, cityInfoProp, airQuality, astronomy, spinner }) => {
     const { name, country } = cityInfoProp;
 
 
@@ -20,23 +20,23 @@ const MainInfo = ({ weatherInfoProp, weatherInfoCondition, cityInfoProp, airQual
     }
 
     else {
-        if (_.size(cityInfoProp) > 0 || _.size(weatherInfoProp) > 0) {
+        if (_.size(cityInfoProp) > 0 || _.size(weatherProp) > 0) {
             return (
                 <div>
                     <div className="MainInfo-header card">
                         <h2> Realtime weather conditions in: </h2>
                         <h2> { name }, { country } </h2>
                     </div>
-                    <WeatherInfo
-                        weatherInfoProp={ weatherInfoProp }
-                        weatherInfoCondition={ weatherInfoCondition }
+                    <Weather
+                        weatherProp={ weatherProp }
+                        weatherCondition={ weatherCondition }
                     />
-                    <CityInfo
-                        cityInfoProp={ cityInfoProp }
+                    <AirQuality
+                        airQuality={ airQuality }
                     />
-                    <div className="air-astro">
-                        <AirQualityInfo
-                            airQuality={ airQuality }
+                    <div className="city-astro">
+                        <CityInfo
+                            cityInfoProp={ cityInfoProp }
                         />
                         <Astronomy
                             astronomy={ astronomy }

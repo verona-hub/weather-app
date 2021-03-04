@@ -252,18 +252,6 @@ button {
 
 
 /*
-+ Components
-*/
-.MainInfo-header,
-.WeatherInfo,
-.CityInfo{
- /* border-radius: 4px;
-  box-shadow: 1px 1px 6px 2px rgb(165, 164, 164);*/
-}
-
-
-
-/*
 + MainInfo
 */
 .card {
@@ -292,28 +280,28 @@ button {
 
 
 /*
-+ WeatherInfo
++ Weather
 */
-.WeatherInfo {
+.Weather {
   /*border: 1px solid #3b3b3b;*/
 }
 
-.WeatherInfo .top-content {
+.Weather .top-content {
   flex-wrap: wrap;
   margin-top: 20px;
   min-height: 20vh;
 }
 
-.WeatherInfo .card-top-header {
+.Weather .card-top-header {
   margin: 10px 10px 0 10px;
   text-align: center;
 }
 
-.WeatherInfo .card-top-main {
+.Weather .card-top-main {
   margin: 0 1vw 1vw;
 }
 
-.WeatherInfo .bottom-content {
+.Weather .bottom-content {
   display: flex;
   flex-wrap: wrap;
   justify-content: space-evenly;
@@ -321,66 +309,67 @@ button {
   width: 100%;
 }
 
-.WeatherInfo .bottom-left,
-.WeatherInfo .bottom-right {
+.Weather .bottom-left,
+.Weather .bottom-right {
   margin: 5vw 1vw;
   width: calc(50% - 60px);
 }
 
-.WeatherInfo span,
+.Weather span,
+.AirQuality span,
 .CityInfo span,
-.AirQualityInfo span,
 .Astronomy span {
   font-size: 18px;
   text-align: left;
 }
 
-.WeatherInfo img {
+.Weather img {
   width: 100px;
 }
 
 .spaced {
   align-items: center;
-  border-top: 1px solid dimgrey;
+  border-bottom: 1px solid dimgrey;
   display: flex;
   justify-content: space-between;
   padding: 5px 0;
 }
 
 .spaced:first-child {
-  border-top: none;
 }
 
+
+
+/*
++ + AirQuality
+*/
+
+.CityInfo .title,
+.AirQuality .title,
+.Astronomy .title {
+  margin: 5vh;
+}
+
+.AirQuality .value {
+  padding: 5px;
+}
+
+.AirQuality .main {
+  margin-bottom: 5vh;
+  width: 70%;
+}
+
+.ozone-index {
+  margin-left: 85px;
+}
 
 
 /*
 + CityInfo
-*/
-.CityInfo .title,
-.AirQualityInfo .title,
-.Astronomy .title {
-  margin: 3vw;
-}
-
-.CityInfo .main,
-.AirQualityInfo .main,
-.Astronomy .main {
-  margin: 0 0 3vw;
-  width: calc(50% - 60px);
-}
-
-
-/*
-+ AirQualityInfo
 + Astronomy
 */
 
-.AirQualityInfo .value {
-  padding: 5px;
-}
-
-
-.air-astro {
+.city-astro {
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
@@ -388,14 +377,20 @@ button {
   width: 100%;
 }
 
-.AirQualityInfo,
+.CityInfo,
 .Astronomy {
   margin: 0;
   width: 48%;
 }
-.AirQualityInfo .main,
+
+.CityInfo .main,
 .Astronomy .main {
+  margin-bottom: 5vh;
   width: 70%;
+}
+
+.Astronomy {
+  justify-content: normal;
 }
 
 
@@ -464,13 +459,14 @@ button {
   .button-block {
     width: 50%;
   }
+}
 
-  .AirQualityInfo,
+@media (max-width: 900px) {
+  .CityInfo,
   .Astronomy {
     margin-bottom: 5vh;
     width: 100%;
   }
-
 }
 
 
@@ -478,16 +474,19 @@ button {
   form {
     width: 70%;
   }
-  .WeatherInfo .bottom-content {
+  .oWeather .bottom-content {
     display: block;
   }
 
-  .WeatherInfo .bottom-left,
-  .WeatherInfo .bottom-right,
-  .CityInfo-main,
-  .AirQuality-main {
+  .Weather .bottom-left,
+  .Weather .bottom-right,
+  .CityInfo-main {
     margin: 5vh auto;
-    width: 80%;
+    width: 90%;
+  }
+
+  .AirQuality .main {
+    width: 90%;
   }
 
 }

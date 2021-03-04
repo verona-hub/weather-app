@@ -1,14 +1,14 @@
 import React from 'react';
 
 
-const WeatherInfo = ({ weatherInfoProp, weatherInfoCondition }) => {
+const Weather = ({ weatherProp, weatherCondition }) => {
 
     const { cloud, temp_c, feelslike_c, humidity, precip_mm, uv, vis_km,
-        pressure_mb, wind_kph, wind_dir } = weatherInfoProp;
-    const { icon, text } = weatherInfoCondition;
+        pressure_mb, wind_kph, wind_dir } = weatherProp;
+    const { icon, text } = weatherCondition;
 
     return (
-        <div className="WeatherInfo card">
+        <div className="Weather card">
             <div className="top-content">
                 <div className="card-top-header">
                     <img src={ icon } alt=""/>
@@ -37,4 +37,4 @@ const WeatherInfo = ({ weatherInfoProp, weatherInfoCondition }) => {
 };
 
 
-export default WeatherInfo;
+export default Weather;

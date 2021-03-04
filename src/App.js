@@ -18,8 +18,8 @@ class App extends Component {
 
     state = {
         cityInfo: [],
-        weatherInfo: [],
-        weatherInfoCondition: [],
+        weather: [],
+        weatherCondition: [],
         airQuality: [],
         astronomy: [],
         spinner: false,
@@ -45,8 +45,8 @@ class App extends Component {
 
             this.setState({
                 cityInfo: response[0].data.location,
-                weatherInfo: response[0].data.current,
-                weatherInfoCondition: response[0].data.current.condition,
+                weather: response[0].data.current,
+                weatherCondition: response[0].data.current.condition,
                 airQuality: response[0].data.current.air_quality,
                 astronomy: response[1].data.astronomy.astro,
                 spinner: false,
@@ -56,7 +56,7 @@ class App extends Component {
         } catch(err) {
             this.setState({
                 cityInfo: [],
-                weatherInfo: [],
+                weather: [],
                 spinner: false,
                 errorMessage: err.response.data.error.message,
                 errorCode: Object.entries(err.response.data.error)[0][1]
@@ -70,13 +70,13 @@ class App extends Component {
     clearContent = () => {
         this.setState({
             cityInfo: [],
-            weatherInfo: [],
-            weatherInfoCondition: []
+            weather: [],
+            weatherCondition: []
         });
     }
     render () {
 
-        const {cityInfo, weatherInfo, weatherInfoCondition, spinner,
+        const {cityInfo, weather, weatherCondition, spinner,
             errorMessage, errorCode} = this.state;
         const { searchCity, clearContent } = this;
 
@@ -91,15 +91,15 @@ class App extends Component {
                                        <Search
                                            searchCity={ searchCity }
                                            clearContent={ clearContent }
-                                           showClearButton={ _.size(cityInfo) > 0 && _.size(weatherInfo) > 0 && !spinner }
+                                           showClearButton={ _.size(cityInfo) > 0 && _.size(weather) > 0 && !spinner }
                                        />
                                        <Errors
                                            errorMessage={ errorMessage }
                                            errorCode={ errorCode }
                                        />
                                        <MainInfo
-                                           weatherInfoProp={ weatherInfo }
-                                           weatherInfoCondition={ weatherInfoCondition }
+                                           weatherProp={ weather }
+                                           weatherCondition={ weatherCondition }
                                            cityInfoProp={ cityInfo }
                                            airQuality={ this.state.airQuality }
                                            astronomy={ this.state.astronomy }
