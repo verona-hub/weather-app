@@ -29,7 +29,6 @@ class Search extends Component {
         this.setState({ text: '' });
     }
 
-
     render() {
         const { text } = this.state;
         const { onSubmit, onChange, clearContent, clearInput } = this;

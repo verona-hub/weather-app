@@ -160,7 +160,6 @@ input[type='text'] {
   font-size: 1.2rem;
   letter-spacing: 1px;
   padding: 1rem 1rem 1rem 4rem;
-  text-transform: capitalize;
   width: 100%;
 }
 
@@ -335,7 +334,8 @@ button {
   padding: 5px 0;
 }
 
-.spaced:first-child {
+.AirQuality .spaced {
+  border: none;
 }
 
 
@@ -348,14 +348,16 @@ button {
 .AirQuality .title,
 .Astronomy .title {
   margin: 5vh;
+  text-transform: uppercase;
 }
 
 .AirQuality .value {
-  padding: 5px;
+  padding: 2vh;
 }
 
 .AirQuality .main {
-  margin-bottom: 5vh;
+  border: 1px solid;
+  margin-bottom: 8vh;
   width: 70%;
 }
 
@@ -385,7 +387,7 @@ button {
 
 .CityInfo .main,
 .Astronomy .main {
-  margin-bottom: 5vh;
+  margin-bottom: 8vh;
   width: 70%;
 }
 
@@ -435,20 +437,14 @@ button {
 }
 
 .api {
-  margin-top: 15vh;
+  margin: 15vh 0 2vh;
 }
 
 .api-img {
-  margin: 0 20px;
-  position: relative;
-  top: 10px;
+  display: block;
+  margin: 10px auto;
   width: 80px;
 }
-
-.api a img:hover {
-  opacity: 1;
-}
-
 
 
 

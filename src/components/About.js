@@ -36,10 +36,10 @@ const About = () => {
                     <p>React logo by: <a href="https://www.flaticon.com/authors/kiranshastry" title="Kiranshastry">Kiranshastry</a> from <a href="https://www.flaticon.com/" title="Flaticon">www.flaticon.com</a></p>
 
                     <div className="api">
-                        Powered by <a href="https://www.weatherapi.com/" title="Free Weather API">WeatherAPI.com</a>
                         <a href="https://www.weatherapi.com/" title="Free Weather API">
                             <img src='//cdn.weatherapi.com/v4/images/weatherapi_logo.png' alt="Weather data by WeatherAPI.com" className="api-img"/>
                         </a>
+                        <p>Powered by <a href="https://www.weatherapi.com/" title="Free Weather API">WeatherAPI.com</a></p>
                     </div>
                 </section>
             </div>

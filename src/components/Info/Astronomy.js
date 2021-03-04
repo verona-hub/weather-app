@@ -2,7 +2,9 @@ import React from 'react';
 
 
 const Astronomy = ({ astronomy }) => {
-    
+
+    console.log(astronomy);
+
     const { sunrise, sunset, moonrise, moonset, moon_phase, moon_illumination } = astronomy;
 
     return (
