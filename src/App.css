@@ -14,10 +14,6 @@
   --dark-blue: #286ba2;
 }
 
-.greenClass {
-  background: green;
-}
-
 * {
   box-sizing: border-box;
   margin: 0;
@@ -380,7 +376,7 @@ button {
 */
 
 .AirQualityInfo .value {
-  padding: 5px 0;
+  padding: 5px;
 }
 
 

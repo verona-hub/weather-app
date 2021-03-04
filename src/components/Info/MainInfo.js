@@ -42,6 +42,12 @@ const MainInfo = ({ weatherInfoProp, weatherInfoCondition, cityInfoProp, airQual
                             astronomy={ astronomy }
                         />
                     </div>
+                    <div className="api">
+                        Powered by <a href="https://www.weatherapi.com/" title="Free Weather API">WeatherAPI.com</a>
+                        <a href="https://www.weatherapi.com/" title="Free Weather API">
+                            <img src='//cdn.weatherapi.com/v4/images/weatherapi_logo.png' alt="Weather data by WeatherAPI.com" className="api-img"/>
+                        </a>
+                    </div>
                 </div>
             );
         }
