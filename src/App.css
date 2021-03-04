@@ -319,7 +319,6 @@ button {
 .CityInfo span,
 .Astronomy span {
   font-size: 18px;
-  text-align: left;
 }
 
 .Weather img {
@@ -334,25 +333,16 @@ button {
   padding: 5px 0;
 }
 
-.AirQuality .spaced {
-  border-bottom: 1px solid;
-}
-
 
 
 /*
-+ + AirQuality
++  AirQuality
 */
-
 .CityInfo .title,
 .AirQuality .title,
 .Astronomy .title {
   margin: 5vh;
   text-transform: uppercase;
-}
-
-.AirQuality .value {
-  padding: 2vh;
 }
 
 .AirQuality .main {
@@ -361,10 +351,29 @@ button {
   width: 70%;
 }
 
-.ozone-index {
-  margin-left: 85px;
+.AirQuality .box {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  border-bottom: 1px solid dimgrey;
+  padding: 2vh;
 }
 
+.AirQuality .box span {
+  text-align: center;
+  width: 50%;
+}
+
+.AirQuality .box span:first-child {
+  text-align: left;
+  width: 25%;
+}
+
+.AirQuality .box span:last-child {
+  text-align: right;
+  width: 25%;
+}
 
 /*
 + CityInfo
@@ -470,8 +479,13 @@ button {
   form {
     width: 70%;
   }
-  .oWeather .bottom-content {
-    display: block;
+
+  .Weather span,
+  .AirQuality span,
+  .CityInfo span,
+  .Astronomy span
+  .Weather .bottom-content {
+    text-align: left;
   }
 
   .Weather .bottom-left,

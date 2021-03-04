@@ -16,15 +16,16 @@ const AirQuality = ({ airQuality }) => {
     pm10 = floor(pm10);
 
     let low1 = '#9cff9c';
-    let low2 = '#31ff00';
-    let low3 = '#31cf00';
-    let mod4 = '#ff0';
+    let low2 = '#66cb55';
+    let low3 = '#5a9f4f';
+    let mod4 = '#fbfb66';
     let mod5 = '#ffcf00';
     let mod6 = '#ff9a00';
     let high7 = '#ff6464';
-    let high8 = 'red';
-    let high9 = '#900';
-    let veryHigh10 = '#ce30ff';
+    let high8 = '#e63d3d';
+    let high9 = 'red';
+    let veryHigh10 = '#191818';
+     veryHigh10 = '#700b88';
 
 
     /*
@@ -32,6 +33,7 @@ const AirQuality = ({ airQuality }) => {
     */
     let bgCo;
     let textCo;
+    let textCoColor;
     switch (true) {
         case co <= 10:
             bgCo = low1;
@@ -72,6 +74,7 @@ const AirQuality = ({ airQuality }) => {
         case co > 1600:
             bgCo = veryHigh10;
             textCo = 'Index 10 - (Very High)';
+            textCoColor = 'white';
             break;
         default:
             break;
@@ -82,6 +85,7 @@ const AirQuality = ({ airQuality }) => {
     */
     let bgNo2;
     let textNo2;
+    let textNo2Color;
     switch (true) {
         case no2 <= 67:
             bgNo2 = low1;
@@ -122,6 +126,7 @@ const AirQuality = ({ airQuality }) => {
         case no2 > 600:
             bgNo2 = veryHigh10;
             textNo2 = 'Index 10 - (Very High)';
+            textNo2Color = 'white';
             break;
         default:
             break;
@@ -132,6 +137,7 @@ const AirQuality = ({ airQuality }) => {
     */
     let bgO3;
     let textO3;
+    let textO3Color;
     switch (true) {
         case o3 <= 33:
             bgO3 = low1;
@@ -172,6 +178,7 @@ const AirQuality = ({ airQuality }) => {
         case o3 > 240:
             bgO3 = veryHigh10;
             textO3 = 'Index 10 - (Very High)';
+            textO3Color = 'white';
             break;
         default:
             break;
@@ -182,6 +189,7 @@ const AirQuality = ({ airQuality }) => {
     */
     let bgSo2;
     let textSo2;
+    let textSo2Color;
     switch (true) {
         case so2 <= 88:
             bgSo2 = low1;
@@ -222,6 +230,7 @@ const AirQuality = ({ airQuality }) => {
         case so2 > 1064:
             bgSo2 = veryHigh10;
             textSo2 = 'Index 10 - (Very High)';
+            textSo2Color = 'white';
             break;
         default:
             break;
@@ -232,6 +241,7 @@ const AirQuality = ({ airQuality }) => {
     */
     let bgPm2_5;
     let textPm2_5;
+    let textPm2_5Color;
     switch (true) {
         case pm2_5 <= 11:
             bgPm2_5 = low1;
@@ -272,6 +282,7 @@ const AirQuality = ({ airQuality }) => {
         case pm2_5 > 70:
             bgPm2_5 = veryHigh10;
             textPm2_5 = 'Index 10 - (Very High)';
+            textPm2_5Color = 'white';
             break;
         default:
             break;
@@ -282,6 +293,7 @@ const AirQuality = ({ airQuality }) => {
     */
     let bgPm10;
     let textPm10;
+    let textPm10Color;
     switch (true) {
         case pm10 <= 16:
             bgPm10 = low1;
@@ -322,6 +334,7 @@ const AirQuality = ({ airQuality }) => {
         case pm10 > 100:
             bgPm10 = veryHigh10;
             textPm10 = 'Index 10 - (Very High)';
+            textPm10Color = 'white';
             break;
         default:
             break;
@@ -332,32 +345,32 @@ const AirQuality = ({ airQuality }) => {
         <div className="AirQuality card">
             <h2 className="title">Air Quality</h2>
             <div className="main">
-                <div className="spaced value" style={{ backgroundColor: bgCo }}>
+                <div className="box" style={{ backgroundColor: bgCo, color: textCoColor  }}>
                     <span> Carbon Monoxide:</span>
                     <span>{ textCo }</span>
                     <span> { co } &#13197;/&#13221; </span>
                 </div>
-                <div className="spaced value" style={{ backgroundColor: bgNo2 }}>
+                <div className="box" style={{ backgroundColor: bgNo2, color: textNo2Color  }}>
                     <span> Nitrogen Dioxide: </span>
                     <span> { textNo2 } </span>
                     <span> { no2 } &#13197;/&#13221; </span>
                 </div>
-                <div className="spaced value" style={{ backgroundColor: bgO3 }}>
+                <div className="box" style={{ backgroundColor: bgO3, color: textO3Color  }}>
                     <span> Ozone: </span>
-                    <span className="ozone-index"> { textO3 } </span>
+                    <span> { textO3 } </span>
                     <span> { o3 } &#13197;/&#13221; </span>
                 </div>
-                <div className="spaced value" style={{ backgroundColor: bgSo2 }}>
+                <div className="box" style={{ backgroundColor: bgSo2, color: textSo2Color  }}>
                     <span> Sulphur Dioxide: </span>
                     <span> { textSo2 } </span>
                     <span> { so2 } &#13197;/&#13221; </span>
                 </div>
-                <div className="spaced value" style={{ backgroundColor: bgPm2_5 }}>
+                <div className="box" style={{ backgroundColor: bgPm2_5, color: textPm2_5Color }}>
                     <span> PM2.5 Particles: </span>
                     <span> { textPm2_5 } </span>
                     <span> { pm2_5 } &#13197;/&#13221; </span>
                 </div>
-                <div className="spaced value" style={{ backgroundColor: bgPm10 }}>
+                <div className="box" style={{ backgroundColor: bgPm10, color: textPm10Color  }}>
                     <span> PM10 Particles: </span>
                     <span> { textPm10 } </span>
                     <span> { pm10 } &#13197;/&#13221; </span>
