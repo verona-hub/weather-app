@@ -23,7 +23,7 @@ const Main = ({ weatherProp, weatherCondition, location, airQuality, astronomy, 
         if (_.size(location) > 0 || _.size(weatherProp) > 0) {
             return (
                 <div>
-                    <div className="Main-header card">
+                    <div className="Main_header card">
                         <h2> Realtime weather conditions in: </h2>
                         <h2> { name }, { country } </h2>
                     </div>
@@ -44,7 +44,7 @@ const Main = ({ weatherProp, weatherCondition, location, airQuality, astronomy, 
                     </div>
                     <div className="api">
                         <a href="https://www.weatherapi.com/" title="Free Weather API">
-                            <img src='//cdn.weatherapi.com/v4/images/weatherapi_logo.png' alt="Weather data by WeatherAPI.com" className="api-img"/>
+                            <img src='//cdn.weatherapi.com/v4/images/weatherapi_logo.png' alt="Weather data by WeatherAPI.com" className="api_img"/>
                         </a>
                         <p>Powered by <a href="https://www.weatherapi.com/" title="Free Weather API">WeatherAPI.com</a></p>
                     </div>

@@ -69,21 +69,21 @@ img {
   width: 100%;
 }
 
-.logo-wrapper {
+.logo_wrapper {
   align-items: center;
   display: flex;
 }
 
-.logo-img {
+.logo_img {
   margin-right: 3px;
   width: 35px;
 }
 
-.nav-link-item {
+.nav_link_item {
   padding: 0 10px;
 }
 
-.nav-link-item.about {
+.nav_link_item.about {
   margin-right: 35px;
 }
 
@@ -117,7 +117,7 @@ form {
   width: 50%;
 }
 
-.form-content {
+.form_content {
   position:relative;
 }
 
@@ -126,19 +126,19 @@ form {
 /*
 + Input
 */
-.search-icon,
-.close-icon {
+.search_icon,
+.close_icon {
   cursor: pointer;
   position: absolute;
 }
 
-.search-icon {
+.search_icon {
   left: 14px;
   top: 10px;
   width: 35px;
 }
 
-.close-icon {
+.close_icon {
   right: 14px;
   top: 18px;
   width: 20px;
@@ -187,30 +187,30 @@ button {
   padding: 0.4rem 1.3rem;
 }
 
-.button-block {
+.button_block {
   display: block;
   margin: auto;
   width: 25%;
 }
 
-.button-search {
+.button_search {
   background: var(--blue);
   color: var(--white);
   margin: 4vh auto 2vh;
 }
 
-.button-search:hover {
+.button_search:hover {
   opacity: 0.95;
 }
 
-.button-clear {
+.button_clear {
   background: var(--orange);
   color: var(--white);
   font-size: 1rem;
   padding: 0.6rem;
 }
 
-.button-clear:hover {
+.button_clear:hover {
   opacity: 0.9;
 }
 
@@ -254,7 +254,7 @@ button {
   margin: 5vh auto;
 }
 
-.Main-header {
+.Main_header {
   align-items: center;
   background-color: var(--white);
   display: flex;
@@ -271,22 +271,22 @@ button {
 + Weather
 */
 
-.Weather .top-content {
+.Weather .top_content {
   flex-wrap: wrap;
   margin-top: 20px;
   min-height: 20vh;
 }
 
-.Weather .card-top-header {
+.Weather .card_top_header {
   margin: 10px 10px 0 10px;
   text-align: center;
 }
 
-.Weather .card-top-main {
+.Weather .card_top_main {
   margin: 0 1vw 1vw;
 }
 
-.Weather .bottom-content {
+.Weather .bottom_content {
   display: flex;
   flex-wrap: wrap;
   justify-content: space-evenly;
@@ -294,8 +294,8 @@ button {
   width: 100%;
 }
 
-.Weather .bottom-left,
-.Weather .bottom-right {
+.Weather .bottom_left,
+.Weather .bottom_right {
   margin: 5vw 1vw;
   width: calc(50% - 60px);
 }
@@ -336,7 +336,7 @@ button {
 
 .AirQuality .main {
   border: 1px solid;
-  margin-bottom: 15vh;
+  margin-bottom: 10vh;
   width: 70%;
 }
 
@@ -364,15 +364,21 @@ button {
   width: 25%;
 }
 
+.AirQuality .button_index {
+  margin-bottom: 7vh;
+}
+
 .AirQuality .index_wrapper {
   border: 1px solid;
-  margin: 2vh auto 10vh;
+  margin: 2vh auto 15vh;
   width: 90%;
 }
 
-.AirQuality h2 {
-  margin: 5vh;
+.AirQuality .index_wrapper .title {
+  display: inline-block;
+  font-size: 1.6rem;
 }
+
 
 .AirQuality .index_levels {
   display: flex;
@@ -435,7 +441,7 @@ button {
 /*
 + About
 */
-.About section:not(.about-header) {
+.About section:not(.about_header) {
   margin: 15vh 0 3vh;
 }
 
@@ -443,20 +449,20 @@ button {
   margin: 5vh 0 10vh;
 }
 
-.love-icon {
+.love_icon {
   width: 60px;
 }
 
-.react-logo {
+.react_logo {
   margin: 2vh;
   width: 100px;
 }
 
-.source-text {
+.source_text {
   margin-bottom: 3vh;
 }
 
-.github-logo {
+.github_logo {
   opacity: 0.7;
   width: 100px;
 }
@@ -467,7 +473,7 @@ button {
   width: 30%;
 }
 
-.github-logo:hover,
+.github_logo:hover,
 .github p:hover{
   opacity: 1;
 }
@@ -476,7 +482,7 @@ button {
   margin: 15vh 0 2vh;
 }
 
-.api-img {
+.api_img {
   display: block;
   margin: 10px auto;
   width: 80px;
@@ -488,12 +494,12 @@ button {
 + Mobile
 */
 @media (max-width: 1240px) {
-  .button-block {
+  .button_block {
     width: 50%;
   }
 }
 
-@media (max-width: 900px) {
+@media (max-width: 980px) {
   .Location,
   .Astronomy {
     margin-bottom: 5vh;
@@ -501,20 +507,26 @@ button {
   }
 
   .AirQuality .index_levels {
-    flex-direction: column;
+    flex-direction: row;
+    justify-content: space-evenly;
     flex-wrap: wrap;
-    height: 500px;
+    min-height: 500px;
   }
 
   .AirQuality .index_box {
-    height: auto;
+    align-items: center;
+    display: flex;
+    justify-content: flex-start;
+    margin: 10px 40px;
+    width: auto;
   }
 
+
   .AirQuality .item {
-    height: 60px;
     justify-content: center;
-    width: 120px;
+    width: 60px;
   }
+
 }
 
 
@@ -526,12 +538,12 @@ button {
   .AirQuality span,
   .Location span,
   .Astronomy span,
-  .Weather .bottom-content {
+  .Weather .bottom_content {
     text-align: left;
   }
 
-  .Weather .bottom-left,
-  .Weather .bottom-right,
+  .Weather .bottom_left,
+  .Weather .bottom_right,
   .Location .main,
   .AirQuality .index_levels {
     margin: 5vh auto;
@@ -542,8 +554,20 @@ button {
     width: 90%;
   }
 
+  .AirQuality .index_levels {
+    flex-direction: row;
+  }
+
+  .AirQuality .index_box {
+    margin: 10px;
+  }
+
+
+  .AirQuality .item {
+    width: 50px;
+  }
+
   .Location .main {
     width: 80%;
   }
-
 }

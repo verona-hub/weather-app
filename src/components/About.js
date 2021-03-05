@@ -11,19 +11,19 @@ const About = () => {
 
                 <section className="about-header">
                     <h2 className="title"> Welcome to the <span className="italic">Weather App! </span></h2>
-                    <h3> This App was made with <img src={ love } alt="love icon" className="love-icon"/> using ReactJS </h3>
-                    <a href="http://reactjs.org"><img src={ react_logo } alt="react logo" className="react-logo"/></a>
+                    <h3> This App was made with <img src={ love } alt="love icon" className="love_icon"/> using ReactJS </h3>
+                    <a href="http://reactjs.org"><img src={ react_logo } alt="react logo" className="react_logo"/></a>
                 </section>
 
                 <section className="source">
-                    <div className="source-text">
+                    <div className="source_text">
                         <h3> Source code: </h3>
                         <p> You can find the source code for this project alongside other projects on my Github
                             profile: </p>
                     </div>
                     <div className="github">
                         <a href="https://github.com/verona-hub/weather-app">
-                            <img src={ github } alt="github icon" className="github-logo"/>
+                            <img src={ github } alt="github icon" className="github_logo"/>
                             <p> verona-hub </p>
                         </a>
                     </div>
@@ -37,7 +37,7 @@ const About = () => {
 
                     <div className="api">
                         <a href="https://www.weatherapi.com/" title="Free Weather API">
-                            <img src='//cdn.weatherapi.com/v4/images/weatherapi_logo.png' alt="Weather data by WeatherAPI.com" className="api-img"/>
+                            <img src='//cdn.weatherapi.com/v4/images/weatherapi_logo.png' alt="Weather data by WeatherAPI.com" className="api_img"/>
                         </a>
                         <p>Powered by <a href="https://www.weatherapi.com/" title="Free Weather API">WeatherAPI.com</a></p>
                     </div>
