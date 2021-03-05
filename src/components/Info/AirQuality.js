@@ -15,28 +15,33 @@ const AirQuality = ({ airQuality }) => {
     pm2_5 = floor(pm2_5);
     pm10 = floor(pm10);
 
-    let low1 = '#9cff9c';
-    let low2 = '#66cb55';
-    let low3 = '#5a9f4f';
-    let mod4 = '#fbfb66';
-    let mod5 = '#ffcf00';
-    let mod6 = '#ff9a00';
-    let high7 = '#ff6464';
-    let high8 = '#d85454';
-    let high9 = '#e63d3d';
-    let veryHigh10 = 'red';
-    let white = '#fff';
+    let colorLow1 = '#9cff9c';
+    let colorLow2 = '#66cb55';
+    let colorLow3 = '#5a9f4f';
+    let colorMod4 = '#fbfb66';
+    let colorMod5 = '#ffcf00';
+    let colorMod6 = '#ff9a00';
+    let colorHigh7 = '#ff6464';
+    let colorHigh8 = '#d85454';
+    let colorHigh9 = '#e63d3d';
+    let colorVeryHigh10 = 'red';
+    let colorWhite = '#fff';
 
-    let index1 = 'Index 1 (Low)';
-    let index2 = 'Index 2 (Low)';
-    let index3 = 'Index 3 (Low)';
-    let index4 = 'Index 4 (Moderate)';
-    let index5 = 'Index 5 (Moderate)';
-    let index6 = 'Index 6 (Moderate)';
-    let index7 = 'Index 7 (High)';
-    let index8 = 'Index 8 (High)';
-    let index9 = 'Index 9 (High)';
-    let index10 = 'Index 10 (Very High)';
+    let textIndex1 = 'Index 1';
+    let textIndex2 = 'Index 2';
+    let textIndex3 = 'Index 3';
+    let textIndex4 = 'Index 4';
+    let textIndex5 = 'Index 5';
+    let textIndex6 = 'Index 6';
+    let textIndex7 = 'Index 7';
+    let textIndex8 = 'Index 8';
+    let textIndex9 = 'Index 9';
+    let textIndex10 = 'Index 10';
+
+    let textLow = 'Low';
+    let textModerate = 'Moderate';
+    let textHigh = 'High';
+    let textVeryHigh = 'Very High';
 
     /*
     + co = Carbon Monoxide
@@ -46,48 +51,48 @@ const AirQuality = ({ airQuality }) => {
     let textCoColor;
     switch (true) {
         case co <= 10:
-            bgCo = low1;
-            textCo = index1;
+            bgCo = colorLow1;
+            textCo = textIndex1;
             break;
         case co <= 25:
-            bgCo = low2;
-            textCo = index2;
+            bgCo = colorLow2;
+            textCo = textIndex2;
             break;
         case co <= 50:
-            bgCo = low3;
-            textCo = index3;
+            bgCo = colorLow3;
+            textCo = textIndex3;
             break;
         case co <= 200:
-            bgCo = mod4;
-            textCo = index4;
+            bgCo = colorMod4;
+            textCo = textIndex4;
             break;
         case co <= 400:
-            bgCo = mod5;
-            textCo = index5;
+            bgCo = colorMod5;
+            textCo = textIndex5;
             break;
         case co <= 600:
-            bgCo = mod6;
-            textCo = index6;
+            bgCo = colorMod6;
+            textCo = textIndex6;
             break;
         case co <= 800:
-            bgCo = high7;
-            textCo = index7;
-            textCoColor = white;
+            bgCo = colorHigh7;
+            textCo = textIndex7;
+            textCoColor = colorWhite;
             break;
         case co <= 1200:
-            bgCo = high8;
-            textCo = index8;
-            textCoColor = white;
+            bgCo = colorHigh8;
+            textCo = textIndex8;
+            textCoColor = colorWhite;
             break;
         case co <= 1600:
-            bgCo = high9;
-            textCo = index9;
-            textCoColor = white;
+            bgCo = colorHigh9;
+            textCo = textIndex9;
+            textCoColor = colorWhite;
             break;
         case co > 1600:
-            bgCo = veryHigh10;
-            textCo = index10;
-            textCoColor = white;
+            bgCo = colorVeryHigh10;
+            textCo = textIndex10;
+            textCoColor = colorWhite;
             break;
         default:
             break;
@@ -101,48 +106,48 @@ const AirQuality = ({ airQuality }) => {
     let textNo2Color;
     switch (true) {
         case no2 <= 67:
-            bgNo2 = low1;
-            textNo2 = index1;
+            bgNo2 = colorLow1;
+            textNo2 = textIndex1;
             break;
         case no2 <= 134:
-            bgNo2 = low2;
-            textNo2 = index2;
+            bgNo2 = colorLow2;
+            textNo2 = textIndex2;
             break;
         case no2 <= 200:
-            bgNo2 = low3;
-            textNo2 = index3;
+            bgNo2 = colorLow3;
+            textNo2 = textIndex3;
             break;
         case no2 <= 267:
-            bgNo2 = mod4;
-            textNo2 = index4;
+            bgNo2 = colorMod4;
+            textNo2 = textIndex4;
             break;
         case no2 <= 334:
-            bgNo2 = mod5;
-            textNo2 = index5;
+            bgNo2 = colorMod5;
+            textNo2 = textIndex5;
             break;
         case no2 <= 400:
-            bgNo2 = mod6;
-            textNo2 = index6;
+            bgNo2 = colorMod6;
+            textNo2 = textIndex6;
             break;
         case no2 <= 467:
-            bgNo2 = high7;
-            textNo2 = index7;
-            textNo2Color = white;
+            bgNo2 = colorHigh7;
+            textNo2 = textIndex7;
+            textNo2Color = colorWhite;
             break;
         case no2 <= 534:
-            bgNo2 = high8;
-            textNo2 = index8;
-            textNo2Color = white;
+            bgNo2 = colorHigh8;
+            textNo2 = textIndex8;
+            textNo2Color = colorWhite;
             break;
         case no2 <= 600:
-            bgNo2 = high9;
-            textNo2 = index9;
-            textNo2Color = white;
+            bgNo2 = colorHigh9;
+            textNo2 = textIndex9;
+            textNo2Color = colorWhite;
             break;
         case no2 > 600:
-            bgNo2 = veryHigh10;
-            textNo2 = index10;
-            textNo2Color = white;
+            bgNo2 = colorVeryHigh10;
+            textNo2 = textIndex10;
+            textNo2Color = colorWhite;
             break;
         default:
             break;
@@ -156,48 +161,48 @@ const AirQuality = ({ airQuality }) => {
     let textO3Color;
     switch (true) {
         case o3 <= 33:
-            bgO3 = low1;
-            textO3 = index1;
+            bgO3 = colorLow1;
+            textO3 = textIndex1;
             break;
         case o3 <= 66:
-            bgO3 = low2;
-            textO3 = index2;
+            bgO3 = colorLow2;
+            textO3 = textIndex2;
             break;
         case o3 <= 100:
-            bgO3 = low3;
-            textO3 = index3;
+            bgO3 = colorLow3;
+            textO3 = textIndex3;
             break;
         case o3 <= 120:
-            bgO3 = mod4;
-            textO3 = index4;
+            bgO3 = colorMod4;
+            textO3 = textIndex4;
             break;
         case o3 <= 140:
-            bgO3 = mod5;
-            textO3 = index5;
+            bgO3 = colorMod5;
+            textO3 = textIndex5;
             break;
         case o3 <= 160:
-            bgO3 = mod6;
-            textO3 = index6;
+            bgO3 = colorMod6;
+            textO3 = textIndex6;
             break;
         case o3 <= 187:
-            bgO3 = high7;
-            textO3 = index7;
-            textO3Color = white;
+            bgO3 = colorHigh7;
+            textO3 = textIndex7;
+            textO3Color = colorWhite;
             break;
         case o3 <= 213:
-            bgO3 = high8;
-            textO3 = index8;
-            textO3Color = white;
+            bgO3 = colorHigh8;
+            textO3 = textIndex8;
+            textO3Color = colorWhite;
             break;
         case o3 <= 240:
-            bgO3 = high9;
-            textO3 = index9;
-            textO3Color = white;
+            bgO3 = colorHigh9;
+            textO3 = textIndex9;
+            textO3Color = colorWhite;
             break;
         case o3 > 240:
-            bgO3 = veryHigh10;
-            textO3 = index10;
-            textO3Color = white;
+            bgO3 = colorVeryHigh10;
+            textO3 = textIndex10;
+            textO3Color = colorWhite;
             break;
         default:
             break;
@@ -211,48 +216,48 @@ const AirQuality = ({ airQuality }) => {
     let textSo2Color;
     switch (true) {
         case so2 <= 88:
-            bgSo2 = low1;
-            textSo2 = index1;
+            bgSo2 = colorLow1;
+            textSo2 = textIndex1;
             break;
         case so2 <= 177:
-            bgSo2 = low2;
-            textSo2 = index2;
+            bgSo2 = colorLow2;
+            textSo2 = textIndex2;
             break;
         case so2 <= 266:
-            bgSo2 = low3;
-            textSo2 = index3;
+            bgSo2 = colorLow3;
+            textSo2 = textIndex3;
             break;
         case so2 <= 354:
-            bgSo2 = mod4;
-            textSo2 = index4;
+            bgSo2 = colorMod4;
+            textSo2 = textIndex4;
             break;
         case so2 <= 443:
-            bgSo2 = mod5;
-            textSo2 = index5;
+            bgSo2 = colorMod5;
+            textSo2 = textIndex5;
             break;
         case so2 <= 532:
-            bgSo2 = mod6;
-            textSo2 = index6;
+            bgSo2 = colorMod6;
+            textSo2 = textIndex6;
             break;
         case so2 <= 710:
-            bgSo2 = high7;
-            textSo2 = index7;
-            textSo2Color = white;
+            bgSo2 = colorHigh7;
+            textSo2 = textIndex7;
+            textSo2Color = colorWhite;
             break;
         case so2 <= 887:
-            bgSo2 = high8;
-            textSo2 = index8;
-            textSo2Color = white;
+            bgSo2 = colorHigh8;
+            textSo2 = textIndex8;
+            textSo2Color = colorWhite;
             break;
         case so2 <= 1064:
-            bgSo2 = high9;
-            textSo2 = index9;
-            textSo2Color = white;
+            bgSo2 = colorHigh9;
+            textSo2 = textIndex9;
+            textSo2Color = colorWhite;
             break;
         case so2 > 1064:
-            bgSo2 = veryHigh10;
-            textSo2 = index10;
-            textSo2Color = white;
+            bgSo2 = colorVeryHigh10;
+            textSo2 = textIndex10;
+            textSo2Color = colorWhite;
             break;
         default:
             break;
@@ -266,48 +271,48 @@ const AirQuality = ({ airQuality }) => {
     let textPm2_5Color;
     switch (true) {
         case pm2_5 <= 11:
-            bgPm2_5 = low1;
-            textPm2_5 = index1;
+            bgPm2_5 = colorLow1;
+            textPm2_5 = textIndex1;
             break;
         case pm2_5 <= 23:
-            bgPm2_5 = low2;
-            textPm2_5 = index2;
+            bgPm2_5 = colorLow2;
+            textPm2_5 = textIndex2;
             break;
         case pm2_5 <= 35:
-            bgPm2_5 = low3;
-            textPm2_5 = index3;
+            bgPm2_5 = colorLow3;
+            textPm2_5 = textIndex3;
             break;
         case pm2_5 <= 41:
-            bgPm2_5 = mod4;
-            textPm2_5 = index4;
+            bgPm2_5 = colorMod4;
+            textPm2_5 = textIndex4;
             break;
         case pm2_5 <= 47:
-            bgPm2_5 = mod5;
-            textPm2_5 = index5;
+            bgPm2_5 = colorMod5;
+            textPm2_5 = textIndex5;
             break;
         case pm2_5 <= 53:
-            bgPm2_5 = mod6;
-            textPm2_5 = index6;
+            bgPm2_5 = colorMod6;
+            textPm2_5 = textIndex6;
             break;
         case pm2_5 <= 58:
-            bgPm2_5 = high7;
-            textPm2_5 = index7;
-            textPm2_5Color = white;
+            bgPm2_5 = colorHigh7;
+            textPm2_5 = textIndex7;
+            textPm2_5Color = colorWhite;
             break;
         case pm2_5 <= 64:
-            bgPm2_5 = high8;
-            textPm2_5 = index8;
-            textPm2_5Color = white;
+            bgPm2_5 = colorHigh8;
+            textPm2_5 = textIndex8;
+            textPm2_5Color = colorWhite;
             break;
         case pm2_5 <= 70:
-            bgPm2_5 = high9;
-            textPm2_5 = index9;
-            textPm2_5Color = white;
+            bgPm2_5 = colorHigh9;
+            textPm2_5 = textIndex9;
+            textPm2_5Color = colorWhite;
             break;
         case pm2_5 > 70:
-            bgPm2_5 = veryHigh10;
-            textPm2_5 = index10;
-            textPm2_5Color = white;
+            bgPm2_5 = colorVeryHigh10;
+            textPm2_5 = textIndex10;
+            textPm2_5Color = colorWhite;
             break;
         default:
             break;
@@ -321,48 +326,48 @@ const AirQuality = ({ airQuality }) => {
     let textPm10Color;
     switch (true) {
         case pm10 <= 16:
-            bgPm10 = low1;
-            textPm10 = index1;
+            bgPm10 = colorLow1;
+            textPm10 = textIndex1;
             break;
         case pm10 <= 33:
-            bgPm10 = low2;
-            textPm10 = index2;
+            bgPm10 = colorLow2;
+            textPm10 = textIndex2;
             break;
         case pm10 <= 50:
-            bgPm10 = low3;
-            textPm10 = index3;
+            bgPm10 = colorLow3;
+            textPm10 = textIndex3;
             break;
         case pm10 <= 58:
-            bgPm10 = mod4;
-            textPm10 = index4;
+            bgPm10 = colorMod4;
+            textPm10 = textIndex4;
             break;
         case pm10 <= 66:
-            bgPm10 = mod5;
-            textPm10 = index5;
+            bgPm10 = colorMod5;
+            textPm10 = textIndex5;
             break;
         case pm10 <= 75:
-            bgPm10 = mod6;
-            textPm10 = index6;
+            bgPm10 = colorMod6;
+            textPm10 = textIndex6;
             break;
         case pm10 <= 83:
-            bgPm10 = high7;
-            textPm10 = index7;
-            textPm10Color = white;
+            bgPm10 = colorHigh7;
+            textPm10 = textIndex7;
+            textPm10Color = colorWhite;
             break;
         case pm10 <= 91:
-            bgPm10 = high8;
-            textPm10 = index8;
-            textPm10Color = white;
+            bgPm10 = colorHigh8;
+            textPm10 = textIndex8;
+            textPm10Color = colorWhite;
             break;
         case pm10 <= 100:
-            bgPm10 = high9;
-            textPm10 = index9;
-            textPm10Color = white;
+            bgPm10 = colorHigh9;
+            textPm10 = textIndex9;
+            textPm10Color = colorWhite;
             break;
         case pm10 > 100:
-            bgPm10 = veryHigh10;
-            textPm10 = index10;
-            textPm10Color = white;
+            bgPm10 = colorVeryHigh10;
+            textPm10 = textIndex10;
+            textPm10Color = colorWhite;
             break;
         default:
             break;
@@ -371,20 +376,7 @@ const AirQuality = ({ airQuality }) => {
 
     return (
         <div className="AirQuality card">
-            <h2 className="title">Air Quality</h2>
-            <div className="index-levels">
-                <h3> Index Levels </h3>
-                <div className="item" style={{ backgroundColor: low1 }}> { index1 } </div>
-                <div className="item" style={{ backgroundColor: low2 }}> { index2 } </div>
-                <div className="item" style={{ backgroundColor: low3 }}> { index3 } </div>
-                <div className="item" style={{ backgroundColor: mod4 }}> { index4 } </div>
-                <div className="item" style={{ backgroundColor: mod5 }}> { index5 } </div>
-                <div className="item" style={{ backgroundColor: mod6 }}> { index6 } </div>
-                <div className="item" style={{ backgroundColor: high7 }}> { index7 } </div>
-                <div className="item" style={{ backgroundColor: high8 }}> { index8 } </div>
-                <div className="item" style={{ backgroundColor: high9 }}> { index9 } </div>
-                <div className="item" style={{ backgroundColor: veryHigh10 }}> { index10 } </div>
-            </div>
+            <h1 className="title">Air Quality</h1>
             <div className="main">
                 <div className="box" style={{ backgroundColor: bgCo, color: textCoColor  }}>
                     <span> Carbon Monoxide:</span>
@@ -415,6 +407,53 @@ const AirQuality = ({ airQuality }) => {
                     <span> PM10 Particles: </span>
                     <span> { textPm10 } </span>
                     <span> { pm10 } &#13197;/&#13221; </span>
+                </div>
+            </div>
+
+            <button> Show Air Quality Index </button>
+            <div className="index_wrapper">
+                <h2> Air Quality Index: </h2>
+                <div className="index_levels">
+                    <div className="index_box">
+                        <div className="item" style={ { backgroundColor: colorLow1 } }>{ textIndex1 } </div>
+                        <div className="item-text"> { textLow } </div>
+                    </div>
+                    <div className="index_box">
+                        <div className="item" style={ { backgroundColor: colorLow2 } }> { textIndex2 } </div>
+                        <div className="item-text"> { textLow } </div>
+                    </div>
+                    <div className="index_box">
+                        <div className="item" style={ { backgroundColor: colorLow3 } }> { textIndex3 } </div>
+                        <div className="item-text"> { textLow } </div>
+                    </div>
+                    <div className="index_box">
+                        <div className="item" style={ { backgroundColor: colorMod4 } }> { textIndex4 } </div>
+                        <div className="item-text"> { textModerate } </div>
+                    </div>
+                    <div className="index_box">
+                        <div className="item" style={ { backgroundColor: colorMod5 } }> { textIndex5 } </div>
+                        <div className="item-text"> { textModerate } </div>
+                    </div>
+                    <div className="index_box">
+                        <div className="item" style={ { backgroundColor: colorMod6 } }> { textIndex6 } </div>
+                        <div className="item-text"> { textModerate } </div>
+                    </div>
+                    <div className="index_box">
+                        <div className="item" style={ { backgroundColor: colorHigh7 } }> { textIndex7 } </div>
+                        <div className="item-text"> { textHigh } </div>
+                    </div>
+                    <div className="index_box">
+                        <div className="item" style={ { backgroundColor: colorHigh8 } }> { textIndex8 } </div>
+                        <div className="item-text"> { textHigh } </div>
+                    </div>
+                    <div className="index_box">
+                        <div className="item" style={ { backgroundColor: colorHigh9 } }> { textIndex9 } </div>
+                        <div className="item-text">  { textHigh } </div>
+                    </div>
+                    <div className="index_box">
+                        <div className="item" style={ { backgroundColor: colorVeryHigh10 } }> { textIndex10 } </div>
+                        <div className="item-text"> { textVeryHigh } </div>
+                    </div>
                 </div>
             </div>
         </div>

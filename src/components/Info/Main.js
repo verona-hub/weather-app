@@ -34,7 +34,7 @@ const Main = ({ weatherProp, weatherCondition, location, airQuality, astronomy, 
                     <AirQuality
                         airQuality={ airQuality }
                     />
-                    <div className="city-astro">
+                    <div className="city_astro">
                         <Location
                             location={ location }
                         />
