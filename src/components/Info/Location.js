@@ -1,12 +1,12 @@
 import React from 'react';
 
 
-const CityInfo = ({ cityInfoProp }) => {
+const Location = ({ location }) => {
 
-    const { name, region, country, lat, lon, localtime, tz_id } = cityInfoProp;
+    const { name, region, country, lat, lon, localtime, tz_id } = location;
 
     return (
-        <div className="CityInfo card">
+        <div className="Location card">
             <h2 className="title"> Location details </h2>
             <div className="main">
                 <div className="spaced"><span> City:</span> { name } </div>
@@ -23,4 +23,4 @@ const CityInfo = ({ cityInfoProp }) => {
 }
 
 
-export default CityInfo;
+export default Location;

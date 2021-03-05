@@ -9,7 +9,7 @@ import * as _ from 'underscore';
 // Components
 import About from './components/About';
 import Errors from './components/Error/Errors';
-import MainInfo from './components/Info/MainInfo';
+import Main from './components/Info/Main';
 import Navbar from './components/Navbar';
 import Search from "./components/Search";
 
@@ -17,10 +17,10 @@ import Search from "./components/Search";
 class App extends Component {
 
     state = {
-        cityInfo: [],
         weather: [],
         weatherCondition: [],
         airQuality: [],
+        location: [],
         astronomy: [],
         spinner: false,
         errorMessage: null,
@@ -37,17 +37,17 @@ class App extends Component {
                 ${process.env.REACT_APP_WEATHER_API_KEY}
                 &q=${text}
                 &aqi=yes`),
-                axios.get(`http://api.weatherapi.com/v1/astronomy.json?key=
+                axios.get(`https://api.weatherapi.com/v1/astronomy.json?key=
                 ${process.env.REACT_APP_WEATHER_API_KEY}
                 &q=${text}
                 `)
             ]).then(x => new Promise(resolve => setTimeout(() => resolve(x), 1000)));
 
             this.setState({
-                cityInfo: response[0].data.location,
                 weather: response[0].data.current,
                 weatherCondition: response[0].data.current.condition,
                 airQuality: response[0].data.current.air_quality,
+                location: response[0].data.location,
                 astronomy: response[1].data.astronomy.astro,
                 spinner: false,
                 errorMessage: null
@@ -55,8 +55,8 @@ class App extends Component {
 
         } catch(err) {
             this.setState({
-                cityInfo: [],
                 weather: [],
+                location: [],
                 spinner: false,
                 errorMessage: err.response.data.error.message,
                 errorCode: Object.entries(err.response.data.error)[0][1]
@@ -69,14 +69,14 @@ class App extends Component {
 
     clearContent = () => {
         this.setState({
-            cityInfo: [],
             weather: [],
-            weatherCondition: []
+            weatherCondition: [],
+            location: []
         });
     }
     render () {
 
-        const {cityInfo, weather, weatherCondition, spinner,
+        const { weather, weatherCondition, location, spinner,
             errorMessage, errorCode} = this.state;
         const { searchCity, clearContent } = this;
 
@@ -91,16 +91,16 @@ class App extends Component {
                                        <Search
                                            searchCity={ searchCity }
                                            clearContent={ clearContent }
-                                           showClearButton={ _.size(cityInfo) > 0 && _.size(weather) > 0 && !spinner }
+                                           showClearButton={ _.size(location) > 0 && _.size(weather) > 0 && !spinner }
                                        />
                                        <Errors
                                            errorMessage={ errorMessage }
                                            errorCode={ errorCode }
                                        />
-                                       <MainInfo
+                                       <Main
                                            weatherProp={ weather }
                                            weatherCondition={ weatherCondition }
-                                           cityInfoProp={ cityInfo }
+                                           location={ location }
                                            airQuality={ this.state.airQuality }
                                            astronomy={ this.state.astronomy }
                                            spinner={ spinner }

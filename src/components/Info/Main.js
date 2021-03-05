@@ -6,13 +6,13 @@ import * as _ from 'underscore';
 // Components
 import AirQuality from "./AirQuality";
 import Astronomy from './Astronomy';
-import CityInfo from "./CityInfo";
+import Location from "./Location";
 import Spinner from "../Spinner";
 import Weather from "./Weather";
 
 
-const MainInfo = ({ weatherProp, weatherCondition, cityInfoProp, airQuality, astronomy, spinner }) => {
-    const { name, country } = cityInfoProp;
+const Main = ({ weatherProp, weatherCondition, location, airQuality, astronomy, spinner }) => {
+    const { name, country } = location;
 
 
     if (spinner) {
@@ -20,10 +20,10 @@ const MainInfo = ({ weatherProp, weatherCondition, cityInfoProp, airQuality, ast
     }
 
     else {
-        if (_.size(cityInfoProp) > 0 || _.size(weatherProp) > 0) {
+        if (_.size(location) > 0 || _.size(weatherProp) > 0) {
             return (
                 <div>
-                    <div className="MainInfo-header card">
+                    <div className="Main-header card">
                         <h2> Realtime weather conditions in: </h2>
                         <h2> { name }, { country } </h2>
                     </div>
@@ -35,8 +35,8 @@ const MainInfo = ({ weatherProp, weatherCondition, cityInfoProp, airQuality, ast
                         airQuality={ airQuality }
                     />
                     <div className="city-astro">
-                        <CityInfo
-                            cityInfoProp={ cityInfoProp }
+                        <Location
+                            location={ location }
                         />
                         <Astronomy
                             astronomy={ astronomy }
@@ -59,4 +59,4 @@ const MainInfo = ({ weatherProp, weatherCondition, cityInfoProp, airQuality, ast
 };
 
 
-export default MainInfo;
+export default Main;

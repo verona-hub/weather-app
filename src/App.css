@@ -2,16 +2,13 @@
 @import url('https://fonts.googleapis.com/css?family=Playfair+Display');
 
 :root {
-  --white: #f4f4f4;
-  --grey: #d3d3d3;
-  --dark-grey: #333333;
-  --green: #008952;
-  --light-green: #50BF84;
-  --orange: #FA9138;
-  --pink: #F26A69;
-  --red: #c4231d;
   --blue: #00A7D8;
   --dark-blue: #286ba2;
+  --dark-grey: #333333;
+  --grey: #d3d3d3;
+  --orange: #FA9138;
+  --red: #c4231d;
+  --white: #f4f4f4;
 }
 
 * {
@@ -97,7 +94,6 @@ img {
 }
 
 .navbar .active {
-  color: #33a2a8;
   color: var(--orange);
 }
 
@@ -198,12 +194,7 @@ button {
 }
 
 .button-search {
-  background: var(--dark-grey);
-  background: var(--light-green);
-  background: var(--orange);
-  background: var(--green);
   background: var(--blue);
-
   color: var(--white);
   margin: 4vh auto 2vh;
 }
@@ -213,9 +204,7 @@ button {
 }
 
 .button-clear {
-  background: var(--pink);
   background: var(--orange);
-
   color: var(--white);
   font-size: 1rem;
   padding: 0.6rem;
@@ -251,7 +240,7 @@ button {
 
 
 /*
-+ MainInfo
++ Main
 */
 .card {
   align-items: center;
@@ -265,7 +254,7 @@ button {
   margin: 5vh auto;
 }
 
-.MainInfo-header {
+.Main-header {
   align-items: center;
   background-color: var(--white);
   display: flex;
@@ -281,9 +270,6 @@ button {
 /*
 + Weather
 */
-.Weather {
-  /*border: 1px solid #3b3b3b;*/
-}
 
 .Weather .top-content {
   flex-wrap: wrap;
@@ -316,7 +302,7 @@ button {
 
 .Weather span,
 .AirQuality span,
-.CityInfo span,
+.Location span,
 .Astronomy span {
   font-size: 18px;
 }
@@ -338,11 +324,31 @@ button {
 /*
 +  AirQuality
 */
-.CityInfo .title,
 .AirQuality .title,
+.Location .title,
 .Astronomy .title {
+  border-bottom: 1px solid var(--grey);
+  font-family: 'Playfair Display', serif ;
+  font-size: 2rem;
   margin: 5vh;
   text-transform: uppercase;
+}
+
+.AirQuality .index-levels {
+  align-items: center;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  margin: 4vh;
+  width: 70%;
+}
+
+.AirQuality .item {
+  align-items: center;
+  border: 1px solid;
+  display: flex;
+  height: 150px;
+  width: 100%;
 }
 
 .AirQuality .main {
@@ -376,7 +382,7 @@ button {
 }
 
 /*
-+ CityInfo
++ Location
 + Astronomy
 */
 
@@ -388,13 +394,13 @@ button {
   width: 100%;
 }
 
-.CityInfo,
+.Location,
 .Astronomy {
   margin: 0;
   width: 48%;
 }
 
-.CityInfo .main,
+.Location .main,
 .Astronomy .main {
   margin-bottom: 8vh;
   width: 70%;
@@ -467,7 +473,7 @@ button {
 }
 
 @media (max-width: 900px) {
-  .CityInfo,
+  .Location,
   .Astronomy {
     margin-bottom: 5vh;
     width: 100%;
@@ -479,24 +485,36 @@ button {
   form {
     width: 70%;
   }
-
   .Weather span,
   .AirQuality span,
-  .CityInfo span,
-  .Astronomy span
+  .Location span,
+  .Astronomy span,
   .Weather .bottom-content {
     text-align: left;
   }
 
   .Weather .bottom-left,
   .Weather .bottom-right,
-  .CityInfo-main {
+  .Location .main,
+  .AirQuality .index-levels {
     margin: 5vh auto;
     width: 90%;
   }
 
+  .AirQuality .index-levels {
+    flex-wrap: wrap;
+  }
+
+  .AirQuality .item {
+    height: 30px;
+  }
+
   .AirQuality .main {
     width: 90%;
+  }
+
+  .Location .main {
+    width: 80%;
   }
 
 }
