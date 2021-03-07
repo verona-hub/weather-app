@@ -11,11 +11,15 @@ const About = () => {
     console.log(currentRoute);
 
     return (
-        <div className="About">
-            <div className="container">
-
-                <section className="about_header">
+        <div className="About card">
+            <div className="welcome">
+                <div className="title_wrapper">
                     <h1 className="title"> Welcome to the <span className="italic">Weather App! </span></h1>
+                </div>
+            </div>
+
+            <div className="container">
+                <section className="about_main">
                     <h2> This App was made with
                         <img src={ love } alt="love icon" className="love_icon"/> using ReactJS
                     </h2>

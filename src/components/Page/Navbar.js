@@ -5,8 +5,8 @@ import logo from '../../img/sun.svg';
 
 const Navbar = () => {
     return (
-        <div className={window.location.pathname === '/' ? 'header' : 'About-header '}>
-            <nav className='navbar'>
+        <div className={window.location.pathname === '/' ? 'header' : 'About_header '}>
+            <nav className={window.location.pathname === '/' ? 'navbar' : 'navbar About_navbar '}>
                     <NavLink to='/' activeClassName='active' exact className='logo_wrapper'>
                         <img src={ logo } alt="logo icon" className="logo_img"/>
                         <div className='nav_link_item'>Weather App</div>

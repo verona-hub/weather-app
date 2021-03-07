@@ -50,10 +50,10 @@ img {
 .header {
   background: url(img/sky.jpg) no-repeat top;
   background-size: 100vw 100vh;
-  height: 50vh;
+  height: 70vh;
 }
 
-.About-header {
+.About_header {
   background: url(img/sky.jpg) no-repeat top;
   background-size: 100vw 100vh;
   height: 100vh;
@@ -64,10 +64,15 @@ img {
   background-color: rgba(0,0,0, 0.2);
   display: flex;
   font-size: 1.2rem;
+  height: 10vh;
   justify-content: center;
   padding: 0.7rem;
   text-transform: uppercase;
   width: 100%;
+}
+
+.About_navbar {
+  background-color: rgba(0,0,0, 0.5);
 }
 
 .logo_wrapper {
@@ -369,6 +374,8 @@ button {
 
 .AirQuality .button_index {
   margin-bottom: 7vh;
+  padding: 20px 0;
+  width: 200px;
 }
 
 .AirQuality .index_wrapper {
@@ -444,17 +451,38 @@ button {
 /*
 + About
 */
-.About section:not(about_header) {
-  margin: 15vh 0 3vh;
+.About .welcome {
+  background-color: rgba(0,0,0, 0.5);
+  color: var(--white);
+  left: 0;
+  margin-left: auto;
+  margin-right: auto;
+  position: absolute;
+  right: 0;
+  text-align: center;
+  top: 10vh;
 }
 
-.About .about_header {
-  margin-top: 10vh;
+.About .title_wrapper {
+  align-items: center;
+  display: flex;
+  height: 90vh;
+  justify-content: center;
+  padding: 10vh 0;
 }
 
 .About .title {
   font-size: 3rem;
-  margin: 5vh 0 15vh;
+  margin-bottom: 10vh;
+  text-transform: uppercase;
+}
+
+.About section:not(about_main) {
+  margin: 15vh 0 3vh;
+}
+
+.About .about_main {
+  margin-top: 10vh;
 }
 
 .love_icon {

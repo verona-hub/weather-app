@@ -114,7 +114,9 @@ class App extends Component {
                         <Route path="/about" render={ () => (
                             <Fragment>
                                 <Navbar/>
-                                <About/>
+                                <div className="container">
+                                    <About/>
+                                </div>
                             </Fragment>
                         )}/>
                     </Switch>
