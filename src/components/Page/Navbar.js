@@ -1,11 +1,11 @@
 import React from 'react';
 import { NavLink } from 'react-router-dom';
-import logo from '../img/sun.svg';
+import logo from '../../img/sun.svg';
 
 
 const Navbar = () => {
     return (
-        <div className="header">
+        <div className={window.location.pathname === '/' ? 'header' : 'About-header '}>
             <nav className='navbar'>
                     <NavLink to='/' activeClassName='active' exact className='logo_wrapper'>
                         <img src={ logo } alt="logo icon" className="logo_img"/>

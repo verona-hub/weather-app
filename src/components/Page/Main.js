@@ -4,11 +4,12 @@ import React from 'react';
 import * as _ from 'underscore';
 
 // Components
-import AirQuality from "./AirQuality";
-import Astronomy from './Astronomy';
-import Location from "./Location";
-import Spinner from "../Spinner";
-import Weather from "./Weather";
+import AirQuality from "../Info/AirQuality";
+import Astronomy from '../Info/Astronomy';
+import Footer from './Footer';
+import Location from "../Info/Location";
+import Spinner from "../Utility/Spinner";
+import Weather from "../Info/Weather";
 
 
 const Main = ({ weatherProp, weatherCondition, location, airQuality, astronomy, spinner }) => {
@@ -22,7 +23,7 @@ const Main = ({ weatherProp, weatherCondition, location, airQuality, astronomy, 
     else {
         if (_.size(location) > 0 || _.size(weatherProp) > 0) {
             return (
-                <div>
+                <div className="Main">
                     <div className="Main_header card">
                         <h2> Realtime weather conditions in: </h2>
                         <h2> { name }, { country } </h2>
@@ -42,12 +43,9 @@ const Main = ({ weatherProp, weatherCondition, location, airQuality, astronomy, 
                             astronomy={ astronomy }
                         />
                     </div>
-                    <div className="api">
-                        <a href="https://www.weatherapi.com/" title="Free Weather API">
-                            <img src='//cdn.weatherapi.com/v4/images/weatherapi_logo.png' alt="Weather data by WeatherAPI.com" className="api_img"/>
-                        </a>
-                        <p>Powered by <a href="https://www.weatherapi.com/" title="Free Weather API">WeatherAPI.com</a></p>
-                    </div>
+
+                    <Footer />
+
                 </div>
             );
         }

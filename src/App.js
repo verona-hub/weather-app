@@ -7,11 +7,11 @@ import axios from "axios";
 import * as _ from 'underscore';
 
 // Components
-import About from './components/About';
+import About from './components/Page/About';
 import Errors from './components/Error/Errors';
-import Main from './components/Info/Main';
-import Navbar from './components/Navbar';
-import Search from "./components/Search";
+import Main from './components/Page/Main';
+import Navbar from './components/Page/Navbar';
+import Search from "./components/Utility/Search";
 
 
 class App extends Component {
@@ -81,34 +81,42 @@ class App extends Component {
         const { searchCity, clearContent } = this;
 
         return (
+
             <BrowserRouter>
-                <Navbar/>
-                <div className="container">
+                <div>
                     <Switch>
                         <Route exact path="/"
                                render={ () => (
                                    <Fragment>
-                                       <Search
-                                           searchCity={ searchCity }
-                                           clearContent={ clearContent }
-                                           showClearButton={ _.size(location) > 0 && _.size(weather) > 0 && !spinner }
-                                       />
-                                       <Errors
-                                           errorMessage={ errorMessage }
-                                           errorCode={ errorCode }
-                                       />
-                                       <Main
-                                           weatherProp={ weather }
-                                           weatherCondition={ weatherCondition }
-                                           location={ location }
-                                           airQuality={ this.state.airQuality }
-                                           astronomy={ this.state.astronomy }
-                                           spinner={ spinner }
-                                       />
+                                       <Navbar/>
+                                       <div className="container">
+                                           <Search
+                                               searchCity={ searchCity }
+                                               clearContent={ clearContent }
+                                               showClearButton={ _.size(location) > 0 && _.size(weather) > 0 && !spinner }
+                                           />
+                                           <Errors
+                                               errorMessage={ errorMessage }
+                                               errorCode={ errorCode }
+                                           />
+                                           <Main
+                                               weatherProp={ weather }
+                                               weatherCondition={ weatherCondition }
+                                               location={ location }
+                                               airQuality={ this.state.airQuality }
+                                               astronomy={ this.state.astronomy }
+                                               spinner={ spinner }
+                                           />
+                                       </div>
                                    </Fragment>
                                )}
                         />
-                        <Route path="/about" component={ About }/>
+                        <Route path="/about" render={ () => (
+                            <Fragment>
+                                <Navbar/>
+                                <About/>
+                            </Fragment>
+                        )}/>
                     </Switch>
                 </div>
             </BrowserRouter>
