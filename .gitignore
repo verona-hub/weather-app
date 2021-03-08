@@ -25,7 +25,8 @@ yarn-error.log*
 
 # .idea directory
 /.idea
-/idea
+.idea
 
 # config
 /config
+.vercel
