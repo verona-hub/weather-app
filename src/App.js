@@ -76,14 +76,13 @@ class App extends Component {
     }
     render () {
 
-        const { weather, weatherCondition, location, spinner,
-            errorMessage, errorCode} = this.state;
+        const { weather, weatherCondition, airQuality, location, astronomy,
+            spinner, errorMessage, errorCode} = this.state;
         const { searchCity, clearContent } = this;
 
         return (
 
             <BrowserRouter>
-                <div>
                     <Switch>
                         <Route exact path="/"
                                render={ () => (
@@ -92,23 +91,22 @@ class App extends Component {
                                            emptyContent={ _.size(location) <= 0 && _.size(weather) <= 0 }
                                            errorIsPresent={ errorCode && errorMessage}
                                        />
-
+                                       <Errors
+                                           errorMessage={ errorMessage }
+                                           errorCode={ errorCode }
+                                       />
                                        <div className="container">
                                            <Search
                                                searchCity={ searchCity }
                                                clearContent={ clearContent }
                                                showClearButton={ _.size(location) > 0 && _.size(weather) > 0 && !spinner }
                                            />
-                                           <Errors
-                                               errorMessage={ errorMessage }
-                                               errorCode={ errorCode }
-                                           />
                                            <Main
                                                weatherProp={ weather }
                                                weatherCondition={ weatherCondition }
+                                               airQuality={ airQuality }
                                                location={ location }
-                                               airQuality={ this.state.airQuality }
-                                               astronomy={ this.state.astronomy }
+                                               astronomy={ astronomy }
                                                spinner={ spinner }
                                            />
                                        </div>
@@ -124,7 +122,6 @@ class App extends Component {
                             </Fragment>
                         )}/>
                     </Switch>
-                </div>
             </BrowserRouter>
         );
     }
