@@ -26,3 +26,6 @@ yarn-error.log*
 # .idea directory
 /.idea
 /idea
+
+# config
+/config
