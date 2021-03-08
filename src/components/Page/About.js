@@ -7,8 +7,8 @@ import Footer from './Footer';
 
 
 const About = () => {
-    const currentRoute= window.location.pathname;
-    console.log(currentRoute);
+    /*const currentRoute= window.location.pathname;
+    console.log(currentRoute);*/
 
     return (
         <div className="About card">

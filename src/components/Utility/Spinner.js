@@ -7,7 +7,7 @@ const Spinner = () => {
     const override = css`
         display: block;
         position: absolute;
-        top: 65vh;
+        top: 80vh;
         left: 50vw;
         `;
 

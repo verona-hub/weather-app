@@ -50,18 +50,25 @@ img {
 .header {
   background: url(img/sky.jpg) no-repeat top;
   background-size: 100vw 100vh;
-  height: 70vh;
 }
 
-.About_header {
-  background: url(img/sky.jpg) no-repeat top;
-  background-size: 100vw 100vh;
+.header_100 {
   height: 100vh;
 }
 
+.header_90 {
+  height: 90vh;
+}
+
+.header_70 {
+  height: 70vh;
+}
+
+
+
 .navbar {
   align-items: center;
-  background-color: rgba(0,0,0, 0.2);
+  /*background-color: rgba(0,0,0, 0.2);*/
   display: flex;
   font-size: 1.2rem;
   height: 10vh;
@@ -71,9 +78,6 @@ img {
   width: 100%;
 }
 
-.About_navbar {
-  background-color: rgba(0,0,0, 0.5);
-}
 
 .logo_wrapper {
   align-items: center;
@@ -119,7 +123,7 @@ form {
   position: absolute;
   right: 0;
   text-align: center;
-  top: 15vh;
+  top: 25vh;
   width: 50%;
 }
 
@@ -232,6 +236,9 @@ button {
   margin: 1rem 0;
   opacity: 0.9;
   padding: 0.6rem;
+
+/*  position: absolute;
+  top: 10vh;*/
 }
 
 
@@ -414,6 +421,10 @@ button {
   display: flex;
   height: 100px;
   width: 50px;
+}
+
+.AirQuality .item-text {
+  margin-top: 5px;
 }
 
 

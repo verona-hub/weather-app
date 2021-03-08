@@ -88,7 +88,11 @@ class App extends Component {
                         <Route exact path="/"
                                render={ () => (
                                    <Fragment>
-                                       <Navbar/>
+                                       <Navbar
+                                           emptyContent={ _.size(location) <= 0 && _.size(weather) <= 0 }
+                                           errorIsPresent={ errorCode && errorMessage}
+                                       />
+
                                        <div className="container">
                                            <Search
                                                searchCity={ searchCity }
