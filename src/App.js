@@ -14,7 +14,6 @@ import Navbar from './components/Page/Navbar';
 import Search from "./components/Utility/Search";
 
 
-
 // let weatherApiKey;
 //
 // if (process.env.NODE_ENV !== 'production') {
