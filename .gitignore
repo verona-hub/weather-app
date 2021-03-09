@@ -29,7 +29,11 @@ yarn-error.log*
 
 # config
 /config
+
+# Vercel
 .vercel
 
 # Local Netlify folder
 .netlify
+
+
