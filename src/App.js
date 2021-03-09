@@ -22,9 +22,7 @@ import Search from "./components/Utility/Search";
 //     weatherApiKey = process.env.WEATHER_API_KEY;
 // }
 
-
 console.log(process.env);
-
 
 class App extends Component {
 
