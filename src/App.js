@@ -15,13 +15,13 @@ import Search from "./components/Utility/Search";
 
 
 
-let weatherApiKey;
-
-if (process.env.NODE_ENV !== 'production') {
-    weatherApiKey = process.env.REACT_APP_WEATHER_API_KEY;
-} else {
-    weatherApiKey = process.env.WEATHER_API_KEY;
-}
+// let weatherApiKey;
+//
+// if (process.env.NODE_ENV !== 'production') {
+//     weatherApiKey = process.env.REACT_APP_WEATHER_API_KEY;
+// } else {
+//     weatherApiKey = process.env.WEATHER_API_KEY;
+// }
 
 
 class App extends Component {
@@ -44,11 +44,11 @@ class App extends Component {
         try {
             const response = await axios.all([
                 axios.get(`https://api.weatherapi.com/v1/current.json?key=
-                ${weatherApiKey}
+                ${process.env.REACT_APP_WEATHER_API_KEY}
                 &q=${text}
                 &aqi=yes`),
                 axios.get(`https://api.weatherapi.com/v1/astronomy.json?key=
-                ${weatherApiKey}
+                ${process.env.REACT_APP_WEATHER_API_KEY}
                 &q=${text}
                 `)
             ]).then(x => new Promise(resolve => setTimeout(() => resolve(x), 1000)));
