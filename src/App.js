@@ -16,6 +16,7 @@ import Search from "./components/Utility/Search";
 
 
 let weatherApiKey;
+
 if (process.env.NODE_ENV !== 'production') {
     weatherApiKey = process.env.REACT_APP_WEATHER_API_KEY;
 } else {
