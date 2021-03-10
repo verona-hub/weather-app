@@ -23,12 +23,12 @@ import Search from "./components/Utility/Search";
 // }
 
 
-console.log(process.env);
+// console.log(process.env);
 
 class App extends Component {
 
     state = {
-        weather: [],
+        weatherInfo: [],
         weatherCondition: [],
         airQuality: [],
         location: [],
@@ -55,7 +55,7 @@ class App extends Component {
             ]).then(x => new Promise(resolve => setTimeout(() => resolve(x), 3000)));
 
             this.setState({
-                weather: response[0].data.current,
+                weatherInfo: response[0].data.current,
                 weatherCondition: response[0].data.current.condition,
                 airQuality: response[0].data.current.air_quality,
                 location: response[0].data.location,
@@ -65,21 +65,21 @@ class App extends Component {
             });
 
         } catch(err) {
+
             this.setState({
-                weather: [],
+                weatherInfo: [],
                 location: [],
-                spinner: false,
-                errorMessage: err.response.data.error.message,
                 errorCode: Object.entries(err.response.data.error)[0][1]
             });
 
-            setTimeout(() => this.setState({ errorMessage: null }), 2500);
+            setTimeout(() => this.setState({ errorMessage: err.response.data.error.message, spinner: false }), 2000);
+            setTimeout(() => this.setState({ errorMessage: null }), 4500);
         }
     }
 
     clearContent = () => {
         this.setState({
-            weather: [],
+            weatherInfo: [],
             weatherCondition: [],
             location: []
         });
@@ -88,9 +88,12 @@ class App extends Component {
 
     render () {
 
-        const { weather, weatherCondition, airQuality, location, astronomy,
+        const { weatherInfo, weatherCondition, airQuality, location, astronomy,
             spinner, errorMessage, errorCode} = this.state;
         const { searchCity, clearContent } = this;
+
+        const locationResponseSize = _.size(location);
+        const weatherResponseSize = _.size(weatherInfo);
 
         return (
             <BrowserRouter>
@@ -99,27 +102,31 @@ class App extends Component {
                            render={ () => (
                                <Fragment>
                                    <Navbar
-                                       emptyContent={ _.size(location) <= 0 && _.size(weather) <= 0 }
+                                       emptyContent={ locationResponseSize <= 0 && weatherResponseSize <= 0 }
                                        errorIsPresent={ errorCode && errorMessage}
+                                       spinner={ spinner }
                                    />
                                    <Errors
                                        errorMessage={ errorMessage }
                                        errorCode={ errorCode }
                                    />
+                                   <Search
+                                       searchCity={ searchCity }
+                                       clearContent={ clearContent }
+                                       showClearButton={ locationResponseSize > 0 && weatherResponseSize > 0 && !spinner }
+                                       spinner={ spinner }
+                                   />
                                    <div className="container">
-                                       <Search
-                                           searchCity={ searchCity }
-                                           clearContent={ clearContent }
-                                           showClearButton={ _.size(location) > 0 && _.size(weather) > 0 && !spinner }
-                                           spinner={ spinner }
-                                       />
+
                                        <Main
-                                           weatherProp={ weather }
+                                           weatherInfo={ weatherInfo }
                                            weatherCondition={ weatherCondition }
                                            airQuality={ airQuality }
                                            location={ location }
                                            astronomy={ astronomy }
                                            spinner={ spinner }
+                                           locationResponseSize={ locationResponseSize }
+                                           weatherResponseSize={ weatherResponseSize }
                                        />
                                    </div>
                                </Fragment>

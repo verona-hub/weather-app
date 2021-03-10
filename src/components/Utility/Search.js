@@ -34,6 +34,7 @@ class Search extends Component {
         const { text } = this.state;
         const { onSubmit, onChange, clearContent, clearInput } = this;
 
+
         return (
             <div className="Search">
                 <form onSubmit={ onSubmit } className="form">

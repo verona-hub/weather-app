@@ -1,10 +1,10 @@
 import React from 'react';
 
 
-const Weather = ({ weatherProp, weatherCondition }) => {
+const Weather = ({ weatherInfo, weatherCondition }) => {
 
     const { cloud, temp_c, feelslike_c, humidity, precip_mm, uv, vis_km,
-        pressure_mb, wind_kph, wind_dir } = weatherProp;
+        pressure_mb, wind_kph, wind_dir } = weatherInfo;
     const { icon, text } = weatherCondition;
 
     return (
