@@ -28,6 +28,7 @@ import Search from "./components/Utility/Search";
 class App extends Component {
 
     state = {
+        text: '',
         weatherInfo: [],
         weatherCondition: [],
         airQuality: [],
@@ -40,10 +41,11 @@ class App extends Component {
 
     searchCity = async (text) => {
 
-        this.setState({ spinner: true })
+        this.setState({ spinner: true, text: text })
 
         try {
-            const response = await axios.all([
+            const response = await axios.all
+            ([
                 axios.get(`https://api.weatherapi.com/v1/current.json?key=
                 ${process.env.REACT_APP_WEATHER_API_KEY}
                 &q=${text}
@@ -52,7 +54,7 @@ class App extends Component {
                 ${process.env.REACT_APP_WEATHER_API_KEY}
                 &q=${text}
                 `)
-            ]).then(x => new Promise(resolve => setTimeout(() => resolve(x), 3000)));
+            ]).then(x => new Promise(resolve => setTimeout(() => resolve(x), 1000)));
 
             this.setState({
                 weatherInfo: response[0].data.current,
@@ -88,7 +90,7 @@ class App extends Component {
 
     render () {
 
-        const { weatherInfo, weatherCondition, airQuality, location, astronomy,
+        const { text, weatherInfo, weatherCondition, airQuality, location, astronomy,
             spinner, errorMessage, errorCode} = this.state;
         const { searchCity, clearContent } = this;
 
@@ -105,6 +107,7 @@ class App extends Component {
                                        emptyContent={ locationResponseSize <= 0 && weatherResponseSize <= 0 }
                                        errorIsPresent={ errorCode && errorMessage}
                                        spinner={ spinner }
+                                       text={ text }
                                    />
                                    <Errors
                                        errorMessage={ errorMessage }
@@ -116,8 +119,8 @@ class App extends Component {
                                        showClearButton={ locationResponseSize > 0 && weatherResponseSize > 0 && !spinner }
                                        spinner={ spinner }
                                    />
-                                   <div className="container">
 
+                                   <div className="container">
                                        <Main
                                            weatherInfo={ weatherInfo }
                                            weatherCondition={ weatherCondition }

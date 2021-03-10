@@ -1,7 +1,6 @@
 import React, {Component} from 'react';
 import icon from '../../img/search.svg';
 import x from '../../img/x.svg';
-import Spinner from './Spinner';
 
 
 class Search extends Component {
@@ -64,13 +63,7 @@ class Search extends Component {
                                  onClick={ clearInput } /> )
                         }
                     </div>
-                    {
-                        this.props.spinner && (
-                            <Spinner />
-                        )
-                    }
                 </form>
-
             </div>
         );
     }
