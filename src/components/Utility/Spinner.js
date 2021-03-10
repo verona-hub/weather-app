@@ -1,19 +1,22 @@
 import React, {Fragment} from 'react';
 import { css } from '@emotion/react';
-import FadeLoader from "react-spinners/FadeLoader";
+import PropagateLoader from "react-spinners/PropagateLoader";
+import SyncLoader from "react-spinners/SyncLoader";
+import ClipLoader from "react-spinners/ClipLoader";
+import BarLoader from "react-spinners/BarLoader";
 
 
 const Spinner = () => {
     const override = css`
-        display: block;
-        position: absolute;
-        top: 80vh;
-        left: 50vw;
+        display: inline-block;
         `;
 
     return (
         <Fragment>
-            <FadeLoader color={'#333333'} css={override} size={80} />
+            {/*<PropagateLoader color={'#c57d26'} css={override} size={20}/>*/}
+            {/*<SyncLoader color={'#c57d26'} css={override} size={20}/>*/}
+            {/*<ClipLoader color={'#c57d26'} css={override} size={60}/>*/}
+            <BarLoader color={'#54e334'} css={override} size={20}/>
         </Fragment>
     )
 }

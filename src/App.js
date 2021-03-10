@@ -52,15 +52,15 @@ class App extends Component {
                 ${process.env.REACT_APP_WEATHER_API_KEY}
                 &q=${text}
                 `)
-            ]).then(x => new Promise(resolve => setTimeout(() => resolve(x), 1000)));
+            ]).then(x => new Promise(resolve => setTimeout(() => resolve(x), 3000)));
 
             this.setState({
                 weather: response[0].data.current,
                 weatherCondition: response[0].data.current.condition,
                 airQuality: response[0].data.current.air_quality,
                 location: response[0].data.location,
-                astronomy: response[1].data.astronomy.astro,
                 spinner: false,
+                astronomy: response[1].data.astronomy.astro,
                 errorMessage: null
             });
 
@@ -77,7 +77,6 @@ class App extends Component {
         }
     }
 
-
     clearContent = () => {
         this.setState({
             weather: [],
@@ -85,6 +84,8 @@ class App extends Component {
             location: []
         });
     }
+
+
     render () {
 
         const { weather, weatherCondition, airQuality, location, astronomy,
@@ -92,47 +93,47 @@ class App extends Component {
         const { searchCity, clearContent } = this;
 
         return (
-
             <BrowserRouter>
-                    <Switch>
-                        <Route exact path="/"
-                               render={ () => (
-                                   <Fragment>
-                                       <Navbar
-                                           emptyContent={ _.size(location) <= 0 && _.size(weather) <= 0 }
-                                           errorIsPresent={ errorCode && errorMessage}
+                <Switch>
+                    <Route exact path="/"
+                           render={ () => (
+                               <Fragment>
+                                   <Navbar
+                                       emptyContent={ _.size(location) <= 0 && _.size(weather) <= 0 }
+                                       errorIsPresent={ errorCode && errorMessage}
+                                   />
+                                   <Errors
+                                       errorMessage={ errorMessage }
+                                       errorCode={ errorCode }
+                                   />
+                                   <div className="container">
+                                       <Search
+                                           searchCity={ searchCity }
+                                           clearContent={ clearContent }
+                                           showClearButton={ _.size(location) > 0 && _.size(weather) > 0 && !spinner }
+                                           spinner={ spinner }
                                        />
-                                       <Errors
-                                           errorMessage={ errorMessage }
-                                           errorCode={ errorCode }
+                                       <Main
+                                           weatherProp={ weather }
+                                           weatherCondition={ weatherCondition }
+                                           airQuality={ airQuality }
+                                           location={ location }
+                                           astronomy={ astronomy }
+                                           spinner={ spinner }
                                        />
-                                       <div className="container">
-                                           <Search
-                                               searchCity={ searchCity }
-                                               clearContent={ clearContent }
-                                               showClearButton={ _.size(location) > 0 && _.size(weather) > 0 && !spinner }
-                                           />
-                                           <Main
-                                               weatherProp={ weather }
-                                               weatherCondition={ weatherCondition }
-                                               airQuality={ airQuality }
-                                               location={ location }
-                                               astronomy={ astronomy }
-                                               spinner={ spinner }
-                                           />
-                                       </div>
-                                   </Fragment>
-                               )}
-                        />
-                        <Route path="/about" render={ () => (
-                            <Fragment>
-                                <Navbar/>
-                                <div className="container">
-                                    <About/>
-                                </div>
-                            </Fragment>
-                        )}/>
-                    </Switch>
+                                   </div>
+                               </Fragment>
+                           )}
+                    />
+                    <Route path="/about" render={ () => (
+                        <Fragment>
+                            <Navbar/>
+                            <div className="container">
+                                <About/>
+                            </div>
+                        </Fragment>
+                    )} />
+                </Switch>
             </BrowserRouter>
         );
     }
