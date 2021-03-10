@@ -23,8 +23,11 @@ const Navbar = ({ text, emptyContent, spinner }) => {
 
                 { spinner && (
                     <div className="modal">
-                        <div className="modal-content">
-                            <h2> Searching {text} in progress... </h2>
+                        <div className="modal_content">
+                            <h2> Searching
+                                <span> &ldquo; { text } &rdquo; </span>
+                                in progress...
+                            </h2>
                             <Spinner/>
                         </div>
                     </div> )

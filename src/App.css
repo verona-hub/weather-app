@@ -73,33 +73,33 @@ img {
   height: 10vh;
   justify-content: center;
   padding: 0.7rem;
-  text-transform: uppercase;
   width: 100%;
 }
 
-
-
 .modal {
-  background-color: rgba(0,0,0, 0.6);
+  background-color: rgba(0,0,0, 0.9);
+  height: 100%;
   left: 0;
   margin-left: auto;
   margin-right: auto;
   overflow: auto;
-  padding-top: 30vh;
+  padding-top: 20vh;
   position: fixed;
-  top: 10vh;
   text-align: center;
+  top: 10vh;
   width: 100%;
-  height: 100%;
   z-index: 10;
 }
 
-.modal-content {
+.modal_content {
   color: var(--white);
   margin: auto;
-  padding: 20px;
-  border: 2px solid;
+  padding: 80px 0;
   width: 50%;
+}
+
+.modal_content span {
+  text-transform: capitalize;
 }
 
 
@@ -125,6 +125,7 @@ img {
 
 .nav_link_item {
   padding: 0 10px;
+  text-transform: uppercase;
 }
 
 .nav_link_item.about {

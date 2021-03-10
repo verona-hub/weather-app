@@ -54,7 +54,7 @@ class App extends Component {
                 ${process.env.REACT_APP_WEATHER_API_KEY}
                 &q=${text}
                 `)
-            ]).then(x => new Promise(resolve => setTimeout(() => resolve(x), 1000)));
+            ]).then(x => new Promise(resolve => setTimeout(() => resolve(x), 2500)));
 
             this.setState({
                 weatherInfo: response[0].data.current,
