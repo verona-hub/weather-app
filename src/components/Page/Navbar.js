@@ -5,14 +5,14 @@ import Errors from '../Error/Errors';
 import Spinner from '../Utility/Spinner';
 
 
-const Navbar = ({ text, emptyContent, spinner, errorMessage, errorCode, clearError, modal }) => {
+const Navbar = ({ text, emptyContent, spinner, errorMessage, errorCode, clearError }) => {
 
     const headerChange = window.location.pathname === '/about' ? 'header_100'
         : ( window.location.pathname === '/' && emptyContent  ? ' header_100' : ' header_70');
 
     return (
         <div className={`header ${headerChange}`}>
-            <nav className= { modal ? 'navbar navbar_dark' : 'navbar'}>
+            <nav className= { spinner ? 'navbar navbar_dark' : 'navbar'}>
                 <NavLink to='/' activeClassName='active' exact className='logo_wrapper'>
                     <img src={ logo } alt="logo icon" className="logo_img"/>
                     <div className='nav_link_item'>Weather App</div>
@@ -22,8 +22,7 @@ const Navbar = ({ text, emptyContent, spinner, errorMessage, errorCode, clearErr
                 </NavLink>
 
                 {
-
-                    modal && (
+                    spinner && (
                         <div className="modal">
                             <div className="modal_content">
                                 <h2> Searching
@@ -41,7 +40,6 @@ const Navbar = ({ text, emptyContent, spinner, errorMessage, errorCode, clearErr
                             />
                         </div>
                     )
-
                 }
             </nav>
 

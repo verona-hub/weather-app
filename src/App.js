@@ -8,7 +8,6 @@ import * as _ from 'underscore';
 
 // Components
 import About from './components/Page/About';
-import Errors from './components/Error/Errors';
 import Main from './components/Page/Main';
 import Navbar from './components/Page/Navbar';
 import Search from "./components/Utility/Search";
@@ -21,8 +20,6 @@ import Search from "./components/Utility/Search";
 // } else {
 //     weatherApiKey = process.env.WEATHER_API_KEY;
 // }
-
-
 // console.log(process.env);
 
 class App extends Component {
@@ -36,8 +33,7 @@ class App extends Component {
         astronomy: [],
         spinner: false,
         errorMessage: null,
-        errorCode: null,
-        modal: false
+        errorCode: null
     }
 
     searchCity = async (text) => {
@@ -49,8 +45,7 @@ class App extends Component {
             weatherCondition: [],
             airQuality: [],
             location: [],
-            astronomy: [],
-            modal: null
+            astronomy: []
         })
 
         try {
@@ -73,27 +68,22 @@ class App extends Component {
                 location: response[0].data.location,
                 spinner: false,
                 astronomy: response[1].data.astronomy.astro,
-                errorMessage: null,
-                modal: true
+                errorMessage: null
             });
 
         } catch(err) {
+
             this.setState({
                 weatherInfo: [],
                 location: [],
                 errorCode: Object.entries(err.response.data.error)[0][1],
-                spinner: true,
-                modal: true
+                spinner: true
             });
 
             setTimeout(() => this.setState({ errorMessage: err.response.data.error.message }), 1000);
-            setTimeout(() => this.setState({ spinner: false }), 1000);
-            setTimeout(() => this.setState({ errorMessage: null, modal: false }), 4500);
+            setTimeout(() => this.setState({ spinner: false }), 3000);
+            setTimeout(() => this.setState({ errorMessage: null }), 4500);
         }
-
-        this.setState({
-            spinner: false
-        });
     }
 
     clearContent = () => {
@@ -107,8 +97,7 @@ class App extends Component {
     clearError = () => {
         this.setState({
             errorMessage: null,
-            spinner: false,
-            modal: false
+            spinner: false
         });
     }
 
@@ -116,7 +105,7 @@ class App extends Component {
     render () {
 
         const { text, weatherInfo, weatherCondition, airQuality, location, astronomy,
-            spinner, errorMessage, errorCode, modal } = this.state;
+            spinner, errorMessage, errorCode} = this.state;
         const { searchCity, clearContent, clearError } = this;
 
         const locationResponseSize = _.size(location);
@@ -135,7 +124,6 @@ class App extends Component {
                                        errorMessage={ errorMessage }
                                        errorCode={ errorCode }
                                        clearError={ clearError }
-                                       modal={ modal }
                                    />
                                    {/*<Errors
                                        errorMessage={ errorMessage }
