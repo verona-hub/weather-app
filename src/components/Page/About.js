@@ -60,6 +60,7 @@ const About = () => {
                             www.flaticon.com
                         </a>
                     </p>
+                        <p> Warning icon by <a href="https://www.flaticon.com/authors/mavadee" title="mavadee">mavadee</a> from <a href="https://www.flaticon.com/" title="Flaticon">www.flaticon.com</a></p>
                     <p>React logo by:
                         <a href="https://www.flaticon.com/authors/kiranshastry" title="Kiranshastry" target="_blank" rel="noreferrer">
                             Kiranshastry

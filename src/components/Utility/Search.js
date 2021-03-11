@@ -3,7 +3,7 @@ import icon from '../../img/search.svg';
 import x from '../../img/x.svg';
 
 
-const Search = ({ searchCity, showClearButton }) => {
+const Search = ({ searchCity, showClearButton, clearContent }) => {
 
     const [ text, setText ] = useState('');
 
@@ -17,7 +17,7 @@ const Search = ({ searchCity, showClearButton }) => {
         setText( e.target.value );
     }
 
-    const clearContent = () => {
+    const clearAllContent = () => {
         clearContent(text);
         setText('');
     }
@@ -47,7 +47,7 @@ const Search = ({ searchCity, showClearButton }) => {
                     { showClearButton && (
                         <button
                             className="button button_clear button_block"
-                            onClick={ clearContent }> Clear
+                            onClick={ clearAllContent }> Clear
                         </button> )
                     }
                     { text.length > 0 && (

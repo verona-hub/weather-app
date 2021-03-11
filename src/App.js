@@ -22,6 +22,7 @@ import Search from "./components/Utility/Search";
 // }
 // console.log(process.env);
 
+
 class App extends Component {
 
     state = {
@@ -33,7 +34,9 @@ class App extends Component {
         astronomy: [],
         spinner: false,
         errorMessage: null,
-        errorCode: null
+        errorCode: null,
+        modal: false,
+        search: false
     }
 
     searchCity = async (text) => {
@@ -45,7 +48,9 @@ class App extends Component {
             weatherCondition: [],
             airQuality: [],
             location: [],
-            astronomy: []
+            astronomy: [],
+            modal: true,
+            search: true
         })
 
         try {
@@ -68,7 +73,9 @@ class App extends Component {
                 location: response[0].data.location,
                 spinner: false,
                 astronomy: response[1].data.astronomy.astro,
-                errorMessage: null
+                errorMessage: null,
+                modal: false,
+                search: false
             });
 
         } catch(err) {
@@ -77,12 +84,13 @@ class App extends Component {
                 weatherInfo: [],
                 location: [],
                 errorCode: Object.entries(err.response.data.error)[0][1],
-                spinner: true
+                spinner: true,
+                modal: true,
+                search: true
             });
 
-            setTimeout(() => this.setState({ errorMessage: err.response.data.error.message }), 1000);
-            setTimeout(() => this.setState({ spinner: false }), 3000);
-            setTimeout(() => this.setState({ errorMessage: null }), 4500);
+            setTimeout(() => this.setState({ errorMessage: err.response.data.error.message, spinner: false, search: false}), 1000);
+            // setTimeout(() => this.setState({ errorMessage: null, modal: false }), 4500);
         }
     }
 
@@ -97,7 +105,8 @@ class App extends Component {
     clearError = () => {
         this.setState({
             errorMessage: null,
-            spinner: false
+            spinner: false,
+            modal: false
         });
     }
 
@@ -105,7 +114,7 @@ class App extends Component {
     render () {
 
         const { text, weatherInfo, weatherCondition, airQuality, location, astronomy,
-            spinner, errorMessage, errorCode} = this.state;
+            spinner, errorMessage, errorCode, modal, search } = this.state;
         const { searchCity, clearContent, clearError } = this;
 
         const locationResponseSize = _.size(location);
@@ -124,6 +133,8 @@ class App extends Component {
                                        errorMessage={ errorMessage }
                                        errorCode={ errorCode }
                                        clearError={ clearError }
+                                       modal={ modal }
+                                       search={ search }
                                    />
                                    {/*<Errors
                                        errorMessage={ errorMessage }
