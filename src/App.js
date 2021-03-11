@@ -36,12 +36,22 @@ class App extends Component {
         astronomy: [],
         spinner: false,
         errorMessage: null,
-        errorCode: null
+        errorCode: null,
+        modal: false
     }
 
     searchCity = async (text) => {
 
-        this.setState({ spinner: true, text: text })
+        this.setState({
+            spinner: true,
+            text: text,
+            weatherInfo: [],
+            weatherCondition: [],
+            airQuality: [],
+            location: [],
+            astronomy: [],
+            modal: null
+        })
 
         try {
             const response = await axios.all
@@ -63,20 +73,27 @@ class App extends Component {
                 location: response[0].data.location,
                 spinner: false,
                 astronomy: response[1].data.astronomy.astro,
-                errorMessage: null
+                errorMessage: null,
+                modal: true
             });
 
         } catch(err) {
-
             this.setState({
                 weatherInfo: [],
                 location: [],
-                errorCode: Object.entries(err.response.data.error)[0][1]
+                errorCode: Object.entries(err.response.data.error)[0][1],
+                spinner: true,
+                modal: true
             });
 
-            setTimeout(() => this.setState({ errorMessage: err.response.data.error.message, spinner: false }), 2000);
-            setTimeout(() => this.setState({ errorMessage: null }), 4500);
+            setTimeout(() => this.setState({ errorMessage: err.response.data.error.message }), 1000);
+            setTimeout(() => this.setState({ spinner: false }), 1000);
+            setTimeout(() => this.setState({ errorMessage: null, modal: false }), 4500);
         }
+
+        this.setState({
+            spinner: false
+        });
     }
 
     clearContent = () => {
@@ -87,12 +104,20 @@ class App extends Component {
         });
     }
 
+    clearError = () => {
+        this.setState({
+            errorMessage: null,
+            spinner: false,
+            modal: false
+        });
+    }
+
 
     render () {
 
         const { text, weatherInfo, weatherCondition, airQuality, location, astronomy,
-            spinner, errorMessage, errorCode} = this.state;
-        const { searchCity, clearContent } = this;
+            spinner, errorMessage, errorCode, modal } = this.state;
+        const { searchCity, clearContent, clearError } = this;
 
         const locationResponseSize = _.size(location);
         const weatherResponseSize = _.size(weatherInfo);
@@ -105,14 +130,17 @@ class App extends Component {
                                <Fragment>
                                    <Navbar
                                        emptyContent={ locationResponseSize <= 0 && weatherResponseSize <= 0 }
-                                       errorIsPresent={ errorCode && errorMessage}
                                        spinner={ spinner }
                                        text={ text }
-                                   />
-                                   <Errors
                                        errorMessage={ errorMessage }
                                        errorCode={ errorCode }
+                                       clearError={ clearError }
+                                       modal={ modal }
                                    />
+                                   {/*<Errors
+                                       errorMessage={ errorMessage }
+                                       errorCode={ errorCode }
+                                   />*/}
                                    <Search
                                        searchCity={ searchCity }
                                        clearContent={ clearContent }
