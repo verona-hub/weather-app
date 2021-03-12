@@ -1,4 +1,4 @@
-import React, { Fragment, Component } from 'react';
+import React, { Fragment, Component, useEffect } from 'react';
 import { BrowserRouter, Route, Switch } from 'react-router-dom';
 import './App.css';
 
@@ -51,7 +51,7 @@ class App extends Component {
             astronomy: [],
             modal: true,
             search: true
-        })
+        });
 
         try {
             const response = await axios.all
@@ -92,6 +92,13 @@ class App extends Component {
             setTimeout(() => this.setState({ errorMessage: err.response.data.error.message, spinner: false, search: false}), 1000);
             // setTimeout(() => this.setState({ errorMessage: null, modal: false }), 4500);
         }
+
+
+        /*
+        useEffect(() => {
+            window.scrollTo(0, 0);
+        }, []);
+        */
     }
 
     clearContent = () => {
@@ -109,7 +116,6 @@ class App extends Component {
             modal: false
         });
     }
-
 
     render () {
 
@@ -136,17 +142,12 @@ class App extends Component {
                                        modal={ modal }
                                        search={ search }
                                    />
-                                   {/*<Errors
-                                       errorMessage={ errorMessage }
-                                       errorCode={ errorCode }
-                                   />*/}
                                    <Search
                                        searchCity={ searchCity }
                                        clearContent={ clearContent }
                                        showClearButton={ locationResponseSize > 0 && weatherResponseSize > 0 && !spinner }
                                        spinner={ spinner }
                                    />
-
                                    <div className="container">
                                        <Main
                                            weatherInfo={ weatherInfo }

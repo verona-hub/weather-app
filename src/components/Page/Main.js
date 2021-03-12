@@ -1,12 +1,13 @@
 import React from 'react';
+import BackToTop from '../Utility/BackToTop';
 
 
 // Components
-import AirQuality from "../Info/AirQuality";
-import Astronomy from '../Info/Astronomy';
+import AirQuality from "./Info/AirQuality";
+import Astronomy from './Info/Astronomy';
 import Footer from './Footer';
-import Location from "../Info/Location";
-import Weather from "../Info/Weather";
+import Location from "./Info/Location";
+import Weather from "./Info/Weather";
 
 
 const Main = ({ weatherInfo, weatherCondition, location, airQuality, astronomy, spinner, locationResponseSize, weatherResponseSize }) => {
@@ -43,6 +44,8 @@ const Main = ({ weatherInfo, weatherCondition, location, airQuality, astronomy, 
                                     astronomy={ astronomy }
                                 />
                             </div>
+
+                            <BackToTop />
 
                             <Footer/>
 
