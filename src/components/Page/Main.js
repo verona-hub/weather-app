@@ -1,5 +1,5 @@
 import React from 'react';
-import BackToTop from '../Utility/BackToTop';
+import ScrollToTop from '../Utility/ScrollToTop';
 
 
 // Components
@@ -14,6 +14,11 @@ const Main = ({ weatherInfo, weatherCondition, location, airQuality, astronomy, 
 
     const { name, country } = location;
 
+    /*
+    document.addEventListener('click', function(e){
+        console.log(window.scrollY);
+    });
+    */
 
     if (spinner) {
         return null;
@@ -45,7 +50,7 @@ const Main = ({ weatherInfo, weatherCondition, location, airQuality, astronomy, 
                                 />
                             </div>
 
-                            <BackToTop />
+                            <ScrollToTop />
 
                             <Footer/>
 

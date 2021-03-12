@@ -4,6 +4,7 @@ import github from '../../img/github.png';
 import love from '../../img/love.png';
 import react_logo from '../../img/react-logo.png';
 import Footer from './Footer';
+import ScrollToTop from '../Utility/ScrollToTop';
 
 
 const About = () => {
@@ -35,7 +36,7 @@ const About = () => {
                             profile: </p>
                     </div>
                     <div className="github">
-                        <a href="https://github.com/verona-hub/weatherInfo-app" target="_blank" rel="noreferrer">
+                        <a href="https://github.com/verona-hub/weather-app" target="_blank" rel="noreferrer">
                             <img src={ github } alt="github icon" className="github_logo"/>
                             <p> verona-hub </p>
                         </a>
@@ -69,7 +70,12 @@ const About = () => {
                             www.flaticon.com
                         </a>
                     </p>
+
+                    <ScrollToTop />
+
                 </section>
+
+
 
                 <Footer />
             </div>

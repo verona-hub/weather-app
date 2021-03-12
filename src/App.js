@@ -1,4 +1,4 @@
-import React, { Fragment, Component, useEffect } from 'react';
+import React, { Fragment, Component } from 'react';
 import { BrowserRouter, Route, Switch } from 'react-router-dom';
 import './App.css';
 
@@ -90,15 +90,11 @@ class App extends Component {
             });
 
             setTimeout(() => this.setState({ errorMessage: err.response.data.error.message, spinner: false, search: false}), 1000);
-            // setTimeout(() => this.setState({ errorMessage: null, modal: false }), 4500);
+            setTimeout(() => this.setState({ errorMessage: null, modal: false }), 10000);
         }
 
+        window.scrollTo(0,650);
 
-        /*
-        useEffect(() => {
-            window.scrollTo(0, 0);
-        }, []);
-        */
     }
 
     clearContent = () => {
