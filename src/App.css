@@ -64,6 +64,10 @@ img {
   height: 70vh;
 }
 
+.header_no-image {
+  background: none;
+}
+
 .navbar {
   align-items: center;
   background-color: rgba(0,0,0, 0.5);
@@ -114,7 +118,7 @@ img {
 + Modal
 */
 
-.modal {
+.Modal {
   background-color: rgba(0,0,0, 0.8);
   height: 100%;
   left: 0;
@@ -132,12 +136,16 @@ img {
 .modal_content {
   color: var(--white);
   margin: auto;
-  padding: 80px 0;
+  /*padding: 80px 0;*/
   width: 50%;
 }
 
 .modal_content span {
   text-transform: capitalize;
+}
+
+.modal_content .dog {
+  width: 300px;
 }
 
 /*
@@ -594,6 +602,31 @@ button {
 .github_logo:hover,
 .github p:hover{
   opacity: 1;
+}
+
+
+
+/*
++ PageNotFound404
+*/
+
+.PageNotFound404_wrapper {
+  align-items: center;
+  background-color: orange;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  height: 30vh;
+  /*padding: 10vh 5vw;*/
+}
+
+.PageNotFound404 h1 {
+  background-color: lightblue;
+  margin: 5vh;
+}
+
+.home_icon {
+  width: 32px;
 }
 
 

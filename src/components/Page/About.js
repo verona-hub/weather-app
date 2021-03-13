@@ -53,7 +53,7 @@ const About = () => {
                             Unsplash
                         </a>
                     </p>
-                    <p>Main app logo, search icon, "x" icon, love icon, and Github icon by:
+                    <p>Main app logo, search icon, "x" icon, love icon, home icon and Github icon by:
                         <a href="https://www.freepik.com" title="Freepik" target="_blank" rel="noreferrer">
                             Freepik
                         </a> from

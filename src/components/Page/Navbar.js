@@ -1,14 +1,18 @@
 import React from 'react';
 import { NavLink } from 'react-router-dom';
+
+// Images
 import logo from '../../img/sun.svg';
-import Errors from '../Error/Errors';
-import Spinner from '../Utility/Spinner';
+
+// Components
+import Modal from '../Utility/Modal';
 
 
 const Navbar = ({ text, emptyContent, spinner, errorMessage, errorCode, clearError, modal, search }) => {
 
     const headerChange = window.location.pathname === '/about' ? 'header_100'
-        : ( window.location.pathname === '/' && emptyContent  ? ' header_100' : ' header_70');
+        : ( window.location.pathname === '/' && emptyContent  ? ' header_100'
+            : (window.location.pathname !== ('/' || '/about') ? ' header_no-image' : 'header_70'));
 
     return (
         <div className={`header ${headerChange}`}>
@@ -23,25 +27,14 @@ const Navbar = ({ text, emptyContent, spinner, errorMessage, errorCode, clearErr
 
                 {
                     modal && (
-                        <div className="modal">
-                            <div className="modal_content">
-                                { search && (
-                                    <h2>
-                                        Searching
-                                            <span> &ldquo;{ text }&rdquo; </span>
-                                        in progress...
-                                    </h2> )
-                                }
-
-                                { spinner && ( <Spinner/> ) }
-                            </div>
-
-                            <Errors
-                                errorMessage={ errorMessage }
-                                errorCode={ errorCode }
-                                clearError={ clearError }
-                            />
-                        </div>
+                        <Modal
+                            spinner={ spinner }
+                            text={ text }
+                            errorMessage={ errorMessage }
+                            errorCode={ errorCode }
+                            clearError={ clearError }
+                            search={ search }
+                        />
                     )
                 }
             </nav>

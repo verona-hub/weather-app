@@ -10,6 +10,7 @@ import * as _ from 'underscore';
 import About from './components/Page/About';
 import Main from './components/Page/Main';
 import Navbar from './components/Page/Navbar';
+import PageNotFound404 from "./components/Page/PageNotFound404";
 import Search from "./components/Utility/Search";
 
 
@@ -64,7 +65,7 @@ class App extends Component {
                 ${process.env.REACT_APP_WEATHER_API_KEY}
                 &q=${text}
                 `)
-            ]).then(x => new Promise(resolve => setTimeout(() => resolve(x), 2500)));
+            ]).then(x => new Promise(resolve => setTimeout(() => resolve(x), 3500)));
 
             this.setState({
                 weatherInfo: response[0].data.current,
@@ -159,6 +160,7 @@ class App extends Component {
                                </Fragment>
                            )}
                     />
+
                     <Route path="/about" render={ () => (
                         <Fragment>
                             <Navbar/>
@@ -167,6 +169,9 @@ class App extends Component {
                             </div>
                         </Fragment>
                     )} />
+
+                    <Route component={ PageNotFound404 } />
+
                 </Switch>
             </BrowserRouter>
         );
