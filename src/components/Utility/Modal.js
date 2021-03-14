@@ -24,6 +24,7 @@ const Modal = ({ text, spinner, errorMessage, errorCode, clearError, search }) =
                     }
 
                     { spinner && ( <Spinner/> ) }
+
                 </div>
 
                 <Errors

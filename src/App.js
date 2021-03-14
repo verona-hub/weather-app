@@ -65,7 +65,7 @@ class App extends Component {
                 ${process.env.REACT_APP_WEATHER_API_KEY}
                 &q=${text}
                 `)
-            ]).then(x => new Promise(resolve => setTimeout(() => resolve(x), 3500)));
+            ]).then(x => new Promise(resolve => setTimeout(() => resolve(x), 2500)));
 
             this.setState({
                 weatherInfo: response[0].data.current,
@@ -74,7 +74,6 @@ class App extends Component {
                 location: response[0].data.location,
                 spinner: false,
                 astronomy: response[1].data.astronomy.astro,
-                errorMessage: null,
                 modal: false,
                 search: false
             });
@@ -90,11 +89,15 @@ class App extends Component {
                 search: true
             });
 
-            setTimeout(() => this.setState({ errorMessage: err.response.data.error.message, spinner: false, search: false}), 1000);
+            setTimeout(() => this.setState({ errorMessage: err.response.data.error.message, spinner: false, search: false}), 2000);
             setTimeout(() => this.setState({ errorMessage: null, modal: false }), 10000);
         }
 
-        window.scrollTo(0,650);
+        // window.scrollTo(0,650);
+        window.scrollTo({
+            top: 670,
+            behavior: 'smooth'
+        });
 
     }
 
