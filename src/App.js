@@ -64,7 +64,7 @@ class App extends Component {
                 axios.get(`https://api.weatherapi.com/v1/astronomy.json?key=
                 ${process.env.REACT_APP_WEATHER_API_KEY}
                 &q=${text}
-                `)
+                `), {}
             ]).then(x => new Promise(resolve => setTimeout(() => resolve(x), 2500)));
 
             this.setState({
@@ -93,7 +93,6 @@ class App extends Component {
             setTimeout(() => this.setState({ errorMessage: null, modal: false }), 10000);
         }
 
-        // window.scrollTo(0,650);
         window.scrollTo({
             top: 650,
             behavior: 'smooth'
