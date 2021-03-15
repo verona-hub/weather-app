@@ -95,7 +95,7 @@ class App extends Component {
 
         // window.scrollTo(0,650);
         window.scrollTo({
-            top: 670,
+            top: 650,
             behavior: 'smooth'
         });
 
@@ -117,11 +117,27 @@ class App extends Component {
         });
     }
 
+    cancelSearch = () => {
+        this.setState({
+            text: '',
+            weatherInfo: [],
+            weatherCondition: [],
+            airQuality: [],
+            location: [],
+            astronomy: [],
+            spinner: false,
+            errorMessage: null,
+            errorCode: null,
+            modal: false,
+            search: false
+        });
+    }
+
     render () {
 
         const { text, weatherInfo, weatherCondition, airQuality, location, astronomy,
             spinner, errorMessage, errorCode, modal, search } = this.state;
-        const { searchCity, clearContent, clearError } = this;
+        const { searchCity, clearContent, clearError, cancelSearch } = this;
 
         const locationResponseSize = _.size(location);
         const weatherResponseSize = _.size(weatherInfo);
@@ -141,6 +157,7 @@ class App extends Component {
                                        clearError={ clearError }
                                        modal={ modal }
                                        search={ search }
+                                       cancelSearch={ cancelSearch }
                                    />
                                    <Search
                                        searchCity={ searchCity }

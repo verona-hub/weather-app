@@ -279,7 +279,8 @@ button {
   opacity: 0.95;
 }
 
-.button_clear {
+.button_clear,
+.button_cancel_search {
   background: var(--orange);
   color: var(--white);
   font-size: 1rem;
@@ -312,12 +313,16 @@ button {
   min-width: 20%;
 }
 
-.button_to_top {
-  padding: 0;
-  position: relative;
-  /*background-color: rgba(255,255,255, 0.001);*/
-  width: 64px;
+.button_cancel_search {
+  margin: 5vh;
 }
+
+.button_to_top,
+.button_to_left {
+  background-color: rgba(255, 255, 255, 0.01);
+  padding: 2vh;
+}
+
 
 
 /*
@@ -327,24 +332,60 @@ button {
   font-style: italic;
 }
 
+
+
+/*
++ BackToSearch
++ ScrollToTop
+*/
+
+.About_buttons {
+  display: flex;
+  justify-content: center;
+  margin: 10vh;
+}
+
+.BackToSearch img,
+.ScrollToTop img {
+  width: 64px;
+}
+
+.BackToSearch p,
+.ScrollToTop p {
+  font-size: 1rem;
+  font-weight: bold;
+  margin: 10px;
+}
+
 /*
 + Keyframes
 */
 
 .Modal {
-  -webkit-animation: fadeIn 700ms;
-  animation: fadeIn 700ms;
+  -webkit-animation: fadeIn 700ms ease;
+  animation: fadeIn 700ms ease;
+}
+
+.Search {
+  -webkit-animation: fadeIn 700ms ease;
+  animation: fadeIn 700ms ease;
 }
 
 .Main {
-  -webkit-animation: fadeIn 2000ms;
-  animation: fadeIn 2000ms;
+  -webkit-animation: fadeIn 1600ms ease-in;
+  animation: fadeIn 1600ms ease-in;
+}
+
+.index_wrapper {
+  -webkit-animation: fadeIn 1000ms ease-out;
+  animation: fadeIn 1000ms ease-out;
 }
 
 .About {
-  -webkit-animation: fadeInSlow 1600ms linear;
-  animation: fadeInSlow 1600ms linear;
+  -webkit-animation: fadeToAbout 1000ms ease;
+  animation: fadeToAbout 1000ms ease;
 }
+
 
 @keyframes fadeIn {
   0% { opacity: 0; }
@@ -360,16 +401,7 @@ button {
   100% { opacity: 1; }
 }
 
-/*@keyframes fadeInSlow {
-  from {
-    opacity: 0;
-  }
-  to {
-    opacity: 1;
-  }
-}*/
-
-@keyframes fadeInSlow {
+@keyframes fadeToAbout {
   0% { opacity: 0; }
   5% { opacity: 0.05; }
   10% { opacity: 0.1; }
@@ -419,16 +451,6 @@ button {
   width: 100%;
 }
 
-.ScrollToTop {
-  margin: 10vh;
-}
-
-.Main img.to_top {
-  /*top: -10px;*/
-  /*position: absolute;*/
-  /*right: -4px;*/
-  /*width: 125%;*/
-}
 
 
 /*

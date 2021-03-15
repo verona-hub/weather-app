@@ -5,6 +5,7 @@ import love from '../../img/love.png';
 import react_logo from '../../img/react-logo.png';
 import Footer from './Footer';
 import ScrollToTop from '../Utility/ScrollToTop';
+import BackToSearch from "../Utility/BackToSearch";
 
 
 const About = () => {
@@ -53,7 +54,7 @@ const About = () => {
                             Unsplash
                         </a>
                     </p>
-                    <p>Main app logo, search icon, "x" icon, love icon, home icon and Github icon by:
+                    <p>Main app logo, search icon, "x" icon, love icon, home icon, scroll to top icon, back to search icon and Github icon by:
                         <a href="https://www.freepik.com" title="Freepik" target="_blank" rel="noreferrer">
                             Freepik
                         </a> from
@@ -61,7 +62,7 @@ const About = () => {
                             www.flaticon.com
                         </a>
                     </p>
-                        <p> Warning icon by <a href="https://www.flaticon.com/authors/mavadee" title="mavadee">mavadee</a> from <a href="https://www.flaticon.com/" title="Flaticon">www.flaticon.com</a></p>
+                    <p> Warning icon by <a href="https://www.flaticon.com/authors/mavadee" title="mavadee">mavadee</a> from <a href="https://www.flaticon.com/" title="Flaticon">www.flaticon.com</a></p>
                     <p>React logo by:
                         <a href="https://www.flaticon.com/authors/kiranshastry" title="Kiranshastry" target="_blank" rel="noreferrer">
                             Kiranshastry
@@ -70,14 +71,15 @@ const About = () => {
                             www.flaticon.com
                         </a>
                     </p>
-
-                    <ScrollToTop />
-
                 </section>
 
-
+                <div className="About_buttons">
+                    <BackToSearch />
+                    <ScrollToTop />
+                </div>
 
                 <Footer />
+
             </div>
         </div>
     );
