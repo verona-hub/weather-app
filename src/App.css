@@ -68,6 +68,12 @@ img {
   height: 10vh;
 }
 
+.header_404 {
+  background: url(img/404.jpg) no-repeat top;
+  height: 100vh;
+  /*background-size: cover;*/
+}
+
 .navbar {
   align-items: center;
   background-color: rgba(0,0,0, 0.5);
@@ -285,8 +291,7 @@ button {
   opacity: 0.95;
 }
 
-.button_clear,
-.button_cancel_search {
+.button_clear {
   background: var(--orange);
   color: var(--white);
   font-size: 1rem;
@@ -313,6 +318,8 @@ button {
 }
 
 .button_home {
+  display: inline-block;
+  margin: 0;
   width: 12rem;
 }
 
@@ -324,8 +331,20 @@ button {
   min-width: 20%;
 }
 
+.x_button_wrapper {
+  position: absolute;
+  right: 5px;
+  top: 0;
+}
+
 .button_cancel_search {
-  margin: 5vh;
+  background-color: rgba(255, 255, 255, 0.01);
+  border: none;
+  color: var(--orange);
+  cursor: pointer;
+  font-size: 1.2rem;
+  font-weight: bold;
+  padding: 10px;
 }
 
 .button_to_top,
@@ -682,6 +701,10 @@ button {
   margin-top: 10vh;
 }
 
+.About .credits div {
+  margin: 5vh;
+}
+
 .love_icon {
   width: 60px;
 }
@@ -716,43 +739,69 @@ button {
 /*
 + PageNotFound404
 */
-
 .PageNotFound404 .container {
-  max-width: 1300px;
+  max-width: 0;
+}
+
+.PageNotFound404 {
+  position: absolute;
+  height: 90vh;
+  top: 10vh;
 }
 
 .PageNotFound404_wrapper {
-  align-items: center;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-evenly;
-  padding: 10vh 5vw;
-  text-align: left;
+  height: 100%;
+  /*padding: 1vh 3vw;*/
+  width: 50%;
+
 }
 
-.PageNotFound404 h1 {
+.PageNotFound404 .title {
+  text-align: center;
+}
+
+.PageNotFound404 .title h1 {
   font-family: 'Love Ya Like A Sister', cursive;
-  font-size: 9rem;
+  font-size: 8rem;
   letter-spacing: 1.2rem;
 }
 
-.PageNotFound404 h2 {
-  font-family: 'Playfair Display', serif ;
-  font-size: 2rem;
-  width: 100%;
+.PageNotFound404 .sub-title {
+  left: 0;
+  margin-bottom: 5vh;
+  position: absolute;
+  right: 0;
+  text-align: center;
+  top: 18vh;
+  width: 49%;
 }
 
-.PageNotFound404 p.paragraph {
+.PageNotFound404 .sub-title h2 {
+  font-size: 2.6rem;
+  letter-spacing: 0.1rem;
+}
+
+.PageNotFound404 .text h2 {
   font-family: 'Playfair Display', serif ;
   font-size: 1.6rem;
+}
+
+
+.PageNotFound404 .text p {
+  font-family: 'Playfair Display', serif ;
+  font-size: 1.6rem;
+  letter-spacing: 1px;
   padding: 3vh 0;
 }
 
-.home_icon_wrapper {
-  align-items: center;
-  border-radius: 4px;
+.PageNotFound404 .text {
+  margin: 7vh 5vh;
+}
+
+.home_wrapper {
   display: flex;
-  padding: 10px;
+  justify-content: center;
+  margin: 5vh;
 }
 
 .home_icon {

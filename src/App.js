@@ -180,7 +180,7 @@ class App extends Component {
                            )}
                     />
 
-                    <Route path="/about" render={ () => (
+                    <Route exact path="/about" render={ () => (
                         <Fragment>
                             <Navbar/>
                             <div className="container">
@@ -189,7 +189,12 @@ class App extends Component {
                         </Fragment>
                     )} />
 
-                    <Route component={ PageNotFound404 } />
+                    <Route render={ () => (
+                        <Fragment>
+                            <Navbar />
+                                <PageNotFound404 />
+                        </Fragment>
+                    )} />
 
                 </Switch>
             </BrowserRouter>

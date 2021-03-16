@@ -5,10 +5,8 @@ import warning from '../../img/warning.png';
 
 const Errors = ({ errorMessage, errorCode, clearError }) => {
 
-    const [ error ] = useState(true);
-
     const handleClearError = () => {
-        clearError(error);
+        clearError();
     }
 
     if (_.size(errorMessage) > 0) {
@@ -36,7 +34,7 @@ const Errors = ({ errorMessage, errorCode, clearError }) => {
                             <p> Please try a different one. </p>
                             <p> (this box will self-close in 10s) </p>
                         </div>
-                        <button onClick={ clearError } className="button button_ok"> OK </button>
+                        <button onClick={ handleClearError } className="button button_ok"> OK </button>
                     </div>
                 )
 
@@ -49,7 +47,7 @@ const Errors = ({ errorMessage, errorCode, clearError }) => {
                             <p>Sorry, { errorMessage } </p>
                             <p> (this box will self-close in 10s) </p>
                         </div>
-                        <button onClick={ this.clearError } className="button button_ok"> OK </button>
+                        <button onClick={ handleClearError } className="button button_ok"> OK </button>
                     </div>)
         }
     }
