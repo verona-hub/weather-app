@@ -31,8 +31,8 @@ const Main = ({ weatherInfo, weatherCondition, location, airQuality, astronomy, 
                     ( locationResponseSize > 0 || weatherResponseSize > 0 ) && (
                         <div className="Main">
                             <div className="Main_header card">
-                                <h2> Realtime weather conditions in: </h2>
-                                <h2> { name }, { country } </h2>
+                                <h2 className="title"> Realtime weather conditions in: </h2>
+                                <h2 className="title"> { name }, { country } </h2>
                             </div>
                             <Weather
                                 weatherInfo={ weatherInfo }

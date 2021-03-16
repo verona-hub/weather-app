@@ -1,22 +1,67 @@
 import React from 'react';
 import { NavLink } from 'react-router-dom';
-
 // Images
 import logo from '../../img/sun.svg';
-
 // Components
 import Modal from '../Utility/Modal';
 
 
 const Navbar = ({ text, emptyContent, spinner, errorMessage, errorCode, clearError, modal, search, cancelSearch }) => {
 
-    const headerChange = window.location.pathname === '/about' ? 'header_100'
-        : ( window.location.pathname === '/' && emptyContent  ? ' header_100'
+    /*const headerChange = window.location.pathname === '/about' || ('/' && emptyContent) ? 'header_100'
+        : window.location.pathname !== ('/' || '/about') ? ' header_no-image'
+            : 'header_100';*/
+    /*
+        const homePage = window.location.pathname === '/' && emptyContent ? 'header_100' : 'header_70';
+        const about = window.location.pathname === '/about' ? 'header_100' : 'header_100';
+
+        const otherPages = window.location.pathname !== ('/' || '/about') ? 'header_no-image'
+            : (window.location.pathname === '/' && emptyContent  ? 'header_100'
+                : ( window.location.pathname === '/about' ? 'header_100' : 'header_70'));
+        */
+
+    /*
+        const headerChange = window.location.pathname === '/about' ? 'header_100'
+            : ( window.location.pathname === '/' && emptyContent  ? ' header_100'
+                : (window.location.pathname !== ('/' || '/about') ? ' header_no-image' : 'header_70'));
+        */
+
+    // const noImage = window.location.pathname !== '/' && '/about' ? 'header header_no-image' : 'header';
+
+   /* let home;
+    if (window.location.pathname === '/') {
+        if (window.location.pathname === '/') {
+            if (!emptyContent) {
+                if (window.location.pathname === '/about') {
+                    home = 'header_70';
+                } else {
+                    home = 'header_100';
+
+                }
+            } else {
+                home = 'header_80';
+            }
+        }
+    }
+
+    if (window.location.pathname === '/about') {
+        home = 'header_100';
+    }
+    */
+
+    const homePage = window.location.pathname === '/';
+    const aboutPage = window.location.pathname === '/about';
+    let otherPages = window.location.pathname !== '/' || '/about';
+
+    const headerChange = aboutPage ? 'header_100'
+        : ( homePage && emptyContent  ? ' header_100'
             : (window.location.pathname !== ('/' || '/about') ? ' header_no-image' : 'header_70'));
 
+   const otherNavbar = otherPages ? 'navbar_other' : 'navbar';
+
     return (
-        <div className={`header ${headerChange}`}>
-            <nav className= { modal ? 'navbar navbar_dark' : 'navbar'}>
+        <div className={`header ${headerChange} `}>
+            <nav className= { modal ? 'navbar navbar_dark' : `navbar ${otherNavbar}` }>
                 <NavLink to='/' activeClassName='active' exact className='logo_wrapper'>
                     <img src={ logo } alt="logo icon" className="logo_img"/>
                     <div className='nav_link_item'>Weather App</div>
