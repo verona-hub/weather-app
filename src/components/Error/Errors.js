@@ -18,9 +18,9 @@ const Errors = ({ errorMessage, errorCode, clearError }) => {
                             <img src={ warning } alt="warning logo" className="warning_logo"/>
                             <h2> Ooops! </h2>
                             <p> Searchbar is empty. Please enter a location... </p>
-                            <p> (this box will self-close in 10s) </p>
+                            <p className="close"> (this box will self-close in 10s) </p>
                         </div>
-                        <button onClick={ handleClearError } className="button button_ok"> OK </button>
+                        <button onClick={ handleClearError } className="button button_ok"> Close </button>
                     </div>
                 )
 
@@ -32,9 +32,9 @@ const Errors = ({ errorMessage, errorCode, clearError }) => {
                             <h2> Ooops! </h2>
                             <p>{ errorMessage }.</p>
                             <p> Please try a different one. </p>
-                            <p> (this box will self-close in 10s) </p>
+                            <p className="close"> (this box will self-close in 10s) </p>
                         </div>
-                        <button onClick={ handleClearError } className="button button_ok"> OK </button>
+                        <button onClick={ handleClearError } className="button button_ok"> Close </button>
                     </div>
                 )
 
@@ -45,9 +45,9 @@ const Errors = ({ errorMessage, errorCode, clearError }) => {
                             <img src={ warning } alt="warning logo" className="warning_logo"/>
                             <h2> Ooops! </h2>
                             <p>Sorry, { errorMessage } </p>
-                            <p> (this box will self-close in 10s) </p>
+                            <p className="close"> (this box will self-close in 10s) </p>
                         </div>
-                        <button onClick={ handleClearError } className="button button_ok"> OK </button>
+                        <button onClick={ handleClearError } className="button button_ok"> Close </button>
                     </div>)
         }
     }

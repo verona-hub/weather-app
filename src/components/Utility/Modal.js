@@ -1,8 +1,5 @@
 import React from 'react';
 
-// Images
-import dog from '../../img/gif/dog.gif';
-
 // Components
 import Spinner from "./Spinner";
 import Errors from "../Error/Errors";
@@ -16,15 +13,12 @@ const Modal = ({ text, spinner, errorMessage, errorCode, clearError, search, can
 
     return (
         <div className="Modal">
-            <div className="modal_content">
                 { search && (
-                    <div>
-                        <div>
-                            <h2> Your request is being processed! </h2>
-                            <h2> Searching
-                                <span> &ldquo;{ text }&rdquo;... </span>
+                    <div className="modal_content">
+                        <div className="modal_text">
+                            <h2> Searching:
+                                <span> { text } </span>
                             </h2>
-                            <img src={ dog } alt="a cat processing the search request" className="dog"/>
                             <h2> Please wait... </h2>
                         </div>
                         <div className="x_button_wrapper">
@@ -35,8 +29,6 @@ const Modal = ({ text, spinner, errorMessage, errorCode, clearError, search, can
                 }
 
                 { spinner && ( <Spinner/> ) }
-
-            </div>
 
             <Errors
                 errorMessage={ errorMessage }
