@@ -191,7 +191,7 @@ class App extends Component {
                     <Route render={ () => (
                         <Fragment>
                             <Navbar />
-                                <PageNotFound404 />
+                            <PageNotFound404 />
                         </Fragment>
                     )} />
 

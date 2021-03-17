@@ -15,14 +15,14 @@ const Modal = ({ text, spinner, errorMessage, errorCode, clearError, search, can
         <div className="Modal">
                 { search && (
                     <div className="modal_content">
-                        <div className="modal_text">
-                            <h2> Searching:
-                                <span> { text } </span>
-                            </h2>
-                            <h2> Please wait... </h2>
+                        <div className="x_wrapper">
+                            <button onClick={ handleCancelSearch } className="x_search"> X</button>
                         </div>
-                        <div className="x_button_wrapper">
-                            <button onClick={ handleCancelSearch } className="button_cancel_search"> X </button>
+                        <div className="modal_text">
+                            <h1> Search in progress </h1>
+                            <h2 className="location"> Location: <span> { text } </span></h2>
+                            <h2 className="wait"> Please wait... </h2>
+                            <button onClick={ handleCancelSearch } className="button button_cancel_search"> Close </button>
                         </div>
                     </div>
                 )

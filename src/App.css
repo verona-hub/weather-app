@@ -28,8 +28,21 @@ body {
 }
 
 a {
+  /*
   color: var(--dark-grey);
+  */
+}
+
+.header a,
+.Main a,
+.BackToSearch a,
+.ScrollToTop a {
   text-decoration: none;
+}
+
+.BackToSearch a,
+.ScrollToTop a {
+  color: var(--dark-grey);
 }
 
 img {
@@ -145,27 +158,57 @@ img {
 }
 
 .modal_content {
-  /*color: var(--white);*/
-  margin: auto;
-  padding: 15vh 0 5vh;
-  width: 50%;
+  background-color: white;
+  border-radius: 2px;
+  margin: 10vh auto auto;
+  width: 40vw;
 }
 
 .modal_text {
-  background-color: white;
-  border: 4px solid orange;
-  border-radius: 4px;
-  display: inline-block;
+  /*padding: 0 0 3vh;*/
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
 }
 
-.modal_content h2 {
-  font-size: 2rem;
-  border-bottom: 1px solid dimgrey;
-  padding: 40px;
+.modal_text h1 {
+  border: 2px solid dimgrey;
+  display: inline;
+  font-size: 2.4rem;
+  padding: 10px;
+}
+
+.modal_text h2 {
+  font-size: 2.4rem;
+}
+
+.modal_text h2.location{
+  /*margin: 5vh 0;*/
+}
+
+.modal_text h2.wait{
+  /*margin: 5vh 0;*/
 }
 
 .modal_content span {
   text-transform: capitalize;
+}
+
+.x_wrapper {
+  display: flex;
+  justify-content: flex-end;
+}
+
+.x_search {
+  background-color: rgba(255, 255, 255, 0.01);
+  border: none;
+  color: var(--dark-grey);
+  cursor: pointer;
+  font-size: 1.2rem;
+  font-weight: bold;
+  margin-right: 5px;
+  padding: 8px;
 }
 
 
@@ -338,7 +381,8 @@ button {
   width: 12rem;
 }
 
-.button_ok {
+.button_ok,
+.button_cancel_search{
   background: var(--blue);
   color: var(--white);
   font-size: 1rem;
@@ -346,29 +390,11 @@ button {
   min-width: 20%;
 }
 
-.x_button_wrapper {
-  position: absolute;
-  right: 5px;
-  top: 0;
-}
-
-.button_cancel_search {
-  background-color: rgba(255, 255, 255, 0.01);
-  border: none;
-  color: var(--orange);
-  cursor: pointer;
-  font-size: 1.2rem;
-  font-weight: bold;
-  padding: 10px;
-}
-
 .button_to_top,
 .button_to_left {
   background-color: rgba(255, 255, 255, 0.01);
   padding: 2vh;
 }
-
-
 
 /*
 + BackToSearch
@@ -676,6 +702,11 @@ button {
 /*
 + About
 */
+
+.About {
+  font-family: 'Playfair Display', serif ;
+}
+
 .About .welcome {
   background-color: rgba(0,0,0, 0.3);
   color: var(--white);
@@ -698,19 +729,32 @@ button {
 
 .About .title {
   border: 2px solid var(--white);
-  font-family: 'Playfair Display', serif ;
   font-size: 8rem;
   margin-bottom: 20vh;
   padding: 30px;
   text-transform: uppercase;
 }
 
-.About section:not(about_main) {
-  margin: 15vh 0 3vh;
+.About section {
+  margin: 15vh 0;
 }
 
-.About .about_main {
+.About .about_react {
   margin-top: 10vh;
+}
+
+.About h2 {
+  border: solid dimgrey;
+  border-width: 1px 0 1px;
+  display: inline-block;
+  font-size: 2.4rem;
+  padding: 10px 0 10px;
+  margin-bottom: 30px;
+}
+
+.About p {
+  font-size: 1.3rem;
+  padding: 0 30px;
 }
 
 .About .credits div {
@@ -718,7 +762,7 @@ button {
 }
 
 .react_logo {
-  margin: 2vh;
+  margin: 5vh auto 0;
   width: 100px;
 }
 
@@ -726,19 +770,30 @@ button {
   margin-bottom: 3vh;
 }
 
+.github {
+  text-align: center;
+}
+
+.github a {
+  display: inline-block;
+  width: 120px;
+}
+
 .github_logo {
+  display: inline-block;
   opacity: 0.7;
   width: 100px;
 }
 
-.github p {
+.github span {
   margin: 0 auto;
   opacity: 0.7;
-  width: 30%;
+  font-size: 1.3rem;
+  /*padding: 0 30px;*/
 }
 
 .github_logo:hover,
-.github p:hover{
+.github span:hover{
   opacity: 1;
 }
 
@@ -853,6 +908,9 @@ button {
 }
 
 @media (max-width: 980px) {
+  .modal_content {
+    width: 70vw;
+  }
 
   .modal_content h2 {
     font-size: 2rem;
@@ -904,8 +962,18 @@ button {
     padding: 0 10px;
   }
 
-  .modal_content h2 {
-    padding: 10px;
+  .modal_content {
+    margin: 5vh auto 0;
+    width: 90vw;
+  }
+
+  .modal_text h1 {
+    font-size: 1.6rem;
+  }
+
+  .modal_text h2.location,
+  .modal_text h2.wait {
+    font-size: 1.4rem;
   }
 
   form {
@@ -953,8 +1021,22 @@ button {
     min-width: 80%;
   }
 
+  .About section {
+    margin: 30vh 0;
+    padding: 0 20px;
+  }
+
   .About .title {
     font-size: 2.6rem;
+  }
+
+  .About h2 {
+    font-size: 1.4rem;
+
+  }
+  .About p {
+    font-size: 1rem;
+    padding: 0;
   }
 
 }
