@@ -93,8 +93,7 @@ class App extends Component {
             setTimeout(() => this.setState({ errorMessage: null, modal: false }), 10000);
         }
 
-        window.scrollTo({
-            top: 650,
+        document.querySelector('.container').scrollIntoView({
             behavior: 'smooth'
         });
 
@@ -164,7 +163,7 @@ class App extends Component {
                                        showClearButton={ locationResponseSize > 0 && weatherResponseSize > 0 && !spinner }
                                        spinner={ spinner }
                                    />
-                                   <div className="container">
+                                   <div id="container" className="container">
                                        <Main
                                            weatherInfo={ weatherInfo }
                                            weatherCondition={ weatherCondition }
