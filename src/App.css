@@ -27,12 +27,6 @@ body {
   overflow-y: scroll;
 }
 
-a {
-  /*
-  color: var(--dark-grey);
-  */
-}
-
 .header a,
 .Main a,
 .BackToSearch a,
@@ -419,74 +413,6 @@ button {
   margin: 10px;
 }
 
-/*
-+ Keyframes
-*/
-
-.Modal {
-  -webkit-animation: fadeIn 700ms ease;
-  animation: fadeIn 700ms ease;
-}
-
-.Search {
-  -webkit-animation: fadeIn 700ms ease;
-  animation: fadeIn 700ms ease;
-}
-
-.Main {
-  -webkit-animation: fadeIn 1600ms ease-in;
-  animation: fadeIn 1600ms ease-in;
-}
-
-.index_wrapper {
-  -webkit-animation: fadeIn 1000ms ease-out;
-  animation: fadeIn 1000ms ease-out;
-}
-
-.About {
-  -webkit-animation: fadeToAbout 1000ms ease;
-  animation: fadeToAbout 1000ms ease;
-}
-
-
-@keyframes fadeIn {
-  0% { opacity: 0; }
-  10% { opacity: 0.1; }
-  20% { opacity: 0.2; }
-  30% { opacity: 0.3; }
-  40% { opacity: 0.4; }
-  50% { opacity: 0.5; }
-  60% { opacity: 0.6; }
-  70% { opacity: 0.7; }
-  80% { opacity: 0.8; }
-  90% { opacity: 0.9; }
-  100% { opacity: 1; }
-}
-
-@keyframes fadeToAbout {
-  0% { opacity: 0; }
-  5% { opacity: 0.05; }
-  10% { opacity: 0.1; }
-  15% { opacity: 0.15; }
-  20% { opacity: 0.2; }
-  25% { opacity: 0.25; }
-  30% { opacity: 0.3; }
-  35% { opacity: 0.35; }
-  40% { opacity: 0.4; }
-  45% { opacity: 0.45; }
-  50% { opacity: 0.5; }
-  55% { opacity: 0.55; }
-  60% { opacity: 0.6; }
-  65% { opacity: 0.65; }
-  70% { opacity: 0.7; }
-  75% { opacity: 0.75; }
-  80% { opacity: 0.8; }
-  85% { opacity: 0.85; }
-  90% { opacity: 0.9; }
-  95% { opacity: 0.95; }
-  100% { opacity: 1; }
-}
-
 
 
 /*
@@ -752,13 +678,9 @@ button {
   margin-bottom: 30px;
 }
 
-.About p {
-  font-size: 1.3rem;
-  padding: 0 30px;
-}
-
-.About .credits div {
-  margin: 3vh;
+.github a {
+  display: inline-block;
+  width: 120px;
 }
 
 .react_logo {
@@ -774,28 +696,38 @@ button {
   text-align: center;
 }
 
-.github a {
-  display: inline-block;
-  width: 120px;
-}
-
 .github_logo {
   display: inline-block;
   opacity: 0.7;
   width: 100px;
 }
 
-.github span {
-  margin: 0 auto;
-  opacity: 0.7;
-  font-size: 1.3rem;
-  /*padding: 0 30px;*/
-}
-
 .github_logo:hover,
 .github span:hover{
   opacity: 1;
 }
+
+.github span {
+  margin: 0 auto;
+  opacity: 0.7;
+  font-size: 1.3rem;
+}
+
+.About .list_wrapper {
+  background-color: red;
+  margin: 0 auto;
+  width: 80%;
+}
+
+.About ul {
+  background-color: orange;
+}
+
+.About ul li {
+  background-color: lightblue;
+  list-style: square;
+}
+
 
 
 
@@ -894,9 +826,92 @@ button {
 }
 
 
+
+/*
++ Keyframes
+*/
+
+.Modal {
+  -webkit-animation: fadeIn 700ms ease;
+  animation: fadeIn 700ms ease;
+}
+
+.Search {
+  -webkit-animation: fadeIn 700ms ease;
+  animation: fadeIn 700ms ease;
+}
+
+.Main {
+  -webkit-animation: fadeIn 1600ms ease-in;
+  animation: fadeIn 1600ms ease-in;
+}
+
+.index_wrapper {
+  -webkit-animation: fadeIn 1000ms ease-out;
+  animation: fadeIn 1000ms ease-out;
+}
+
+.About {
+  -webkit-animation: fadeToAbout 1000ms ease;
+  animation: fadeToAbout 1000ms ease;
+}
+
+
+@keyframes fadeIn {
+  0% { opacity: 0; }
+  10% { opacity: 0.1; }
+  20% { opacity: 0.2; }
+  30% { opacity: 0.3; }
+  40% { opacity: 0.4; }
+  50% { opacity: 0.5; }
+  60% { opacity: 0.6; }
+  70% { opacity: 0.7; }
+  80% { opacity: 0.8; }
+  90% { opacity: 0.9; }
+  100% { opacity: 1; }
+}
+
+@keyframes fadeToAbout {
+  0% { opacity: 0; }
+  5% { opacity: 0.05; }
+  10% { opacity: 0.1; }
+  15% { opacity: 0.15; }
+  20% { opacity: 0.2; }
+  25% { opacity: 0.25; }
+  30% { opacity: 0.3; }
+  35% { opacity: 0.35; }
+  40% { opacity: 0.4; }
+  45% { opacity: 0.45; }
+  50% { opacity: 0.5; }
+  55% { opacity: 0.55; }
+  60% { opacity: 0.6; }
+  65% { opacity: 0.65; }
+  70% { opacity: 0.7; }
+  75% { opacity: 0.75; }
+  80% { opacity: 0.8; }
+  85% { opacity: 0.85; }
+  90% { opacity: 0.9; }
+  95% { opacity: 0.95; }
+  100% { opacity: 1; }
+}
+
+
+
 /*
 + Mobile
 */
+
+@media (min-width: 760px) {
+  .About ul {
+    /*padding: 0 160px;*/
+  }
+
+  .About ul li {
+    padding: 20px;
+  }
+}
+
+
 @media (max-width: 1240px) {
   .button_block {
     width: 50%;
@@ -1028,6 +1043,18 @@ button {
 
   .About .title {
     font-size: 2.6rem;
+  }
+
+  .About .list_wrapper {
+    width: 100%;
+  }
+
+  .About ul li {
+    padding: 20px 10px;
+  }
+
+  .About ul li a {
+    padding: 0 10px 0 0;
   }
 
   .About h2 {
