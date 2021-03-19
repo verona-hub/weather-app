@@ -9,12 +9,11 @@ const PageNotFound404 = () => {
         <div className="PageNotFound404">
             <div className="PageNotFound404_wrapper">
 
-                <div className="title">
-                    <h1> 404 </h1>
-                </div>
-
-                <div className="sub-title">
-                    <h2> Page not found! </h2>
+                <div className="title_wrapper">
+                    <div className="title">
+                        <h1> 404 </h1>
+                        <h2> Page not found! </h2>
+                    </div>
                 </div>
 
                 <div className="text">

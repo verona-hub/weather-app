@@ -76,7 +76,6 @@ img {
 .header_404 {
   background: url(img/404.jpg) no-repeat top;
   height: 100vh;
-  /*background-size: cover;*/
 }
 
 .navbar {
@@ -714,44 +713,32 @@ button {
 }
 
 .About .list_wrapper {
-  background-color: red;
   margin: 0 auto;
   width: 80%;
 }
 
-.About ul {
-  background-color: orange;
-}
-
 .About ul li {
-  background-color: lightblue;
   list-style: square;
 }
-
 
 
 
 /*
 + PageNotFound404
 */
-.PageNotFound404 .container {
-  max-width: 0;
-}
 
 .PageNotFound404 {
   position: absolute;
-  height: 90vh;
+  min-height: 90vh;
   top: 10vh;
 }
 
 .PageNotFound404_wrapper {
-  height: 100%;
-  /*padding: 1vh 3vw;*/
+  /*height: 100%;*/
   width: 50%;
-
 }
 
-.PageNotFound404 .title {
+.PageNotFound404 .title_wrapper {
   text-align: center;
 }
 
@@ -761,19 +748,14 @@ button {
   letter-spacing: 1.2rem;
 }
 
-.PageNotFound404 .sub-title {
-  left: 0;
-  margin-bottom: 5vh;
-  position: absolute;
-  right: 0;
-  text-align: center;
-  top: 18vh;
-  width: 49%;
-}
-
-.PageNotFound404 .sub-title h2 {
+.PageNotFound404 .title h2 {
   font-size: 2.6rem;
   letter-spacing: 0.1rem;
+  margin-top: -30px;
+}
+
+.PageNotFound404 .text {
+  margin: 7vh 5vh;
 }
 
 .PageNotFound404 .text h2 {
@@ -789,14 +771,10 @@ button {
   padding: 3vh 0;
 }
 
-.PageNotFound404 .text {
-  margin: 7vh 5vh;
-}
-
 .home_wrapper {
   display: flex;
   justify-content: center;
-  margin: 5vh;
+  margin: 2vh;
 }
 
 .home_icon {
@@ -920,6 +898,36 @@ button {
   .alert {
     width: 70vw;
   }
+
+  .header_404 {
+    background-size: cover;
+    height: 50vh;
+  }
+
+  .PageNotFound404 {
+    min-height: 50vh;
+    position: relative;
+    top: 0;
+  }
+
+  .PageNotFound404_wrapper {
+    background-color: #fff;
+    padding: 50px;
+    width: 100%;
+  }
+
+  .PageNotFound404 .title_wrapper {
+    left: 5%;
+    position: absolute;
+    top: -35vh;
+  }
+
+  .PageNotFound404 .title h1 {
+    font-size: 7rem;
+    letter-spacing: 1rem;
+  }
+
+
 }
 
 @media (max-width: 980px) {
