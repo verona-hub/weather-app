@@ -58,7 +58,7 @@ const About = () => {
                                    target="_blank" rel="noreferrer">
                                     Anton Darius
                                 </a>
-                                <span> &nbsp;on&nbsp; </span>
+                                <span>on&nbsp;</span>
                                 <a href="https://unsplash.com" target="_blank" rel="noreferrer">
                                     Unsplash
                                 </a>
@@ -69,7 +69,7 @@ const About = () => {
                                    target="_blank" rel="noreferrer">
                                     krakenimages
                                 </a>
-                                <span> &nbsp;on&nbsp; </span>
+                                <span> on&nbsp;</span>
                                 <a href="https://unsplash.com" target="_blank" rel="noreferrer">
                                     Unsplash
                                 </a>
@@ -79,7 +79,7 @@ const About = () => {
                                 <a href="https://www.flaticon.com/authors/mavadee" title="mavadee" target="_blank" rel="noreferrer">
                                     mavadee
                                 </a>
-                                <span> &nbsp;from&nbsp; </span>
+                                <span> from&nbsp;</span>
                                 <a href="https://www.flaticon.com/" title="Flaticon" target="_blank" rel="noreferrer">
                                     www.flaticon.com</a>
                             </li>
@@ -89,7 +89,7 @@ const About = () => {
                                    target="_blank" rel="noreferrer">
                                     Kiranshastry
                                 </a>
-                                <span> &nbsp;from&nbsp; </span>
+                                <span> from&nbsp;</span>
                                 <a href="https://www.flaticon.com/" title="Flaticon" target="_blank" rel="noreferrer">
                                     www.flaticon.com
                                 </a>
@@ -97,19 +97,19 @@ const About = () => {
 
                             <li> Main logo and icons (search, X, home, scroll to top,
                                    back to search, Github) by:&nbsp;
-                                <p>
+                                <div>
                                     <a href="https://www.flaticon.com/authors/freepik" target="_blank" rel="noreferrer">
                                         Freepik
                                     </a>
-                                    <span> &nbsp; from &nbsp; </span>
+                                    <span> from&nbsp; </span>
                                     <a href="https://www.flaticon.com/" title="Flaticon" target="_blank" rel="noreferrer">
                                         www.flaticon.com
                                     </a>
-                                    <span> &nbsp; and &nbsp; </span>
+                                    <span> and&nbsp; </span>
                                     <a href="https://www.freepik.com" title="Freepik" target="_blank" rel="noreferrer">
                                         www.freepik.com
                                     </a>
-                                </p>
+                                </div>
                             </li>
                         </ul>
                     </div>

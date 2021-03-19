@@ -677,6 +677,12 @@ button {
   margin-bottom: 30px;
 }
 
+.About .about_react p,
+.About .source p {
+  color: black;
+  font-size: 1.4rem;
+}
+
 .github a {
   display: inline-block;
   width: 120px;
@@ -718,7 +724,9 @@ button {
 }
 
 .About ul li {
-  list-style: square;
+  color: black;
+  list-style: none;
+  font-size: 1.4rem;
 }
 
 
@@ -880,14 +888,12 @@ button {
 */
 
 @media (min-width: 760px) {
-  .About ul {
-    /*padding: 0 160px;*/
-  }
 
   .About ul li {
     padding: 20px;
   }
 }
+
 
 
 @media (max-width: 1240px) {
@@ -897,6 +903,16 @@ button {
 
   .alert {
     width: 70vw;
+  }
+
+  .About ul li {
+    font-size: 1.2rem;
+  }
+
+  .About .about_react p,
+  .About .source p {
+    font-size: 1.2rem;
+    padding: 10px;
   }
 
   .header_404 {
@@ -925,6 +941,10 @@ button {
   .PageNotFound404 .title h1 {
     font-size: 7rem;
     letter-spacing: 1rem;
+  }
+
+  .PageNotFound404 .text {
+    margin: 5vh;
   }
 
 
@@ -1045,8 +1065,7 @@ button {
   }
 
   .About section {
-    margin: 30vh 0;
-    padding: 0 20px;
+    /*padding: 20px;*/
   }
 
   .About .title {
@@ -1058,6 +1077,7 @@ button {
   }
 
   .About ul li {
+    font-size: 1rem;
     padding: 20px 10px;
   }
 
@@ -1067,11 +1087,66 @@ button {
 
   .About h2 {
     font-size: 1.4rem;
+    margin: 10px;
+    padding: 0 10px;
+  }
 
-  }
-  .About p {
+  .About .about_react p,
+  .About .source p {
     font-size: 1rem;
-    padding: 0;
   }
+
+  .header_404 {
+    background-size: cover;
+    height: 50vh;
+  }
+
+  .PageNotFound404 {
+    min-height: 50vh;
+    position: relative;
+    top: 0;
+  }
+
+  .PageNotFound404_wrapper {
+    background-color: #fff;
+    padding: 5px 0;
+  }
+
+  .PageNotFound404 .title_wrapper {
+    left: 0;
+    margin: 3vh;
+    position: relative;
+    top: 50%;
+  }
+
+  .PageNotFound404 .title h1 {
+    font-size: 4rem;
+    letter-spacing: 1rem;
+  }
+
+  .PageNotFound404 .title h2 {
+    font-size: 2rem;
+    letter-spacing: 0.1rem;
+    margin-top: -30px;
+  }
+
+  .PageNotFound404 .text {
+    margin: 8vh;
+  }
+
+  .PageNotFound404 .text h2 {
+    font-size: 1.6rem;
+    font-weight: normal;
+  }
+
+  .PageNotFound404 .text p {
+    font-size: 1.6rem;
+    letter-spacing: 0;
+    padding: 3vh 0;
+  }
+  .home_wrapper {
+    margin: 10vh 10vh 15vh;
+  }
+
 
 }
