@@ -4,10 +4,15 @@
 
 
 :root {
+  --alert: #b74444;
+  --black: #000;
   --blue: #00A7D8;
-  --dark-blue: #286ba2;
-  --dark-grey: #333333;
+  --dark_blue: #286ba2;
+  --dark_grey: #333333;
+  --dim_grey: #696969;
   --grey: #d3d3d3;
+  --navbar: rgba(0,0,0, 0.5);
+  --navbar_dark: rgba(0,0,0, 0.8);
   --orange: #FA9138;
   --red: #c4231d;
   --white: #f4f4f4;
@@ -36,7 +41,7 @@ body {
 
 .BackToSearch a,
 .ScrollToTop a {
-  color: var(--dark-grey);
+  color: var(--dark_grey);
 }
 
 img {
@@ -80,7 +85,7 @@ img {
 
 .navbar {
   align-items: center;
-  background-color: rgba(0,0,0, 0.5);
+  background-color: var(--navbar);
   box-shadow: inset 0 0 5rem rgb(10, 22, 29);
   display: flex;
   font-size: 1.2rem;
@@ -95,7 +100,7 @@ img {
 }
 
 .navbar_dark {
-  background-color: rgba(0,0,0, 0.8);
+  background-color: var(--navbar_dark);
 }
 .navbar_other {
   box-shadow: none;
@@ -137,7 +142,7 @@ img {
 */
 
 .Modal {
-  background-color: rgba(0,0,0, 0.8);
+  background-color: var(--navbar_dark);
   height: 100%;
   left: 0;
   margin-left: auto;
@@ -151,29 +156,35 @@ img {
 }
 
 .modal_content {
-  background-color: white;
-  border-radius: 2px;
+  background-color: var(--white);
+  box-shadow: 4px 4px 20px 8px rgba(0, 167, 216, 0.8);
+  box-shadow: 1px 1px 86px 10px rgba(0, 167, 216, 0.5);
+  border-radius: 8px;
   margin: 10vh auto auto;
-  width: 40vw;
+  width: 35vw;
 }
 
 .modal_text {
-  /*padding: 0 0 3vh;*/
   align-items: center;
   display: flex;
   flex-direction: column;
   justify-content: center;
+  padding: 30px;
 }
 
 .modal_text h1 {
-  border: 2px solid dimgrey;
   display: inline;
   font-size: 2.4rem;
-  padding: 10px;
+  margin: 2vh;
+}
+
+.modal_text .dots {
+  position: absolute;
+  margin-left: 3px;
 }
 
 .modal_text h2 {
-  font-size: 2.4rem;
+  font-size: 1.8rem;
 }
 
 .modal_text h2.location{
@@ -188,22 +199,6 @@ img {
   text-transform: capitalize;
 }
 
-.x_wrapper {
-  display: flex;
-  justify-content: flex-end;
-}
-
-.x_search {
-  background-color: rgba(255, 255, 255, 0.01);
-  border: none;
-  color: var(--dark-grey);
-  cursor: pointer;
-  font-size: 1.2rem;
-  font-weight: bold;
-  margin-right: 5px;
-  padding: 8px;
-}
-
 
 
 /*
@@ -212,7 +207,7 @@ img {
 
 .alert {
   background: var(--white);
-  border: 4px solid #b74444;
+  border: 4px solid var(--alert);
   border-radius: 4px;
   font-size: 1.4rem;
   left: 0;
@@ -298,7 +293,6 @@ input[type='text'] {
 }
 
 input[type='text']:focus {
-  background-color: rgba(255, 255, 255, 0.9);
   background-color: rgb(245, 235, 245);
 }
 
@@ -318,7 +312,7 @@ button {
   background: var(--white);
   border: none;
   border-radius: 4px;
-  color: #333;
+  color: var(--dark_grey);
   cursor: pointer;
   display: inline-block;
   font-size: 0.5rem;
@@ -496,7 +490,7 @@ button {
 
 .spaced {
   align-items: center;
-  border-bottom: 1px solid dimgrey;
+  border-bottom: 1px solid var(--dim_grey);
   display: flex;
   justify-content: space-between;
   padding: 5px 0;
@@ -511,7 +505,7 @@ button {
 .AirQuality .title,
 .Location .title,
 .Astronomy .title {
-  border-bottom: 1px solid var(--dark-blue);
+  border-bottom: 1px solid var(--dark_blue);
   font-family: 'Playfair Display', serif ;
   font-size: 2rem;
   letter-spacing: 0.2rem;
@@ -531,7 +525,7 @@ button {
   justify-content: space-between;
   align-items: center;
 
-  border-bottom: 1px solid dimgrey;
+  border-bottom: 1px solid var(--dim_grey);
   padding: 2vh;
 }
 
@@ -669,7 +663,7 @@ button {
 }
 
 .About h2 {
-  border: solid dimgrey;
+  border: solid var(--dim_grey);
   border-width: 1px 0 1px;
   display: inline-block;
   font-size: 2.4rem;
@@ -679,8 +673,8 @@ button {
 
 .About .about_react p,
 .About .source p {
-  color: black;
-  font-size: 1.4rem;
+  color: var(--black);
+  font-size: 1.3rem;
 }
 
 .github a {
@@ -724,9 +718,9 @@ button {
 }
 
 .About ul li {
-  color: black;
+  color: var(--black);
   list-style: none;
-  font-size: 1.4rem;
+  font-size: 1.3rem;
 }
 
 
@@ -742,7 +736,6 @@ button {
 }
 
 .PageNotFound404_wrapper {
-  /*height: 100%;*/
   width: 50%;
 }
 
@@ -770,7 +763,6 @@ button {
   font-family: 'Playfair Display', serif ;
   font-size: 1.6rem;
 }
-
 
 .PageNotFound404 .text p {
   font-family: 'Playfair Display', serif ;
@@ -842,6 +834,11 @@ button {
   animation: fadeToAbout 1000ms ease;
 }
 
+.modal_text .dots:after {
+  animation: dots 3s linear infinite;
+  content: "";
+}
+
 
 @keyframes fadeIn {
   0% { opacity: 0; }
@@ -881,6 +878,21 @@ button {
   100% { opacity: 1; }
 }
 
+@keyframes dots {
+  20% {
+    content: '';
+  }
+  40% {
+    content: '.';
+  }
+  60% {
+    content: '..';
+  }
+  80% {
+    content: '...';
+  }
+}
+
 
 
 /*
@@ -897,6 +909,10 @@ button {
 
 
 @media (max-width: 1240px) {
+  .modal_content {
+    width: 55vw;
+  }
+
   .button_block {
     width: 50%;
   }
@@ -927,7 +943,7 @@ button {
   }
 
   .PageNotFound404_wrapper {
-    background-color: #fff;
+    background-color: var(--white);
     padding: 50px;
     width: 100%;
   }
@@ -947,8 +963,9 @@ button {
     margin: 5vh;
   }
 
-
 }
+
+
 
 @media (max-width: 980px) {
   .modal_content {
@@ -992,6 +1009,7 @@ button {
 }
 
 
+
 @media (max-width: 760px) {
   .nav_link_item {
     padding: 0 5px;
@@ -1007,7 +1025,7 @@ button {
 
   .modal_content {
     margin: 5vh auto 0;
-    width: 90vw;
+    width: 80vw;
   }
 
   .modal_text h1 {
@@ -1050,7 +1068,6 @@ button {
     margin: 10px;
   }
 
-
   .AirQuality .item {
     width: 50px;
   }
@@ -1062,10 +1079,6 @@ button {
   .alert {
     margin: 0 auto;
     min-width: 80%;
-  }
-
-  .About section {
-    /*padding: 20px;*/
   }
 
   .About .title {
@@ -1108,7 +1121,6 @@ button {
   }
 
   .PageNotFound404_wrapper {
-    background-color: #fff;
     padding: 5px 0;
   }
 
@@ -1147,6 +1159,5 @@ button {
   .home_wrapper {
     margin: 10vh 10vh 15vh;
   }
-
 
 }

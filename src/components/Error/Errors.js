@@ -20,7 +20,7 @@ const Errors = ({ errorMessage, errorCode, clearError }) => {
                             <p> Searchbar is empty. Please enter a location... </p>
                             <p className="close"> (this box will self-close in 10s) </p>
                         </div>
-                        <button onClick={ handleClearError } className="button button_ok"> Close </button>
+                        <button onClick={ handleClearError } className="button button_ok"> Close now </button>
                     </div>
                 )
 
@@ -34,7 +34,7 @@ const Errors = ({ errorMessage, errorCode, clearError }) => {
                             <p> Please try a different one. </p>
                             <p className="close"> (this box will self-close in 10s) </p>
                         </div>
-                        <button onClick={ handleClearError } className="button button_ok"> Close </button>
+                        <button onClick={ handleClearError } className="button button_ok"> Close now </button>
                     </div>
                 )
 
@@ -47,7 +47,7 @@ const Errors = ({ errorMessage, errorCode, clearError }) => {
                             <p>Sorry, { errorMessage } </p>
                             <p className="close"> (this box will self-close in 10s) </p>
                         </div>
-                        <button onClick={ handleClearError } className="button button_ok"> Close </button>
+                        <button onClick={ handleClearError } className="button button_ok"> Close now </button>
                     </div>)
         }
     }

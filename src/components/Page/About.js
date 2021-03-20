@@ -58,7 +58,7 @@ const About = () => {
                                    target="_blank" rel="noreferrer">
                                     Anton Darius
                                 </a>
-                                <span>on&nbsp;</span>
+                                <span>&nbsp;on&nbsp;</span>
                                 <a href="https://unsplash.com" target="_blank" rel="noreferrer">
                                     Unsplash
                                 </a>
@@ -101,11 +101,11 @@ const About = () => {
                                     <a href="https://www.flaticon.com/authors/freepik" target="_blank" rel="noreferrer">
                                         Freepik
                                     </a>
-                                    <span> from&nbsp; </span>
+                                    <span> from </span>
                                     <a href="https://www.flaticon.com/" title="Flaticon" target="_blank" rel="noreferrer">
                                         www.flaticon.com
                                     </a>
-                                    <span> and&nbsp; </span>
+                                    <span> and </span>
                                     <a href="https://www.freepik.com" title="Freepik" target="_blank" rel="noreferrer">
                                         www.freepik.com
                                     </a>
