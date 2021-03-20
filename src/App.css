@@ -30,6 +30,7 @@ body {
   font-family: 'Nunito', sans-serif;
   line-height: 1.6;
   overflow-y: scroll;
+  overflow: hidden;
 }
 
 .header a,
@@ -165,7 +166,7 @@ img {
 }
 
 .modal_text {
-  align-items: center;
+  /*align-items: center;*/
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -1011,6 +1012,10 @@ button {
 
 
 @media (max-width: 760px) {
+  .header_70 {
+    height: 85vh;
+  }
+
   .nav_link_item {
     padding: 0 5px;
   }
@@ -1020,6 +1025,7 @@ button {
   }
 
   .container {
+    margin-top: 10vh;
     padding: 0 10px;
   }
 
@@ -1038,8 +1044,9 @@ button {
   }
 
   form {
-    width: 70%;
+    width: 85%;
   }
+
   .Weather span,
   .AirQuality span,
   .Location span,

@@ -16,7 +16,7 @@ const Modal = ({ text, spinner, errorMessage, errorCode, clearError, search, can
             { search && (
                 <div className="modal_content">
                     <div className="modal_text">
-                        <h1> Search in progress <span className="dots"> </span> </h1>
+                        <h1> Search in progress <span className="dots"></span> </h1>
 
                         { spinner && ( <Spinner/> ) }
 

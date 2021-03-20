@@ -6,7 +6,7 @@ import PuffLoader from "react-spinners/PuffLoader";
 const Spinner = () => {
     const override = css`
         display: inline-block;
-        margin: 0 0 3vh;
+        margin: 3vh auto;
         `;
 
     return (

@@ -163,7 +163,7 @@ class App extends Component {
                                        showClearButton={ locationResponseSize > 0 && weatherResponseSize > 0 && !spinner }
                                        spinner={ spinner }
                                    />
-                                   <div id="container" className="container">
+                                   <div className="container">
                                        <Main
                                            weatherInfo={ weatherInfo }
                                            weatherCondition={ weatherCondition }
