@@ -8,9 +8,11 @@
   --black: #000;
   --blue: #00A7D8;
   --dark_blue: #286ba2;
+  --marine_blue: #2a6bcc;
   --dark_grey: #333333;
   --dim_grey: #696969;
   --grey: #d3d3d3;
+  --light_alert: #df7474;
   --navbar: rgba(0,0,0, 0.5);
   --navbar_dark: rgba(0,0,0, 0.8);
   --orange: #FA9138;
@@ -26,11 +28,14 @@
 
 body {
   background: var(--grey);
-  color: #333;
+  color: var(--dark_grey);
   font-family: 'Nunito', sans-serif;
   line-height: 1.6;
   overflow-y: scroll;
-  overflow: hidden;
+}
+
+a {
+  color: var(--blue);
 }
 
 .header a,
@@ -44,6 +49,28 @@ body {
 .ScrollToTop a {
   color: var(--dark_grey);
 }
+
+.About a:visited {
+  color: var(--alert);
+}
+
+.About a:visited:hover,
+.Footer a:visited:hover {
+  color: var(--light_alert);
+}
+
+a:hover {
+  color: var(--marine_blue);
+}
+
+.BackToSearch a:hover,
+.ScrollToTop a:hover {
+  color: var(--blue);
+  opacity: 0.8;
+}
+
+
+
 
 img {
   width: 100%;
@@ -685,7 +712,12 @@ button {
 
 .react_logo {
   margin: 5vh auto 0;
+  transition: 5s ease;
   width: 100px;
+}
+
+.react_logo:hover {
+  transform: rotate(720deg);
 }
 
 .source_text {
@@ -702,9 +734,8 @@ button {
   width: 100px;
 }
 
-.github_logo:hover,
-.github span:hover{
-  opacity: 1;
+.github_logo:hover {
+  /*transform: scale(1.1);*/
 }
 
 .github span {
@@ -790,12 +821,6 @@ button {
 
 .Footer {
   margin: 15vh 0 2vh;
-}
-
-.About a:hover,
-.Footer a:hover {
-  color: var(--blue) ;
-  opacity: 0.8;
 }
 
 .Footer .api_img {
@@ -1025,7 +1050,6 @@ button {
   }
 
   .container {
-    margin-top: 10vh;
     padding: 0 10px;
   }
 

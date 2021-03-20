@@ -1,4 +1,6 @@
 import React from 'react';
+import { useDetectClickOutside } from 'react-detect-click-outside';
+
 
 // Components
 import Spinner from "./Spinner";
@@ -10,11 +12,12 @@ const Modal = ({ text, spinner, errorMessage, errorCode, clearError, search, can
     const handleCancelSearch = () => {
         cancelSearch();
     }
+    const ref = useDetectClickOutside({ onTriggered: cancelSearch });
 
     return (
         <div className="Modal">
             { search && (
-                <div className="modal_content">
+                <div className="modal_content" ref={ ref }>
                     <div className="modal_text">
                         <h1> Search in progress <span className="dots"></span> </h1>
 
