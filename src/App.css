@@ -50,8 +50,14 @@ a {
   color: var(--dark_grey);
 }
 
-.About a:visited {
+.About a:visited,
+.Footer a:visited {
   color: var(--alert);
+}
+
+.BackToSearch a:visited,
+.ScrollToTop a:visited {
+  color: var(--dark_grey);
 }
 
 .About a:visited:hover,
@@ -64,9 +70,15 @@ a:hover {
 }
 
 .BackToSearch a:hover,
-.ScrollToTop a:hover {
+.BackToSearch a:visited:hover,
+.ScrollToTop a:hover,
+.ScrollToTop a:visited:hover {
   color: var(--blue);
   opacity: 0.8;
+}
+
+a:active {
+  color: var(--black);
 }
 
 
@@ -852,7 +864,7 @@ button {
 
 .index_wrapper {
   -webkit-animation: fadeIn 1000ms ease-out;
-  animation: fadeIn 1000ms ease-out;
+  animation: fadeIn 1600ms ease-out;
 }
 
 .About {
