@@ -81,9 +81,6 @@ a:active {
   color: var(--black);
 }
 
-
-
-
 img {
   width: 100%;
 }
@@ -197,7 +194,6 @@ img {
 
 .modal_content {
   background-color: var(--white);
-  box-shadow: 4px 4px 20px 8px rgba(0, 167, 216, 0.8);
   box-shadow: 1px 1px 86px 10px rgba(0, 167, 216, 0.5);
   border-radius: 8px;
   margin: 10vh auto auto;
@@ -205,7 +201,6 @@ img {
 }
 
 .modal_text {
-  /*align-items: center;*/
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -225,14 +220,6 @@ img {
 
 .modal_text h2 {
   font-size: 1.8rem;
-}
-
-.modal_text h2.location{
-  /*margin: 5vh 0;*/
-}
-
-.modal_text h2.wait{
-  /*margin: 5vh 0;*/
 }
 
 .modal_content span {
@@ -609,8 +596,6 @@ button {
   display: flex;
   flex-direction: column;
   height: 150px;
-  justify-content: center;
-  margin: 20px 0;
   width: 80px;
 }
 
@@ -618,7 +603,7 @@ button {
   align-items: center;
   border: 1px solid;
   display: flex;
-  height: 100px;
+  min-height: 100px;
   width: 50px;
 }
 
@@ -938,6 +923,10 @@ button {
 */
 
 @media (min-width: 760px) {
+  .AirQuality .index_box {
+    min-width: 80px;
+    width: 80px;
+  }
 
   .About ul li {
     padding: 20px;
@@ -1031,8 +1020,6 @@ button {
     align-items: center;
     display: flex;
     justify-content: flex-start;
-    margin: 10px 40px;
-    width: auto;
   }
 
   .AirQuality .item {
@@ -1107,10 +1094,6 @@ button {
     flex-direction: row;
   }
 
-  .AirQuality .index_box {
-    margin: 10px;
-  }
-
   .AirQuality .item {
     width: 50px;
   }
@@ -1135,10 +1118,6 @@ button {
   .About ul li {
     font-size: 1rem;
     padding: 20px 10px;
-  }
-
-  .About ul li a {
-    padding: 0 10px 0 0;
   }
 
   .About h2 {
