@@ -15,7 +15,7 @@ const ScrollToTop = () => {
     return (
         <div className="ScrollToTop">
             <button onClick={ scrollToTop } className="button button_to_top">
-                < NavLink to={ `${window.location.pathname}`} >
+                <NavLink to={ `${window.location.pathname}`} >
                     <img src={ top } alt="back to top icon" />
                     <p> Scroll to Top </p>
                 </NavLink>

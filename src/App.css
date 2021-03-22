@@ -48,6 +48,8 @@ a {
 .BackToSearch a,
 .ScrollToTop a {
   color: var(--dark_grey);
+  font-family: 'Nunito', sans-serif;
+  text-transform: uppercase;
 }
 
 .About a:visited,
@@ -73,7 +75,7 @@ a:hover {
 .BackToSearch a:visited:hover,
 .ScrollToTop a:hover,
 .ScrollToTop a:visited:hover {
-  color: var(--blue);
+  color: var(--marine_blue);
   opacity: 0.8;
 }
 
@@ -407,7 +409,16 @@ button {
 .button_to_top,
 .button_to_left {
   background-color: rgba(255, 255, 255, 0.01);
-  padding: 2vh;
+  font-size: 1rem;
+  padding: 0;
+}
+
+.button_to_left {
+}
+
+.button_to_top a,
+.button_to_left a {
+  display: inline-block;
 }
 
 /*
@@ -415,22 +426,21 @@ button {
 + ScrollToTop
 */
 
-.About_buttons {
+.scroll_buttons {
   display: flex;
   justify-content: center;
-  margin: 10vh;
 }
 
 .BackToSearch img,
 .ScrollToTop img {
+  margin: 5px;
   width: 52px;
 }
 
 .BackToSearch p,
 .ScrollToTop p {
-  font-size: 1rem;
   font-weight: bold;
-  margin: 10px;
+  margin: 5px;
 }
 
 
@@ -820,6 +830,10 @@ button {
   margin: 15vh 0 2vh;
 }
 
+.Footer a.link_api_img {
+  display: inline-block;
+}
+
 .Footer .api_img {
   display: block;
   margin: 20px auto;
@@ -931,6 +945,13 @@ button {
   .About ul li {
     padding: 20px;
   }
+
+  .BackToSearch,
+  .ScrollToTop {
+    margin: 10px;
+    padding: 5px;
+  }
+
 }
 
 
@@ -1129,6 +1150,11 @@ button {
   .About .about_react p,
   .About .source p {
     font-size: 1rem;
+  }
+
+  .BackToSearch,
+  .ScrollToTop {
+    padding: 10px;
   }
 
   .header_404 {

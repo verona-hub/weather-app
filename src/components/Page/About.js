@@ -115,7 +115,7 @@ const About = () => {
                     </div>
                 </section>
 
-                <div className="About_buttons">
+                <div className="scroll_buttons">
                     <BackToSearch />
                     <ScrollToTop />
                 </div>
