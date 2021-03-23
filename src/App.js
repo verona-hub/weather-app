@@ -188,7 +188,7 @@ class App extends Component {
                             <div className="container">
                                 <About/>
                             </div>
-                                <Footer />
+                            <Footer />
                         </Fragment>
                     )} />
 

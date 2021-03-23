@@ -832,19 +832,29 @@ button {
 */
 
 .Footer {
-  background-color: orange;
+  background-color: var(--dark_grey);
+  margin-top: 15vh;
   width: 100%;
-  margin: 15vh 0 0;
 }
 
-.Footer a.link_api_img {
-  display: inline-block;
+.footer_content {
+  align-items: center;
+  /*background-color: lightblue;*/
+  display: flex;
+  height: 15vh;
+  justify-content: center;
+  margin: 0 auto;
+  text-align: center;
+  width: 50%;
 }
 
-.Footer .api_img {
+.footer_content .text span {
   display: block;
-  margin: 20px auto;
-  width: 80px;
+}
+
+.footer_content p {
+  color: var(--white);
+  font-size: 1.2rem;
 }
 
 
@@ -1069,6 +1079,10 @@ button {
     height: 85vh;
   }
 
+  .navbar {
+    height: 15vh;
+  }
+
   .nav_link_item {
     padding: 0 5px;
   }
@@ -1138,6 +1152,10 @@ button {
   .alert {
     margin: 0 auto;
     min-width: 80%;
+  }
+
+  .About .welcome {
+    top: 15vh;
   }
 
   .About .title {
