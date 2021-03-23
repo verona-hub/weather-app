@@ -12,7 +12,7 @@ const Navbar = ({ text, emptyContent, spinner, errorMessage, errorCode, clearErr
 
     const homePage = window.location.pathname === '/';
     const aboutPage = window.location.pathname === '/about';
-    const otherPages = window.location.pathname !== '/' || '/about';
+    const otherPages = window.location.pathname !== '/' && window.location.pathname !== '/about';
 
     const headerChange = aboutPage ? 'header_100'
         : ( homePage && emptyContent  ? ' header_100'

@@ -142,6 +142,7 @@ img {
   background-color: var(--navbar_dark);
 }
 .navbar_other {
+  background-color: rgba(7, 13, 17, 0.9);
   box-shadow: none;
 }
 
@@ -558,15 +559,15 @@ button {
 }
 
 .AirQuality .box {
+  align-items: center;
+  border-bottom: 1px solid var(--dim_grey);
   display: flex;
   justify-content: space-between;
-  align-items: center;
-
-  border-bottom: 1px solid var(--dim_grey);
   padding: 2vh;
 }
 
 .AirQuality .box span {
+  font-size: 1rem;
   text-align: center;
   width: 50%;
 }
@@ -578,7 +579,7 @@ button {
 
 .AirQuality .box span:last-child {
   text-align: right;
-  width: 25%;
+  width: 30%;
 }
 
 .AirQuality .index_wrapper {
@@ -646,6 +647,10 @@ button {
 .Astronomy .main {
   margin-bottom: 8vh;
   width: 70%;
+}
+
+.Location .spaced {
+
 }
 
 .Astronomy {
@@ -827,7 +832,9 @@ button {
 */
 
 .Footer {
-  margin: 15vh 0 2vh;
+  background-color: orange;
+  width: 100%;
+  margin: 15vh 0 0;
 }
 
 .Footer a.link_api_img {
@@ -951,6 +958,7 @@ button {
     margin: 10px;
     padding: 5px;
   }
+
 
 }
 
@@ -1121,6 +1129,10 @@ button {
 
   .Location .main {
     width: 80%;
+  }
+
+  .Location .spaced .city_name {
+    margin-left: 12%;
   }
 
   .alert {

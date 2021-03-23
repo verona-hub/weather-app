@@ -12,6 +12,7 @@ import Main from './components/Page/Main';
 import Navbar from './components/Page/Navbar';
 import PageNotFound404 from "./components/Page/PageNotFound404";
 import Search from "./components/Utility/Search";
+import Footer from "./components/Page/Footer";
 
 
 // let weatherApiKey;
@@ -139,6 +140,7 @@ class App extends Component {
 
         const locationResponseSize = _.size(location);
         const weatherResponseSize = _.size(weatherInfo);
+        const contentIsPresent = locationResponseSize > 0 && weatherResponseSize > 0;
 
         return (
             <BrowserRouter>
@@ -175,6 +177,7 @@ class App extends Component {
                                            weatherResponseSize={ weatherResponseSize }
                                        />
                                    </div>
+                                   { contentIsPresent && <Footer/> }
                                </Fragment>
                            )}
                     />
@@ -185,6 +188,7 @@ class App extends Component {
                             <div className="container">
                                 <About/>
                             </div>
+                                <Footer />
                         </Fragment>
                     )} />
 

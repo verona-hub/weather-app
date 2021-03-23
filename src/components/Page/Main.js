@@ -52,8 +52,6 @@ const Main = ({ weatherInfo, weatherCondition, location, airQuality, astronomy, 
 
                             <ScrollToTop />
 
-                            <Footer/>
-
                         </div>
                     )
                 }

@@ -9,7 +9,10 @@ const Location = ({ location }) => {
         <div className="Location card">
             <h2 className="title"> Location details </h2>
             <div className="main">
-                <div className="spaced"><span> City:</span> { name } </div>
+                <div className="spaced">
+                    <span> City:</span>
+                    <span className="city_name">{ name }</span>
+                </div>
                 <div className="spaced"><span> Region:</span> { region } </div>
                 <div className="spaced"><span> Country:</span> { country }</div>
                 <div className="spaced"><span> Latitude:</span> { lat } </div>

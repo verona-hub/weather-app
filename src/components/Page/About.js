@@ -119,9 +119,6 @@ const About = () => {
                     <BackToSearch />
                     <ScrollToTop />
                 </div>
-
-                <Footer />
-
             </div>
         </div>
     );
