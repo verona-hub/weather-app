@@ -5,7 +5,6 @@ import github from '../../img/github.png';
 import react_logo from '../../img/react-logo.png';
 
 // Components
-import Footer from './Footer';
 import ScrollToTop from '../Utility/ScrollToTop';
 import BackToSearch from "../Utility/BackToSearch";
 

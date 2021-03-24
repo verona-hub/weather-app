@@ -422,6 +422,7 @@ button {
   display: inline-block;
 }
 
+
 /*
 + BackToSearch
 + ScrollToTop
@@ -483,25 +484,69 @@ button {
 
 
 /*
-+ Weather
++ Weather_current
 */
 
-.Weather .top_content {
-  flex-wrap: wrap;
-  margin-top: 20px;
-  min-height: 20vh;
+.weather_wrapper {
+  height: 800px;
 }
 
-.Weather .card_top_header {
+.weather_wrapper .main {
+  height: 85%;
+}
+
+.Forecast_1_Day .main,
+.Forecast_2_Days .main,
+.Forecast_3_Days .main {
+  padding-top: 20vh;
+}
+
+.weather_navlinks_wrapper {
+  background-color: var(--dark_grey);
+  display: flex;
+  flex-wrap: wrap;
+  height: 15%;
+  justify-content: space-evenly;
+  align-items: center;
+  width: 100%;
+}
+
+.forecast_navlink {
+  background-color: var(--marine_blue);
+  padding: 10px 0;
+}
+
+.button_weather_nav {
+  color: var(--white);
+  cursor: pointer;
+  padding: 10px 0;
+}
+
+
+.Weather_current,
+.Forecast_1_Day,
+.Forecast_2_Days ,
+.Forecast_3_Days {
+  /*background-color: orange;*/
+}
+
+
+
+.Weather_current .top_content {
+  flex-wrap: wrap;
+  margin-top: 100px;
+}
+
+.Weather_current .card_top_header {
   margin: 10px 10px 0 10px;
   text-align: center;
 }
 
-.Weather .card_top_main {
+.Weather_current .card_top_main {
   margin: 0 1vw 1vw;
 }
 
-.Weather .bottom_content {
+.Weather_current .bottom_content {
   display: flex;
   flex-wrap: wrap;
   justify-content: space-evenly;
@@ -509,20 +554,20 @@ button {
   width: 100%;
 }
 
-.Weather .bottom_left,
-.Weather .bottom_right {
+.Weather_current .bottom_left,
+.Weather_current .bottom_right {
   margin: 5vw 1vw;
   width: calc(50% - 60px);
 }
 
-.Weather span,
+.Weather_current span,
 .AirQuality span,
 .Location span,
 .Astronomy span {
   font-size: 18px;
 }
 
-.Weather img {
+.Weather_current img {
   width: 100px;
 }
 
@@ -969,6 +1014,13 @@ button {
     padding: 5px;
   }
 
+  /*.Weather_current,
+  .Forecast_1_Day,
+  .Forecast_2_Days ,
+  .Forecast_3_Days {
+    height: 800px;
+  }*/
+
 
 }
 
@@ -1113,16 +1165,16 @@ button {
     width: 85%;
   }
 
-  .Weather span,
+  .Weather_current span,
   .AirQuality span,
   .Location span,
   .Astronomy span,
-  .Weather .bottom_content {
+  .Weather_current .bottom_content {
     text-align: left;
   }
 
-  .Weather .bottom_left,
-  .Weather .bottom_right,
+  .Weather_current .bottom_left,
+  .Weather_current .bottom_right,
   .Location .main,
   .AirQuality .index_levels {
     margin: 5vh auto;
