@@ -12,6 +12,7 @@ const Weather = ({ weatherInfo, weatherCondition }) => {
     return (
         <BrowserRouter>
             <Switch>
+
                 <Route path='/forecast_1_day' component={ Forecast_1_Day }/>
                 <Route path='/forecast_2_days' component={ Forecast_2_Days }/>
                 <Route path='/forecast_3_days' component={ Forecast_3_Days }/>
@@ -20,8 +21,8 @@ const Weather = ({ weatherInfo, weatherCondition }) => {
                     weatherInfo={ weatherInfo }
                     weatherCondition={ weatherCondition }
                 />
-            </Switch>
 
+            </Switch>
         </BrowserRouter>
     );
 };
