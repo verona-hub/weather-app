@@ -487,10 +487,6 @@ button {
 + Weather_current
 */
 
-.weather_wrapper {
-  height: 800px;
-}
-
 .weather_wrapper .main {
   height: 85%;
 }
@@ -502,12 +498,12 @@ button {
 }
 
 .weather_navlinks_wrapper {
+  align-items: center;
   background-color: var(--dark_grey);
   display: flex;
   flex-wrap: wrap;
   height: 15%;
   justify-content: space-evenly;
-  align-items: center;
   width: 100%;
 }
 
@@ -534,7 +530,7 @@ button {
 
 .Weather_current .top_content {
   flex-wrap: wrap;
-  margin-top: 100px;
+  margin-top: 8vh;
 }
 
 .Weather_current .card_top_header {
@@ -543,21 +539,20 @@ button {
 }
 
 .Weather_current .card_top_main {
-  margin: 0 1vw 1vw;
+  margin: 20px 10px 50px;
 }
 
 .Weather_current .bottom_content {
   display: flex;
   flex-wrap: wrap;
-  justify-content: space-evenly;
-  padding: 5px 15px;
+  justify-content: space-between;
   width: 100%;
 }
 
 .Weather_current .bottom_left,
 .Weather_current .bottom_right {
-  margin: 5vw 1vw;
-  width: calc(50% - 60px);
+  min-width: 300px;
+  margin: 20px;
 }
 
 .Weather_current span,
@@ -998,6 +993,12 @@ button {
 + Mobile
 */
 
+@media (min-width: 980px) {
+  .weather_wrapper {
+    height: 800px;
+  }
+}
+
 @media (min-width: 760px) {
   .AirQuality .index_box {
     min-width: 80px;
@@ -1013,14 +1014,6 @@ button {
     margin: 10px;
     padding: 5px;
   }
-
-  /*.Weather_current,
-  .Forecast_1_Day,
-  .Forecast_2_Days ,
-  .Forecast_3_Days {
-    height: 800px;
-  }*/
-
 
 }
 
@@ -1094,6 +1087,22 @@ button {
     font-size: 2rem;
   }
 
+  .Weather_current .bottom_left,
+  .Weather_current .bottom_right {
+    margin: auto;
+    width: 100%;
+  }
+  .weather_wrapper {
+    height: 900px;
+  }
+  .weather_wrapper .main {
+  }
+
+  .weather_navlinks_wrapper {
+  }
+
+
+
   .Location,
   .Astronomy {
     margin-bottom: 5vh;
@@ -1165,6 +1174,15 @@ button {
     width: 85%;
   }
 
+  .weather_wrapper {
+    min-height: 1000px;
+  }
+
+  .Weather_current .bottom_content {
+    width: 90%;
+    margin: auto;
+  }
+
   .Weather_current span,
   .AirQuality span,
   .Location span,
@@ -1175,7 +1193,6 @@ button {
 
   .Weather_current .bottom_left,
   .Weather_current .bottom_right,
-  .Location .main,
   .AirQuality .index_levels {
     margin: 5vh auto;
     width: 90%;
@@ -1193,7 +1210,8 @@ button {
     width: 50px;
   }
 
-  .Location .main {
+  .Location .main,
+  .Astronomy .main  {
     width: 80%;
   }
 

@@ -1,16 +1,20 @@
 import React from 'react';
 import { NavLink } from 'react-router-dom';
+import GoBack from "./GoBack";
 
 
 const Forecast_1_Day = () => {
     return (
         <div className="Forecast_1_Day weather_wrapper card">
             <div className="main">
+            <GoBack />
                 <h1> Forecast for 1 day </h1>
                 <h2> Work </h2>
                 <h3> In </h3>
                 <h4> Progress... </h4>
             </div>
+
+
 
             <div className="weather_navlinks_wrapper">
                 <NavLink to='/weather_current' activeClassName="forecast_navlink">

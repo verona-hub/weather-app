@@ -1,5 +1,6 @@
 import React from 'react';
 import { NavLink } from 'react-router-dom';
+import GoBack from "./GoBack";
 
 
 const WeatherCurrent = ({ weatherInfo, weatherCondition }) => {
@@ -11,6 +12,7 @@ const WeatherCurrent = ({ weatherInfo, weatherCondition }) => {
     return (
         <div className="Weather_current weather_wrapper card">
             <div className="main">
+                <GoBack />
                 <div className="top_content">
                     <div className="card_top_header">
                         <img src={ icon } alt=""/>
@@ -34,7 +36,10 @@ const WeatherCurrent = ({ weatherInfo, weatherCondition }) => {
                         <div className="spaced"><span> Uv index:</span> { uv } of 10</div>
                     </div>
                 </div>
+
             </div>
+
+
 
             <div className="weather_navlinks_wrapper">
                 <NavLink to='/weather_current' activeClassName="forecast_navlink">

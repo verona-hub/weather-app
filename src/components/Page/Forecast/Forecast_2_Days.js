@@ -1,11 +1,13 @@
 import React from 'react';
 import { NavLink } from 'react-router-dom';
+import GoBack from "./GoBack";
 
 
 const Forecast_2_Days = () => {
     return (
         <div className="Forecast_2_Days weather_wrapper card">
             <div className="main">
+                <GoBack />
                 <h1> Forecast for 2 days </h1>
                 <h2> Work </h2>
                 <h3> In </h3>
