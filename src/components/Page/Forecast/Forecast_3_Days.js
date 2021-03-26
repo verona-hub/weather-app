@@ -12,7 +12,8 @@ const Forecast_3_Days = () => {
                 <h4> Progress... </h4>
             </div>
 
-            {/*<div className="weather_navlinks_wrapper">
+
+            <div className="weather_navlinks_wrapper">
                 <NavLink to='/weather_current' activeClassName="forecast_navlink">
                     <div className="button_weather_nav"> Go to current weather</div>
                 </NavLink>
@@ -25,7 +26,7 @@ const Forecast_3_Days = () => {
                 <NavLink to='/forecast_3_days' activeClassName="forecast_navlink">
                     <div className="button_weather_nav"> This is 3 days forecast</div>
                 </NavLink>
-            </div>*/}
+            </div>
 
         </div>
     );

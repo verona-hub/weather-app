@@ -2,7 +2,7 @@ import React from 'react';
 import { NavLink } from 'react-router-dom';
 
 
-const Forecast_1_Day = () => {
+const Forecast1Day = () => {
     return (
         <div className="Forecast_1_Day weather_wrapper card">
             <div className="main">
@@ -12,7 +12,7 @@ const Forecast_1_Day = () => {
                 <h4> Progress... </h4>
             </div>
 
-            {/*<div className="weather_navlinks_wrapper">
+            <div className="weather_navlinks_wrapper">
                 <NavLink to='/weather_current' activeClassName="forecast_navlink">
                     <div className="button_weather_nav"> Go to current weather</div>
                 </NavLink>
@@ -25,11 +25,11 @@ const Forecast_1_Day = () => {
                 <NavLink to='/forecast_3_days' activeClassName="forecast_navlink">
                     <div className="button_weather_nav"> Go to 3 days forecast</div>
                 </NavLink>
-            </div>*/}
+            </div>
 
         </div>
     );
 };
 
 
-export default Forecast_1_Day;
+export default Forecast1Day;

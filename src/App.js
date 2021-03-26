@@ -38,7 +38,8 @@ class App extends Component {
         errorMessage: null,
         errorCode: null,
         modal: false,
-        search: false
+        search: false,
+        forecast_3_days: []
     }
 
     searchCity = async (text) => {
@@ -52,7 +53,8 @@ class App extends Component {
             location: [],
             astronomy: [],
             modal: true,
-            search: true
+            search: true,
+            forecast_3_days: []
         });
 
         try {
@@ -65,6 +67,11 @@ class App extends Component {
                 axios.get(`https://api.weatherapi.com/v1/astronomy.json?key=
                 ${process.env.REACT_APP_WEATHER_API_KEY}
                 &q=${text}
+                `),
+                axios.get(`http://api.weatherapi.com/v1/forecast.json?key=
+                ${process.env.REACT_APP_WEATHER_API_KEY}
+                &q=${text}
+                &days=3
                 `), {}
             ]).then(x => new Promise(resolve => setTimeout(() => resolve(x), 3000)));
 
@@ -76,8 +83,11 @@ class App extends Component {
                 spinner: false,
                 astronomy: response[1].data.astronomy.astro,
                 modal: false,
-                search: false
+                search: false,
+                forecast_3_days: response[2].data.forecast
             });
+
+            // console.log(response[2].data.forecast.forecastday);
 
         } catch(err) {
 
@@ -128,14 +138,15 @@ class App extends Component {
             errorMessage: null,
             errorCode: null,
             modal: false,
-            search: false
+            search: false,
+            forecast_3_days: []
         });
     }
 
     render () {
 
         const { text, weatherInfo, weatherCondition, airQuality, location, astronomy,
-            spinner, errorMessage, errorCode, modal, search } = this.state;
+            spinner, errorMessage, errorCode, modal, search, forecast_3_days } = this.state;
         const { searchCity, clearContent, clearError, cancelSearch } = this;
 
         const locationResponseSize = _.size(location);
@@ -175,6 +186,7 @@ class App extends Component {
                                            spinner={ spinner }
                                            locationResponseSize={ locationResponseSize }
                                            weatherResponseSize={ weatherResponseSize }
+                                           forecast_3_days={ forecast_3_days }
                                        />
                                    </div>
                                    { contentIsPresent && <Footer/> }

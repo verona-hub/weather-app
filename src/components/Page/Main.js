@@ -9,7 +9,7 @@ import Location from "./Info/Location";
 import Weather from "./Info/Weather";
 
 
-const Main = ({ weatherInfo, weatherCondition, location, airQuality, astronomy, spinner, locationResponseSize, weatherResponseSize }) => {
+const Main = ({ weatherInfo, weatherCondition, location, airQuality, astronomy, spinner, locationResponseSize, weatherResponseSize, forecast_3_days }) => {
 
     const { name, country } = location;
 
@@ -30,6 +30,7 @@ const Main = ({ weatherInfo, weatherCondition, location, airQuality, astronomy, 
                             <Weather
                                 weatherInfo={ weatherInfo }
                                 weatherCondition={ weatherCondition }
+                                forecast_3_days={ forecast_3_days }
                             />
                             <AirQuality
                                 airQuality={ airQuality }

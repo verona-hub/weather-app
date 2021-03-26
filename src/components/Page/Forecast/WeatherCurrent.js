@@ -2,11 +2,20 @@ import React from 'react';
 import { NavLink } from 'react-router-dom';
 
 
-const WeatherCurrent = ({ weatherInfo, weatherCondition }) => {
+const WeatherCurrent = ({ weatherInfo, weatherCondition, forecast_3_days }) => {
 
     const { cloud, temp_c, feelslike_c, humidity, precip_mm, uv, vis_km,
         pressure_mb, wind_kph, wind_dir } = weatherInfo;
     const { icon, text } = weatherCondition;
+
+    const { forecastday } = forecast_3_days;
+    const forecastday_1_day = forecastday[0];
+    const forecastday_2_days = forecastday[1];
+    const forecastday_3_days = forecastday[2];
+
+    // console.log(forecastday_1_day);
+    // console.log(forecastday_2_days);
+    // console.log(forecastday_3_days);
 
     return (
         <div className="Weather_current weather_wrapper card">
@@ -39,7 +48,7 @@ const WeatherCurrent = ({ weatherInfo, weatherCondition }) => {
 
 
 
-            {/*<div className="weather_navlinks_wrapper">
+            <div className="weather_navlinks_wrapper">
                 <NavLink to='/weather_current' activeClassName="forecast_navlink">
                     <div className="button_weather_nav"> This is current weather</div>
                 </NavLink>
@@ -52,7 +61,7 @@ const WeatherCurrent = ({ weatherInfo, weatherCondition }) => {
                 <NavLink to='/forecast_3_days' activeClassName="forecast_navlink">
                     <div className="button_weather_nav"> Go to 3 days forecast</div>
                 </NavLink>
-            </div>*/}
+            </div>
 
         </div>
     );
