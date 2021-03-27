@@ -68,7 +68,7 @@ class App extends Component {
                 ${process.env.REACT_APP_WEATHER_API_KEY}
                 &q=${text}
                 `),
-                axios.get(`http://api.weatherapi.com/v1/forecast.json?key=
+                axios.get(`https://api.weatherapi.com/v1/forecast.json?key=
                 ${process.env.REACT_APP_WEATHER_API_KEY}
                 &q=${text}
                 &days=3
