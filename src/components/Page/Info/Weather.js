@@ -1,31 +1,55 @@
 import React, { Fragment } from 'react';
 import { BrowserRouter, Route, Switch } from 'react-router-dom';
 
+// Slider
+import AwesomeSlider from 'react-awesome-slider';
+import 'react-awesome-slider/dist/styles.css';
+
+// Components
 import WeatherCurrent from '../Forecast/WeatherCurrent';
-import Forecast1Day from '../Forecast/Forecast_1_Day';
+import Forecast_1_Day from '../Forecast/Forecast_1_Day';
 import Forecast_2_Days from '../Forecast/Forecast_2_Days';
 import Forecast_3_Days from '../Forecast/Forecast_3_Days';
 
 
-const Weather = ({ weatherInfo, weatherCondition, forecast_3_days }) => {
+const Weather = ({ weatherInfo, weatherCondition, location, forecast_3_days }) => {
+
+    const { name, country } = location;
 
     return (
         <BrowserRouter>
-            <Switch>
-                <Route path='/forecastday_1_day' render={ () => (
-                        <Forecast1Day />
-                )} />
-                {/*<Route path='/forecast_1_day' component={ Forecast_1_Day }/>*/}
-                <Route path='/forecast_2_days' component={ Forecast_2_Days }/>
-                <Route path='/forecast_3_days' component={ Forecast_3_Days }/>
+            <AwesomeSlider className="slider card">
+                <div className="Weather_current">
 
-                <WeatherCurrent
-                    weatherInfo={ weatherInfo }
-                    weatherCondition={ weatherCondition }
-                    forecast_3_days={ forecast_3_days }
-                />
+                    <div className="Main_header">
+                        <h2 className="title"> Current weather conditions in: </h2>
+                        <h2 className="title"> { name }, { country } </h2>
+                    </div>
 
-            </Switch>
+                    <WeatherCurrent
+                        weatherInfo={ weatherInfo }
+                        weatherCondition={ weatherCondition }
+                        forecast_3_days={ forecast_3_days }
+                    />
+
+                </div>
+
+                <div>
+                    <h1> 1 day Forecast </h1>
+                    <h2> Work in progress... </h2>
+                </div>
+
+                <div>
+                    <h1> 2 days Forecast </h1>
+                    <h2> Work in progress... </h2>
+                </div>
+
+                <div>
+                    <h1> 3 days Forecast </h1>
+                    <h2> Work in progress... </h2>
+                </div>
+
+            </AwesomeSlider >
         </BrowserRouter>
     );
 };

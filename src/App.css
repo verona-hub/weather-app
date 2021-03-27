@@ -465,13 +465,13 @@ button {
 
 .Main_header {
   align-items: center;
-  background-color: var(--white);
+  /*background-color: var(--white);*/
   display: flex;
   flex-direction: column;
   justify-content: center;
-  margin: 5vh auto;
-  padding: 3vh;
-  width: 100%;
+  /*margin: 5vh auto;*/
+  /*padding: 3vh;*/
+  /*width: 100%;*/
 }
 
 .Main .title {
@@ -487,8 +487,11 @@ button {
 + Weather_current
 */
 
-.weather_wrapper .main {
-  height: 85%;
+.Weather_current,
+.Forecast_1_Day,
+.Forecast_2_Days ,
+.Forecast_3_Days {
+  /*background-color: orange;*/
 }
 
 .Forecast_1_Day .main,
@@ -518,19 +521,9 @@ button {
   padding: 10px 0;
 }
 
-
-.Weather_current,
-.Forecast_1_Day,
-.Forecast_2_Days ,
-.Forecast_3_Days {
-  /*background-color: orange;*/
-}
-
-
-
 .Weather_current .top_content {
   flex-wrap: wrap;
-  margin-top: 8vh;
+  /*margin-top: 8vh;*/
 }
 
 .Weather_current .card_top_header {
@@ -900,6 +893,17 @@ button {
 
 
 /*
++ Slider
+*/
+
+.slider {
+  color: var(--marine_blue);
+  height: 800px;
+}
+
+
+
+/*
 + Keyframes
 */
 
@@ -993,12 +997,6 @@ button {
 + Mobile
 */
 
-@media (min-width: 980px) {
-  .weather_wrapper {
-    height: 800px;
-  }
-}
-
 @media (min-width: 760px) {
   .AirQuality .index_box {
     min-width: 80px;
@@ -1030,6 +1028,10 @@ button {
 
   .alert {
     width: 70vw;
+  }
+
+  .slider {
+    height: 100vh;
   }
 
   .About ul li {
@@ -1092,16 +1094,6 @@ button {
     margin: auto;
     width: 100%;
   }
-  .weather_wrapper {
-    height: 900px;
-  }
-  .weather_wrapper .main {
-  }
-
-  .weather_navlinks_wrapper {
-  }
-
-
 
   .Location,
   .Astronomy {
@@ -1172,10 +1164,6 @@ button {
 
   form {
     width: 85%;
-  }
-
-  .weather_wrapper {
-    min-height: 1000px;
   }
 
   .Weather_current .bottom_content {

@@ -1,7 +1,6 @@
 import React from 'react';
 import ScrollToTop from '../Utility/ScrollToTop';
 
-
 // Components
 import AirQuality from "./Info/AirQuality";
 import Astronomy from './Info/Astronomy';
@@ -10,8 +9,6 @@ import Weather from "./Info/Weather";
 
 
 const Main = ({ weatherInfo, weatherCondition, location, airQuality, astronomy, spinner, locationResponseSize, weatherResponseSize, forecast_3_days }) => {
-
-    const { name, country } = location;
 
     if (spinner) {
         return null;
@@ -23,14 +20,11 @@ const Main = ({ weatherInfo, weatherCondition, location, airQuality, astronomy, 
                 {
                     ( locationResponseSize > 0 || weatherResponseSize > 0 ) && (
                         <div className="Main">
-                            <div className="Main_header card">
-                                <h2 className="title"> Current weather conditions in: </h2>
-                                <h2 className="title"> { name }, { country } </h2>
-                            </div>
                             <Weather
                                 weatherInfo={ weatherInfo }
                                 weatherCondition={ weatherCondition }
                                 forecast_3_days={ forecast_3_days }
+                                location={ location }
                             />
                             <AirQuality
                                 airQuality={ airQuality }
