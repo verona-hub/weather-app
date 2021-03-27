@@ -469,19 +469,38 @@ button {
   display: flex;
   flex-direction: column;
   justify-content: center;
-  /*margin: 5vh auto;*/
   /*padding: 3vh;*/
   /*width: 100%;*/
 }
 
-.Main .title {
-  font-size: 1.6rem;
+.Main_header .title,
+.AirQuality .title,
+.Location .title,
+.Astronomy .title {
+  border-bottom: 1px solid var(--dark_blue);
+  font-family: 'Playfair Display', serif ;
+  font-size: 2rem;
+  letter-spacing: 0.2rem;
+  margin: 7vh;
+  text-transform: uppercase;
+  word-spacing: 0.2rem;
+}
+
+.Main .title,
+.Main .sub_title {
+  /*font-size: 1.6rem;*/
   letter-spacing: 0.1rem;
   margin: 1vh;
   word-spacing: 0.1rem;
 }
 
+.Main_header .title {
+  text-transform: uppercase;
+  border-bottom: 1px solid var(--white);
+}
 
+.Main_header .sub_title {
+}
 
 /*
 + Weather_current
@@ -492,6 +511,9 @@ button {
 .Forecast_2_Days ,
 .Forecast_3_Days {
   /*background-color: orange;*/
+}
+
+.Weather_current {
 }
 
 .Forecast_1_Day .main,
@@ -532,7 +554,7 @@ button {
 }
 
 .Weather_current .card_top_main {
-  margin: 20px 10px 50px;
+  margin: 20px 0 50px;
 }
 
 .Weather_current .bottom_content {
@@ -572,18 +594,6 @@ button {
 /*
 +  AirQuality
 */
-
-.AirQuality .title,
-.Location .title,
-.Astronomy .title {
-  border-bottom: 1px solid var(--dark_blue);
-  font-family: 'Playfair Display', serif ;
-  font-size: 2rem;
-  letter-spacing: 0.2rem;
-  margin: 7vh;
-  text-transform: uppercase;
-  word-spacing: 0.2rem;
-}
 
 .AirQuality .main {
   border: 1px solid;
@@ -897,8 +907,12 @@ button {
 */
 
 .slider {
-  color: var(--marine_blue);
-  height: 800px;
+  color: var(--white);
+  height: 80vh;
+}
+
+.awssld__container {
+  /*height: 80vh;*/
 }
 
 
@@ -1034,6 +1048,10 @@ button {
     height: 100vh;
   }
 
+  .Weather_current .card_top_main {
+    margin: 0 0 100px;
+  }
+
   .About ul li {
     font-size: 1.2rem;
   }
@@ -1164,6 +1182,10 @@ button {
 
   form {
     width: 85%;
+  }
+
+  .Weather_current .card_top_main {
+    margin: 0 0 40px;
   }
 
   .Weather_current .bottom_content {

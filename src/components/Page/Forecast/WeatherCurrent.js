@@ -18,7 +18,7 @@ const WeatherCurrent = ({ weatherInfo, weatherCondition, forecast_3_days }) => {
     // console.log(forecastday_3_days);
 
     return (
-        <div className="card">
+        <div>
             <div className="main">
                 <div className="top_content">
                     <div className="card_top_header">

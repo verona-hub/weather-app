@@ -18,12 +18,14 @@ const Weather = ({ weatherInfo, weatherCondition, location, forecast_3_days }) =
 
     return (
         <BrowserRouter>
-            <AwesomeSlider className="slider card">
+            <AwesomeSlider
+                className="slider card"
+            >
                 <div className="Weather_current">
 
                     <div className="Main_header">
-                        <h2 className="title"> Current weather conditions in: </h2>
-                        <h2 className="title"> { name }, { country } </h2>
+                        <h2 className="title"> Current weather conditions </h2>
+                        <h2 className="sub_title"> { name }, { country } </h2>
                     </div>
 
                     <WeatherCurrent
