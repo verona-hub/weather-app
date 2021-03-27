@@ -19,7 +19,7 @@ const Main = ({ weatherInfo, weatherCondition, location, airQuality, astronomy, 
             <div>
                 {
                     ( locationResponseSize > 0 || weatherResponseSize > 0 ) && (
-                        <div className="Main">
+                        <div>
                             <Weather
                                 weatherInfo={ weatherInfo }
                                 weatherCondition={ weatherCondition }
