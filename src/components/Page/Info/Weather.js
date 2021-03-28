@@ -29,10 +29,10 @@ const Weather = ({ weatherInfo, weatherCondition, location, forecast_3_days }) =
 
     return (
         <AwesomeSlider
-            className="slider card"
+            className="slider card Weather_wrapper"
             animation="foldOutAnimation"
         >
-            <div className="Weather_current">
+            <div className="Weather_current_box">
                 <MainHeader
                     location={ location }
                     title='Current weather conditions'

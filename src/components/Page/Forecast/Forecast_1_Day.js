@@ -8,6 +8,9 @@ const Forecast1Day = ({ forecast1day }) => {
     const oldDate = forecast1day.date.toString();
     const date = oldDate.split('-').reverse().join('-');
 
+    const {day} = forecast1day;
+    console.log(day);
+
     return (
         <div className="Forecast_1_Day">
             <div>
@@ -15,7 +18,7 @@ const Forecast1Day = ({ forecast1day }) => {
                     Date: { date }
                 </h2>
             </div>
-            <div className="main">
+            <div className="day">
                 <h2> Work </h2>
                 <h3> In </h3>
                 <h4> Progress... </h4>

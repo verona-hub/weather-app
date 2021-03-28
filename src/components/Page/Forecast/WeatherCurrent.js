@@ -8,7 +8,7 @@ const WeatherCurrent = ({ weatherInfo, weatherCondition }) => {
     const { icon, text } = weatherCondition;
 
     return (
-            <div>
+            <div className="WeatherCurrent">
                 <div className="top_content">
                     <div className="card_top_header">
                         <img src={ icon } alt=""/>
