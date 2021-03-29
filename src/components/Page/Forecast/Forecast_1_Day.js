@@ -1,7 +1,8 @@
 import React from 'react';
+import MainHeader from "../MainHeader";
 
 
-const Forecast1Day = ({ forecast1day }) => {
+const Forecast1Day = ({ forecast1day, location }) => {
 
     console.log(forecast1day);
 
@@ -13,6 +14,11 @@ const Forecast1Day = ({ forecast1day }) => {
 
     return (
         <div className="Forecast_1_Day">
+            <MainHeader
+                location={ location }
+                title='1 Day Forecast'
+                css='MainHeader__forecast'
+            />
             <div>
                 <h2>
                     Date: { date }

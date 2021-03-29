@@ -9,7 +9,7 @@ import AnimationStyles from 'react-awesome-slider/src/styled/fold-out-animation/
 import Forecast1Day from '../Forecast/Forecast_1_Day';
 import Forecast2Days from '../Forecast/Forecast_2_Days';
 import Forecast3Days from '../Forecast/Forecast_3_Days';
-import MainHeader from "../../Utility/MainHeader";
+import MainHeader from "../MainHeader";
 import WeatherCurrent from '../Forecast/WeatherCurrent';
 
 
@@ -44,26 +44,21 @@ const Weather = ({ weatherInfo, weatherCondition, location, forecast_3_days }) =
                 />
             </div>
 
-            <div className='forecast_box'>
-                <MainHeader
+            <div>
+                <Forecast1Day
+                    forecast1day={ forecast1day }
                     location={ location }
                     title='1 Day Forecast'
                     css='MainHeader__forecast'
-
-                />
-                <Forecast1Day
-                    forecast1day={ forecast1day }
                 />
             </div>
 
-            <div className='forecast_box'>
-                <MainHeader
+            <div>
+                <Forecast2Days
+                    forecast2days={ forecast2days }
                     location={ location }
                     title='2 Days Forecast'
                     css='MainHeader__forecast'
-                />
-                <Forecast2Days
-                    forecast2days={ forecast2days }
                 />
             </div>
 

@@ -1,13 +1,19 @@
 import React from 'react';
+import MainHeader from "../MainHeader";
 
 
-const Forecast2Days = ({ forecast2days }) => {
+const Forecast2Days = ({ forecast2days, location }) => {
 
     const oldDate = forecast2days.date.toString();
     const date = oldDate.split('-').reverse().join('-');
 
     return (
         <div className="Forecast_2_Days">
+            <MainHeader
+                location={ location }
+                title='1 Day Forecast'
+                css='MainHeader__forecast'
+            />
             <div>
                 <h2>
                     Date: { date }
