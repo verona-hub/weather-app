@@ -9,7 +9,7 @@ import AnimationStyles from 'react-awesome-slider/src/styled/fold-out-animation/
 import Forecast1Day from '../Forecast/Forecast_1_Day';
 import Forecast2Days from '../Forecast/Forecast_2_Days';
 import Forecast3Days from '../Forecast/Forecast_3_Days';
-import MainHeader from "../MainHeader";
+import ForecastHeader from "../Forecast/ForecastHeader";
 import WeatherCurrent from '../Forecast/WeatherCurrent';
 
 
@@ -22,18 +22,13 @@ const Weather = ({ weatherInfo, weatherCondition, location, forecast_3_days }) =
     const forecast2days = forecastday[1];
     const forecast3days = forecastday[2];
 
-    // console.log(forecast1day);
-    // console.log(forecastday_2_days);
-    // console.log(forecastday_3_days);
-
-
     return (
         <AwesomeSlider
             className="slider card Weather_wrapper"
             animation="foldOutAnimation"
         >
-            <div className="Weather_current_box">
-                <MainHeader
+            <div className="Weather_current_wrapper">
+                <ForecastHeader
                     location={ location }
                     title='Current weather conditions'
                     css=''
@@ -44,32 +39,24 @@ const Weather = ({ weatherInfo, weatherCondition, location, forecast_3_days }) =
                 />
             </div>
 
-            <div>
+            <div className="forecast_wrapper">
                 <Forecast1Day
-                    forecast1day={ forecast1day }
+                    forecast={ forecast1day }
                     location={ location }
-                    title='1 Day Forecast'
-                    css='MainHeader__forecast'
                 />
             </div>
 
-            <div>
+            <div className="forecast_wrapper">
                 <Forecast2Days
-                    forecast2days={ forecast2days }
+                    forecast={ forecast2days }
                     location={ location }
-                    title='2 Days Forecast'
-                    css='MainHeader__forecast'
                 />
             </div>
 
-            <div className='forecast_box'>
-                <MainHeader
-                    location={ location }
-                    title='3 Days Forecast'
-                    css='MainHeader__forecast'
-                />
+            <div className="forecast_wrapper">
                 <Forecast3Days
-                    forecast3days={ forecast3days }
+                    forecast={ forecast3days }
+                    location={ location }
                 />
             </div>
 

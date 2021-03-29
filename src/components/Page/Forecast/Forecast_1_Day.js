@@ -1,33 +1,55 @@
 import React from 'react';
-import MainHeader from "../MainHeader";
+import ForecastHeader from "./ForecastHeader";
+import ForecastInfo from "./ForecastInfo";
 
 
-const Forecast1Day = ({ forecast1day, location }) => {
+const Forecast1Day = ({ forecast, location }) => {
 
-    console.log(forecast1day);
-
-    const oldDate = forecast1day.date.toString();
+    const oldDate = forecast.date.toString();
     const date = oldDate.split('-').reverse().join('-');
 
-    const {day} = forecast1day;
-    console.log(day);
+    console.log(forecast);
+
+    const { day, astro } = forecast;
+    const { condition, maxtemp_c, avgtemp_c, mintemp_c, daily_chance_of_rain, totalprecip_mm,
+        avghumidity, maxwind_kph, daily_chance_of_snow, avgvis_km
+    } = day;
+    const { sunrise, sunset } = astro;
 
     return (
-        <div className="Forecast_1_Day">
-            <MainHeader
-                location={ location }
-                title='1 Day Forecast'
-                css='MainHeader__forecast'
-            />
-            <div>
-                <h2>
-                    Date: { date }
-                </h2>
+        <div className="Forecast_1_Day forecast">
+            <div className="forecast_header">
+                <h1> Work in progress... </h1>
+                <ForecastHeader
+                    location={ location }
+                    title='1 Day Forecast'
+                    css='ForecastHeader'
+                    day=' Today: '
+                    date={ date }
+                />
             </div>
-            <div className="day">
-                <h2> Work </h2>
-                <h3> In </h3>
-                <h4> Progress... </h4>
+
+            <div className="forecast_main">
+
+                <div className="forecast_main_box">
+                    <ForecastInfo
+                        condition={ condition }
+                        maxtemp_c={ maxtemp_c }
+                        avgtemp_c={ avgtemp_c }
+                        mintemp_c={ mintemp_c }
+                        daily_chance_of_rain={ daily_chance_of_rain }
+                        totalprecip_mm={ totalprecip_mm }
+                        avghumidity={ avghumidity }
+                        maxwind_kph={ maxwind_kph }
+                        daily_chance_of_snow={ daily_chance_of_snow }
+                        avgvis_km={ avgvis_km }
+                    />
+                </div>
+
+                <div className="forecast_main_box">
+                    <p> Sunrise: { sunrise } </p>
+                    <p> Sunset: { sunset } </p>
+                </div>
             </div>
         </div>
     );
