@@ -2,7 +2,7 @@ import React from 'react';
 
 
 const ForecastInfo = ({ condition, maxtemp_c, avgtemp_c, mintemp_c, daily_chance_of_rain, totalprecip_mm,
-                      avghumidity, maxwind_kph, daily_chance_of_snow, avgvis_km }) => {
+                          avghumidity, maxwind_kph, daily_chance_of_snow, avgvis_km, sunrise, sunset }) => {
 
     const { text } = condition;
 
@@ -18,6 +18,8 @@ const ForecastInfo = ({ condition, maxtemp_c, avgtemp_c, mintemp_c, daily_chance
             <p> Max wind speed: { maxwind_kph }km/h</p>
             <p> Daily change of snow: { daily_chance_of_snow}&#37; </p>
             <p> Average Visibility: { avgvis_km }km; </p>
+            <p> Sunrise: { sunrise } </p>
+            <p> Sunset: { sunset } </p>
         </div>
     );
 };

@@ -449,38 +449,6 @@ button {
 
 
 /*
-+ Slider
-*/
-
-.slider {
-  height: 80vh;
-  margin-bottom: 10vh;
-}
-
-.awssld {
-  /*background-color: var(--grey);*/
-  background: url(img/sky.jpg) no-repeat top;
-}
-
-.awssld__wrapper {
-}
-
-.awssld__container {
-  height: 100% !important;
-  /*background-color: var(--grey) !important;*/
-}
-
-.awssld__content {
-  background-color: var(--white) !important;
-}
-
-.awssld__bullets {
-  bottom: -50px !important;
-}
-
-
-
-/*
 + Main
 + Title
 + ForecastHeader
@@ -549,6 +517,54 @@ button {
   margin-top: 25px;
 }
 
+
+
+/*
++ Slider
+*/
+
+.slider {
+  height: 90vh;
+  /*min-height: 100%;*/
+  margin-bottom: 10vh;
+  padding: 10px;
+}
+
+.awssld {
+  /*background-color: var(--grey);*/
+  background: url(img/sky.jpg) no-repeat top;
+}
+
+.awssld__wrapper {
+  height: 100%;
+}
+
+.awssld__container {
+  height: 100% !important;
+}
+
+.awssld__content {
+  background-color: var(--white) !important;
+}
+
+.awssld__bullets {
+  bottom: -50px !important;
+}
+
+.forecast_main .awssld__controls__arrow-left,
+.forecast_main .awssld__controls__arrow-right {
+  position: absolute !important;
+  top: -180px !important;
+  /*transform: rotate(90deg);*/
+}
+
+.forecast_main .awssld__controls__arrow-left {
+  left: 25vw;
+}
+.forecast_main .awssld__controls__arrow-right {
+  right: 25vw;
+}
+
 /*
 + Weather_current
 */
@@ -602,6 +618,7 @@ button {
 }
 
 .forecast {
+  /*height: 100%;*/
 }
 
 .ForecastHeader {
@@ -613,15 +630,17 @@ button {
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
+  /*height: 100%;*/
   justify-content: space-evenly;
   width: 100%;
 }
 
 .forecast_main_box {
   background-color: lightgreen;
+  /*height: 100%;*/
   margin: 10px 0;
   padding: 10px;
-  width: 400px;
+  /*width: 400px;*/
 
 }
 
@@ -1067,7 +1086,8 @@ button {
   }
 
   .slider {
-    /*height: 90vh;*/
+    height: 90vh;
+    min-height: 100%;
   }
 
   .Weather_current_wrapper .card_top_main {
@@ -1130,7 +1150,9 @@ button {
   }
 
   .slider {
-    /*height: 90vh;*/
+    height: 90vh;
+    /*padding: 10px;*/
+    /*min-height: 100%;*/
   }
 
   .Weather_current_wrapper .bottom_left,
@@ -1410,6 +1432,11 @@ button {
 @media (max-width: 480px) {
   .awssld {
     min-height: 800px;
+  }
+
+  .slider {
+    height: 1000px;
+    min-height: 100%;
   }
 
   .Weather_current_wrapper .bottom_content {

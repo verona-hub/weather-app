@@ -1,16 +1,18 @@
 import React from 'react';
 import ForecastHeader from "./ForecastHeader";
 import ForecastInfo from "./ForecastInfo";
+import ForecastHour from "./ForecastHour";
 
+// Slider
+import AwesomeSlider from 'react-awesome-slider';
+import 'react-awesome-slider/dist/styles.css';
 
 const Forecast1Day = ({ forecast, location }) => {
 
     const oldDate = forecast.date.toString();
     const date = oldDate.split('-').reverse().join('-');
 
-    console.log(forecast);
-
-    const { day, astro } = forecast;
+    const { day, astro, hour } = forecast;
     const { condition, maxtemp_c, avgtemp_c, mintemp_c, daily_chance_of_rain, totalprecip_mm,
         avghumidity, maxwind_kph, daily_chance_of_snow, avgvis_km
     } = day;
@@ -19,7 +21,6 @@ const Forecast1Day = ({ forecast, location }) => {
     return (
         <div className="Forecast_1_Day forecast">
             <div className="forecast_header">
-                <h1> Work in progress... </h1>
                 <ForecastHeader
                     location={ location }
                     title='1 Day Forecast'
@@ -30,26 +31,32 @@ const Forecast1Day = ({ forecast, location }) => {
             </div>
 
             <div className="forecast_main">
+                <AwesomeSlider>
+                    <div className="forecast_main_box">
+                        <h2> Work in progress...</h2>
+                        <ForecastInfo
+                            condition={ condition }
+                            maxtemp_c={ maxtemp_c }
+                            avgtemp_c={ avgtemp_c }
+                            mintemp_c={ mintemp_c }
+                            daily_chance_of_rain={ daily_chance_of_rain }
+                            totalprecip_mm={ totalprecip_mm }
+                            avghumidity={ avghumidity }
+                            maxwind_kph={ maxwind_kph }
+                            daily_chance_of_snow={ daily_chance_of_snow }
+                            avgvis_km={ avgvis_km }
+                            sunrise={ sunrise }
+                            sunset={ sunset }
+                        />
+                    </div>
 
-                <div className="forecast_main_box">
-                    <ForecastInfo
-                        condition={ condition }
-                        maxtemp_c={ maxtemp_c }
-                        avgtemp_c={ avgtemp_c }
-                        mintemp_c={ mintemp_c }
-                        daily_chance_of_rain={ daily_chance_of_rain }
-                        totalprecip_mm={ totalprecip_mm }
-                        avghumidity={ avghumidity }
-                        maxwind_kph={ maxwind_kph }
-                        daily_chance_of_snow={ daily_chance_of_snow }
-                        avgvis_km={ avgvis_km }
-                    />
-                </div>
 
-                <div className="forecast_main_box">
-                    <p> Sunrise: { sunrise } </p>
-                    <p> Sunset: { sunset } </p>
-                </div>
+                    <div className="forecast_main_box">
+                        <ForecastHour
+                            hour={ hour }
+                        />
+                    </div>
+                </AwesomeSlider>
             </div>
         </div>
     );

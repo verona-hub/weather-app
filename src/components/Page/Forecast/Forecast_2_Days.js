@@ -8,10 +8,11 @@ const Forecast2Days = ({ forecast, location }) => {
     const oldDate = forecast.date.toString();
     const date = oldDate.split('-').reverse().join('-');
 
-    const { day } = forecast;
+    const { day, astro, hour } = forecast;
     const { condition, maxtemp_c, avgtemp_c, mintemp_c, daily_chance_of_rain, totalprecip_mm,
         avghumidity, maxwind_kph, daily_chance_of_snow, avgvis_km
     } = day;
+    const { sunrise, sunset } = astro;
 
     return (
         <div className="Forecast_2_Days forecast">
@@ -38,6 +39,8 @@ const Forecast2Days = ({ forecast, location }) => {
                     maxwind_kph={ maxwind_kph }
                     daily_chance_of_snow={ daily_chance_of_snow }
                     avgvis_km={ avgvis_km }
+                    sunrise={ sunrise }
+                    sunset={ sunset }
                 />
             </div>
         </div>
