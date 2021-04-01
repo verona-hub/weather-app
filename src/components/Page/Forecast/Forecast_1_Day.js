@@ -9,8 +9,7 @@ import 'react-awesome-slider/dist/styles.css';
 
 const Forecast1Day = ({ forecast, location }) => {
 
-    const oldDate = forecast.date.toString();
-    const date = oldDate.split('-').reverse().join('-');
+    const date = forecast.date.split('-').reverse().join('-');
 
     const { day, astro, hour } = forecast;
     const { condition, maxtemp_c, avgtemp_c, mintemp_c, daily_chance_of_rain, totalprecip_mm,

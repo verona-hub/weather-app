@@ -1,12 +1,12 @@
 import React from 'react';
 import ForecastHeader from "./ForecastHeader";
 import ForecastInfo from "./ForecastInfo";
+import ForecastHour from "./ForecastHour";
 
 
 const Forecast2Days = ({ forecast, location }) => {
 
-    const oldDate = forecast.date.toString();
-    const date = oldDate.split('-').reverse().join('-');
+    const date = forecast.date.split('-').reverse().join('-');
 
     const { day, astro, hour } = forecast;
     const { condition, maxtemp_c, avgtemp_c, mintemp_c, daily_chance_of_rain, totalprecip_mm,
@@ -41,6 +41,12 @@ const Forecast2Days = ({ forecast, location }) => {
                     avgvis_km={ avgvis_km }
                     sunrise={ sunrise }
                     sunset={ sunset }
+                />
+            </div>
+
+            <div className="forecast_main_box">
+                <ForecastHour
+                    hour={ hour }
                 />
             </div>
         </div>
