@@ -1,15 +1,14 @@
 import React from 'react';
+import { timeForecast } from '../../Utility/DateAndTime';
 import ForecastHeader from "./ForecastHeader";
-import ForecastInfo from "./ForecastInfo";
 import ForecastHour from "./ForecastHour";
+import ForecastInfo from "./ForecastInfo";
 
 // Slider
 import AwesomeSlider from 'react-awesome-slider';
 import 'react-awesome-slider/dist/styles.css';
 
 const Forecast1Day = ({ forecast, location }) => {
-
-    const date = forecast.date.split('-').reverse().join('-');
 
     const { day, astro, hour } = forecast;
     const { condition, maxtemp_c, avgtemp_c, mintemp_c, daily_chance_of_rain, totalprecip_mm,
@@ -25,7 +24,7 @@ const Forecast1Day = ({ forecast, location }) => {
                     title='1 Day Forecast'
                     css='ForecastHeader'
                     day=' Today: '
-                    date={ date }
+                    date={ timeForecast(forecast) }
                 />
             </div>
 
@@ -55,6 +54,7 @@ const Forecast1Day = ({ forecast, location }) => {
                             hour={ hour }
                         />
                     </div>
+
                 </AwesomeSlider>
             </div>
         </div>

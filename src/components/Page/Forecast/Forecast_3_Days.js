@@ -1,11 +1,11 @@
 import React from 'react';
+import { timeForecast } from '../../Utility/DateAndTime';
 import ForecastHeader from "./ForecastHeader";
 import ForecastInfo from "./ForecastInfo";
+import ForecastHour from "./ForecastHour";
 
 
 const Forecast3Days = ({ forecast, location }) => {
-
-    const date = forecast.date.split('-').reverse().join('-');
 
     const { day, astro, hour } = forecast;
     const { condition, maxtemp_c, avgtemp_c, mintemp_c, daily_chance_of_rain, totalprecip_mm,
@@ -22,7 +22,7 @@ const Forecast3Days = ({ forecast, location }) => {
                     title='3 Days Forecast'
                     css='ForecastHeader'
                     day=' Day after tomorrow: '
-                    date={ date }
+                    date={ timeForecast(forecast) }
                 />
             </div>
 
@@ -40,6 +40,12 @@ const Forecast3Days = ({ forecast, location }) => {
                     avgvis_km={ avgvis_km }
                     sunrise={ sunrise }
                     sunset={ sunset }
+                />
+            </div>
+
+            <div className="forecast_main_box">
+                <ForecastHour
+                    hour={ hour }
                 />
             </div>
         </div>
