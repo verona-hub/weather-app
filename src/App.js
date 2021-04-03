@@ -8,11 +8,11 @@ import * as _ from 'underscore';
 
 // Components
 import About from './components/Page/About';
+import Footer from "./components/Page/Footer";
 import Main from './components/Page/Main';
 import Navbar from './components/Page/Navbar';
 import PageNotFound404 from "./components/Page/PageNotFound404";
 import Search from "./components/Utility/Search";
-import Footer from "./components/Page/Footer";
 
 
 // let weatherApiKey;
@@ -27,6 +27,7 @@ import Footer from "./components/Page/Footer";
 
 class App extends Component {
 
+    // Initial state
     state = {
         text: '',
         weatherInfo: [],
@@ -42,8 +43,10 @@ class App extends Component {
         forecast_3_days: []
     }
 
+    // After a location search is made from the input, the call to the Api will be made
     searchCity = async (text) => {
 
+        // State updates as soon as the call is made, this is the phase before the response, the modal with the spinner are activated
         this.setState({
             spinner: true,
             text: text,
@@ -58,6 +61,8 @@ class App extends Component {
         });
 
         try {
+            // Three calls are made and requested with Axios: current weather data, astronomy data, and forecast data;
+            // with a timeout delay for the request of 3sec, since the Api is too fast in fetching the data
             const response = await axios.all
             ([
                 axios.get(`https://api.weatherapi.com/v1/current.json?key=
@@ -75,6 +80,7 @@ class App extends Component {
                 `), {}
             ]).then(x => new Promise(resolve => setTimeout(() => resolve(x), 3000)));
 
+            // State is updating once the response is back, the data is populating the various states
             this.setState({
                 weatherInfo: response[0].data.current,
                 weatherCondition: response[0].data.current.condition,
@@ -87,8 +93,11 @@ class App extends Component {
                 forecast_3_days: response[2].data.forecast
             });
 
+            // In case the request cannot be made, the error will be caught
         } catch(err) {
 
+            // In case of an error, the state updates: all the information beside the errorCode is reset to the initial state,
+            // the modal with the spinner are activated
             this.setState({
                 weatherInfo: [],
                 location: [],
@@ -98,10 +107,15 @@ class App extends Component {
                 search: true
             });
 
+            // Two timeouts on the state:
+            // One of 2sec for disabling the spinner before the error box displays on screen
+            // The second to close the modal after exactly 10 seconds after the box is opened
             setTimeout(() => this.setState({ errorMessage: err.response.data.error.message, spinner: false, search: false}), 2000);
             setTimeout(() => this.setState({ errorMessage: null, modal: false }), 13000);
         }
 
+        // The view slides smoothly to the main container which is activated only with a response;
+        // if the response is an error, it will not know where that container is located.
         if(this.state.errorMessage !== null) {
             document.querySelector('.container').scrollIntoView({
                 behavior: 'smooth'
@@ -110,6 +124,7 @@ class App extends Component {
 
     }
 
+    // Removes all the content and resets the state back to the origin
     clearContent = () => {
         this.setState({
             weatherInfo: [],
@@ -118,6 +133,7 @@ class App extends Component {
         });
     }
 
+    // Closes the error modal
     clearError = () => {
         this.setState({
             errorMessage: null,
@@ -126,6 +142,8 @@ class App extends Component {
         });
     }
 
+    // Interrupts the search and closes the modal window;
+    // It does not cancel the request to the Api!
     cancelSearch = () => {
         this.setState({
             text: '',
@@ -195,9 +213,7 @@ class App extends Component {
                     <Route exact path="/about" render={ () => (
                         <Fragment>
                             <Navbar/>
-                            <div className="container">
-                                <About/>
-                            </div>
+                            <About/>
                             <Footer />
                         </Fragment>
                     )} />
