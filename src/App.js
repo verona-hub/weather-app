@@ -87,8 +87,6 @@ class App extends Component {
                 forecast_3_days: response[2].data.forecast
             });
 
-            // console.log(response[2].data.forecast.forecastday);
-
         } catch(err) {
 
             this.setState({
@@ -101,12 +99,14 @@ class App extends Component {
             });
 
             setTimeout(() => this.setState({ errorMessage: err.response.data.error.message, spinner: false, search: false}), 2000);
-            setTimeout(() => this.setState({ errorMessage: null, modal: false }), 10000);
+            setTimeout(() => this.setState({ errorMessage: null, modal: false }), 13000);
         }
 
-        document.querySelector('.container').scrollIntoView({
-            behavior: 'smooth'
-        });
+        if(this.state.errorMessage !== null) {
+            document.querySelector('.container').scrollIntoView({
+                behavior: 'smooth'
+            });
+        }
 
     }
 
@@ -176,19 +176,17 @@ class App extends Component {
                                        showClearButton={ locationResponseSize > 0 && weatherResponseSize > 0 && !spinner }
                                        spinner={ spinner }
                                    />
-                                   <div className="container">
-                                       <Main
-                                           weatherInfo={ weatherInfo }
-                                           weatherCondition={ weatherCondition }
-                                           airQuality={ airQuality }
-                                           location={ location }
-                                           astronomy={ astronomy }
-                                           spinner={ spinner }
-                                           locationResponseSize={ locationResponseSize }
-                                           weatherResponseSize={ weatherResponseSize }
-                                           forecast_3_days={ forecast_3_days }
-                                       />
-                                   </div>
+                                   <Main
+                                       weatherInfo={ weatherInfo }
+                                       weatherCondition={ weatherCondition }
+                                       airQuality={ airQuality }
+                                       location={ location }
+                                       astronomy={ astronomy }
+                                       spinner={ spinner }
+                                       locationResponseSize={ locationResponseSize }
+                                       weatherResponseSize={ weatherResponseSize }
+                                       forecast_3_days={ forecast_3_days }
+                                   />
                                    { contentIsPresent && <Footer/> }
                                </Fragment>
                            )}

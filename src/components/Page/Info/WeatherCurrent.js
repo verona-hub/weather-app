@@ -1,14 +1,24 @@
 import React from 'react';
 
+// Components
+import ForecastHeader from "../Forecast/ForecastHeader";
 
-const WeatherCurrent = ({ weatherInfo, weatherCondition }) => {
+
+const WeatherCurrent = ({ weatherInfo, weatherCondition, location }) => {
 
     const { cloud, temp_c, feelslike_c, humidity, precip_mm, uv, vis_km,
         pressure_mb, wind_kph, wind_dir } = weatherInfo;
     const { icon, text } = weatherCondition;
 
     return (
-            <div className="WeatherCurrent">
+        <div className="WeatherCurrent card">
+            <ForecastHeader
+                location={ location }
+                title='Current weather conditions'
+                css=''
+            />
+
+            <div className="Weather_current_main">
                 <div className="top_content">
                     <div className="card_top_header">
                         <img src={ icon } alt=""/>
@@ -33,6 +43,7 @@ const WeatherCurrent = ({ weatherInfo, weatherCondition }) => {
                     </div>
                 </div>
             </div>
+        </div>
     );
 };
 

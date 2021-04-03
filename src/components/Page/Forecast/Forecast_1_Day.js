@@ -29,9 +29,11 @@ const Forecast1Day = ({ forecast, location }) => {
             </div>
 
             <div className="forecast_main">
+
                 <AwesomeSlider>
                     <div className="forecast_main_box">
                         <h2> Work in progress...</h2>
+                        <h2> Daily Forecast </h2>
                         <ForecastInfo
                             condition={ condition }
                             maxtemp_c={ maxtemp_c }
@@ -48,14 +50,14 @@ const Forecast1Day = ({ forecast, location }) => {
                         />
                     </div>
 
-
                     <div className="forecast_main_box">
+                        <h2> Hourly Forecast </h2>
                         <ForecastHour
                             hour={ hour }
                         />
                     </div>
-
                 </AwesomeSlider>
+
             </div>
         </div>
     );

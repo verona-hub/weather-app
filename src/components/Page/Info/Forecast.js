@@ -9,8 +9,6 @@ import AnimationStyles from 'react-awesome-slider/src/styled/fold-out-animation/
 import Forecast1Day from '../Forecast/Forecast_1_Day';
 import Forecast2Days from '../Forecast/Forecast_2_Days';
 import Forecast3Days from '../Forecast/Forecast_3_Days';
-import ForecastHeader from "../Forecast/ForecastHeader";
-import WeatherCurrent from '../Forecast/WeatherCurrent';
 
 
 
@@ -27,18 +25,6 @@ const Weather = ({ weatherInfo, weatherCondition, location, forecast_3_days }) =
             className="slider card Weather_wrapper"
             animation="foldOutAnimation"
         >
-            <div className="Weather_current_wrapper">
-                <ForecastHeader
-                    location={ location }
-                    title='Current weather conditions'
-                    css=''
-                />
-                <WeatherCurrent
-                    weatherInfo={ weatherInfo }
-                    weatherCondition={ weatherCondition }
-                />
-            </div>
-
             <div className="forecast_wrapper">
                 <Forecast1Day
                     forecast={ forecast1day }

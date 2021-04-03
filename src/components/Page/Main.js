@@ -4,8 +4,9 @@ import ScrollToTop from '../Utility/ScrollToTop';
 // Components
 import AirQuality from "./Info/AirQuality";
 import Astronomy from './Info/Astronomy';
+import Forecast from './Info/Forecast';
 import Location from "./Info/Location";
-import Weather from "./Info/Weather";
+import WeatherCurrent from "./Info/WeatherCurrent";
 
 
 const Main = ({ weatherInfo, weatherCondition, location, airQuality, astronomy, spinner, locationResponseSize, weatherResponseSize, forecast_3_days }) => {
@@ -16,13 +17,17 @@ const Main = ({ weatherInfo, weatherCondition, location, airQuality, astronomy, 
 
     else {
         return (
-            <div>
+            <div className="container">
                 {
                     ( locationResponseSize > 0 || weatherResponseSize > 0 ) && (
                         <div>
-                            <Weather
+                            <WeatherCurrent
                                 weatherInfo={ weatherInfo }
                                 weatherCondition={ weatherCondition }
+                                forecast_3_days={ forecast_3_days }
+                                location={ location }
+                            />
+                            <Forecast
                                 forecast_3_days={ forecast_3_days }
                                 location={ location }
                             />

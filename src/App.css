@@ -233,7 +233,9 @@ img {
 
 
 /*
++ Errors
 + Alert
+
 */
 
 .alert {
@@ -263,8 +265,6 @@ img {
 p.close {
   margin-top: 3vh;
 }
-
-
 
 /*
 + Search
@@ -509,14 +509,61 @@ button {
   font-size: 1.8rem;
 }
 
-.Weather_current_wrapper .MainHeader .title {
+.WeatherCurrent .MainHeader .title {
   margin-top: 50px;
 }
 
-.Weather_current_wrapper .MainHeader .sub_title {
+.WeatherCurrent .MainHeader .sub_title {
   margin-top: 25px;
 }
 
+
+
+/*
++ Weather Current
+*/
+
+.WeatherCurrent .top_content {
+  flex-wrap: wrap;
+}
+
+.WeatherCurrent .card_top_header {
+  margin: 10px 10px 0 10px;
+  text-align: center;
+}
+
+.WeatherCurrent .card_top_main {
+}
+
+.WeatherCurrent .bottom_content {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  width: 100%;
+}
+
+.WeatherCurrent .bottom_left,
+.WeatherCurrent .bottom_right {
+  min-width: 300px;
+  margin: 20px 60px;
+}
+
+.WeatherCurrent span,
+.AirQuality span,
+.Location span,
+.Astronomy span {
+  font-size: 18px;
+}
+
+.WeatherCurrent img {
+  width: 100px;
+}
+
+.Weather_current_main {
+  /*min-height: 500px;*/
+  /*height: 700px;*/
+  margin-bottom: 75px;
+}
 
 
 /*
@@ -565,49 +612,7 @@ button {
   right: 25vw;
 }
 
-/*
-+ Weather_current
-*/
 
-.Weather_current_wrapper {
-  height: 100%;
-}
-
-.Weather_current_wrapper .top_content {
-  flex-wrap: wrap;
-}
-
-.Weather_current_wrapper .card_top_header {
-  margin: 10px 10px 0 10px;
-  text-align: center;
-}
-
-.Weather_current_wrapper .card_top_main {
-}
-
-.Weather_current_wrapper .bottom_content {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-between;
-  width: 100%;
-}
-
-.Weather_current_wrapper .bottom_left,
-.Weather_current_wrapper .bottom_right {
-  min-width: 300px;
-  margin: 20px 60px;
-}
-
-.Weather_current_wrapper span,
-.AirQuality span,
-.Location span,
-.Astronomy span {
-  font-size: 18px;
-}
-
-.Weather_current_wrapper img {
-  width: 100px;
-}
 
 /*
 +  Forecast
@@ -988,6 +993,11 @@ button {
   content: "";
 }
 
+.alert .counter:after {
+  animation: counter 10s;
+  content: "now";
+}
+
 
 @keyframes fadeIn {
   0% { opacity: 0; }
@@ -1043,12 +1053,48 @@ button {
 }
 
 
+@keyframes counter {
+  0% {
+    content: 'in 10s';
+  }
+  10% {
+    content: 'in 10s';
+  }
+  20% {
+    content: 'in 9s';
+  }
+  30% {
+    content: 'in 8s';
+  }
+  40% {
+    content: 'in 7s';
+  }
+  50% {
+    content: 'in 6s';
+  }
+  60% {
+    content: 'in 5s';
+  }
+  70% {
+    content: 'in 4s';
+  }
+  80% {
+    content: 'in 3s';
+  }
+  90% {
+    content: 'in 2s';
+  }
+  100% {
+    content: 'in 1s';
+  }
+}
+
 
 /*
 + Mobile
 */
 @media (min-width: 1240px) {
-  .Weather_current_wrapper .card_top_main {
+  .WeatherCurrent .card_top_main {
     margin: 20px 0 30px;
   }
 }
@@ -1090,7 +1136,7 @@ button {
     min-height: 100%;
   }
 
-  .Weather_current_wrapper .card_top_main {
+  .WeatherCurrent .card_top_main {
     /*margin: 0 0 100px;*/
   }
 
@@ -1155,8 +1201,8 @@ button {
     /*min-height: 100%;*/
   }
 
-  .Weather_current_wrapper .bottom_left,
-  .Weather_current_wrapper .bottom_right {
+  .WeatherCurrent .bottom_left,
+  .WeatherCurrent .bottom_right {
     margin: auto;
     width: 100%;
   }
@@ -1266,18 +1312,18 @@ button {
     /*margin: 0;*/
   }
 
-  .Weather_current_wrapper .card_top_header {
+  .WeatherCurrent .card_top_header {
     margin: 0;
   }
 
-  .Weather_current_wrapper .card_top_header img {
+  .WeatherCurrent .card_top_header img {
     /*width: 120px;*/
   }
-  .Weather_current_wrapper .card_top_main h1 {
+  .WeatherCurrent .card_top_main h1 {
     font-size: 1.6rem;
     /*margin-bottom: 10px;*/
   }
-  .Weather_current_wrapper .card_top_main h3 {
+  .WeatherCurrent .card_top_main h3 {
     font-size: 1.4rem;
     margin-bottom: 30px;
   }
@@ -1288,26 +1334,27 @@ button {
     margin: 45px;
   }
 
-  .Weather_current_wrapper span,
+  .WeatherCurrent span,
   .AirQuality span,
   .Location span,
   .Astronomy span,
-  .Weather_current_wrapper .bottom_content {
+  .WeatherCurrent .bottom_content {
     text-align: left;
   }
-  .Weather_current_wrapper .bottom_content {
+  .WeatherCurrent .bottom_content {
     margin: auto;
     width: 80%;
   }
 
 
-  .Weather_current_wrapper .bottom_left,
-  .Weather_current_wrapper .bottom_right,
+  .WeatherCurrent .bottom_left,
+  .WeatherCurrent .bottom_right,
   .AirQuality .index_levels {
     margin: auto;
     width: 90%;
   }
 
+  .WeatherCurrent.card,
   .AirQuality.card,
   .Location.card,
   .Astronomy.card {
@@ -1439,13 +1486,13 @@ button {
     min-height: 100%;
   }
 
-  .Weather_current_wrapper .bottom_content {
+  .WeatherCurrent .bottom_content {
     /*margin: auto 0;*/
     /*width: 90%;*/
   }
 
-  .Weather_current_wrapper .bottom_left,
-  .Weather_current_wrapper .bottom_right {
+  .WeatherCurrent .bottom_left,
+  .WeatherCurrent .bottom_right {
     margin: auto;
     min-width: 100px;
   }

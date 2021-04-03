@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React from 'react';
 import * as _ from 'underscore';
 import warning from '../../img/warning.png';
 
@@ -18,7 +18,7 @@ const Errors = ({ errorMessage, errorCode, clearError }) => {
                             <img src={ warning } alt="warning logo" className="warning_logo"/>
                             <h2> Ooops! </h2>
                             <p> Searchbar is empty. Please enter a location... </p>
-                            <p className="close"> (this box will self-close in 10s) </p>
+                            <p className="close"> (this box will self-close<span className="counter"> </span>) </p>
                         </div>
                         <button onClick={ handleClearError } className="button button_ok"> Close now </button>
                     </div>
@@ -32,7 +32,7 @@ const Errors = ({ errorMessage, errorCode, clearError }) => {
                             <h2> Ooops! </h2>
                             <p>{ errorMessage }.</p>
                             <p> Please try a different one. </p>
-                            <p className="close"> (this box will self-close in 10s) </p>
+                            <p className="close"> (this box will self-close<span className="counter"> </span>) </p>
                         </div>
                         <button onClick={ handleClearError } className="button button_ok"> Close now </button>
                     </div>
@@ -45,7 +45,7 @@ const Errors = ({ errorMessage, errorCode, clearError }) => {
                             <img src={ warning } alt="warning logo" className="warning_logo"/>
                             <h2> Ooops! </h2>
                             <p>Sorry, { errorMessage } </p>
-                            <p className="close"> (this box will self-close in 10s) </p>
+                            <p className="close"> (this box will self-close<span className="counter"> </span>) </p>
                         </div>
                         <button onClick={ handleClearError } className="button button_ok"> Close now </button>
                     </div>)
