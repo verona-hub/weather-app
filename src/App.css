@@ -101,6 +101,7 @@ img {
 /*
 + Navbar
 */
+
 .header {
   background: url(img/sky.jpg) no-repeat top;
   background-size: 100vw 100vh;
@@ -235,7 +236,6 @@ img {
 /*
 + Errors
 + Alert
-
 */
 
 .alert {
@@ -290,6 +290,7 @@ form {
 /*
 + Input
 */
+
 .search_icon,
 .close_icon {
   cursor: pointer;
@@ -415,13 +416,11 @@ button {
   padding: 0;
 }
 
-.button_to_left {
-}
-
 .button_to_top a,
 .button_to_left a {
   display: inline-block;
 }
+
 
 
 /*
@@ -560,8 +559,6 @@ button {
 }
 
 .Weather_current_main {
-  /*min-height: 500px;*/
-  /*height: 700px;*/
   margin-bottom: 75px;
 }
 
@@ -572,13 +569,11 @@ button {
 
 .slider {
   height: 90vh;
-  /*min-height: 100%;*/
   margin-bottom: 10vh;
   padding: 10px;
 }
 
 .awssld {
-  /*background-color: var(--grey);*/
   background: url(img/sky.jpg) no-repeat top;
 }
 
@@ -602,7 +597,6 @@ button {
 .forecast_main .awssld__controls__arrow-right {
   position: absolute !important;
   top: -180px !important;
-  /*transform: rotate(90deg);*/
 }
 
 .forecast_main .awssld__controls__arrow-left {
@@ -623,7 +617,6 @@ button {
 }
 
 .forecast {
-  /*height: 100%;*/
 }
 
 .ForecastHeader {
@@ -635,19 +628,16 @@ button {
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
-  /*height: 100%;*/
   justify-content: space-evenly;
   width: 100%;
 }
 
 .forecast_main_box {
   background-color: lightgreen;
-  /*height: 100%;*/
-  /*margin: 10px 0;*/
   padding: 10px;
-  /*width: 400px;*/
-
 }
+
+
 
 /*
 +  AirQuality
@@ -693,7 +683,6 @@ button {
   display: inline-block;
   font-size: 1.6rem;
 }
-
 
 .AirQuality .index_levels {
   display: flex;
@@ -757,6 +746,7 @@ button {
 .Astronomy {
   justify-content: normal;
 }
+
 
 
 /*
@@ -1052,7 +1042,6 @@ button {
   }
 }
 
-
 @keyframes counter {
   0% {
     content: 'in 10s';
@@ -1090,14 +1079,18 @@ button {
 }
 
 
+
 /*
 + Mobile
 */
+
 @media (min-width: 1240px) {
   .WeatherCurrent .card_top_main {
     margin: 20px 0 30px;
   }
 }
+
+
 
 @media (min-width: 760px) {
   .AirQuality .index_box {
@@ -1134,10 +1127,6 @@ button {
   .slider {
     height: 90vh;
     min-height: 100%;
-  }
-
-  .WeatherCurrent .card_top_main {
-    /*margin: 0 0 100px;*/
   }
 
   .About ul li {
@@ -1197,8 +1186,6 @@ button {
 
   .slider {
     height: 90vh;
-    /*padding: 10px;*/
-    /*min-height: 100%;*/
   }
 
   .WeatherCurrent .bottom_left,
@@ -1295,34 +1282,24 @@ button {
     min-height: 700px;
   }
 
-  .awssld__wrapper {
-    /*min-height: 650px;*/
-  }
-
   .MainHeader .title {
     font-size: 1.6rem;
-    /*margin: 30px 30px 10px;*/
     margin: 30px 20px 10px;
   }
 
   .MainHeader .sub_title {
     font-size: 1.6rem;
     margin: 0;
-    /*margin: 10px 0 40px;*/
-    /*margin: 0;*/
   }
 
   .WeatherCurrent .card_top_header {
     margin: 0;
   }
 
-  .WeatherCurrent .card_top_header img {
-    /*width: 120px;*/
-  }
   .WeatherCurrent .card_top_main h1 {
     font-size: 1.6rem;
-    /*margin-bottom: 10px;*/
   }
+
   .WeatherCurrent .card_top_main h3 {
     font-size: 1.4rem;
     margin-bottom: 30px;
@@ -1341,6 +1318,7 @@ button {
   .WeatherCurrent .bottom_content {
     text-align: left;
   }
+
   .WeatherCurrent .bottom_content {
     margin: auto;
     width: 80%;
@@ -1476,6 +1454,8 @@ button {
 
 }
 
+
+
 @media (max-width: 480px) {
   .awssld {
     min-height: 800px;
@@ -1484,11 +1464,6 @@ button {
   .slider {
     height: 1000px;
     min-height: 100%;
-  }
-
-  .WeatherCurrent .bottom_content {
-    /*margin: auto 0;*/
-    /*width: 90%;*/
   }
 
   .WeatherCurrent .bottom_left,
@@ -1514,4 +1489,5 @@ button {
   .Astronomy .main {
     width: 80%;
   }
+
 }

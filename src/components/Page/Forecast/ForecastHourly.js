@@ -1,16 +1,21 @@
 import React from 'react';
+import { date, timeForecastHourly } from '../../Utility/DateAndTime';
 
-const ForecastHour = ({ hour }) => {
+
+const ForecastHourly = ({ hour }) => {
 
     const everyThirdHour = hour.map( (item, index) => {
+
         const { condition: { text }, time, temp_c } = item;
+
         if(index % 2 === 0 ){
-            return <p key={index}> { time }h - { text } - { temp_c }&#8451; </p>
+            return <p key={index}> { date(time) } - { timeForecastHourly(time) } - { text } = Temperature { temp_c }&#8451; </p>
         }
         else {
             return null;
         }
     });
+
 
     return (
         <div>
@@ -20,4 +25,5 @@ const ForecastHour = ({ hour }) => {
     );
 };
 
-export default ForecastHour;
+
+export default ForecastHourly;

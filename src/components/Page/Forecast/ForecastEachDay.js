@@ -1,14 +1,15 @@
 import React from 'react';
 import { timeForecast } from '../../Utility/DateAndTime';
 import ForecastHeader from "./ForecastHeader";
-import ForecastHour from "./ForecastHour";
-import ForecastInfo from "./ForecastInfo";
+import ForecastHourly from "./ForecastHourly";
+import ForecastDaily from "./ForecastDaily";
 
-// Slider
-import AwesomeSlider from 'react-awesome-slider';
-import 'react-awesome-slider/dist/styles.css';
 
-const Forecast1Day = ({ forecast, location }) => {
+// Carousel slider
+import { Dot, CarouselProvider, Slide, Slider } from 'pure-react-carousel';
+import 'pure-react-carousel/dist/react-carousel.es.css';
+
+const ForecastEachDay = ({ forecast, location, title, when }) => {
 
     const { day, astro, hour } = forecast;
     const { condition, maxtemp_c, avgtemp_c, mintemp_c, daily_chance_of_rain, totalprecip_mm,
@@ -21,20 +22,26 @@ const Forecast1Day = ({ forecast, location }) => {
             <div className="forecast_header">
                 <ForecastHeader
                     location={ location }
-                    title='1 Day Forecast'
+                    title= { title }
                     css='ForecastHeader'
-                    day=' Today: '
+                    when= { when }
                     date={ timeForecast(forecast) }
                 />
             </div>
 
-            <div className="forecast_main">
-
-                <AwesomeSlider>
-                    <div className="forecast_main_box">
+            <CarouselProvider
+                visibleSlides={1}
+                totalSlides={3}
+                step={1}
+                naturalSlideWidth={400}
+                naturalSlideHeight={500}
+                isIntrinsicHeight
+            >
+                <Slider>
+                    <Slide index={0} className="forecast_main_box">
                         <h2> Work in progress...</h2>
                         <h2> Daily Forecast </h2>
-                        <ForecastInfo
+                        <ForecastDaily
                             condition={ condition }
                             maxtemp_c={ maxtemp_c }
                             avgtemp_c={ avgtemp_c }
@@ -48,20 +55,31 @@ const Forecast1Day = ({ forecast, location }) => {
                             sunrise={ sunrise }
                             sunset={ sunset }
                         />
-                    </div>
+                    </Slide>
 
-                    <div className="forecast_main_box">
+                    <Slide index={1} className="forecast_main_box">
                         <h2> Hourly Forecast </h2>
-                        <ForecastHour
+                        <ForecastHourly
                             hour={ hour }
                         />
-                    </div>
-                </AwesomeSlider>
+                    </Slide>
 
-            </div>
+                    <Slide index={2} className="forecast_main_box">
+                        <h1> Work in progress... </h1>
+                        <p>
+                            Work in progress...
+                        </p>
+                    </Slide>
+                </Slider>
+
+                <Dot slide={0} > Daily Forecast </Dot>
+                <Dot slide={1} > Hourly Forecast </Dot>
+                <Dot slide={2} > I don't know yet </Dot>
+
+            </CarouselProvider>
         </div>
     );
 };
 
 
-export default Forecast1Day;
+export default ForecastEachDay;

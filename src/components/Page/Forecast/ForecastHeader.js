@@ -1,5 +1,6 @@
 import React from 'react';
 
+
 const ForecastHeader = ({ location, title, css, day, date }) => {
 
     const { name, country } = location;
@@ -12,5 +13,6 @@ const ForecastHeader = ({ location, title, css, day, date }) => {
         </div>
     );
 };
+
 
 export default ForecastHeader;

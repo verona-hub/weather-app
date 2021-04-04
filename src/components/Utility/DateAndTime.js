@@ -1,12 +1,24 @@
 
-function timeLocation (localtime) {
-
-    const oldDateAndTime = localtime.split('-');
-    const oldTime = oldDateAndTime[2];
-    const oldDay = oldTime.split(' ');
-    const time = oldDay[1];
+function timeLocation (arg) {
+    const oldDateAndTime = arg.split('-');
+    let oldTime = oldDateAndTime[2];
+    oldTime = oldTime.split(' ');
+    const time = oldTime[1];
 
     return `${time}h`;
+}
+
+
+function date (date) {
+    const oldDateAndTime = date.split('-');
+    let oldTime = oldDateAndTime[2];
+    oldTime = oldTime.split(' ');
+
+    const year = oldDateAndTime[0];
+    const month = oldDateAndTime[1];
+    const day = oldTime[0];
+
+    return `${day}-${month}-${year}`;
 }
 
 
@@ -16,18 +28,14 @@ function timeForecast (forecast) {
 }
 
 
+function timeForecastHourly (time) {
+    const oldDateAndTime = time.split('-');
+    let oldTime = oldDateAndTime[2];
+    oldTime = oldTime.split(' ');
+    const timeNow = oldTime[1];
 
-function date (localtime) {
-
-    const oldDateAndTime = localtime.split('-');
-    const oldTime = oldDateAndTime[2];
-    const oldDay = oldTime.split(' ');
-    const year = oldDateAndTime[0];
-    const month = oldDateAndTime[1];
-    const day = oldDay[0];
-
-    return `${day}-${month}-${year}`;
+    return `${timeNow}h`;
 }
 
 
-export { timeLocation, timeForecast, date };
+export { timeLocation, timeForecast, date, timeForecastHourly };

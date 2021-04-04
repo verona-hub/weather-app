@@ -1,8 +1,8 @@
 import React from 'react';
 import { timeForecast } from '../../Utility/DateAndTime';
 import ForecastHeader from "./ForecastHeader";
-import ForecastInfo from "./ForecastInfo";
-import ForecastHour from "./ForecastHour";
+import ForecastDaily from "./ForecastDaily";
+import ForecastHourly from "./ForecastHourly";
 
 
 const Forecast3Days = ({ forecast, location }) => {
@@ -27,7 +27,7 @@ const Forecast3Days = ({ forecast, location }) => {
             </div>
 
             <div className="forecast_main">
-                <ForecastInfo
+                <ForecastDaily
                     condition={ condition }
                     maxtemp_c={ maxtemp_c }
                     avgtemp_c={ avgtemp_c }
@@ -44,7 +44,7 @@ const Forecast3Days = ({ forecast, location }) => {
             </div>
 
             <div className="forecast_main_box">
-                <ForecastHour
+                <ForecastHourly
                     hour={ hour }
                 />
             </div>
