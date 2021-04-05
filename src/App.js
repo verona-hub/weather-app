@@ -114,10 +114,11 @@ class App extends Component {
             setTimeout(() => this.setState({ errorMessage: null, modal: false }), 13000);
         }
 
-        // The view slides smoothly to the main container which is activated only with a response;
-        // if the response is an error, it will not know where that container is located.
-        if(this.state.errorMessage !== null) {
-            document.querySelector('.container').scrollIntoView({
+        // The view slides smoothly to the main container which is activated only with the Api response;
+        // If the modal is present, the scroll doesn't happen
+        // (leave this to avoid a Typescript error that scrollIntoView is missing when a request error is present)
+        if(this.state.modal !== true) {
+            document.querySelector('.scrollToMain').scrollIntoView({
                 behavior: 'smooth'
             });
         }
@@ -169,6 +170,8 @@ class App extends Component {
 
         const locationResponseSize = _.size(location);
         const weatherResponseSize = _.size(weatherInfo);
+
+        // If the data from Location and Weather have been fetched, the content is present (displayed on screen)
         const contentIsPresent = locationResponseSize > 0 && weatherResponseSize > 0;
 
         return (
@@ -194,17 +197,19 @@ class App extends Component {
                                        showClearButton={ locationResponseSize > 0 && weatherResponseSize > 0 && !spinner }
                                        spinner={ spinner }
                                    />
-                                   <Main
-                                       weatherInfo={ weatherInfo }
-                                       weatherCondition={ weatherCondition }
-                                       airQuality={ airQuality }
-                                       location={ location }
-                                       astronomy={ astronomy }
-                                       spinner={ spinner }
-                                       locationResponseSize={ locationResponseSize }
-                                       weatherResponseSize={ weatherResponseSize }
-                                       forecast_3_days={ forecast_3_days }
-                                   />
+                                   <div className="scrollToMain">
+                                       <Main
+                                           weatherInfo={ weatherInfo }
+                                           weatherCondition={ weatherCondition }
+                                           airQuality={ airQuality }
+                                           location={ location }
+                                           astronomy={ astronomy }
+                                           spinner={ spinner }
+                                           locationResponseSize={ locationResponseSize }
+                                           weatherResponseSize={ weatherResponseSize }
+                                           forecast_3_days={ forecast_3_days }
+                                       />
+                                   </div>
                                    { contentIsPresent && <Footer/> }
                                </Fragment>
                            )}

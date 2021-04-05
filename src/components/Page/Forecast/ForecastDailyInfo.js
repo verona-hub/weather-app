@@ -1,7 +1,7 @@
 import React from 'react';
 
 
-const ForecastDaily = ({ condition, maxtemp_c, avgtemp_c, mintemp_c, daily_chance_of_rain, totalprecip_mm,
+const ForecastDailyInfo = ({ condition, maxtemp_c, avgtemp_c, mintemp_c, daily_chance_of_rain, totalprecip_mm,
                           avghumidity, maxwind_kph, daily_chance_of_snow, avgvis_km, sunrise, sunset }) => {
 
     const { text } = condition;
@@ -25,4 +25,4 @@ const ForecastDaily = ({ condition, maxtemp_c, avgtemp_c, mintemp_c, daily_chanc
 };
 
 
-export default ForecastDaily;
+export default ForecastDailyInfo;

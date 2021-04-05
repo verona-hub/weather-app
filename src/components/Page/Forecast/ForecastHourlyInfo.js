@@ -2,7 +2,7 @@ import React from 'react';
 import { date, timeForecastHourly } from '../../Utility/DateAndTime';
 
 
-const ForecastHourly = ({ hour }) => {
+const ForecastHourlyInfo = ({ hour }) => {
 
     const everyThirdHour = hour.map( (item, index) => {
 
@@ -26,4 +26,4 @@ const ForecastHourly = ({ hour }) => {
 };
 
 
-export default ForecastHourly;
+export default ForecastHourlyInfo;

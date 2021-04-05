@@ -569,7 +569,7 @@ button {
 
 .slider {
   height: 90vh;
-  margin-bottom: 10vh;
+  /*margin-bottom: 10vh;*/
   padding: 10px;
 }
 
@@ -578,7 +578,6 @@ button {
 }
 
 .awssld__wrapper {
-  height: 100%;
 }
 
 .awssld__container {
@@ -590,22 +589,12 @@ button {
 }
 
 .awssld__bullets {
-  bottom: -50px !important;
+  bottom: 50px !important;
 }
 
-.forecast_main .awssld__controls__arrow-left,
-.forecast_main .awssld__controls__arrow-right {
-  position: absolute !important;
-  top: -180px !important;
+.dot_slide {
+  /*margin: 100px 0;*/
 }
-
-.forecast_main .awssld__controls__arrow-left {
-  left: 25vw;
-}
-.forecast_main .awssld__controls__arrow-right {
-  right: 25vw;
-}
-
 
 
 /*
@@ -613,10 +602,11 @@ button {
 */
 
 .forecast_wrapper {
-  width: 100%;
+  /*width: 100%;*/
+  text-align: center;
 }
 
-.forecast {
+.ForecastEachDay {
 }
 
 .ForecastHeader {
@@ -634,7 +624,7 @@ button {
 
 .forecast_main_box {
   background-color: lightgreen;
-  padding: 10px;
+  padding: 20px;
 }
 
 
@@ -1093,6 +1083,10 @@ button {
 
 
 @media (min-width: 760px) {
+  .dot_slide_wrapper {
+    margin-top: 25px;
+  }
+
   .AirQuality .index_box {
     min-width: 80px;
     width: 80px;
@@ -1125,8 +1119,8 @@ button {
   }
 
   .slider {
-    height: 90vh;
-    min-height: 100%;
+    /*height: 90vh;*/
+    /*min-height: 100%;*/
   }
 
   .About ul li {
@@ -1185,7 +1179,7 @@ button {
   }
 
   .slider {
-    height: 90vh;
+    /*min-height: 90vh;*/
   }
 
   .WeatherCurrent .bottom_left,
@@ -1324,7 +1318,6 @@ button {
     width: 80%;
   }
 
-
   .WeatherCurrent .bottom_left,
   .WeatherCurrent .bottom_right,
   .AirQuality .index_levels {
@@ -1456,14 +1449,45 @@ button {
 
 
 
+@media (max-width: 760px) {
+  .slider {
+  }
+
+  .awssld__content {
+  }
+
+  .awssld__bullets {
+    bottom: 30px !important;
+  }
+
+  .dot_slide_wrapper {
+    /*margin-top: 50px;*/
+  }
+
+  .dot_slide_wrapper {
+    margin-top: 25px;
+  }
+}
+
+
+
 @media (max-width: 480px) {
   .awssld {
-    min-height: 800px;
+    min-height: 900px;
   }
 
   .slider {
-    height: 1000px;
-    min-height: 100%;
+    /*min-height: 1000px;*/
+  }
+
+  .dot_slide_wrapper {
+    display: flex;
+    justify-content: center;
+    margin: 40px 0 100px;
+  }
+
+  .dot_slide {
+    width: 80px;
   }
 
   .WeatherCurrent .bottom_left,

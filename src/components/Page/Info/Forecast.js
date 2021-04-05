@@ -7,12 +7,9 @@ import AnimationStyles from 'react-awesome-slider/src/styled/fold-out-animation/
 
 // Components
 import ForecastEachDay from '../Forecast/ForecastEachDay';
-import Forecast2Days from '../Forecast/Forecast_2_Days';
-import Forecast3Days from '../Forecast/Forecast_3_Days';
 
 
-
-const Weather = ({ weatherInfo, weatherCondition, location, forecast_3_days }) => {
+const Weather = ({ location, forecast_3_days }) => {
 
     const { forecastday } = forecast_3_days;
 

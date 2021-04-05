@@ -1,15 +1,16 @@
 import React from 'react';
 import { timeForecast } from '../../Utility/DateAndTime';
 import ForecastHeader from "./ForecastHeader";
-import ForecastHourly from "./ForecastHourly";
-import ForecastDaily from "./ForecastDaily";
-
+import ForecastHourlyInfo from "./ForecastHourlyInfo";
+import ForecastDailyInfo from "./ForecastDailyInfo";
 
 // Carousel slider
 import { Dot, CarouselProvider, Slide, Slider } from 'pure-react-carousel';
 import 'pure-react-carousel/dist/react-carousel.es.css';
 
+
 const ForecastEachDay = ({ forecast, location, title, when }) => {
+    console.log(forecast);
 
     const { day, astro, hour } = forecast;
     const { condition, maxtemp_c, avgtemp_c, mintemp_c, daily_chance_of_rain, totalprecip_mm,
@@ -18,7 +19,7 @@ const ForecastEachDay = ({ forecast, location, title, when }) => {
     const { sunrise, sunset } = astro;
 
     return (
-        <div className="Forecast_1_Day forecast">
+        <div className="ForecastEachDay">
             <div className="forecast_header">
                 <ForecastHeader
                     location={ location }
@@ -41,7 +42,7 @@ const ForecastEachDay = ({ forecast, location, title, when }) => {
                     <Slide index={0} className="forecast_main_box">
                         <h2> Work in progress...</h2>
                         <h2> Daily Forecast </h2>
-                        <ForecastDaily
+                        <ForecastDailyInfo
                             condition={ condition }
                             maxtemp_c={ maxtemp_c }
                             avgtemp_c={ avgtemp_c }
@@ -59,7 +60,7 @@ const ForecastEachDay = ({ forecast, location, title, when }) => {
 
                     <Slide index={1} className="forecast_main_box">
                         <h2> Hourly Forecast </h2>
-                        <ForecastHourly
+                        <ForecastHourlyInfo
                             hour={ hour }
                         />
                     </Slide>
@@ -72,9 +73,11 @@ const ForecastEachDay = ({ forecast, location, title, when }) => {
                     </Slide>
                 </Slider>
 
-                <Dot slide={0} > Daily Forecast </Dot>
-                <Dot slide={1} > Hourly Forecast </Dot>
-                <Dot slide={2} > I don't know yet </Dot>
+                <div className="dot_slide_wrapper">
+                    <Dot slide={ 0 } className="dot_slide"> Daily Forecast </Dot>
+                    <Dot slide={ 1 } className="dot_slide"> Hourly Forecast </Dot>
+                    <Dot slide={ 2 } className="dot_slide"> I don't know yet </Dot>
+                </div>
 
             </CarouselProvider>
         </div>
