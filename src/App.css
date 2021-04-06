@@ -466,7 +466,7 @@ button {
 }
 
 .spaced {
-  align-items: center;
+  align-items: baseline;
   border-bottom: 1px solid var(--dim_grey);
   display: flex;
   justify-content: space-between;
@@ -534,7 +534,8 @@ button {
 .WeatherCurrent .card_top_main {
 }
 
-.WeatherCurrent .bottom_content {
+.WeatherCurrent .bottom_content,
+.ForecastDailyInfo .bottom_content {
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
@@ -548,6 +549,7 @@ button {
 }
 
 .WeatherCurrent span,
+.ForecastDailyInfo span,
 .AirQuality span,
 .Location span,
 .Astronomy span {
@@ -568,12 +570,13 @@ button {
 */
 
 .slider {
-  height: 90vh;
+  /*height: 100vh;*/
   /*margin-bottom: 10vh;*/
   padding: 10px;
 }
 
 .awssld {
+  height: 90vh;
   background: url(img/sky.jpg) no-repeat top;
 }
 
@@ -589,7 +592,7 @@ button {
 }
 
 .awssld__bullets {
-  bottom: 50px !important;
+  bottom: -50px !important;
 }
 
 .dot_slide {
@@ -606,25 +609,36 @@ button {
   text-align: center;
 }
 
-.ForecastEachDay {
-}
-
 .ForecastHeader {
   background-color: lightblue;
 }
 
-.forecast_main {
+/*.forecast_main {
   background-color: lightpink;
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
   justify-content: space-evenly;
   width: 100%;
-}
+}*/
 
-.forecast_main_box {
+.forecast_each_day_main_box {
   background-color: lightgreen;
   padding: 20px;
+}
+
+.ForecastDailyInfo .main {
+  margin: 0 auto;
+  width: 70%;
+}
+
+.ForecastDailyInfo .bottom_content {
+}
+
+.ForecastDailyInfo .bottom_left,
+.ForecastDailyInfo .bottom_right  {
+  width: 300px;
+  margin: 20px 10px;
 }
 
 
@@ -727,10 +741,6 @@ button {
 .Astronomy .main {
   margin-bottom: 8vh;
   width: 70%;
-}
-
-.Location .spaced {
-
 }
 
 .Astronomy {
@@ -1268,7 +1278,7 @@ button {
     word-spacing: 0.1rem;
   }
 
-  .Weather_wrapper {
+  .Forecast_wrapper {
     width: 90% !important;
   }
 
@@ -1306,14 +1316,17 @@ button {
   }
 
   .WeatherCurrent span,
+  .ForecastDailyInfo span,
   .AirQuality span,
   .Location span,
   .Astronomy span,
-  .WeatherCurrent .bottom_content {
+  .WeatherCurrent .bottom_content,
+  .ForecastDailyInfo .bottom_content {
     text-align: left;
   }
 
-  .WeatherCurrent .bottom_content {
+  .WeatherCurrent .bottom_content,
+  .ForecastDailyInfo .bottom_content {
     margin: auto;
     width: 80%;
   }
@@ -1334,6 +1347,10 @@ button {
     width: 90%;
   }
 
+/*  .ForecastDailyInfo {
+    height: 55vh;
+  }*/
+
   .AirQuality .main,
   .AirQuality .index_wrapper {
     width: 80%;
@@ -1352,9 +1369,9 @@ button {
     width: 70%;
   }
 
-  .Location .spaced .city_name {
+/*  .Location .spaced .city_name {
     margin-left: 12%;
-  }
+  }*/
 
   .alert {
     margin: 0 auto;

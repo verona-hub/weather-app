@@ -39,8 +39,7 @@ const ForecastEachDay = ({ forecast, location, title, when }) => {
                 isIntrinsicHeight
             >
                 <Slider>
-                    <Slide index={0} className="forecast_main_box">
-                        <h2> Work in progress...</h2>
+                    <Slide index={0} className="forecast_each_day_main_box">
                         <h2> Daily Forecast </h2>
                         <ForecastDailyInfo
                             condition={ condition }
@@ -58,14 +57,14 @@ const ForecastEachDay = ({ forecast, location, title, when }) => {
                         />
                     </Slide>
 
-                    <Slide index={1} className="forecast_main_box">
+                    <Slide index={1} className="forecast_each_day_main_box">
                         <h2> Hourly Forecast </h2>
                         <ForecastHourlyInfo
                             hour={ hour }
                         />
                     </Slide>
 
-                    <Slide index={2} className="forecast_main_box">
+                    <Slide index={2} className="forecast_each_day_main_box">
                         <h1> Work in progress... </h1>
                         <p>
                             Work in progress...
