@@ -13,8 +13,8 @@ const Astronomy = ({ astronomy }) => {
                 <div className="spaced"><span> Sunset:</span> { sunset } </div>
                 <div className="spaced"><span> Moonrise:</span> { moonrise } </div>
                 <div className="spaced"><span> Moonset:</span> { moonset } </div>
-                <div className="spaced"><span> Moon phase:</span> { moon_phase } </div>
-                <div className="spaced"><span> Moon illumination:</span> {moon_illumination }&#37; </div>
+                <div className="spaced"><span> Moon Phase:</span> { moon_phase } </div>
+                <div className="spaced"><span> Moon Illumination:</span> {moon_illumination }&#37; </div>
             </div>
         </div>
     )
