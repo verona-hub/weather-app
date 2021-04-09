@@ -23,7 +23,7 @@ const Weather = ({ location, forecast_3_days }) => {
                 className="slider "
                 animation="foldOutAnimation"
             >
-                <div className="forecast_wrapper">
+                <div>
                     <ForecastEachDay
                         forecast={ forecast1day }
                         title='1 Day Forecast'
@@ -32,7 +32,7 @@ const Weather = ({ location, forecast_3_days }) => {
                     />
                 </div>
 
-                <div className="forecast_wrapper">
+                <div>
                     <ForecastEachDay
                         forecast={ forecast2days }
                         title='2 Days Forecast'
@@ -41,7 +41,7 @@ const Weather = ({ location, forecast_3_days }) => {
                     />
                 </div>
 
-                <div className="forecast_wrapper">
+                <div>
                     <ForecastEachDay
                         forecast={ forecast3days }
                         title='3 Days Forecast'

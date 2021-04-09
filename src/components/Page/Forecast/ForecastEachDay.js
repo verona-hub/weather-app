@@ -39,7 +39,7 @@ const ForecastEachDay = ({ forecast, location, title, when }) => {
                 isIntrinsicHeight
             >
                 <Slider>
-                    <Slide index={0} className="ForecastDailyInfo_each_wrapper">
+                    <Slide index={0} className="ForecastDailyInfo_wrapper">
                         <h2> Daily Forecast </h2>
                         <ForecastDailyInfo
                             condition={ condition }
@@ -57,14 +57,14 @@ const ForecastEachDay = ({ forecast, location, title, when }) => {
                         />
                     </Slide>
 
-                    <Slide index={1} className="ForecastDailyInfo_each_wrapper">
+                    <Slide index={1}  className="ForecastHourlyInfo_wrapper">
                         <h2> Hourly Forecast </h2>
                         <ForecastHourlyInfo
                             hour={ hour }
                         />
                     </Slide>
 
-                    <Slide index={2} className="ForecastDailyInfo_each_wrapper">
+                    <Slide index={2}>
                         <h1> Work in progress... </h1>
                         <p>
                             Work in progress...
@@ -75,7 +75,7 @@ const ForecastEachDay = ({ forecast, location, title, when }) => {
                 <div className="dot_slide_wrapper">
                     <Dot slide={ 0 } className="dot_slide"> Daily Forecast </Dot>
                     <Dot slide={ 1 } className="dot_slide"> Hourly Forecast </Dot>
-                    <Dot slide={ 2 } className="dot_slide"> I don't know yet </Dot>
+                    <Dot slide={ 2 } className="dot_slide"> Guess what </Dot>
                 </div>
 
             </CarouselProvider>

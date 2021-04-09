@@ -1,5 +1,5 @@
 import React from 'react';
-import { date, timeForecastHourly } from '../../Utility/DateAndTime';
+import { timeForecastHourly } from '../../Utility/DateAndTime';
 
 
 const ForecastHourlyInfo = ({ hour }) => {
@@ -9,7 +9,13 @@ const ForecastHourlyInfo = ({ hour }) => {
         const { condition: { text }, time, temp_c } = item;
 
         if(index % 2 === 0 ){
-            return <p key={index}> { date(time) } - { timeForecastHourly(time) } - { text } = Temperature { temp_c }&#8451; </p>
+            return (
+                <div key={ index } className="item_wrapper">
+                    <div className="item">{ timeForecastHourly(time) } </div>
+                    <div className="item"> Weather Forecast: { text } </div>
+                    <div className="item"> Temperature: { temp_c }&#8451; </div>
+                </div>
+            )
         }
         else {
             return null;
@@ -18,7 +24,12 @@ const ForecastHourlyInfo = ({ hour }) => {
 
 
     return (
-        <div>
+        <div className="ForecastHourlyInfo">
+            <div className="item_wrapper">
+                <div className="item"> Time </div>
+                <div className="item"> Weather Forecast </div>
+                <div className="item center"> Temperature </div>
+            </div>
             { everyThirdHour }
         </div>
 
