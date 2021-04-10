@@ -557,7 +557,7 @@ button {
 .WeatherCurrent .bottom_right,
 .ForecastDailyInfo .bottom_left,
 .ForecastDailyInfo .bottom_right {
-  min-width: 300px;
+  min-width: 330px;
   margin: 20px 60px;
 }
 
@@ -589,7 +589,7 @@ button {
 }
 
 .awssld {
-  height: 90vh;
+  height: 95vh;
   background: url(img/sky.jpg) no-repeat top;
 }
 
@@ -606,24 +606,33 @@ button {
 
 .awssld__prev ,
 .awssld__next {
-  top: 80px !important;
+  top: 0 !important;
 }
 
 .awssld__bullets {
   bottom: -50px !important;
 }
 
+.carousel__slider {
+  /*background-color: lightpink;*/
+  height: 60vh;
+}
+.carousel__slider .ForecastHourlyInfo_wrapper {
+  /*background-color: lightblue;*/
+  /*height: 90vh;*/
+}
 
 /*
 +  Forecast
 */
 
 .ForecastHeader {
-  background-color: lightblue;
+  /*background-color: lightblue;*/
 }
 
 .ForecastDailyInfo_wrapper {
-  background-color: lightgreen;
+  /*background-color: lightgreen;*/
+  /*height: 40vh !important;*/
 }
 
 .ForecastDailyInfo_wrapper h2,
@@ -636,7 +645,6 @@ button {
 }
 
 .ForecastDailyInfo .bottom_content {
-  /*margin: 0 auto;*/
   margin: 30px 0;
 }
 
@@ -647,8 +655,6 @@ button {
 .dot_slide {
   min-height: 70px;
   width: 180px;
-  /*display: inline;*/
-  /*padding: 20px;*/
 }
 
 .ForecastHourlyInfo {
@@ -663,9 +669,28 @@ button {
   width: 60%;
 }
 
+.ForecastHourlyInfo .title {
+  font-weight: bold;
+}
+
 .ForecastHourlyInfo .item_wrapper .item {
   margin: 5px auto;
   width: 100%;
+}
+
+.ForecastHourlyInfo .item_wrapper .item img {
+  width: 52px;
+}
+
+.ForecastHourlyInfo .item_wrapper .item_condition {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+}
+
+.condition_text {
+  display: inline;
 }
 
 .ForecastHourlyInfo .item_wrapper .item:nth-child(1) {
@@ -1141,6 +1166,7 @@ button {
 @media (min-width: 980px) {
   .ForecastDailyInfo .bottom_content {
     justify-content: center;
+    margin-top: 60px;
   }
 }
 
@@ -1374,7 +1400,7 @@ button {
   }
 
   .Forecast_wrapper {
-    height: 110vh;
+    height: 100vh;
     width: 90% !important;
   }
 
@@ -1518,6 +1544,18 @@ button {
   .awssld__next {
     top: 0 !important;
   }
+
+  .Forecast_wrapper {
+    height: 120vh;
+  }
+
+  .awssld {
+    height: 100%;
+  }
+
+  .carousel__slider {
+    height: 70vh;
+  }
 }
 
 
@@ -1545,11 +1583,11 @@ button {
 
 @media (max-width: 480px) {
   .Forecast_wrapper {
-    height: 130vh;
+    /*height: 150vh;*/
   }
 
   .awssld {
-    height: 100%;
+    /*height: 100%;*/
   }
 
   .slider {
@@ -1575,7 +1613,7 @@ button {
 
   .ForecastDailyInfo .bottom_content {
     margin: auto;
-    width: 80%;
+    /*width: 80%;*/
   }
 
   .ForecastDailyInfo .bottom_left,

@@ -10,7 +10,6 @@ import 'pure-react-carousel/dist/react-carousel.es.css';
 
 
 const ForecastEachDay = ({ forecast, location, title, when }) => {
-    console.log(forecast);
 
     const { day, astro, hour } = forecast;
     const { condition, maxtemp_c, avgtemp_c, mintemp_c, daily_chance_of_rain, totalprecip_mm,

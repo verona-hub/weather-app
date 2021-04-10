@@ -21,7 +21,7 @@ const WeatherCurrent = ({ weatherInfo, weatherCondition, location }) => {
             <div className="Weather_current_main">
                 <div className="top_content">
                     <div className="card_top_header">
-                        <img src={ icon } alt=""/>
+                        <img src={ icon } alt="weather conditions icon"/>
                     </div>
                     <div className="card_top_main">
                         <h1>  { text } { temp_c } &#8451; </h1>
