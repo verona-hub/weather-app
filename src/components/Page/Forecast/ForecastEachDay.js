@@ -19,15 +19,12 @@ const ForecastEachDay = ({ forecast, location, title, when }) => {
 
     return (
         <div className="ForecastEachDay">
-            <div className="forecast_header">
-                <ForecastHeader
-                    location={ location }
-                    title= { title }
-                    css='ForecastHeader'
-                    when= { when }
-                    date={ timeForecast(forecast) }
-                />
-            </div>
+            <ForecastHeader
+                title= { title }
+                css='ForecastHeader'
+                when= { when }
+                date={ timeForecast(forecast) }
+            />
 
             <CarouselProvider
                 visibleSlides={1}
@@ -63,7 +60,7 @@ const ForecastEachDay = ({ forecast, location, title, when }) => {
                         />
                     </Slide>
 
-                    <Slide index={2}>
+                    <Slide index={2} className="in_progress_wrapper">
                         <h1> Work in progress... </h1>
                         <p>
                             Work in progress...

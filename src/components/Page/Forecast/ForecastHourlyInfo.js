@@ -4,16 +4,18 @@ import { timeForecastHourly } from '../../Utility/DateAndTime';
 
 const ForecastHourlyInfo = ({ hour }) => {
 
-    const everyTwoHours = hour.map( (item, index) => {
+    const everyThreeHours = hour.map( (item, index) => {
 
         const { condition: { text, icon }, time, temp_c } = item;
 
-        return index % 2 === 0 && (
+        return index % 3 === 0 && (
             <div key={ index } className="item_wrapper">
                 <div className="item">{ timeForecastHourly(time) } </div>
                 <div className="item item_condition">
                     <img src={ icon } alt="weather conditions icon"/>
-                    <span className="condition_text">{ text }</span>
+                    <div className="text_wrapper">
+                        <span> { text } </span>
+                    </div>
                 </div>
                 <div className="item center"> { temp_c }&#8451; </div>
             </div>
@@ -23,12 +25,14 @@ const ForecastHourlyInfo = ({ hour }) => {
 
     return (
         <div className="ForecastHourlyInfo">
-            <div className="item_wrapper title">
-                <div className="item"> Time </div>
-                <div className="item"> Weather Forecast </div>
-                <div className="item center"> Temperature </div>
+            <div className="main">
+                <div className="item_wrapper sub_title">
+                    <div className="item"> Time</div>
+                    <div className="item"> Weather Forecast</div>
+                    <div className="item center"> Temperature</div>
+                </div>
+                { everyThreeHours }
             </div>
-            { everyTwoHours }
         </div>
 
     );

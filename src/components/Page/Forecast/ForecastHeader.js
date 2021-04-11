@@ -1,15 +1,12 @@
 import React from 'react';
 
 
-const ForecastHeader = ({ location, title, css, day, date, when }) => {
-
-    const { name, country } = location;
+const ForecastHeader = ({ title, css, day, date, when }) => {
 
     return (
         <div className={`MainHeader ${ css }`}>
             <h2 className="title"> { title } </h2>
-            <h2 className="sub_title"> { name }, { country } </h2>
-            <h3> {when} { day } { date } </h3>
+            <h3 className="sub_title"> {when} { day } { date } </h3>
         </div>
     );
 };
