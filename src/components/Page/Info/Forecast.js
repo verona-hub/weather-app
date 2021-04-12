@@ -1,4 +1,4 @@
-import React, { Fragment } from 'react';
+import React from 'react';
 
 // Slider
 import AwesomeSlider from 'react-awesome-slider';

@@ -9,6 +9,7 @@ const WeatherCurrent = ({ weatherInfo, weatherCondition, location }) => {
     const { cloud, temp_c, feelslike_c, humidity, precip_mm, uv, vis_km,
         pressure_mb, wind_kph, wind_dir } = weatherInfo;
     const { icon, text } = weatherCondition;
+    const { name, country } = location;
 
     return (
         <div className="WeatherCurrent card">
@@ -19,6 +20,7 @@ const WeatherCurrent = ({ weatherInfo, weatherCondition, location }) => {
             />
 
             <div className="Weather_current_main">
+                <h1> { name }, { country } </h1>
                 <div className="top_content">
                     <div className="card_top_header">
                         <img src={ icon } alt="weather conditions icon"/>

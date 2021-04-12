@@ -62,9 +62,7 @@ const ForecastEachDay = ({ forecast, location, title, when }) => {
 
                     <Slide index={2} className="in_progress_wrapper">
                         <h1> Work in progress... </h1>
-                        <p>
-                            Work in progress...
-                        </p>
+                        <p> Work in progress... </p>
                     </Slide>
                 </Slider>
 

@@ -460,39 +460,39 @@ const AirQuality = ({ airQuality }) => {
                             </div>
                             <div className="index_box">
                                 <div className="item" style={ { backgroundColor: case2.color } }> { case2.index } </div>
-                                <div className="item-text"> { case2.level } </div>
+                                <div className="item_text"> { case2.level } </div>
                             </div>
                             <div className="index_box">
                                 <div className="item" style={ { backgroundColor: case3.color } }> { case3.index } </div>
-                                <div className="item-text"> { case3.level } </div>
+                                <div className="item_text"> { case3.level } </div>
                             </div>
                             <div className="index_box">
                                 <div className="item" style={ { backgroundColor: case4.color } }> { case4.index } </div>
-                                <div className="item-text"> { case4.level } </div>
+                                <div className="item_text"> { case4.level } </div>
                             </div>
                             <div className="index_box">
                                 <div className="item" style={ { backgroundColor: case5.color } }> { case5.index } </div>
-                                <div className="item-text"> { case5.level } </div>
+                                <div className="item_text"> { case5.level } </div>
                             </div>
                             <div className="index_box">
                                 <div className="item" style={ { backgroundColor: case6.color } }> { case6.index } </div>
-                                <div className="item-text"> { case6.level } </div>
+                                <div className="item_text"> { case6.level } </div>
                             </div>
                             <div className="index_box">
                                 <div className="item" style={ { backgroundColor: case7.color } }> { case7.index } </div>
-                                <div className="item-text"> { case7.level } </div>
+                                <div className="item_text"> { case7.level } </div>
                             </div>
                             <div className="index_box">
                                 <div className="item" style={ { backgroundColor: case8.color } }> { case8.index } </div>
-                                <div className="item-text"> { case8.level } </div>
+                                <div className="item_text"> { case8.level } </div>
                             </div>
                             <div className="index_box">
                                 <div className="item" style={ { backgroundColor: case9.color } }> { case9.index } </div>
-                                <div className="item-text">  { case9.level } </div>
+                                <div className="item_text">  { case9.level } </div>
                             </div>
                             <div className="index_box">
                                 <div className="item" style={ { backgroundColor: case10.color } }> { case10.index } </div>
-                                <div className="item-text"> { case10.level } </div>
+                                <div className="item_text"> { case10.level } </div>
                             </div>
                         </div>
                     </div>

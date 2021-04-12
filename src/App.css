@@ -11,6 +11,7 @@
   --marine_blue: #2a6bcc;
   --dark_grey: #333333;
   --dim_grey: #696969;
+  --light_grey: #d3d3d3;
   --light_alert: #df7474;
   --navbar: rgba(0,0,0, 0.5);
   --navbar_dark: rgba(0,0,0, 0.8);
@@ -607,18 +608,34 @@ button {
 .awssld__next {
   top: 0 !important;
 }
+.awssld__controls__arrow-left::before,
+.awssld__controls__arrow-left::after,
+.awssld__controls__arrow-right::before,
+.awssld__controls__arrow-right::after {
+  background-color: var(--blue) !important;
+}
 
 .awssld__bullets {
-  bottom: -50px !important;
+  bottom: -60px !important;
+  right: 2px;
+}
+
+.awssld__bullets--active {
+  border: 3px solid pink !important;
+}
+
+.awssld__bullets button {
+  background-color: var(--blue) !important;
+  padding: 15px !important;
+  margin: 0 20px !important;
 }
 
 .carousel__slider {
-  /*background-color: lightpink;*/
   height: 60vh;
 }
+
 .carousel__slider .ForecastHourlyInfo_wrapper {
-  /*background-color: lightblue;*/
-  /*height: 90vh;*/
+
 }
 
 /*
@@ -655,20 +672,10 @@ button {
   margin: 20px;
 }
 
-.ForecastDailyInfo_wrapper h2 {
-  margin-top: 60px;
-}
-
-.ForecastHourlyInfo_wrapper h2 {
-  margin: 20px;
-}
-
-.ForecastDailyInfo .main {
-}
-
 .ForecastDailyInfo .bottom_content {
   margin: 30px 0;
 }
+
 
 .dot_slide_wrapper {
   display: inline-block;
@@ -676,11 +683,9 @@ button {
 }
 
 .dot_slide {
-  background-color: var(--white);
-  background-color: lightgray;
+  background-color: var(--light_grey);
   border: none;
-  color: var(--dim_grey);
-  color: var(--black);
+  color: var(--dark_grey);
   cursor: pointer;
   display: inline;
   /*transition: border-bottom .6s linear 0s;*/
@@ -709,14 +714,10 @@ button {
 
 .ForecastDailyInfo,
 .ForecastHourlyInfo {
-  /*background-color: lightpink;*/
-  /*border-top: 1px solid var(--dim_grey);*/
 
 }
 
 .ForecastHourlyInfo .item_wrapper {
-  /*background-color: lightslategrey;*/
-  /*border-bottom: 1px solid var(--dim_grey);*/
   display: flex;
   margin: 0 auto;
   width: 60%;
@@ -735,13 +736,12 @@ button {
 }
 
 .ForecastHourlyInfo .item_wrapper .item:nth-child(1) {
-  /*background-color: orange;*/
   text-align: center;
   width: 15%;
 }
 
 .ForecastHourlyInfo .item_wrapper .item:nth-child(2) {
-  width: 40%;
+  width: 50%;
 }
 
 .ForecastHourlyInfo .item_wrapper .item:nth-child(3) {
@@ -833,7 +833,7 @@ button {
   width: 80px;
 }
 
-.AirQuality .item_wrapper {
+.AirQuality .item {
   align-items: center;
   border: 1px solid;
   display: flex;
@@ -841,7 +841,7 @@ button {
   width: 50px;
 }
 
-.AirQuality .item-text {
+.AirQuality .item_text {
   margin-top: 5px;
 }
 
@@ -1222,10 +1222,27 @@ button {
 
 
 @media (min-width: 980px) {
-  .ForecastDailyInfo .bottom_content {
-    justify-content: center;
-    margin-top: 40px;
+
+  .ForecastDailyInfo_wrapper h2 {
+    margin-top: 60px;
   }
+
+  .ForecastHourlyInfo_wrapper h2 {
+    margin: 20px;
+  }
+
+  .ForecastDailyInfo .bottom_content {
+    border: 1px solid black;
+    justify-content: center;
+    margin: 40px auto auto;
+    width:90%;
+  }
+
+  .ForecastDailyInfo .bottom_left,
+  .ForecastDailyInfo .bottom_right {
+    padding: 20px;
+  }
+
 }
 
 
@@ -1445,10 +1462,6 @@ button {
   .WeatherCurrent .bottom_content,
   .ForecastDailyInfo .bottom_content {
     text-align: left;
-  }
-
-  .WeatherCurrent .bottom_content,
-  .ForecastDailyInfo .bottom_content {
   }
 
   .WeatherCurrent .bottom_left,
