@@ -8,7 +8,7 @@ const Location = ({ location }) => {
 
     return (
         <div className="Location card">
-            <h2 className="title"> Location details </h2>
+            <h2 className="title"> Location </h2>
             <div className="main">
                 <div className="spaced">
                     <span> City:</span>

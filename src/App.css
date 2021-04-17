@@ -616,27 +616,27 @@ button {
 }
 
 .awssld__bullets {
-  bottom: -60px !important;
+  bottom: -80px !important;
   right: 2px;
-}
-
-.awssld__bullets--active {
-  border: 3px solid pink !important;
+  padding: 10px;
 }
 
 .awssld__bullets button {
-  background-color: var(--blue) !important;
   padding: 15px !important;
   margin: 0 20px !important;
+  background-color: var(--blue) !important;
+  transition: background-color 1000ms linear 0ms !important;
+}
+
+.awssld__bullets button.awssld__bullets--active {
+  background-color: #08aa08 !important;
 }
 
 .carousel__slider {
   height: 60vh;
 }
 
-.carousel__slider .ForecastHourlyInfo_wrapper {
 
-}
 
 /*
 +  Forecast
@@ -649,7 +649,7 @@ button {
 
 .ForecastHeader .title {
   margin: 10px;
-
+  word-spacing: 0.1rem;
 }
 
 .ForecastHeader .sub_title {
@@ -700,6 +700,10 @@ button {
 .dot_slide:nth-child(3) {
   border-top-right-radius: 4px;
   border-bottom-right-radius: 4px;
+}
+
+.carousel__dot {
+  transition: background-color 800ms linear 0s, color 400ms linear 0s;
 }
 
 .carousel__dot--selected {
@@ -784,10 +788,14 @@ button {
 
 .AirQuality .box {
   align-items: center;
-  border-bottom: 1px solid var(--dim_grey);
+
   display: flex;
   justify-content: space-between;
   padding: 2vh;
+}
+
+.AirQuality .box:not(:last-child) {
+  border-bottom: 1px solid var(--dim_grey);
 }
 
 .AirQuality .box span {
@@ -1217,8 +1225,8 @@ button {
   .WeatherCurrent .card_top_main {
     margin: 20px 0 30px;
   }
-
 }
+
 
 
 @media (min-width: 980px) {

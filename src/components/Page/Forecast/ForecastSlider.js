@@ -9,7 +9,7 @@ import { Dot, CarouselProvider, Slide, Slider } from 'pure-react-carousel';
 import 'pure-react-carousel/dist/react-carousel.es.css';
 
 
-const ForecastEachDay = ({ forecast, location, title, when }) => {
+const ForecastSlider = ({ forecast, title, when }) => {
 
     const { day, astro, hour } = forecast;
     const { condition, maxtemp_c, avgtemp_c, mintemp_c, daily_chance_of_rain, totalprecip_mm,
@@ -78,4 +78,4 @@ const ForecastEachDay = ({ forecast, location, title, when }) => {
 };
 
 
-export default ForecastEachDay;
+export default ForecastSlider;

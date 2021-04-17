@@ -40,7 +40,8 @@ class App extends Component {
         errorCode: null,
         modal: false,
         search: false,
-        forecast_3_days: []
+        forecast_3_days: [],
+        cityInfo: []
     }
 
     // After a location search is made from the input, the call to the Api will be made
@@ -123,6 +124,16 @@ class App extends Component {
             });
         }
 
+    }
+
+    searchCityInfo = async (text) => {
+        try {
+            const response = await axios.get(
+                `https://countriesnow.space/api/v0.1/countries/population/cities`
+            );
+        } catch (err) {
+            console.log(err);
+        }
     }
 
     // Removes all the content and resets the state back to the origin
