@@ -11,13 +11,13 @@ const ForecastEveryThreeHours = ({ hour }) => {
         return index % 3 === 0 && (
             <div key={ index } className="item_wrapper">
                 <div className="item">{ timeForecastHourly(time) } </div>
-                <div className="item item_condition">
+                <div className="item">
                     <img src={ icon } alt="weather conditions icon"/>
                     <div className="text_wrapper">
                         <span> { text } </span>
                     </div>
                 </div>
-                <div className="item center"> { temp_c }&#8451; </div>
+                <div className="item"> { temp_c }&#8451; </div>
             </div>
         )
     });
