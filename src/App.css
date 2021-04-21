@@ -9,7 +9,6 @@
     --blue: #00A7D8;
     --dark_blue: #286ba2;
     --marine_blue: #2a6bcc;
-    --grey: #d3d3d3;
     --dark_grey: #333333;
     --dim_grey: #696969;
     --light_grey: #d3d3d3;
@@ -18,6 +17,7 @@
     --navbar_dark: rgba(0,0,0, 0.8);
     --orange: #FA9138;
     --red: #c4231d;
+    --sand: #f9d89c;
     --slider: #2f2f2f;
     --white: #f4f4f4;
 }
@@ -29,7 +29,7 @@
 }
 
 body {
-    background-color: var(--grey);
+    background-color: var(--light_grey);
     color: var(--dark_grey);
     font-family: 'Nunito', sans-serif;
     line-height: 1.6;
@@ -607,6 +607,16 @@ button {
 .awssld__next {
     top: 0 !important;
 }
+
+.awssld__controls__arrow-left,
+.awssld__controls__arrow-right {
+    opacity: 1 !important;
+}
+
+.awssld__controls button:hover {
+    opacity: var(--control-button-opacity) !important;
+}
+
 .awssld__controls__arrow-left::before,
 .awssld__controls__arrow-left::after,
 .awssld__controls__arrow-right::before,
@@ -627,21 +637,26 @@ button {
 }
 
 .awssld__bullets button {
-    background-color: var(--white) !important;
-    border: 4px solid var(--blue) !important;
+    background-color: var(--dim_grey) !important;
     margin: 0 25px !important;
-    padding: 15px !important;
-    transition: background-color 800ms linear 0s !important;
+    padding: 20px !important;
+    transition: background-color 800ms linear 0s, transform 400ms ease !important;
 }
 
 .awssld__bullets button.awssld__bullets--active {
     background-color: var(--blue) !important;
 }
 
+.awssld__bullets button:hover:not(.awssld__bullets--active) {
+    transform: scale(1.3) !important;
+}
+
+
 
 /*
 + Slider Buttons
 */
+
 .dot_slide_wrapper {
     display: inline-block;
     margin: auto;
@@ -653,6 +668,7 @@ button {
     color: var(--dark_grey);
     cursor: pointer;
     display: inline;
+    padding: 15px;
     width: 180px;
 }
 
@@ -670,10 +686,19 @@ button {
     transition: background-color 800ms linear 0s, color 400ms linear 0s;
 }
 
+.dot_slide_wrapper button:not(.carousel__dot--selected) {
+    opacity: 0.85;
+}
+
+.dot_slide_wrapper button:hover:not(.carousel__dot--selected) {
+    opacity: 1;
+}
+
 .carousel__dot--selected {
     background-color: var(--blue);
     color: var(--white);
 }
+
 
 
 /*
