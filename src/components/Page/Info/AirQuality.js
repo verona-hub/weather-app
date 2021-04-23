@@ -1,10 +1,9 @@
 import React, { useState } from 'react';
-import { data } from '../../Utility/AirQualityData';
+import { data, carbonMonoxideSwitch } from '../../Utility/AirQualityData';
 
 const AirQuality = ({ airQuality }) => {
 
     const [ indexInfoVisible, setIndexInfoVisible] = useState(false);
-
 
     const { case1, case2, case3, case4, case5, case6, case7, case8, case9, case10, mix} = data;
     let { co, no2, o3, so2, pm2_5, pm10 } = airQuality;
@@ -23,6 +22,7 @@ const AirQuality = ({ airQuality }) => {
     /*
     + co = Carbon Monoxide
     */
+    /*
     let bgCo;
     let indexCo;
     let textCoColor;
@@ -73,7 +73,7 @@ const AirQuality = ({ airQuality }) => {
             break;
         default:
             break;
-    }
+    }*/
 
     /*
     + no2 = Nitrogen Dioxide
@@ -358,10 +358,10 @@ const AirQuality = ({ airQuality }) => {
         <div className="AirQuality card">
             <h1 className="title">Air Quality</h1>
             <div className="main">
-                <div className="box" style={{ backgroundColor: bgCo, color: textCoColor  }}>
+                <div className="box" style={{ backgroundColor: carbonMonoxideSwitch(co), color: carbonMonoxideSwitch(co)  }}>
                     <span> Carbon Monoxide: </span>
-                    <span> { indexCo } </span>
-                    <span> { co } &#13197;/&#13221; </span>
+                    <span> { carbonMonoxideSwitch(co) } </span>
+                    <span> { carbonMonoxideSwitch(co) } &#13197;/&#13221; </span>
                 </div>
                 <div className="box" style={{ backgroundColor: bgNo2, color: textNo2Color  }}>
                     <span> Nitrogen Dioxide: </span>
