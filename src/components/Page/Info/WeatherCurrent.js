@@ -1,7 +1,7 @@
 import React from 'react';
 
 // Components
-import ForecastHeader from "../Forecast/ForecastHeader";
+import ForecastHeader from "./ForecastData/ForecastHeader";
 
 
 const WeatherCurrent = ({ weatherInfo, weatherCondition, location }) => {
@@ -15,7 +15,7 @@ const WeatherCurrent = ({ weatherInfo, weatherCondition, location }) => {
         <div className="WeatherCurrent card">
             <ForecastHeader
                 location={ location }
-                title='Current weather conditions'
+                title='Current weather'
                 css=''
             />
 

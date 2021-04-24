@@ -1,5 +1,5 @@
 import React from 'react';
-import { timeForecast } from '../../Utility/DateAndTime';
+import { timeForecast } from '../../../Utility/DateAndTime';
 import ForecastHeader from "./ForecastHeader";
 import ForecastHourlyInfo from "./ForecastHourlyInfo";
 import ForecastDailyInfo from "./ForecastDailyInfo";
@@ -28,7 +28,7 @@ const ForecastSlider = ({ forecast, title, when }) => {
 
             <CarouselProvider
                 visibleSlides={1}
-                totalSlides={3}
+                totalSlides={2}
                 step={1}
                 naturalSlideWidth={400}
                 naturalSlideHeight={500}
@@ -59,17 +59,11 @@ const ForecastSlider = ({ forecast, title, when }) => {
                             hour={ hour }
                         />
                     </Slide>
-
-                    <Slide index={2} className="in_progress_wrapper">
-                        <h1> Work in progress... </h1>
-                        <p> Work in progress... </p>
-                    </Slide>
                 </Slider>
 
                 <div className="dot_slide_wrapper">
                     <Dot slide={ 0 } className="dot_slide"> Daily Forecast </Dot>
                     <Dot slide={ 1 } className="dot_slide"> Hourly Forecast </Dot>
-                    <Dot slide={ 2 } className="dot_slide"> Guess what </Dot>
                 </div>
 
             </CarouselProvider>

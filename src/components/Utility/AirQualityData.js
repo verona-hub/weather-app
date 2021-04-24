@@ -61,14 +61,14 @@ const data = {
 */
 
 
-function carbonMonoxideSwitch(airQuality) {
-const { case1, case2, case3, case4, case5, case6, case7, case8, case9, case10, mix} = data;
+const carbonMonoxideSwitch = (co, bgCo, indexCo, textCoColor) => {
+    const { case1, case2, case3, case4, case5, case6, case7, case8, case9, case10, mix} = data;
 
-    let { co } = airQuality;
+    // let { co, bgCo, indexCo, textCoColor } = airQuality;
 
-    let bgCo;
-    let indexCo;
-    let textCoColor;
+    // let bgCo;
+    // let indexCo;
+    // let textCoColor;
 
     switch (true) {
         case co <= 10:
@@ -118,8 +118,12 @@ const { case1, case2, case3, case4, case5, case6, case7, case8, case9, case10, m
         default:
             break;
     }
+    // console.log(co)
+    // console.log(bgCo);
+    // console.log(indexCo);
+
 }
 
 
 
-export { data, carbonMonoxideSwitch };
+export { data };

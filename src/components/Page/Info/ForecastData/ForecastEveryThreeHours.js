@@ -1,5 +1,5 @@
 import React from 'react';
-import { timeForecastHourly } from "../../Utility/DateAndTime";
+import { timeForecastHourly } from "../../../Utility/DateAndTime";
 
 
 const ForecastEveryThreeHours = ({ hour }) => {

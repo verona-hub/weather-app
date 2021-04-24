@@ -1,16 +1,18 @@
 import React, { useState } from 'react';
-import { data, carbonMonoxideSwitch } from '../../Utility/AirQualityData';
+import { data } from '../../Utility/AirQualityData';
 
 const AirQuality = ({ airQuality }) => {
 
-    const [ indexInfoVisible, setIndexInfoVisible] = useState(false);
+    const [indexInfoVisible, setIndexInfoVisible] = useState(false);
 
-    const { case1, case2, case3, case4, case5, case6, case7, case8, case9, case10, mix} = data;
+
+    const { case1, case2, case3, case4, case5, case6, case7, case8, case9, case10, mix } = data;
     let { co, no2, o3, so2, pm2_5, pm10 } = airQuality;
 
-    function floor(num) {
+    function floor (num) {
         return Math.floor(num);
     }
+
     co = floor(co);
     no2 = floor(no2);
     o3 = floor(o3);
@@ -22,7 +24,6 @@ const AirQuality = ({ airQuality }) => {
     /*
     + co = Carbon Monoxide
     */
-    /*
     let bgCo;
     let indexCo;
     let textCoColor;
@@ -73,7 +74,7 @@ const AirQuality = ({ airQuality }) => {
             break;
         default:
             break;
-    }*/
+    }
 
     /*
     + no2 = Nitrogen Dioxide
@@ -358,45 +359,44 @@ const AirQuality = ({ airQuality }) => {
         <div className="AirQuality card">
             <h1 className="title">Air Quality</h1>
             <div className="main">
-                <div className="box" style={{ backgroundColor: carbonMonoxideSwitch(co), color: carbonMonoxideSwitch(co)  }}>
+                <div className="box" style={ { backgroundColor: bgCo, color: textCoColor } }>
                     <span> Carbon Monoxide: </span>
-                    <span> { carbonMonoxideSwitch(co) } </span>
-                    <span> { carbonMonoxideSwitch(co) } &#13197;/&#13221; </span>
+                    <span> { indexCo } </span>
+                    <span> { co } &#13197;/&#13221; </span>
                 </div>
-                <div className="box" style={{ backgroundColor: bgNo2, color: textNo2Color  }}>
+                <div className="box" style={ { backgroundColor: bgNo2, color: textNo2Color } }>
                     <span> Nitrogen Dioxide: </span>
                     <span> { indexNo2 } </span>
                     <span> { no2 } &#13197;/&#13221; </span>
                 </div>
-                <div className="box" style={{ backgroundColor: bgO3, color: textO3Color  }}>
+                <div className="box" style={ { backgroundColor: bgO3, color: textO3Color } }>
                     <span> Ozone: </span>
                     <span> { indexO3 } </span>
                     <span> { o3 } &#13197;/&#13221; </span>
                 </div>
-                <div className="box" style={{ backgroundColor: bgSo2, color: textSo2Color  }}>
+                <div className="box" style={ { backgroundColor: bgSo2, color: textSo2Color } }>
                     <span> Sulphur Dioxide: </span>
                     <span> { indexSo2 } </span>
                     <span> { so2 } &#13197;/&#13221; </span>
                 </div>
-                <div className="box" style={{ backgroundColor: bgPm2_5, color: textPm2_5Color }}>
+                <div className="box" style={ { backgroundColor: bgPm2_5, color: textPm2_5Color } }>
                     <span> PM2.5 Particles: </span>
                     <span> { indexPm2_5 } </span>
                     <span> { pm2_5 } &#13197;/&#13221; </span>
                 </div>
-                <div className="box" style={{ backgroundColor: bgPm10, color: textPm10Color  }}>
+                <div className="box" style={ { backgroundColor: bgPm10, color: textPm10Color } }>
                     <span> PM10 Particles: </span>
                     <span> { indexPm10 } </span>
                     <span> { pm10 } &#13197;/&#13221; </span>
                 </div>
             </div>
 
-            <button onClick={toggleIndexInfo} className="button_index">
+            <button onClick={ toggleIndexInfo } className="button_index">
                 { indexInfoVisible ? 'Hide Air Quality Index' : 'Show Air Quality Index' }
             </button>
 
             {
-                indexInfoVisible && (
-                    <div className="index_wrapper">
+                <div className={ indexInfoVisible ? "index_wrapper visible" : "index_wrapper hidden"} >
                         <h2 className="title"> Air Quality Index: </h2>
                         <div className="index_levels">
                             <div className="index_box">
@@ -441,12 +441,9 @@ const AirQuality = ({ airQuality }) => {
                             </div>
                         </div>
                     </div>
-                )
             }
         </div>
-    );
+    )
 }
-
-
 
 export default AirQuality;

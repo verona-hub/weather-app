@@ -40,11 +40,10 @@ class App extends Component {
         errorCode: null,
         modal: false,
         search: false,
-        forecast_3_days: [],
-        cityInfo: []
+        forecast_3_days: []
     }
 
-    // After a location search is made from the input, the call to the Api will be made
+    // After a location search is made from the input, the call will be made to the Api with the input text
     searchCity = async (text) => {
 
         // State updates as soon as the call is made, this is the phase before the response, the modal with the spinner are activated
@@ -115,6 +114,8 @@ class App extends Component {
             setTimeout(() => this.setState({ errorMessage: null, modal: false }), 13000);
         }
 
+        console.log(this.state.forecast_3_days);
+
         // The view slides smoothly to the main container which is activated only with the Api response;
         // If the modal is present, the scroll doesn't happen
         // (leave this to avoid a Typescript error that scrollIntoView is missing when a request error is present)
@@ -124,16 +125,6 @@ class App extends Component {
             });
         }
 
-    }
-
-    searchCityInfo = async (text) => {
-        try {
-            const response = await axios.get(
-                `https://countriesnow.space/api/v0.1/countries/population/cities`
-            );
-        } catch (err) {
-            console.log(err);
-        }
     }
 
     // Removes all the content and resets the state back to the origin

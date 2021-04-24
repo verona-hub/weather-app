@@ -6,7 +6,7 @@ import 'react-awesome-slider/dist/styles.css';
 import AnimationStyles from 'react-awesome-slider/src/styled/fold-out-animation/fold-out-animation.scss';
 
 // Components
-import ForecastSlider from '../Forecast/ForecastSlider';
+import ForecastSlider from './ForecastData/ForecastSlider';
 
 
 const Weather = ({ location, forecast_3_days }) => {
@@ -26,7 +26,7 @@ const Weather = ({ location, forecast_3_days }) => {
                 <div>
                     <ForecastSlider
                         forecast={ forecast1day }
-                        title='1 Day Forecast'
+                        title='Forecast Weather: Day 1'
                         when=' Today: '
                         location={ location }
                     />
@@ -35,7 +35,7 @@ const Weather = ({ location, forecast_3_days }) => {
                 <div>
                     <ForecastSlider
                         forecast={ forecast2days }
-                        title='2 Days Forecast'
+                        title='Forecast Weather: Day 2'
                         when=' Tomorrow: '
                         location={ location }
                     />
@@ -44,7 +44,7 @@ const Weather = ({ location, forecast_3_days }) => {
                 <div>
                     <ForecastSlider
                         forecast={ forecast3days }
-                        title='3 Days Forecast'
+                        title='Forecast Weather: Day 3'
                         when=' The day after tomorrow: '
                         location={ location }
                     />
