@@ -36,7 +36,7 @@ const ForecastSlider = ({ forecast, title, when }) => {
             >
                 <Slider>
                     <Slide index={0} className="ForecastDailyInfo_wrapper">
-                        <h2> Daily Forecast </h2>
+                        <h2 className="daily_summary"> Daily Summary </h2>
                         <ForecastDailyInfo
                             condition={ condition }
                             maxtemp_c={ maxtemp_c }
@@ -54,7 +54,7 @@ const ForecastSlider = ({ forecast, title, when }) => {
                     </Slide>
 
                     <Slide index={1}  className="ForecastHourlyInfo_wrapper">
-                        <h2> Hourly Forecast </h2>
+                        <h2> Hourly Summary </h2>
                         <ForecastHourlyInfo
                             hour={ hour }
                         />
@@ -62,8 +62,8 @@ const ForecastSlider = ({ forecast, title, when }) => {
                 </Slider>
 
                 <div className="dot_slide_wrapper">
-                    <Dot slide={ 0 } className="dot_slide"> Daily Forecast </Dot>
-                    <Dot slide={ 1 } className="dot_slide"> Hourly Forecast </Dot>
+                    <Dot slide={ 0 } className="dot_slide"> Daily Summary </Dot>
+                    <Dot slide={ 1 } className="dot_slide"> Hourly Summary </Dot>
                 </div>
 
             </CarouselProvider>

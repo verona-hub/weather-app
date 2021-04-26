@@ -26,7 +26,7 @@ const Weather = ({ location, forecast_3_days }) => {
                 <div>
                     <ForecastSlider
                         forecast={ forecast1day }
-                        title='Forecast Weather: Day 1'
+                        title='Weather Forecast: Day 1'
                         when=' Today: '
                         location={ location }
                     />
@@ -35,7 +35,7 @@ const Weather = ({ location, forecast_3_days }) => {
                 <div>
                     <ForecastSlider
                         forecast={ forecast2days }
-                        title='Forecast Weather: Day 2'
+                        title='Weather Forecast: Day 2'
                         when=' Tomorrow: '
                         location={ location }
                     />
@@ -44,7 +44,7 @@ const Weather = ({ location, forecast_3_days }) => {
                 <div>
                     <ForecastSlider
                         forecast={ forecast3days }
-                        title='Forecast Weather: Day 3'
+                        title='Weather Forecast: Day 3'
                         when=' The day after tomorrow: '
                         location={ location }
                     />
