@@ -870,16 +870,17 @@ button {
 
 .visible {
     height: 100%;
-    margin: 2vh auto 15vh;
+    margin: auto auto 10vh;
     opacity: 1;
-    transition: visibility 100ms, opacity 1.2s linear, height 800ms linear, margin 200ms linear;
+    transition: opacity 1.2s ease-out, margin 500ms ease-out;
     visibility: visible;
 }
 .hidden {
     height: 0;
     margin: 0;
     opacity: 0;
-    transition: visibility 1000ms, opacity 900ms linear, height 200ms 800ms linear, margin 200ms 800ms linear;
+    /*transition: visibility 600ms ease-in, opacity 400ms ease-in, height 300ms 400ms linear, margin 300ms 400ms linear;*/
+    transition: visibility 700ms ease-out, opacity 700ms ease-out, height 400ms 500ms ease-out, margin 400ms 500ms ease-out;
     visibility: hidden;
 }
 
