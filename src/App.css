@@ -636,7 +636,7 @@ button {
 
 .awssld__bullets button {
     background-color: var(--dim_grey) !important;
-    margin: 0 25px !important;
+    margin: 0 35px !important;
     padding: 20px !important;
     transition: background-color 800ms linear 0s, transform 400ms ease !important;
 }
@@ -649,7 +649,30 @@ button {
     opacity: 0.9;
 }
 
+.bullets-text {
+    bottom: 60px;
+    position: relative;
+}
 
+.bullets-text p {
+    border: 1px solid black;
+    border-top: none;
+    display: inline-block;
+    font-size: 1.4rem;
+    padding: 0 10px;
+    position: relative;
+    text-transform: uppercase;
+}
+
+.bullets-text p:first-child {
+    right: 26px;
+}
+.bullets-text p:nth-child(2) {
+    right: 2px;
+}
+.bullets-text p:last-child {
+    left: 23px;
+}
 
 /*
 + Slider Buttons
@@ -877,10 +900,8 @@ button {
 }
 .hidden {
     height: 0;
-    margin: 0;
     opacity: 0;
-    /*transition: visibility 600ms ease-in, opacity 400ms ease-in, height 300ms 400ms linear, margin 300ms 400ms linear;*/
-    transition: visibility 700ms ease-out, opacity 700ms ease-out, height 400ms 500ms ease-out, margin 400ms 500ms ease-out;
+    transition: visibility 1200ms ease-out, opacity 1000ms ease-out, height 400ms 800ms ease, margin 400ms 800ms ease;
     visibility: hidden;
 }
 

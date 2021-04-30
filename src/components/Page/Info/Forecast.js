@@ -18,39 +18,46 @@ const Weather = ({ location, forecast_3_days }) => {
     const forecast3days = forecastday[2];
 
     return (
-        <div className="card Forecast_wrapper">
-            <AwesomeSlider
-                className="slider "
-                animation="foldOutAnimation"
-            >
-                <div>
-                    <ForecastSlider
-                        forecast={ forecast1day }
-                        title='Weather Forecast: Day 1'
-                        when=' Today: '
-                        location={ location }
-                    />
-                </div>
+        <div>
+            <div className="card Forecast_wrapper">
+                <AwesomeSlider
+                    className="slider "
+                    animation="foldOutAnimation"
+                >
+                    <div>
+                        <ForecastSlider
+                            forecast={ forecast1day }
+                            title='Weather Forecast: Day 1'
+                            when=' Today: '
+                            location={ location }
+                        />
+                    </div>
 
-                <div>
-                    <ForecastSlider
-                        forecast={ forecast2days }
-                        title='Weather Forecast: Day 2'
-                        when=' Tomorrow: '
-                        location={ location }
-                    />
-                </div>
+                    <div>
+                        <ForecastSlider
+                            forecast={ forecast2days }
+                            title='Weather Forecast: Day 2'
+                            when=' Tomorrow: '
+                            location={ location }
+                        />
+                    </div>
 
-                <div>
-                    <ForecastSlider
-                        forecast={ forecast3days }
-                        title='Weather Forecast: Day 3'
-                        when=' The day after tomorrow: '
-                        location={ location }
-                    />
-                </div>
+                    <div>
+                        <ForecastSlider
+                            forecast={ forecast3days }
+                            title='Weather Forecast: Day 3'
+                            when=' The day after tomorrow: '
+                            location={ location }
+                        />
+                    </div>
 
-            </AwesomeSlider>
+                </AwesomeSlider>
+            </div>
+            <div className="bullets-text">
+                <p> Day 1</p>
+                <p> Day 2 </p>
+                <p> Day 3 </p>
+            </div>
         </div>
     );
 };
