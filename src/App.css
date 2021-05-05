@@ -588,6 +588,7 @@ button {
 .awssld {
     height: 85vh;
     background: url(img/sky.jpg) no-repeat top;
+    --slider-transition-duration: 1000ms !important;
 }
 
 .awssld__wrapper {
@@ -627,6 +628,12 @@ button {
 .carousel__slider {
     /*height: 50vh;*/
     /*background-color: orange;*/
+}
+
+.awssld--fallAnimation {
+    /*--fall-animation-duration: 1100ms !important;*/
+    --fall-animation-angle: 20deg !important;
+    --fall-scaling-in-from: 1.0 !important;
 }
 
 
@@ -1453,6 +1460,10 @@ button {
 
     .nav_link_item.about {
         margin: 0;
+    }
+
+    .About .title_wrapper {
+        height: 85vh;
     }
 
     .container {

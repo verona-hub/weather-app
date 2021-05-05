@@ -3,7 +3,9 @@ import React from 'react';
 // Slider
 import AwesomeSlider from 'react-awesome-slider';
 import 'react-awesome-slider/dist/styles.css';
-import AnimationStyles from 'react-awesome-slider/src/styled/fold-out-animation/fold-out-animation.scss';
+// import AnimationStyles from 'react-awesome-slider/src/styled/fold-out-animation/fold-out-animation.scss';
+import AwesomeSliderStyles from 'react-awesome-slider/src/styled/fall-animation/fall-animation.scss';
+
 
 // Components
 import ForecastSlider from './ForecastData/ForecastSlider';
@@ -22,7 +24,7 @@ const Weather = ({ location, forecast_3_days }) => {
             <div className="card Forecast_wrapper">
                 <AwesomeSlider
                     className="slider "
-                    animation="foldOutAnimation"
+                    animation="fallAnimation"
                 >
                     <div>
                         <ForecastSlider
