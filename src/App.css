@@ -105,6 +105,7 @@ img {
 
 .header {
     background: url(img/sky.jpg) no-repeat top;
+    background: url(img/beach.jpg) no-repeat;
     background-size: 100vw 100vh;
 }
 
@@ -582,7 +583,8 @@ button {
 */
 
 .slider {
-    padding: 10px;
+    border-radius: 4px;
+    padding: 20px;
 }
 
 .awssld {
@@ -592,6 +594,7 @@ button {
 }
 
 .awssld__wrapper {
+    border-radius: 4px;
 }
 
 .awssld__container {
@@ -610,9 +613,18 @@ button {
 
 .awssld__controls__arrow-left,
 .awssld__controls__arrow-right {
-    bottom: 30px;
+    bottom: 20px;
     opacity: 1 !important;
 }
+
+.awssld__controls__arrow-left {
+    left: 50px !important;
+}
+
+.awssld__controls__arrow-right {
+    right: 50px !important;
+}
+
 
 .awssld__controls button:hover {
     opacity: var(--control-button-opacity) !important;
@@ -647,7 +659,7 @@ button {
     background-color: var(--dim_grey) !important;
     margin: 0 35px !important;
     padding: 20px !important;
-    transition: background-color 800ms linear 0s, transform 400ms ease !important;
+    transition: background-color 200ms linear 200ms, transform 300ms ease !important;
 }
 
 .awssld__bullets button.awssld__bullets--active {
@@ -774,7 +786,7 @@ button {
 }
 
 .ForecastDailyInfo_wrapper h2.daily_summary {
-    margin-top: 60px;
+    margin-top: 70px;
 }
 
 .ForecastDailyInfo .bottom_content {
@@ -1320,7 +1332,7 @@ button {
 
 @media (min-width: 760px) {
     .dot_slide_wrapper {
-        margin-top: 40px;
+        margin-top: 30px;
     }
 
     .AirQuality .index_box {
