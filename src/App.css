@@ -104,7 +104,6 @@ img {
 */
 
 .header {
-    background: url(img/sky.jpg) no-repeat top;
     background: url(img/beach.jpg) no-repeat;
     background-size: 100vw 100vh;
 }
@@ -474,10 +473,6 @@ button {
     padding: 10px;
 }
 
-.Forecast_wrapper.card {
-    /*margin-bottom: 160px;*/
-}
-
 .spaced {
     align-items: baseline;
     border-bottom: 1px solid var(--dim_grey);
@@ -550,14 +545,12 @@ button {
 .WeatherCurrent .bottom_content,
 .ForecastDailyInfo .bottom_content {
     display: flex;
-    /*flex-wrap: wrap;*/
     justify-content: space-between;
     width: 100%;
 }
 
 .WeatherCurrent .bottom_left,
 .WeatherCurrent .bottom_right {
-    min-width: 330px;
     margin: 20px 60px;
 }
 
@@ -575,7 +568,9 @@ button {
 
 .Weather_current_main {
     margin-bottom: 75px;
+    width: 100%;
 }
+
 
 
 /*
@@ -584,12 +579,12 @@ button {
 
 .slider {
     border-radius: 4px;
-    padding: 20px;
+    padding: 15px;
 }
 
 .awssld {
     height: 85vh;
-    background: url(img/sky.jpg) no-repeat top;
+    background: url(img/beach.jpg) no-repeat top;
     --slider-transition-duration: 1000ms !important;
 }
 
@@ -637,16 +632,11 @@ button {
     background-color: var(--blue) !important;
 }
 
-.carousel__slider {
-    /*height: 50vh;*/
-    /*background-color: orange;*/
-}
-
 .awssld--fallAnimation {
-    /*--fall-animation-duration: 1100ms !important;*/
     --fall-animation-angle: 20deg !important;
     --fall-scaling-in-from: 1.0 !important;
 }
+
 
 
 /*  Bullets  */
@@ -694,6 +684,8 @@ button {
 .bullets-text p:last-child {
     left: 23px;
 }
+
+
 
 /*
 + Slider Buttons
@@ -752,8 +744,6 @@ button {
 }
 
 .ForecastHeader {
-    /*position: relative;*/
-    /*bottom: 20px;*/
     margin: 30px 10px 10px;
 }
 
@@ -778,11 +768,9 @@ button {
 
 .ForecastDailyInfo_wrapper h2,
 .ForecastHourlyInfo_wrapper h2 {
-    /*border-bottom: 1px solid var(--dark_blue);*/
     display: inline-block;
     font-size: 1.8rem;
     font-weight: normal;
-    /*margin: 40px;*/
 }
 
 .ForecastDailyInfo_wrapper h2.daily_summary {
@@ -792,12 +780,6 @@ button {
 .ForecastDailyInfo .bottom_content {
     line-height: 1.6;
     margin: 30px 0;
-}
-
-.ForecastDailyInfo .bottom_left,
-.ForecastDailyInfo .bottom_right {
-    min-width: 380px;
-    margin: 20px 30px;
 }
 
 .ForecastHourlyInfo .item_wrapper {
@@ -810,12 +792,9 @@ button {
     background-color: var(--blue);
     border-radius: 4px;
     color: var(--white);
+    font-weight: bold;
     padding: 5px 0;
     margin-bottom: 5px;
-}
-
-.ForecastHourlyInfo .sub_title {
-    font-weight: bold;
 }
 
 .ForecastHourlyInfo .item_wrapper .item {
@@ -934,6 +913,7 @@ button {
     transition: visibility 1200ms ease-out, opacity 1000ms ease-out, height 400ms 800ms ease, margin 400ms 800ms ease;
     visibility: hidden;
 }
+
 
 
 /*
@@ -1182,11 +1162,6 @@ button {
     animation: fadeIn 1600ms ease-in;
 }
 
-.index_wrapper {
-    /*-webkit-animation: fadeIn 1000ms ease-out;
-    animation: fadeIn 1600ms ease-out;*/
-}
-
 .About {
     -webkit-animation: fadeToAbout 1000ms ease;
     animation: fadeToAbout 1000ms ease;
@@ -1302,16 +1277,17 @@ button {
     .WeatherCurrent .card_top_main {
         margin: 20px 0 30px;
     }
+
 }
 
 
 
 @media (min-width: 981px) {
-
-    .ForecastDailyInfo_wrapper h2 {
-        /*margin: 30px;*/
+    .WeatherCurrent .bottom_left,
+    .WeatherCurrent .bottom_right {
+        min-width: 330px;
+        margin: 0 auto;
     }
-
     .ForecastHourlyInfo_wrapper h2 {
         margin: 20px;
     }
@@ -1324,10 +1300,13 @@ button {
 
     .ForecastDailyInfo .bottom_left,
     .ForecastDailyInfo .bottom_right {
+        min-width: 380px;
+        margin: 20px 30px;
         padding: 20px;
     }
 
 }
+
 
 
 @media (min-width: 760px) {
@@ -1365,9 +1344,6 @@ button {
 
     .alert {
         width: 70vw;
-    }
-
-    .slider {
     }
 
     .About ul li {
@@ -1458,6 +1434,11 @@ button {
 
 
 @media (max-width: 980px) {
+    .header {
+        background-size: cover;
+        background-position: center;
+    }
+
     .header_70 {
         height: 85vh;
     }
@@ -1482,9 +1463,13 @@ button {
         padding: 0 10px;
     }
 
+    .Modal {
+        top: 15vh;
+    }
+
     .modal_content {
-        margin: 5vh auto 0;
-        width: 80vw;
+        margin: 10vh auto 0;
+        /*width: 80vw;*/
     }
 
     .modal_text h1 {
@@ -1511,7 +1496,10 @@ button {
 
     .awssld {
         height: 100%;
-        /*height: 80vh;*/
+    }
+
+    .awssld__container {
+        height: 80% !important;
     }
 
     .MainHeader .title {
@@ -1582,8 +1570,12 @@ button {
         width: 100%;
     }
 
-    .ForecastHourlyInfo .item_wrapper .item:nth-child(2) {
-        /*width: 45%;*/
+    .ForecastHourlyInfo_wrapper h2 {
+        margin: 40px;
+    }
+
+    .ForecastHourlyInfo .sub_title {
+        margin-bottom: 15px;
     }
 
     .WeatherCurrent.card,
@@ -1705,22 +1697,12 @@ button {
 
 }
 
+
+
 @media (max-width: 790px) {
     .awssld__prev ,
     .awssld__next {
         top: 0 !important;
-    }
-
-    .Forecast_wrapper {
-        /*height: 120vh;*/
-    }
-
-    .awssld {
-        /*height: 100%;*/
-    }
-
-    .carousel__slider {
-        /*height: 70vh;*/
     }
 
 }
@@ -1728,72 +1710,19 @@ button {
 
 
 @media (max-width: 760px) {
-    .slider {
-    }
-
-    .awssld__content {
-    }
-
-    .awssld__bullets {
-    }
-
-    .dot_slide_wrapper {
-    }
-
     .dot_slide_wrapper {
         margin-top: 25px;
     }
 
-
+    .ForecastDailyInfo .bottom_content {
+        width: 70%;
+    }
 
 }
 
 
 
 @media (max-width: 480px) {
-    .Forecast_wrapper {
-        /*height: 150vh;*/
-    }
-
-    .awssld {
-        /*height: 100%;*/
-    }
-
-    .slider {
-    }
-
-    .dot_slide_wrapper {
-        display: flex;
-        justify-content: center;
-        margin: 40px 0 100px;
-    }
-
-    .dot_slide {
-        width: 80px;
-    }
-
-    .WeatherCurrent .bottom_left,
-    .WeatherCurrent .bottom_right,
-    .ForecastDailyInfo .bottom_left,
-    .ForecastDailyInfo .bottom_right {
-        margin: auto;
-        min-width: 100px;
-    }
-
-    .ForecastDailyInfo .bottom_content {
-        margin: auto;
-    }
-
-    .ForecastDailyInfo .bottom_left,
-    .ForecastDailyInfo .bottom_right {
-        width: 75%;
-    }
-
-    .WeatherCurrent .bottom_right,
-    .ForecastDailyInfo .bottom_right {
-        margin-top: 20px;
-    }
-
     .AirQuality .main {
         margin: 0 0 50px;
         width: 90%;
