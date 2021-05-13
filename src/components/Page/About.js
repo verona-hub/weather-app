@@ -54,11 +54,9 @@ const About = () => {
                         <div className="list_wrapper">
                             <ul>
                                 <li> Main photo by:&nbsp;
-                                    <a
-                                        href="https://unsplash.com/@thesollers?utm_source=unsplash&amp;utm_medium=referral&amp;utm_content=creditCopyText"
-                                        target="_blank" rel="noreferrer"
-                                    >
-                                        Anton Darius
+
+                                    <a href="https://unsplash.com/@willianjusten?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText" target="_blank" rel="noreferrer">
+                                        Willian Justen de Vasconcellos
                                     </a>
                                     <span>&nbsp;on&nbsp;</span>
                                     <a href="https://unsplash.com" target="_blank" rel="noreferrer">

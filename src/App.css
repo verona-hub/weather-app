@@ -1495,16 +1495,17 @@ button {
     }
 
     .awssld {
-        height: 100%;
+        height: 80vh;
+        height: 800px;
     }
 
     .awssld__container {
-        height: 80% !important;
+        /*height: 80% !important;*/
     }
 
     .MainHeader .title {
         font-size: 1.6rem;
-        margin: 30px 20px 10px;
+        /*margin: 30px 20px 10px;*/
     }
 
     .WeatherCurrent .card_top_header {
@@ -1552,9 +1553,23 @@ button {
     }
 
     .Forecast_wrapper {
-        height: 100vh;
+        /*height: 100vh;*/
         width: 90% !important;
     }
+
+    .awssld__controls__arrow-left,
+    .awssld__controls__arrow-right {
+        bottom: 25px;
+    }
+
+    .awssld__controls__arrow-left {
+        left: 40px !important;
+    }
+
+    .awssld__controls__arrow-right {
+        right: 40px !important;
+    }
+
 
     .ForecastDailyInfo_wrapper h2.daily_summary {
         margin: 30px;
@@ -1723,6 +1738,14 @@ button {
 
 
 @media (max-width: 480px) {
+    .Forecast_wrapper {
+        height: 1000px;
+    }
+
+    .awssld {
+        height: 100%;
+    }
+
     .AirQuality .main {
         margin: 0 0 50px;
         width: 90%;
