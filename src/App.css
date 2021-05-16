@@ -782,7 +782,8 @@ button {
     margin: 30px 0;
 }
 
-.ForecastHourlyInfo .item_wrapper {
+.ForecastHourlyInfo .item_wrapper,
+.ForecastHourlyInfo .sub_title {
     display: flex;
     margin: 0 auto;
     width: 60%;
@@ -793,25 +794,35 @@ button {
     border-radius: 4px;
     color: var(--white);
     font-weight: bold;
-    padding: 5px 0;
-    margin-bottom: 5px;
+    margin-bottom: 10px;
+    padding: 5px;
+}
+
+.ForecastHourlyInfo .item_wrapper .item,
+.ForecastHourlyInfo .sub_title .item {
+    align-items: center;
+    display: flex;
+    margin: 2px auto;
+    width: 100%;
+    justify-content: center;
 }
 
 .ForecastHourlyInfo .item_wrapper .item {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    margin: 2px auto;
-    width: 100%;
+
+}
+
+.ForecastHourlyInfo .sub_title .item {
+    /*justify-content: center;*/
 }
 
 .ForecastHourlyInfo .item_wrapper .item:nth-child(1) {
     /*width: 15%;*/
 }
 
-.ForecastHourlyInfo .item_wrapper .item:nth-child(2) {
+.ForecastHourlyInfo .item_wrapper .item:nth-child(2),
+.ForecastHourlyInfo .sub_title .item:nth-child(2) {
     /*width: 50%;*/
-    width: 250%;
+    /*width: 100%;*/
 }
 
 .ForecastHourlyInfo .item_wrapper .item:nth-child(3) {
@@ -822,6 +833,11 @@ button {
     width: 40px;
 }
 
+.ForecastHourlyInfo .item_wrapper .item .text_wrapper {
+    min-width: 100px;
+    padding-left: 5px;
+    text-align: left;
+}
 
 
 /*
@@ -1591,6 +1607,12 @@ button {
 
     .ForecastHourlyInfo .sub_title {
         margin-bottom: 15px;
+        padding: 5px;
+    }
+
+    .ForecastHourlyInfo .item_wrapper,
+    .ForecastHourlyInfo .sub_title {
+        width: 80%;
     }
 
     .WeatherCurrent.card,
@@ -1739,11 +1761,58 @@ button {
 
 @media (max-width: 480px) {
     .Forecast_wrapper {
-        height: 1000px;
+        height: 1300px;
     }
 
     .awssld {
         height: 100%;
+    }
+
+    .ForecastHourlyInfo .item_wrapper {
+        align-items: center;
+        border-bottom: 1px solid black;
+        font-size: 0.9rem;
+        padding: 10px 0;
+        width: 85%;
+    }
+
+    .ForecastHourlyInfo .sub_title {
+        font-size: 0.8rem;
+        width: 95%;
+    }
+
+    .ForecastHourlyInfo .sub_title .item {
+        width: auto;
+    }
+    .ForecastHourlyInfo .sub_title .item:nth-child(1) {
+        /*width: 20%;*/
+        /*margin-left: 20px;*/
+        padding-left: 20px;
+    }
+
+    .ForecastHourlyInfo .sub_title .item:nth-child(2) {
+        /*width: 40%;*/
+        padding-left: 15px;
+        width: 40%;
+    }
+    .ForecastHourlyInfo .sub_title .item:nth-child(3) {
+        /*width: 40%;*/
+        padding-right: 5px;
+    }
+
+    .ForecastHourlyInfo .item_wrapper .item {
+        /*justify-content: space-around;*/
+    }
+
+    .ForecastHourlyInfo .item_wrapper .item_icon_plus_text {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .ForecastHourlyInfo .item_wrapper .item .text_wrapper {
+        padding-left: 0;
+        text-align: center;
+        width: auto;
     }
 
     .AirQuality .main {

@@ -8,7 +8,7 @@ const ForecastHourlyInfo = ({ hour }) => {
         <div className="ForecastHourlyInfo">
             <div className="main">
 
-                <div className="item_wrapper sub_title">
+                <div className="sub_title">
                     <div className="item"> Time </div>
                     <div className="item"> Weather Forecast </div>
                     <div className="item center"> Temperature </div>
