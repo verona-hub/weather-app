@@ -1579,11 +1579,11 @@ button {
     }
 
     .awssld__controls__arrow-left {
-        left: 40px !important;
+        left: 25% !important;
     }
 
     .awssld__controls__arrow-right {
-        right: 40px !important;
+        right: 25% !important;
     }
 
 
@@ -1742,6 +1742,27 @@ button {
         top: 0 !important;
     }
 
+    .awssld__controls {
+        visibility: visible !important;
+    }
+
+    .awssld__controls__arrow-left,
+    .awssld__controls__arrow-right {
+        bottom: 25px;
+    }
+
+    .awssld__controls__arrow-left {
+        left: 20% !important;
+    }
+
+    .awssld__controls__arrow-right {
+        right: 20% !important;
+    }
+
+    .dot_slide {
+        width: 130px !important;
+    }
+
 }
 
 
@@ -1758,14 +1779,88 @@ button {
 }
 
 
+@media (max-width: 700px) {
 
-@media (max-width: 480px) {
+
+    .awssld__controls__arrow-left,
+    .awssld__controls__arrow-right {
+        /*bottom: 15px;*/
+    }
+/*
+    .awssld__controls__arrow-left {
+        left: 30px !important;
+    }
+
+    .awssld__controls__arrow-right {
+        right: 30px !important;
+    }*/
+
+    .ForecastHeader {
+        background-color: orange;
+        margin: 30px 50px;
+    }
+
+    .ForecastHourlyInfo_wrapper h2 {
+        margin: 30px;
+    }
+}
+
+
+
+@media (max-width: 650px) {
     .Forecast_wrapper {
-        height: 1300px;
+        height: 840px;
     }
 
     .awssld {
         height: 100%;
+    }
+
+    .ForecastHeader .title {
+        font-size: 1.3rem;
+    }
+
+    .ForecastHeader .sub_title {
+        font-size: 1rem;
+    }
+
+}
+
+
+
+@media (max-width: 480px) {
+    .awssld {
+        height: 100%;
+    }
+
+    .Forecast_wrapper {
+        height: 1250px;
+    }
+
+    .ForecastDailyInfo_wrapper h2.daily_summary {
+        margin: 50px;
+    }
+
+    .ForecastDailyInfo_wrapper h2,
+    .ForecastHourlyInfo_wrapper h2 {
+        font-size: 1.6rem;
+    }
+
+    .ForecastDailyInfo .bottom_content {
+        width: 85%;
+    }
+
+    .ForecastDailyInfo .bottom_right {
+        margin-top: 50px;
+    }
+
+    .ForecastDailyInfo span {
+        font-size: 1rem;
+        padding: 10px 0;
+    }
+
+    .ForecastDailyInfo .spaced {
+        font-size: 0.9rem;
     }
 
     .ForecastHourlyInfo .item_wrapper {
@@ -1785,18 +1880,14 @@ button {
         width: auto;
     }
     .ForecastHourlyInfo .sub_title .item:nth-child(1) {
-        /*width: 20%;*/
-        /*margin-left: 20px;*/
         padding-left: 20px;
     }
 
     .ForecastHourlyInfo .sub_title .item:nth-child(2) {
-        /*width: 40%;*/
         padding-left: 15px;
         width: 40%;
     }
     .ForecastHourlyInfo .sub_title .item:nth-child(3) {
-        /*width: 40%;*/
         padding-right: 5px;
     }
 
@@ -1813,6 +1904,10 @@ button {
         padding-left: 0;
         text-align: center;
         width: auto;
+    }
+
+    .dot_slide_wrapper {
+        margin-top: 50px;
     }
 
     .AirQuality .main {
