@@ -608,7 +608,7 @@ button {
 
 .awssld__controls__arrow-left,
 .awssld__controls__arrow-right {
-    bottom: 20px;
+    bottom: 10px;
     opacity: 1 !important;
 }
 
@@ -661,13 +661,17 @@ button {
 }
 
 .bullets-text {
-    top: 5px;
+    border: 2px solid black;
+    border-top: none;
+    display: inline-block;
+    padding: 80px 0 30px;
     position: relative;
+    /*top: 5px;*/
+    bottom: 80px;
+    width: 350px;
 }
 
 .bullets-text p {
-    border: 1px solid black;
-    border-top: none;
     display: inline-block;
     font-size: 1.4rem;
     padding: 0 10px;
@@ -678,12 +682,30 @@ button {
 .bullets-text p:first-child {
     right: 26px;
 }
+
 .bullets-text p:nth-child(2) {
     right: 2px;
 }
+
 .bullets-text p:last-child {
     left: 23px;
 }
+
+.arrow {
+    border: solid black;
+    border-width: 0 3px 3px 0;
+    display: inline-block;
+    padding: 3px;
+    position: relative;
+    bottom: 80px;
+    left: 25px;
+}
+
+.up {
+    transform: rotate(-135deg);
+    -webkit-transform: rotate(-135deg);
+}
+
 
 
 
@@ -756,7 +778,8 @@ button {
 
 .ForecastHeader .sub_title {
     font-family: 'Nunito', sans-serif;
-    font-size: 1.2rem;
+    font-size: 1.8rem;
+    font-weight: normal;
     margin: 0 10px 10px;
 }
 
@@ -786,7 +809,7 @@ button {
 .ForecastHourlyInfo .sub_title {
     display: flex;
     margin: 0 auto;
-    width: 60%;
+    width: 70%;
 }
 
 .ForecastHourlyInfo .sub_title {
@@ -807,34 +830,13 @@ button {
     justify-content: center;
 }
 
-.ForecastHourlyInfo .item_wrapper .item {
-
-}
-
-.ForecastHourlyInfo .sub_title .item {
-    /*justify-content: center;*/
-}
-
-.ForecastHourlyInfo .item_wrapper .item:nth-child(1) {
-    /*width: 15%;*/
-}
-
-.ForecastHourlyInfo .item_wrapper .item:nth-child(2),
-.ForecastHourlyInfo .sub_title .item:nth-child(2) {
-    /*width: 50%;*/
-    /*width: 100%;*/
-}
-
-.ForecastHourlyInfo .item_wrapper .item:nth-child(3) {
-    /*width: 15%;*/
-}
-
-.ForecastHourlyInfo .item_wrapper .item img {
+.ForecastEveryThreeHours .item_wrapper .item img {
     width: 40px;
 }
 
-.ForecastHourlyInfo .item_wrapper .item .text_wrapper {
-    min-width: 100px;
+.ForecastEveryThreeHours .item_wrapper .item .text_wrapper {
+    background-color: orange;
+    min-width: 200px;
     padding-left: 5px;
     text-align: left;
 }
@@ -1485,7 +1487,6 @@ button {
 
     .modal_content {
         margin: 10vh auto 0;
-        /*width: 80vw;*/
     }
 
     .modal_text h1 {
@@ -1511,17 +1512,11 @@ button {
     }
 
     .awssld {
-        height: 80vh;
         height: 800px;
-    }
-
-    .awssld__container {
-        /*height: 80% !important;*/
     }
 
     .MainHeader .title {
         font-size: 1.6rem;
-        /*margin: 30px 20px 10px;*/
     }
 
     .WeatherCurrent .card_top_header {
@@ -1569,13 +1564,12 @@ button {
     }
 
     .Forecast_wrapper {
-        /*height: 100vh;*/
         width: 90% !important;
     }
 
     .awssld__controls__arrow-left,
     .awssld__controls__arrow-right {
-        bottom: 25px;
+        bottom: 20px;
     }
 
     .awssld__controls__arrow-left {
@@ -1586,6 +1580,9 @@ button {
         right: 25% !important;
     }
 
+    .ForecastHeader .sub_title {
+        font-size: 1.3rem;
+    }
 
     .ForecastDailyInfo_wrapper h2.daily_summary {
         margin: 30px;
@@ -1746,11 +1743,6 @@ button {
         visibility: visible !important;
     }
 
-    .awssld__controls__arrow-left,
-    .awssld__controls__arrow-right {
-        bottom: 25px;
-    }
-
     .awssld__controls__arrow-left {
         left: 20% !important;
     }
@@ -1772,57 +1764,55 @@ button {
         margin-top: 25px;
     }
 
+    .awssld__controls__arrow-left {
+        left: 10% !important;
+    }
+
+    .awssld__controls__arrow-right {
+        right: 10% !important;
+    }
+
     .ForecastDailyInfo .bottom_content {
         width: 70%;
     }
 
-}
-
-
-@media (max-width: 700px) {
-
-
-    .awssld__controls__arrow-left,
-    .awssld__controls__arrow-right {
-        /*bottom: 15px;*/
-    }
-/*
-    .awssld__controls__arrow-left {
-        left: 30px !important;
-    }
-
-    .awssld__controls__arrow-right {
-        right: 30px !important;
-    }*/
-
     .ForecastHeader {
-        background-color: orange;
         margin: 30px 50px;
+    }
+
+    .ForecastHeader .title {
+        font-size: 1.5rem;
+    }
+
+    .ForecastHeader .sub_title {
+        font-size: 1.3rem;
     }
 
     .ForecastHourlyInfo_wrapper h2 {
         margin: 30px;
     }
+
 }
 
 
 
 @media (max-width: 650px) {
-    .Forecast_wrapper {
-        height: 840px;
-    }
-
     .awssld {
         height: 100%;
     }
 
-    .ForecastHeader .title {
-        font-size: 1.3rem;
+    .Forecast_wrapper {
+        height: 1000px;
     }
 
-    .ForecastHeader .sub_title {
-        font-size: 1rem;
+    .ForecastEveryThreeHours .item_wrapper {
+        padding: 5px 0;
     }
+
+    .ForecastEveryThreeHours .item_wrapper .item .text_wrapper {
+        min-width: 140px;
+    }
+
 
 }
 
@@ -1833,8 +1823,25 @@ button {
         height: 100%;
     }
 
+    .awssld__controls__arrow-left,
+    .awssld__controls__arrow-right {
+        bottom: 50px;
+    }
+
+    .awssld__controls__arrow-left {
+        left: 30% !important;
+    }
+
+    .awssld__controls__arrow-right {
+        right: 30% !important;
+    }
+
     .Forecast_wrapper {
-        height: 1250px;
+        height: 1350px;
+    }
+
+    .ForecastHeader .sub_title {
+        font-size: 1.2rem;
     }
 
     .ForecastDailyInfo_wrapper h2.daily_summary {
@@ -1863,7 +1870,7 @@ button {
         font-size: 0.9rem;
     }
 
-    .ForecastHourlyInfo .item_wrapper {
+    .ForecastEveryThreeHours .item_wrapper {
         align-items: center;
         border-bottom: 1px solid black;
         font-size: 0.9rem;
@@ -1891,16 +1898,12 @@ button {
         padding-right: 5px;
     }
 
-    .ForecastHourlyInfo .item_wrapper .item {
-        /*justify-content: space-around;*/
-    }
-
-    .ForecastHourlyInfo .item_wrapper .item_icon_plus_text {
+    .ForecastEveryThreeHours .item_wrapper .item_icon_plus_text {
         display: flex;
         flex-direction: column;
     }
 
-    .ForecastHourlyInfo .item_wrapper .item .text_wrapper {
+    .ForecastEveryThreeHours .item_wrapper .item .text_wrapper {
         padding-left: 0;
         text-align: center;
         width: auto;

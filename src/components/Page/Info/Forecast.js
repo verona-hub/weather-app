@@ -55,10 +55,13 @@ const Weather = ({ location, forecast_3_days }) => {
 
                 </AwesomeSlider>
             </div>
-            <div className="bullets-text">
-                <p> Day 1</p>
-                <p> Day 2 </p>
-                <p> Day 3 </p>
+            <div bullets_text_wrapper>
+                <p><i className="arrow right"></i></p>
+                <div className="bullets-text">
+                    <p> Day 1</p>
+                    <p> Day 2 </p>
+                    <p> Day 3 </p>
+                </div>
             </div>
         </div>
     );
