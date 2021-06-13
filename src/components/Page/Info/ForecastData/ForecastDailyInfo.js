@@ -1,6 +1,7 @@
 import React from 'react';
 
 
+// Daily forecast component
 const ForecastDailyInfo = ({ condition, maxtemp_c, avgtemp_c, mintemp_c, daily_chance_of_rain, totalprecip_mm,
                                avghumidity, maxwind_kph, daily_chance_of_snow, avgvis_km, sunrise, sunset }) => {
 

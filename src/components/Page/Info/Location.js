@@ -4,6 +4,7 @@ import { timeLocation, date } from '../../Utility/DateAndTime';
 
 const Location = ({ location }) => {
 
+    // Destructuring the fetched location data
     const { name, region, country, lat, lon, localtime, tz_id } = location;
 
     return (
@@ -24,8 +25,7 @@ const Location = ({ location }) => {
             </div>
         </div>
     );
-
-}
+};
 
 
 export default Location;

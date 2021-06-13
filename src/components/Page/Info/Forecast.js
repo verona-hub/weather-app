@@ -3,21 +3,16 @@ import React from 'react';
 // Slider
 import AwesomeSlider from 'react-awesome-slider';
 import 'react-awesome-slider/dist/styles.css';
-// import AnimationStyles from 'react-awesome-slider/src/styled/fold-out-animation/fold-out-animation.scss';
 import AwesomeSliderStyles from 'react-awesome-slider/src/styled/fall-animation/fall-animation.scss';
-
 
 // Components
 import ForecastSlider from './ForecastData/ForecastSlider';
 
-
 const Weather = ({ location, forecast_3_days }) => {
 
+    // Destructuring the fetched forecastday into separate days: day1, day2, and day3
     const { forecastday } = forecast_3_days;
-
-    const forecast1day = forecastday[0];
-    const forecast2days = forecastday[1];
-    const forecast3days = forecastday[2];
+    const [forecast1day, forecast2days, forecast3days] = forecastday;
 
     return (
         <div>
@@ -55,8 +50,8 @@ const Weather = ({ location, forecast_3_days }) => {
 
                 </AwesomeSlider>
             </div>
-            <div bullets_text_wrapper>
-                <p><i className="arrow right"></i></p>
+            <div className="bullets_text_wrapper">
+                <p><i className="arrow right"> </i></p>
                 <div className="bullets-text">
                     <p> Day 1</p>
                     <p> Day 2 </p>

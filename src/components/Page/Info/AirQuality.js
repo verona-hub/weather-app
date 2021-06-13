@@ -2,17 +2,21 @@ import React, { useState } from 'react';
 import { data } from '../../Utility/AirQualityData';
 
 const AirQuality = ({ airQuality }) => {
-
+    // Setting initial state: the air quality index box is set to be invisible
     const [indexInfoVisible, setIndexInfoVisible] = useState(false);
 
-
+    // Destructuring from the AirQualityData.js component in Utility
     const { case1, case2, case3, case4, case5, case6, case7, case8, case9, case10, mix } = data;
+
+    // Destructuring the fetched air quality data
     let { co, no2, o3, so2, pm2_5, pm10 } = airQuality;
 
+    // Function to round the number down to the closest integer
     function floor (num) {
         return Math.floor(num);
     }
 
+    // Each value is floored
     co = floor(co);
     no2 = floor(no2);
     o3 = floor(o3);
@@ -20,7 +24,7 @@ const AirQuality = ({ airQuality }) => {
     pm2_5 = floor(pm2_5);
     pm10 = floor(pm10);
 
-
+    // Switch statement to handle all the various parameters
     /*
     + co = Carbon Monoxide
     */
@@ -350,9 +354,8 @@ const AirQuality = ({ airQuality }) => {
             break;
     }
 
-    const toggleIndexInfo = () => {
-        setIndexInfoVisible(!indexInfoVisible);
-    }
+    // Function to toggle the index box visibility to the opposite of what it currently is
+    const toggleIndexInfo = () => setIndexInfoVisible(!indexInfoVisible);
 
 
     return (
@@ -445,5 +448,6 @@ const AirQuality = ({ airQuality }) => {
         </div>
     )
 }
+
 
 export default AirQuality;

@@ -53,7 +53,7 @@ const data = {
     mix: {
         white: '#fff'
     }
-}
+};
 
 
 /*
@@ -118,12 +118,7 @@ const carbonMonoxideSwitch = (co, bgCo, indexCo, textCoColor) => {
         default:
             break;
     }
-    // console.log(co)
-    // console.log(bgCo);
-    // console.log(indexCo);
-
-}
-
+};
 
 
 export { data };

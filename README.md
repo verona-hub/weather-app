@@ -13,3 +13,5 @@ https://app-weather-app.vercel.app/
 
 ### Netlify 
 https://weather-app-veronahub.netlify.app/
+
+![](https://github.com/verona-hub/weather-app/blob/master/src/img/screenshot.png)

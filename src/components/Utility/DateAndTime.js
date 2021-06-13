@@ -1,3 +1,4 @@
+// Functions for date and time
 
 function timeLocation (arg) {
     const oldDateAndTime = arg.split('-');
@@ -20,7 +21,6 @@ function date (date) {
 
     return `${day}-${month}-${year}`;
 }
-
 
 
 function timeForecast (forecast) {

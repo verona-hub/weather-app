@@ -3,14 +3,13 @@ import { NavLink } from 'react-router-dom';
 import left from '../../img/left.png';
 
 
+// Function that takes you to the Homepage
 const BackToSearch = () => {
-
-    const scrollToTop = () => {
-        window.scrollTo({
-            top: 0,
-            behavior: 'smooth'
-        });
-    }
+    //Scroll to top with a smooth effect
+    const scrollToTop = () => window.scrollTo({
+        top: 0,
+        behavior: 'smooth'
+    });
 
     return (
         <div className="BackToSearch">
@@ -22,7 +21,7 @@ const BackToSearch = () => {
             </button>
         </div>
     )
-}
+};
 
 
 export default BackToSearch;

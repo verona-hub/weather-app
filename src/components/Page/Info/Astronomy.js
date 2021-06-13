@@ -3,6 +3,7 @@ import React from 'react';
 
 const Astronomy = ({ astronomy }) => {
 
+    // Destructuring the fetched astronomy data
     const { sunrise, sunset, moonrise, moonset, moon_phase, moon_illumination } = astronomy;
 
     return (
@@ -18,7 +19,6 @@ const Astronomy = ({ astronomy }) => {
             </div>
         </div>
     )
-
-}
+};
 
 export default Astronomy;

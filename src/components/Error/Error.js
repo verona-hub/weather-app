@@ -7,7 +7,7 @@ const Error = ({ clearError, addedText, text }) => {
     // If clicked on the button, clearError from App.js will be called and the box will close
     const handleClearError = () => {
         clearError();
-    }
+    };
 
     return (
         <div className="alert">

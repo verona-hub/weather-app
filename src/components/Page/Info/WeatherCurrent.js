@@ -4,11 +4,15 @@ import React from 'react';
 import ForecastHeader from "./ForecastData/ForecastHeader";
 
 
+// Current weather component
 const WeatherCurrent = ({ weatherInfo, weatherCondition, location }) => {
 
+    // Destructuring the fetched weather data
     const { cloud, temp_c, feelslike_c, humidity, precip_mm, uv, vis_km,
         pressure_mb, wind_kph, wind_dir } = weatherInfo;
+    // Destructuring the fetched weather conditions data
     const { icon, text } = weatherCondition;
+    // Destructuring the fetched location data
     const { name, country } = location;
 
     return (

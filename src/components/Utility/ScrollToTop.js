@@ -3,14 +3,12 @@ import { NavLink } from 'react-router-dom';
 import top from "../../img/top.png";
 
 
+// Function that scrolls to top of the page
 const ScrollToTop = () => {
-
-    const scrollToTop = () => {
-        window.scrollTo({
-            top: 0,
-            behavior: 'smooth'
-        });
-    }
+    const scrollToTop = () => window.scrollTo({
+        top: 0,
+        behavior: 'smooth'
+    });
 
     return (
         <div className="ScrollToTop">
@@ -22,8 +20,7 @@ const ScrollToTop = () => {
             </button>
         </div>
     )
-
-}
+};
 
 
 export default ScrollToTop;

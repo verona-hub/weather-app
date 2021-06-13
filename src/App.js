@@ -114,8 +114,6 @@ class App extends Component {
             setTimeout(() => this.setState({ errorMessage: null, modal: false }), 13000);
         }
 
-        console.log(this.state.forecast_3_days);
-
         // The view slides smoothly to the main container which is activated only with the Api response;
         // If the modal is present, the scroll doesn't happen
         // (leave this to avoid a Typescript error that scrollIntoView is missing when a request error is present)
