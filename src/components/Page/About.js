@@ -59,7 +59,7 @@ const About = () => {
                                         Willian Justen de Vasconcellos
                                     </a>
                                     <span>&nbsp;on&nbsp;</span>
-                                    <a href="https://unsplash.com" target="_blank" rel="noreferrer">
+                                    <a href="https://unsplash.com/photos/lrPBS8b4G14" target="_blank" rel="noreferrer">
                                         Unsplash
                                     </a>
                                 </li>
@@ -72,7 +72,7 @@ const About = () => {
                                         krakenimages
                                     </a>
                                     <span> on&nbsp;</span>
-                                    <a href="https://unsplash.com" target="_blank" rel="noreferrer">
+                                    <a href="https://unsplash.com/photos/8RXmc8pLX_I" target="_blank" rel="noreferrer">
                                         Unsplash
                                     </a>
                                 </li>

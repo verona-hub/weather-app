@@ -16,11 +16,9 @@ const ForecastEveryThreeHours = ({ hour }) => {
             <div key={ index } className="ForecastEveryThreeHours">
                 <div className="item_wrapper">
                     <div className="item">{ timeForecastHourly(time) } </div>
-                    <div className="item item_icon_plus_text">
-                        <img src={ icon } alt="weather conditions icon"/>
-                        <div className="text_wrapper">
+                    <div className="item item_forecast">
+                            <img src={ icon } alt="weather condition icon"/>
                             <span> { text } </span>
-                        </div>
                     </div>
                     <div className="item"> { temp_c }&#8451; </div>
                 </div>

@@ -10,7 +10,7 @@ import 'pure-react-carousel/dist/react-carousel.es.css';
 
 
 // The slider component
-const ForecastSlider = ({ forecast, title, when }) => {
+const ForecastSlider = ({ forecast, which_day, when }) => {
 
     // Destructuring the fetched forecast data
     const { day, astro, hour } = forecast;
@@ -22,7 +22,7 @@ const ForecastSlider = ({ forecast, title, when }) => {
     return (
         <div className="ForecastEachDay">
             <ForecastHeader
-                title= { title }
+                which_day= { which_day }
                 css='ForecastHeader'
                 when= { when }
                 date={ timeForecast(forecast) }

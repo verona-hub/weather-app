@@ -641,7 +641,7 @@ button {
 
 /*  Bullets  */
 .awssld__bullets {
-    bottom: -70px !important;
+    bottom: -90px !important;
     right: 2px;
 }
 
@@ -659,53 +659,6 @@ button {
 .awssld__bullets button:hover:not(.awssld__bullets--active) {
     opacity: 0.9;
 }
-
-.bullets-text {
-    border: 2px solid black;
-    border-top: none;
-    display: inline-block;
-    padding: 80px 0 30px;
-    position: relative;
-    /*top: 5px;*/
-    bottom: 80px;
-    width: 350px;
-}
-
-.bullets-text p {
-    display: inline-block;
-    font-size: 1.4rem;
-    padding: 0 10px;
-    position: relative;
-    text-transform: uppercase;
-}
-
-.bullets-text p:first-child {
-    right: 26px;
-}
-
-.bullets-text p:nth-child(2) {
-    right: 2px;
-}
-
-.bullets-text p:last-child {
-    left: 23px;
-}
-
-.arrow {
-    border: solid black;
-    border-width: 0 3px 3px 0;
-    display: inline-block;
-    padding: 3px;
-    position: relative;
-    bottom: 80px;
-    left: 25px;
-}
-
-.up {
-    transform: rotate(-135deg);
-    -webkit-transform: rotate(-135deg);
-}
-
 
 
 
@@ -830,16 +783,11 @@ button {
     justify-content: center;
 }
 
-.ForecastEveryThreeHours .item_wrapper .item img {
+.ForecastEveryThreeHours .item_forecast img {
+    margin-right: 10px;
     width: 40px;
 }
 
-.ForecastEveryThreeHours .item_wrapper .item .text_wrapper {
-    background-color: orange;
-    min-width: 200px;
-    padding-left: 5px;
-    text-align: left;
-}
 
 
 /*
@@ -1760,8 +1708,15 @@ button {
 
 
 @media (max-width: 760px) {
+    .awssld {
+        height: 100%;
+    }
+    .Forecast_wrapper {
+        height: 1200px;
+    }
+
     .dot_slide_wrapper {
-        margin-top: 25px;
+        margin-top: 90px;
     }
 
     .awssld__controls__arrow-left {
@@ -1770,10 +1725,6 @@ button {
 
     .awssld__controls__arrow-right {
         right: 10% !important;
-    }
-
-    .ForecastDailyInfo .bottom_content {
-        width: 70%;
     }
 
     .ForecastHeader {
@@ -1786,62 +1737,6 @@ button {
 
     .ForecastHeader .sub_title {
         font-size: 1.3rem;
-    }
-
-    .ForecastHourlyInfo_wrapper h2 {
-        margin: 30px;
-    }
-
-}
-
-
-
-@media (max-width: 650px) {
-    .awssld {
-        height: 100%;
-    }
-
-    .Forecast_wrapper {
-        height: 1000px;
-    }
-
-    .ForecastEveryThreeHours .item_wrapper {
-        padding: 5px 0;
-    }
-
-    .ForecastEveryThreeHours .item_wrapper .item .text_wrapper {
-        min-width: 140px;
-    }
-
-
-}
-
-
-
-@media (max-width: 480px) {
-    .awssld {
-        height: 100%;
-    }
-
-    .awssld__controls__arrow-left,
-    .awssld__controls__arrow-right {
-        bottom: 50px;
-    }
-
-    .awssld__controls__arrow-left {
-        left: 30% !important;
-    }
-
-    .awssld__controls__arrow-right {
-        right: 30% !important;
-    }
-
-    .Forecast_wrapper {
-        height: 1350px;
-    }
-
-    .ForecastHeader .sub_title {
-        font-size: 1.2rem;
     }
 
     .ForecastDailyInfo_wrapper h2.daily_summary {
@@ -1878,6 +1773,15 @@ button {
         width: 85%;
     }
 
+    .ForecastEveryThreeHours .item_wrapper .item_forecast {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .ForecastHourlyInfo_wrapper h2 {
+        margin: 30px;
+    }
+
     .ForecastHourlyInfo .sub_title {
         font-size: 0.8rem;
         width: 95%;
@@ -1898,19 +1802,39 @@ button {
         padding-right: 5px;
     }
 
-    .ForecastEveryThreeHours .item_wrapper .item_icon_plus_text {
-        display: flex;
-        flex-direction: column;
+    .ForecastEveryThreeHours .item_forecast img {
+        margin-right: 0;
     }
 
-    .ForecastEveryThreeHours .item_wrapper .item .text_wrapper {
-        padding-left: 0;
-        text-align: center;
-        width: auto;
+}
+
+
+
+@media (max-width: 480px) {
+    .awssld__controls__arrow-left,
+    .awssld__controls__arrow-right {
+        bottom: 50px;
+    }
+
+    .awssld__controls__arrow-left {
+        left: 30% !important;
+    }
+
+    .awssld__controls__arrow-right {
+        right: 30% !important;
+    }
+
+    .Forecast_wrapper {
+        height: 1350px;
+    }
+
+    .ForecastHeader .sub_title {
+        font-size: 1.2rem;
     }
 
     .dot_slide_wrapper {
         margin-top: 50px;
+
     }
 
     .AirQuality .main {
