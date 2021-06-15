@@ -451,7 +451,6 @@ button {
 /*
 + Main
 + Title
-+ ForecastHeader
 */
 
 .card {
@@ -481,7 +480,7 @@ button {
     padding: 5px 0;
 }
 
-.MainHeader .title,
+.WeatherCurrent .title,
 .AirQuality .title,
 .Location .title,
 .Astronomy .title {
@@ -493,35 +492,11 @@ button {
     word-spacing: 0.2rem;
 }
 
+.WeatherCurrent .title,
 .AirQuality .title,
 .Location .title,
 .Astronomy .title {
-    margin: 7vh;
-}
-
-.MainHeader {
-    align-items: center;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-}
-
-.MainHeader .title,
-.MainHeader .sub_title {
-    word-spacing: 0.1rem;
-}
-
-.MainHeader .sub_title {
-    font-family: 'Playfair Display', serif ;
-    font-size: 1.8rem;
-}
-
-.WeatherCurrent .MainHeader .title {
-    margin-top: 50px;
-}
-
-.WeatherCurrent .MainHeader .sub_title {
-    margin-top: 25px;
+    margin: 5vh;
 }
 
 
@@ -711,7 +686,7 @@ button {
 
 
 /*
-+  ForecastData
++ Weather Forecast
 */
 
 .Forecast_wrapper {
@@ -727,6 +702,10 @@ button {
     font-size: 2.2rem;
     border: none;
     margin: 10px;
+}
+
+.ForecastHeader .title span {
+    display: block;
 }
 
 .ForecastHeader .sub_title {
@@ -914,7 +893,7 @@ button {
 
 
 /*
-+ About
++ About Page
 */
 
 .About {
@@ -1236,7 +1215,7 @@ button {
 
 
 /*
-+ Mobile
++ Desktop
 */
 
 @media (min-width: 1240px) {
@@ -1247,6 +1226,10 @@ button {
 }
 
 
+
+/*
++ Mobile
+*/
 
 @media (min-width: 981px) {
     .WeatherCurrent .bottom_left,
@@ -1275,6 +1258,10 @@ button {
 
 
 
+/*
++ min 760px
+*/
+
 @media (min-width: 760px) {
     .dot_slide_wrapper {
         margin-top: 30px;
@@ -1298,6 +1285,10 @@ button {
 }
 
 
+
+/*
++ max 1240px
+*/
 
 @media (max-width: 1240px) {
     .modal_content {
@@ -1358,6 +1349,11 @@ button {
 
 
 
+/*
++ max 1080px
+*/
+
+
 @media (max-width: 1080px) {
     .modal_content {
         width: 70vw;
@@ -1398,6 +1394,10 @@ button {
 }
 
 
+
+/*
++ max 980px
+*/
 
 @media (max-width: 980px) {
     .header {
@@ -1450,7 +1450,6 @@ button {
         width: 85%;
     }
 
-    .MainHeader .title,
     .AirQuality .title,
     .Location .title,
     .Astronomy .title {
@@ -1461,10 +1460,6 @@ button {
 
     .awssld {
         height: 800px;
-    }
-
-    .MainHeader .title {
-        font-size: 1.6rem;
     }
 
     .WeatherCurrent .card_top_header {
@@ -1681,6 +1676,10 @@ button {
 
 
 
+/*
++ max 790px
+*/
+
 @media (max-width: 790px) {
     .awssld__prev ,
     .awssld__next {
@@ -1706,6 +1705,10 @@ button {
 }
 
 
+
+/*
++ max 760px
+*/
 
 @media (max-width: 760px) {
     .awssld {
@@ -1809,6 +1812,10 @@ button {
 }
 
 
+
+/*
++ max 480px
+*/
 
 @media (max-width: 480px) {
     .awssld__controls__arrow-left,

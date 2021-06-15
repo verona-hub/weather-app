@@ -17,12 +17,7 @@ const WeatherCurrent = ({ weatherInfo, weatherCondition, location }) => {
 
     return (
         <div className="WeatherCurrent card">
-            <ForecastHeader
-                location={ location }
-                title='Current weather'
-                css=''
-            />
-
+            <h2 className="title"> Current Weather </h2>
             <div className="Weather_current_main">
                 <h1> { name }, { country } </h1>
                 <div className="top_content">
