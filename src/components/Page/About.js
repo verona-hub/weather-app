@@ -92,7 +92,7 @@ const About = () => {
                                         www.flaticon.com</a>
                                 </li>
 
-                                <li> React logo by:&nbsp;
+                                <li> React logo and green arrows by:&nbsp;
                                     <a
                                         href="https://www.flaticon.com/authors/kiranshastry" title="Kiranshastry"
                                         target="_blank" rel="noreferrer"
@@ -108,7 +108,7 @@ const About = () => {
                                     </a>
                                 </li>
 
-                                <li> Main logo and icons (search, X, home, scroll to top,
+                                <li> Main logo and icons (search, X, home, arrow, scroll to top,
                                      back to search, Github) by:&nbsp;
                                     <div>
                                         <a

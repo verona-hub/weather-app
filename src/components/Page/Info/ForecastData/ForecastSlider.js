@@ -23,7 +23,6 @@ const ForecastSlider = ({ forecast, which_day, when }) => {
         <div className="ForecastEachDay">
             <ForecastHeader
                 which_day= { which_day }
-                css='ForecastHeader'
                 when= { when }
                 date={ timeForecast(forecast) }
             />

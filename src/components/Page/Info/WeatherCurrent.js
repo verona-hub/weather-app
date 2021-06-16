@@ -1,4 +1,5 @@
 import React from 'react';
+import feels_logo from '../../../img/feels.png';
 
 // Components
 import ForecastHeader from "./ForecastData/ForecastHeader";
@@ -17,16 +18,19 @@ const WeatherCurrent = ({ weatherInfo, weatherCondition, location }) => {
 
     return (
         <div className="WeatherCurrent card">
-            <h2 className="title"> Current Weather </h2>
+            <h1 className="title"> Current Weather </h1>
             <div className="Weather_current_main">
-                <h1> { name }, { country } </h1>
+                <h2 className="sub_title_main"> { name }, { country } </h2>
                 <div className="top_content">
-                    <div className="card_top_header">
+                    <div className="top_content_header">
                         <img src={ icon } alt="weather conditions icon"/>
                     </div>
-                    <div className="card_top_main">
-                        <h1>  { text } { temp_c } &#8451; </h1>
-                        <h3> Feels like: { feelslike_c } &#8451; </h3>
+                    <div className="top_content_main">
+                        <h2 className="current_weather_text">  { text } { temp_c } &#8451; </h2>
+                        <div className="feels_like">
+                            <img src={ feels_logo } alt="feels like icon"/>
+                            <h3> Feels like: { feelslike_c } &#8451; </h3>
+                        </div>
                     </div>
                 </div>
                 <div className="bottom_content">

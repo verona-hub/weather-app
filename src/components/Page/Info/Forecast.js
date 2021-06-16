@@ -8,15 +8,14 @@ import AwesomeSliderStyles from 'react-awesome-slider/src/styled/fall-animation/
 // Components
 import ForecastSlider from './ForecastData/ForecastSlider';
 
-const Weather = ({ location, forecast_3_days }) => {
+const Forecast = ({ location, forecast_3_days }) => {
 
     // Destructuring the fetched forecastday into separate days: day1, day2, and day3
     const { forecastday } = forecast_3_days;
     const [forecast1day, forecast2days, forecast3days] = forecastday;
 
     return (
-        <div>
-            <div className="card Forecast_wrapper">
+            <div className="card Forecast">
                 <AwesomeSlider
                     className="slider "
                     animation="fallAnimation"
@@ -26,7 +25,7 @@ const Weather = ({ location, forecast_3_days }) => {
                         <ForecastSlider
                             forecast={ forecast1day }
                             which_day='Day 1'
-                            when=' Today: '
+                            when=' Today '
                             location={ location }
                         />
                     </div>
@@ -35,7 +34,7 @@ const Weather = ({ location, forecast_3_days }) => {
                         <ForecastSlider
                             forecast={ forecast2days }
                             which_day='Day 2'
-                            when=' Tomorrow: '
+                            when=' Tomorrow '
                             location={ location }
                         />
                     </div>
@@ -44,16 +43,15 @@ const Weather = ({ location, forecast_3_days }) => {
                         <ForecastSlider
                             forecast={ forecast3days }
                             which_day='Day 3'
-                            when=' The day after tomorrow: '
+                            when=' The day after tomorrow '
                             location={ location }
                         />
                     </div>
 
                 </AwesomeSlider>
             </div>
-        </div>
     );
 };
 
 
-export default Weather;
+export default Forecast;

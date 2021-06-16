@@ -1,6 +1,7 @@
-@import url('https://fonts.googleapis.com/css?family=Nunito');
-@import url('https://fonts.googleapis.com/css?family=Playfair+Display');
+@import url('https://fonts.googleapis.com/css2?family=Nunito:wght@300;400&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Love+Ya+Like+A+Sister&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Dosis&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Red+Hat+Display&display=swap');
 
 
 :root {
@@ -50,7 +51,7 @@ a {
 .BackToSearch a,
 .ScrollToTop a {
     color: var(--dark_grey);
-    font-family: 'Nunito', sans-serif;
+    font-family: 'Dosis', sans-serif;
     text-transform: uppercase;
 }
 
@@ -442,7 +443,9 @@ button {
 
 .BackToSearch p,
 .ScrollToTop p {
+    font-size: 1.2rem;
     font-weight: bold;
+    letter-spacing: 0.05rem;
     margin: 5px;
 }
 
@@ -481,40 +484,74 @@ button {
 }
 
 .WeatherCurrent .title,
+.Forecast .title,
 .AirQuality .title,
 .Location .title,
 .Astronomy .title {
     border-bottom: 1px solid var(--dark_blue);
-    font-family: 'Playfair Display', serif ;
-    font-size: 2rem;
+    font-family: 'Dosis', sans-serif;
+    font-family: 'Red Hat Display', sans-serif;
+    font-size: 2.4rem;
     letter-spacing: 0.2rem;
     text-transform: uppercase;
     word-spacing: 0.2rem;
 }
 
 .WeatherCurrent .title,
+.Forecast .title {
+    margin: 5vh 0 1vh;
+}
+
 .AirQuality .title,
 .Location .title,
 .Astronomy .title {
     margin: 5vh;
 }
 
+.sub_title_main {
+    font-size: 2rem;
+    font-weight: 300;
+    letter-spacing: 0.2rem;
+}
 
 
 /*
 + Weather Current
 */
 
-.WeatherCurrent .top_content {
-    flex-wrap: wrap;
+.Weather_current_main {
+    width: 100%;
 }
 
-.WeatherCurrent .card_top_header {
+.WeatherCurrent .top_content {
+    /*margin: 30px;*/
+}
+
+.WeatherCurrent .top_content_header {
     margin: 10px 10px 0 10px;
     text-align: center;
 }
 
-.WeatherCurrent .card_top_main {
+.WeatherCurrent .top_content_header img {
+    margin: 20px 0 0;
+    width: 100px;
+}
+
+.WeatherCurrent .top_content_main .current_weather_text {
+    font-size: 1.6rem;
+    font-weight: 400;
+}
+
+.WeatherCurrent .top_content_main .feels_like img {
+    margin: 10px 20px 10px 10px;
+    transform: rotate(20deg);
+    width: 32px;
+}
+
+.WeatherCurrent .top_content_main .feels_like h3 {
+    font-size: 1.3rem;
+    font-weight: 300;
+    height: 100%;
 }
 
 .WeatherCurrent .bottom_content,
@@ -522,6 +559,10 @@ button {
     display: flex;
     justify-content: space-between;
     width: 100%;
+}
+
+.WeatherCurrent .bottom_content {
+    margin: 60px 0 100px;
 }
 
 .WeatherCurrent .bottom_left,
@@ -537,14 +578,9 @@ button {
     font-size: 18px;
 }
 
-.WeatherCurrent img {
-    width: 100px;
-}
 
-.Weather_current_main {
-    margin-bottom: 75px;
-    width: 100%;
-}
+
+
 
 
 
@@ -558,7 +594,8 @@ button {
 }
 
 .awssld {
-    height: 85vh;
+    height: 95vh;
+    height: 1000px;
     background: url(img/beach.jpg) no-repeat top;
     --slider-transition-duration: 1000ms !important;
 }
@@ -689,36 +726,42 @@ button {
 + Weather Forecast
 */
 
-.Forecast_wrapper {
-    line-height: 1.2;
-}
-
-.ForecastHeader {
-    margin: 30px 10px 10px;
-}
-
 .ForecastHeader .title {
-    font-family: 'Nunito', sans-serif;
-    font-size: 2.2rem;
-    border: none;
-    margin: 10px;
+    display: inline-block;
 }
 
-.ForecastHeader .title span {
-    display: block;
+.ForecastHeader .sub_title_main {
+    align-items: center;
+    display: flex;
+    justify-content: center;
+}
+
+.ForecastHeader img.right {
+    margin: 0 15px;
+    width: 42px;
+}
+.ForecastHeader img.left_down {
+    display: inline-block;
+    bottom: 5px;
+    left: 100px;
+    position: relative;
+    transform: rotate(150deg);
+    width: 42px;
+}
+
+.ForecastHeader .date {
+    bottom: 25px;
+    display: inline-block;
+    font-size: 1.3rem;
+    font-weight: 300;
+    letter-spacing: 0.1rem;
+    position: relative;
 }
 
 .ForecastHeader .sub_title {
     font-family: 'Nunito', sans-serif;
-    font-size: 1.8rem;
+    font-size: 1.6rem;
     font-weight: normal;
-    margin: 0 10px 10px;
-}
-
-.ForecastDailyInfo_wrapper,
-.ForecastHourlyInfo_wrapper,
-.in_progress_wrapper {
-    border-top: 1px solid var(--dim_grey);
 }
 
 .ForecastDailyInfo_wrapper h2,
@@ -729,7 +772,7 @@ button {
 }
 
 .ForecastDailyInfo_wrapper h2.daily_summary {
-    margin-top: 70px;
+    margin: 50px 0 20px;
 }
 
 .ForecastDailyInfo .bottom_content {
@@ -897,7 +940,7 @@ button {
 */
 
 .About {
-    font-family: 'Playfair Display', serif ;
+    font-family: 'Dosis', sans-serif;
 }
 
 .About .welcome {
@@ -1004,6 +1047,7 @@ button {
 */
 
 .PageNotFound404 {
+    font-family: 'Red Hat Display', sans-serif;
     position: absolute;
     min-height: 90vh;
     top: 10vh;
@@ -1034,12 +1078,10 @@ button {
 }
 
 .PageNotFound404 .text h2 {
-    font-family: 'Playfair Display', serif ;
     font-size: 1.6rem;
 }
 
 .PageNotFound404 .text p {
-    font-family: 'Playfair Display', serif ;
     font-size: 1.6rem;
     letter-spacing: 1px;
     padding: 3vh 0;
@@ -1219,10 +1261,6 @@ button {
 */
 
 @media (min-width: 1240px) {
-    .WeatherCurrent .card_top_main {
-        margin: 20px 0 30px;
-    }
-
 }
 
 
@@ -1264,7 +1302,7 @@ button {
 
 @media (min-width: 760px) {
     .dot_slide_wrapper {
-        margin-top: 30px;
+        margin-top: 100px;
     }
 
     .AirQuality .index_box {
@@ -1462,15 +1500,15 @@ button {
         height: 800px;
     }
 
-    .WeatherCurrent .card_top_header {
+    .WeatherCurrent .top_content_header {
         margin: 0;
     }
 
-    .WeatherCurrent .card_top_main h1 {
-        font-size: 1.6rem;
+    .WeatherCurrent .top_content_main h2 {
+        font-size: 2.6rem;
     }
 
-    .WeatherCurrent .card_top_main h3 {
+    .WeatherCurrent .top_content_main h3 {
         font-size: 1.4rem;
         margin-bottom: 30px;
     }
@@ -1506,7 +1544,7 @@ button {
         width: 90%;
     }
 
-    .Forecast_wrapper {
+    .Forecast {
         width: 90% !important;
     }
 
@@ -1524,7 +1562,7 @@ button {
     }
 
     .ForecastHeader .sub_title {
-        font-size: 1.3rem;
+        /*font-size: 1.3rem;*/
     }
 
     .ForecastDailyInfo_wrapper h2.daily_summary {
@@ -1556,7 +1594,7 @@ button {
     }
 
     .WeatherCurrent.card,
-    .Forecast_wrapper.card,
+    .Forecast.card,
     .AirQuality.card,
     .Location.card,
     .Astronomy.card {
@@ -1714,7 +1752,7 @@ button {
     .awssld {
         height: 100%;
     }
-    .Forecast_wrapper {
+    .Forecast {
         height: 1200px;
     }
 
@@ -1731,15 +1769,15 @@ button {
     }
 
     .ForecastHeader {
-        margin: 30px 50px;
+        /*margin: 30px 50px;*/
     }
 
     .ForecastHeader .title {
-        font-size: 1.5rem;
+        /*font-size: 1.5rem;*/
     }
 
     .ForecastHeader .sub_title {
-        font-size: 1.3rem;
+        /*font-size: 1.3rem;*/
     }
 
     .ForecastDailyInfo_wrapper h2.daily_summary {
@@ -1831,12 +1869,12 @@ button {
         right: 30% !important;
     }
 
-    .Forecast_wrapper {
+    .Forecast {
         height: 1350px;
     }
 
     .ForecastHeader .sub_title {
-        font-size: 1.2rem;
+        /*font-size: 1.2rem;*/
     }
 
     .dot_slide_wrapper {
