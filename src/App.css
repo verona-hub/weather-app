@@ -766,9 +766,14 @@ button {
 
 .ForecastDailyInfo_wrapper h2,
 .ForecastHourlyInfo_wrapper h2 {
+    /*background-color: var(--blue);*/
+    border-radius: 4px;
+    border: 3px solid var(--blue);
+    /*color: var(--white);*/
     display: inline-block;
     font-size: 1.8rem;
     font-weight: normal;
+    padding: 10px 25px;
 }
 
 .ForecastDailyInfo_wrapper h2.daily_summary {
@@ -788,9 +793,9 @@ button {
 }
 
 .ForecastHourlyInfo .sub_title {
-    background-color: var(--blue);
+    /*background-color: var(--blue);*/
     border-radius: 4px;
-    color: var(--white);
+    /*color: var(--white);*/
     font-weight: bold;
     margin-bottom: 10px;
     padding: 5px;
@@ -1276,7 +1281,7 @@ button {
         margin: 0 auto;
     }
     .ForecastHourlyInfo_wrapper h2 {
-        margin: 20px;
+        margin: 20px 0;
     }
 
     .ForecastDailyInfo .bottom_content {

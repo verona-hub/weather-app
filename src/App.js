@@ -5,6 +5,7 @@ import './App.css';
 // Modules
 import axios from "axios";
 import * as _ from 'underscore';
+import { NavLink } from 'react-router-dom';
 
 // Components
 import About from './components/Page/About';
@@ -13,6 +14,7 @@ import Main from './components/Page/Main';
 import Navbar from './components/Page/Navbar';
 import PageNotFound404 from "./components/Page/PageNotFound404";
 import Search from "./components/Utility/Search";
+import left from "./img/left.png";
 
 
 // let weatherApiKey;
@@ -116,13 +118,13 @@ class App extends Component {
 
         // The view slides smoothly to the main container which is activated only with the Api response;
         // If the modal is present, the scroll doesn't happen
-        // (leave this to avoid a Typescript error that scrollIntoView is missing when a request error is present)
-        if(this.state.modal !== true) {
+        // - leave this to avoid a Typescript error that scrollIntoView is missing when a request error is present
+        // - added window location pathname to avoid error on window not scrolling if you switch to the About page just after making the search
+        if(!this.state.modal && window.location.pathname === '/') {
             document.querySelector('.scrollToMain').scrollIntoView({
                 behavior: 'smooth'
             });
         }
-
     }
 
     // Removes all the content and resets the state back to the origin
