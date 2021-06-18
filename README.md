@@ -17,7 +17,7 @@ https://weather-app-veronahub.netlify.app/
 ![](https://github.com/verona-hub/weather-app/blob/master/src/img/screenshot.png)
 
 
-#### Implementations: 
+### Implementations: 
 
 - [ ] AirQualityData to be checked what is exported
 - [ ] refactor AirQuality component and move the logic to a new Component, use props to access it ( or remove AirQualityData.js)
@@ -28,8 +28,11 @@ https://weather-app-veronahub.netlify.app/
 
 #### Css:
 
-- [ ] fix hourly forecast subtitle (time, weather forecast, temperature)
-- [ ] create a menu navigation, to display which sections of the landing page you are on (vertical loader bar?)
+- [x] fixed hourly forecast subtitle (time, weather forecast, temperature)
+- [x] fixed slider height on max-width 380px
+- [ ] move arrows up on mobile
+- [ ] improve Daily Summary on tablet
+- [ ] create a menu navigation, to display which sections of the landing page you are on (vertical loader bar?, desktop only?)
 - [ ] move scroll to top to be dynamic on the lower right side
 - [ ] test on mobile and tablet
 
@@ -44,7 +47,7 @@ https://weather-app-veronahub.netlify.app/
 - [ ] translate website to croatian and italian
 
 
-#### Fixes
+#### Fixes:
 
 - [ ] fix process.env for development and production (hide Api key to back end ?)
 - [ ] fix Modal cannot cancel the fetching once started
