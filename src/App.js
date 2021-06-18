@@ -5,7 +5,6 @@ import './App.css';
 // Modules
 import axios from "axios";
 import * as _ from 'underscore';
-import { NavLink } from 'react-router-dom';
 
 // Components
 import About from './components/Page/About';

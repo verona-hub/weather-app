@@ -794,7 +794,7 @@ button {
 
 .ForecastHourlyInfo .sub_title {
     /*background-color: var(--blue);*/
-    border-radius: 4px;
+    /*border-radius: 4px;*/
     /*color: var(--white);*/
     font-weight: bold;
     margin-bottom: 10px;
@@ -1502,7 +1502,7 @@ button {
     }
 
     .awssld {
-        height: 800px;
+        height: 1100px;
     }
 
     .WeatherCurrent .top_content_header {
@@ -1564,10 +1564,6 @@ button {
 
     .awssld__controls__arrow-right {
         right: 25% !important;
-    }
-
-    .ForecastHeader .sub_title {
-        /*font-size: 1.3rem;*/
     }
 
     .ForecastDailyInfo_wrapper h2.daily_summary {
@@ -1755,14 +1751,11 @@ button {
 
 @media (max-width: 760px) {
     .awssld {
-        height: 100%;
-    }
-    .Forecast {
-        height: 1200px;
+        height: 1400px;
     }
 
     .dot_slide_wrapper {
-        margin-top: 90px;
+        margin-top: 70px;
     }
 
     .awssld__controls__arrow-left {
@@ -1771,18 +1764,6 @@ button {
 
     .awssld__controls__arrow-right {
         right: 10% !important;
-    }
-
-    .ForecastHeader {
-        /*margin: 30px 50px;*/
-    }
-
-    .ForecastHeader .title {
-        /*font-size: 1.5rem;*/
-    }
-
-    .ForecastHeader .sub_title {
-        /*font-size: 1.3rem;*/
     }
 
     .ForecastDailyInfo_wrapper h2.daily_summary {
@@ -1815,7 +1796,7 @@ button {
         align-items: center;
         border-bottom: 1px solid black;
         font-size: 0.9rem;
-        padding: 10px 0;
+        padding: 5px 0;
         width: 85%;
     }
 
@@ -1825,27 +1806,27 @@ button {
     }
 
     .ForecastHourlyInfo_wrapper h2 {
-        margin: 30px;
+        margin: 30px 0 80px;
     }
 
     .ForecastHourlyInfo .sub_title {
-        font-size: 0.8rem;
-        width: 95%;
+        font-size: 1.2rem;
+        /*width: 90%;*/
     }
 
     .ForecastHourlyInfo .sub_title .item {
-        width: auto;
+        /*width: auto;*/
     }
     .ForecastHourlyInfo .sub_title .item:nth-child(1) {
-        padding-left: 20px;
+        /*padding-left: 20px;*/
     }
 
     .ForecastHourlyInfo .sub_title .item:nth-child(2) {
-        padding-left: 15px;
-        width: 40%;
+        /*padding-left: 15px;*/
+        /*width: 40%;*/
     }
     .ForecastHourlyInfo .sub_title .item:nth-child(3) {
-        padding-right: 5px;
+        /*padding-right: 5px;*/
     }
 
     .ForecastEveryThreeHours .item_forecast img {
@@ -1854,6 +1835,33 @@ button {
 
 }
 
+
+
+/*
++ max 640px
+*/
+@media (max-width: 640px) {
+    .WeatherCurrent .title,
+    .Forecast .title,
+    .AirQuality .title,
+    .Location .title,
+    .Astronomy .title {
+        font-size: 2rem;
+    }
+
+    .ForecastHeader .sub_title_main {
+        font-size: 1.5rem;
+    }
+
+    .ForecastDailyInfo_wrapper h2,
+    .ForecastHourlyInfo_wrapper h2 {
+        font-size: 1.5rem;
+    }
+
+    .dot_slide_wrapper {
+        margin-top: 70px;
+    }
+}
 
 
 /*
@@ -1874,12 +1882,8 @@ button {
         right: 30% !important;
     }
 
-    .Forecast {
-        height: 1350px;
-    }
-
-    .ForecastHeader .sub_title {
-        /*font-size: 1.2rem;*/
+    .awssld {
+        height: 1400px;
     }
 
     .dot_slide_wrapper {
