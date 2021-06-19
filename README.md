@@ -30,10 +30,12 @@ https://weather-app-veronahub.netlify.app/
 
 - [x] fixed hourly forecast subtitle (time, weather forecast, temperature)
 - [x] fixed slider height on max-width 380px
-- [ ] move arrows up on mobile
-- [ ] improve Daily Summary on tablet
+- [x] move arrows up on mobile
+- [x] improve Daily Summary on tablet
 - [ ] create a menu navigation, to display which sections of the landing page you are on (vertical loader bar?, desktop only?)
 - [ ] move scroll to top to be dynamic on the lower right side
+- [ ] remove arrow icons on mobile
+- [ ] fix ForecastHeader on mobile
 - [ ] test on mobile and tablet
 
 

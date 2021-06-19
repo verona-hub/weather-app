@@ -671,7 +671,7 @@ button {
 
 .dot_slide_wrapper {
     display: inline-block;
-    margin: auto;
+    margin: 80px 0;
 }
 
 .dot_slide {
@@ -717,7 +717,7 @@ button {
 + Weather Forecast
 */
 
-.ForecastHeader .title {
+.Forecast .title {
     display: inline-block;
 }
 
@@ -1292,10 +1292,6 @@ button {
 */
 
 @media (min-width: 760px) {
-    .dot_slide_wrapper {
-        margin-top: 100px;
-    }
-
     .AirQuality .index_box {
         min-width: 80px;
         width: 80px;
@@ -1450,10 +1446,6 @@ button {
         margin: 0;
     }
 
-    .About .title_wrapper {
-        height: 85vh;
-    }
-
     .container {
         padding: 0 10px;
     }
@@ -1479,12 +1471,14 @@ button {
         width: 85%;
     }
 
-    .AirQuality .title,
-    .Location .title,
-    .Astronomy .title {
-        font-size: 1.8rem;
-        letter-spacing: 0.1rem;
-        word-spacing: 0.1rem;
+    .WeatherCurrent.card,
+    .Forecast.card,
+    .AirQuality.card,
+    .Location.card,
+    .Astronomy.card {
+        margin-left: auto;
+        margin-right: auto;
+        width: 90%;
     }
 
     .WeatherCurrent .top_content_header {
@@ -1498,12 +1492,6 @@ button {
     .WeatherCurrent .top_content_main h3 {
         font-size: 1.4rem;
         margin-bottom: 30px;
-    }
-
-    .AirQuality .title,
-    .Location .title,
-    .Astronomy .title {
-        margin: 45px;
     }
 
     .WeatherCurrent span,
@@ -1520,13 +1508,20 @@ button {
         display: block;
     }
 
+    .WeatherCurrent .bottom_left,
+    .WeatherCurrent .bottom_right {
+        margin: 0 auto;
+        width: 90%;
+    }
+
     .awssld {
-        height: 1250px;
+        height: 1450px;
+        background-size: 100% 100%;
     }
 
     .awssld__controls__arrow-left,
     .awssld__controls__arrow-right {
-        bottom: 45px;
+        bottom: 70px;
     }
 
     .awssld__controls__arrow-left {
@@ -1537,26 +1532,18 @@ button {
         right: 25% !important;
     }
 
-    .ForecastDailyInfo .bottom_content {
-        flex-wrap: wrap;
-        line-height: 1.2;
-    }
-
-    .WeatherCurrent .bottom_left,
-    .WeatherCurrent .bottom_right {
-        margin: 0 auto;
-        width: 90%;
-    }
-
     .Forecast {
         width: 90% !important;
     }
 
-    .ForecastDailyInfo_wrapper h2.daily_summary {
-        margin: 30px;
+    .ForecastHeader {
+        margin: 0 auto;
+        width: 80%;
     }
 
     .ForecastDailyInfo .bottom_content {
+        flex-wrap: wrap;
+        line-height: 1.2;
         margin: 0 auto;
         width: 75%;
     }
@@ -1566,15 +1553,17 @@ button {
         width: 100%;
     }
 
-    .ForecastEveryThreeHours .item_wrapper {
-        align-items: center;
-        border-bottom: 1px solid black;
-        padding: 10px 0;
-        width: 85%;
+    .ForecastDailyInfo .bottom_right {
+        margin-top: 50px;
     }
 
-    .ForecastHourlyInfo_wrapper h2 {
-        margin: 40px;
+    .ForecastDailyInfo span {
+        font-size: 1rem;
+        padding: 10px 0;
+    }
+
+    .ForecastDailyInfo .spaced {
+        font-size: 0.9rem;
     }
 
     .ForecastHourlyInfo .sub_title {
@@ -1582,19 +1571,52 @@ button {
         padding: 5px;
     }
 
-    .ForecastHourlyInfo .item_wrapper,
-    .ForecastHourlyInfo .sub_title {
-        width: 80%;
+    .ForecastDailyInfo_wrapper h2,
+    .ForecastHourlyInfo_wrapper h2 {
+        font-size: 1.6rem;
     }
 
-    .WeatherCurrent.card,
-    .Forecast.card,
-    .AirQuality.card,
-    .Location.card,
-    .Astronomy.card {
-        margin-left: auto;
-        margin-right: auto;
+    .ForecastDailyInfo_wrapper h2.daily_summary {
+        margin: 80px 0;
+    }
+
+    .ForecastEveryThreeHours .item_wrapper {
+        align-items: center;
+        border-bottom: 1px solid black;
+        font-size: 0.9rem;
+        padding: 5px 0;
+        width: 85%;
+    }
+
+    .ForecastEveryThreeHours .item_wrapper .item_forecast {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .ForecastEveryThreeHours .item_forecast img {
+        margin-right: 0;
+    }
+
+    .ForecastHourlyInfo_wrapper h2 {
+        margin: 30px 0 80px;
+    }
+
+    .ForecastHourlyInfo .sub_title {
+        font-size: 1.2rem;
         width: 90%;
+    }
+
+    .dot_slide_wrapper {
+        margin-top: 100px;
+    }
+
+    .AirQuality .title,
+    .Location .title,
+    .Astronomy .title {
+        font-size: 1.8rem;
+        letter-spacing: 0.1rem;
+        margin: 45px;
+        word-spacing: 0.1rem;
     }
 
     .AirQuality .main,
@@ -1615,13 +1637,12 @@ button {
         width: 70%;
     }
 
-    .alert {
-        margin: 0 auto;
-        min-width: 80%;
-    }
-
     .About .welcome {
         top: 15vh;
+    }
+
+    .About .title_wrapper {
+        height: 85vh;
     }
 
     .About .title {
@@ -1648,20 +1669,15 @@ button {
         font-size: 1rem;
     }
 
-    .BackToSearch,
-    .ScrollToTop {
-        padding: 10px;
+    .PageNotFound404 {
+        min-height: 50vh;
+        position: relative;
+        top: 0;
     }
 
     .header_404 {
         background-size: cover;
         height: 50vh;
-    }
-
-    .PageNotFound404 {
-        min-height: 50vh;
-        position: relative;
-        top: 0;
     }
 
     .PageNotFound404_wrapper {
@@ -1700,8 +1716,19 @@ button {
         letter-spacing: 0;
         padding: 3vh 0;
     }
+
     .home_wrapper {
         margin: 10vh 10vh 15vh;
+    }
+
+    .alert {
+        margin: 0 auto;
+        min-width: 80%;
+    }
+
+    .BackToSearch,
+    .ScrollToTop {
+        padding: 10px;
     }
 
 }
@@ -1713,21 +1740,13 @@ button {
 */
 
 @media (max-width: 790px) {
-    .awssld__prev ,
-    .awssld__next {
-        top: 0 !important;
+    .ForecastHeader {
+        /*background-color: lightgoldenrodyellow;*/
+        width: 75%;
     }
 
     .awssld__controls {
         visibility: visible !important;
-    }
-
-    .awssld__controls__arrow-left {
-        left: 20% !important;
-    }
-
-    .awssld__controls__arrow-right {
-        right: 20% !important;
     }
 
     .dot_slide {
@@ -1743,75 +1762,36 @@ button {
 */
 
 @media (max-width: 760px) {
-    .awssld {
-        height: 1400px;
+    .WeatherCurrent .title,
+    .Forecast .title,
+    .AirQuality .title,
+    .Location .title,
+    .Astronomy .title {
+        font-size: 2rem;
     }
 
-    .dot_slide_wrapper {
-        margin-top: 70px;
+    .ForecastHeader {
+        /*background-color: lightblue;*/
+    }
+
+    .ForecastHeader .sub_title_main,
+    .ForecastDailyInfo_wrapper h2,
+    .ForecastHourlyInfo_wrapper h2 {
+        font-size: 1.5rem;
+    }
+
+    .ForecastHourlyInfo .sub_title {
+        font-size: 1rem;
+        width: 90%;
     }
 
     .awssld__controls__arrow-left,
     .awssld__controls__arrow-right {
-        bottom: 65px;
+        bottom: 80px;
     }
 
-    .awssld__controls__arrow-left {
-        left: 10% !important;
-    }
-
-    .awssld__controls__arrow-right {
-        right: 10% !important;
-    }
-
-    .ForecastDailyInfo_wrapper h2.daily_summary {
-        margin: 50px;
-    }
-
-    .ForecastDailyInfo_wrapper h2,
-    .ForecastHourlyInfo_wrapper h2 {
-        font-size: 1.6rem;
-    }
-
-    .ForecastDailyInfo .bottom_content {
-        width: 85%;
-    }
-
-    .ForecastDailyInfo .bottom_right {
-        margin-top: 50px;
-    }
-
-    .ForecastDailyInfo span {
-        font-size: 1rem;
-        padding: 10px 0;
-    }
-
-    .ForecastDailyInfo .spaced {
-        font-size: 0.9rem;
-    }
-
-    .ForecastEveryThreeHours .item_wrapper {
-        font-size: 0.9rem;
-        padding: 5px 0;
-        width: 85%;
-    }
-
-    .ForecastEveryThreeHours .item_wrapper .item_forecast {
-        display: flex;
-        flex-direction: column;
-    }
-
-    .ForecastHourlyInfo_wrapper h2 {
-        margin: 30px 0 80px;
-    }
-
-    .ForecastHourlyInfo .sub_title {
-        font-size: 1.2rem;
-        width: 90%;
-    }
-
-    .ForecastEveryThreeHours .item_forecast img {
-        margin-right: 0;
+    .dot_slide_wrapper {
+        margin-top: 80px;
     }
 
 }
@@ -1827,26 +1807,50 @@ button {
     .AirQuality .title,
     .Location .title,
     .Astronomy .title {
-        font-size: 2rem;
+        font-size: 1.9rem;
+        letter-spacing: 0.1rem;
     }
 
     .dot_slide_wrapper {
         margin-top: 70px;
     }
 
-    .ForecastHeader .sub_title_main {
-        font-size: 1.5rem;
+    .ForecastHeader {
+        /*background-color: lightcoral;*/
+        width: 75%;
     }
 
-    .ForecastDailyInfo_wrapper h2,
-    .ForecastHourlyInfo_wrapper h2 {
-        font-size: 1.5rem;
+}
+
+
+
+/*
++ max 590px
+*/
+@media (max-width: 590px) {
+    .WeatherCurrent .title,
+    .Forecast .title,
+    .AirQuality .title,
+    .Location .title,
+    .Astronomy .title {
+        font-size: 1.6rem;
+
+    }
+
+    .ForecastHeader {
+        /*background-color: lightgoldenrodyellow;*/
     }
 
     .ForecastHourlyInfo .sub_title {
-        font-size: 1rem;
-        width: 90%;
+        font-size: 0.9rem;
+        width: 95%;
     }
+
+    .awssld__controls__arrow-left,
+    .awssld__controls__arrow-right {
+        bottom: 90px;
+    }
+
 }
 
 
@@ -1855,9 +1859,13 @@ button {
 */
 
 @media (max-width: 480px) {
+    .ForecastHeader {
+        /*background-color: lightpink;*/
+    }
+
     .awssld__controls__arrow-left,
     .awssld__controls__arrow-right {
-        bottom: 50px;
+        bottom: 45px;
     }
 
     .awssld__controls__arrow-left {
