@@ -2,13 +2,16 @@
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
-## Api
+## Api:
 WeatherApi was used for this project
 
 https://www.weatherapi.com/
 
+## Carousel:
+[pure-react-carousel](https://www.npmjs.com/package/pure-react-carousel) on [Npm](https://www.npmjs.com/)
+
 ## Hosted on:
-### Vercel: 
+### Vercel
 https://app-weather-app.vercel.app/
 
 ### Netlify 
@@ -28,14 +31,14 @@ https://weather-app-veronahub.netlify.app/
 
 #### Css:
 
-- [x] fixed hourly forecast subtitle (time, weather forecast, temperature)
-- [x] fixed slider height on max-width 380px
-- [x] move arrows up on mobile
-- [x] improve Daily Summary on tablet
+- [x] ~~fixed hourly forecast subtitle (time, weather forecast, temperature)~~
+- [x] ~~fixed slider height on max-width 380px~~
+- [x] ~~move arrows up on mobile~~
+- [x] ~~improve Daily Summary on tablet~~
 - [ ] create a menu navigation, to display which sections of the landing page you are on (vertical loader bar?, desktop only?)
 - [ ] move scroll to top to be dynamic on the lower right side
-- [ ] remove arrow icons on mobile
-- [ ] fix ForecastHeader on mobile
+- [x] ~~remove arrow icons on mobile~~
+- [x] ~~fix ForecastHeader on mobile~~
 - [ ] test on mobile and tablet
 
 
