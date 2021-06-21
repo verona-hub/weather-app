@@ -9,9 +9,7 @@ import Errors from "../Error/Errors";
 // Modal component
 const Modal = ({ text, spinner, errorMessage, errorCode, clearError, search, cancelSearch }) => {
     // Function that cancels the search
-    const handleCancelSearch = () => {
-        cancelSearch();
-    };
+    const handleCancelSearch = () => cancelSearch();
 
     // This will only close the modal, it will not cancel the fetch
     const ref = useDetectClickOutside({ onTriggered: cancelSearch });

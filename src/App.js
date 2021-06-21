@@ -4,6 +4,7 @@ import './App.css';
 
 // Modules
 import axios from "axios";
+
 import * as _ from 'underscore';
 
 // Components
@@ -13,7 +14,6 @@ import Main from './components/Page/Main';
 import Navbar from './components/Page/Navbar';
 import PageNotFound404 from "./components/Page/PageNotFound404";
 import Search from "./components/Utility/Search";
-import left from "./img/left.png";
 
 
 // let weatherApiKey;
@@ -25,6 +25,8 @@ import left from "./img/left.png";
 // }
 // console.log(process.env);
 
+var CancelToken = axios.CancelToken;
+var cancel;
 
 class App extends Component {
 
@@ -41,7 +43,8 @@ class App extends Component {
         errorCode: null,
         modal: false,
         search: false,
-        forecast_3_days: []
+        forecast_3_days: [],
+        isCancelled: false
     }
 
     // After a location search is made from the input, the call will be made to the Api with the input text
@@ -58,7 +61,8 @@ class App extends Component {
             astronomy: [],
             modal: true,
             search: true,
-            forecast_3_days: []
+            forecast_3_days: [],
+            fetching: false
         });
 
         try {
@@ -79,20 +83,38 @@ class App extends Component {
                 &q=${text}
                 &days=3
                 `), {}
-            ]).then(x => new Promise(resolve => setTimeout(() => resolve(x), 3000)));
+            ], {
+                cancelToken: new CancelToken(function executor(c) {
+                    // An executor function receives a cancel function as a parameter
+                    cancel = c;
+                })
+            });
+
+
+            if (this.state.fetching) {
+                console.log('Cancelling!');
+                cancel();
+            }
 
             // State is updating once the response is back, the data is populating the various states
-            this.setState({
+            setTimeout(() => this.setState({
                 weatherInfo: response[0].data.current,
                 weatherCondition: response[0].data.current.condition,
                 airQuality: response[0].data.current.air_quality,
                 location: response[0].data.location,
-                spinner: false,
                 astronomy: response[1].data.astronomy.astro,
                 modal: false,
+                spinner: false,
                 search: false,
-                forecast_3_days: response[2].data.forecast
-            });
+                forecast_3_days: response[2].data.forecast,
+                fetching: true
+            }), 3000, console.log("Fetching delay"));
+
+
+            // if (!this.state.fetching) {
+            //     response.cancel();
+            //     console.log('Cancelled!')
+            // }
 
             // In case the request cannot be made, the error will be caught
         } catch(err) {
@@ -105,7 +127,8 @@ class App extends Component {
                 errorCode: Object.entries(err.response.data.error)[0][1],
                 spinner: true,
                 modal: true,
-                search: true
+                search: true,
+                fetching: false
             });
 
             // Two timeouts on the state:
@@ -159,9 +182,11 @@ class App extends Component {
             errorCode: null,
             modal: false,
             search: false,
-            forecast_3_days: []
+            forecast_3_days: [],
+            fetching: true
         });
     }
+
 
     render () {
 

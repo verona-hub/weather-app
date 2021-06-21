@@ -7,8 +7,10 @@ WeatherApi was used for this project
 
 https://www.weatherapi.com/
 
-## Carousel:
+## Carousel and Awesome Slider:
 [pure-react-carousel](https://www.npmjs.com/package/pure-react-carousel) on [Npm](https://www.npmjs.com/)
+
+[awesome-slider](https://www.npmjs.com/package/react-awesome-slider) on [Npm](https://www.npmjs.com/)
 
 ## Hosted on:
 ### Vercel
