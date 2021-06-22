@@ -50,6 +50,11 @@ class App extends Component {
 
         // State updates as soon as the call is made, this is the phase before the response, the modal with the spinner are activated
         this.setState({
+            weatherInfo: [],
+            weatherCondition: [],
+            airQuality: [],
+            location: [],
+            astronomy: [],
             spinner: true,
             text: text,
             modal: true,
@@ -74,27 +79,25 @@ class App extends Component {
                 &q=${text}
                 &days=3
                 `), {}
-            ]);
+            ]).then(x => new Promise(resolve => setTimeout(() => resolve(x), 3000)));
 
             // State is updating once the response is back, the data is populating the various states
             // with a timeout delay for the request of 3sec, since the Api is too fast in fetching the data
-            setTimeout( () => {
-                // If the search is made and the cancel button is not pressed, the data is populating the various states
-                if(this.state.fetching && !this.state.cancelFetch){
-                    this.setState({
-                        weatherInfo: response[0].data.current,
-                        weatherCondition: response[0].data.current.condition,
-                        airQuality: response[0].data.current.air_quality,
-                        location: response[0].data.location,
-                        astronomy: response[1].data.astronomy.astro,
-                        modal: false,
-                        spinner: false,
-                        search: false,
-                        forecast_3_days: response[2].data.forecast,
-                        fetching: true
-                    });
-                }
-            }, 3000);
+
+            // If the search is made and the cancel button is not pressed, the data is populating the various states
+            if(this.state.fetching && !this.state.cancelFetch){
+                this.setState({
+                    weatherInfo: response[0].data.current,
+                    weatherCondition: response[0].data.current.condition,
+                    airQuality: response[0].data.current.air_quality,
+                    location: response[0].data.location,
+                    astronomy: response[1].data.astronomy.astro,
+                    modal: false,
+                    spinner: false,
+                    search: false,
+                    forecast_3_days: response[2].data.forecast
+                });
+            }
 
 
             // In case the request cannot be made, the error will be caught
@@ -108,8 +111,7 @@ class App extends Component {
                 errorCode: Object.entries(err.response.data.error)[0][1],
                 spinner: true,
                 modal: true,
-                search: true,
-                fetching: true
+                search: true
             });
 
             // Two timeouts on the state:
@@ -123,11 +125,11 @@ class App extends Component {
         // If the modal is present, the scroll doesn't happen
         // - leave this to avoid a Typescript error that scrollIntoView is missing when a request error is present
         // - added window location pathname to avoid error on window not scrolling if you switch to the About page just after making the search
+
         if(!this.state.modal && window.location.pathname === '/') {
             document.querySelector('.scrollToMain').scrollIntoView({
                 behavior: 'smooth'
             });
-            console.log('Scroll to');
         }
     }
 
