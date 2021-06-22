@@ -4,7 +4,6 @@ import './App.css';
 
 // Modules
 import axios from "axios";
-
 import * as _ from 'underscore';
 
 // Components
@@ -25,8 +24,6 @@ import Search from "./components/Utility/Search";
 // }
 // console.log(process.env);
 
-var CancelToken = axios.CancelToken;
-var cancel;
 
 class App extends Component {
 
@@ -44,7 +41,8 @@ class App extends Component {
         modal: false,
         search: false,
         forecast_3_days: [],
-        isCancelled: false
+        fetching: false,
+        cancelFetch: false
     }
 
     // After a location search is made from the input, the call will be made to the Api with the input text
@@ -54,20 +52,13 @@ class App extends Component {
         this.setState({
             spinner: true,
             text: text,
-            weatherInfo: [],
-            weatherCondition: [],
-            airQuality: [],
-            location: [],
-            astronomy: [],
             modal: true,
             search: true,
-            forecast_3_days: [],
-            fetching: false
+            fetching: true
         });
 
         try {
             // Three calls are made and requested with Axios: current weather data, astronomy data, and forecast data;
-            // with a timeout delay for the request of 3sec, since the Api is too fast in fetching the data
             const response = await axios.all
             ([
                 axios.get(`https://api.weatherapi.com/v1/current.json?key=
@@ -83,38 +74,28 @@ class App extends Component {
                 &q=${text}
                 &days=3
                 `), {}
-            ], {
-                cancelToken: new CancelToken(function executor(c) {
-                    // An executor function receives a cancel function as a parameter
-                    cancel = c;
-                })
-            });
-
-
-            if (this.state.fetching) {
-                console.log('Cancelling!');
-                cancel();
-            }
+            ]);
 
             // State is updating once the response is back, the data is populating the various states
-            setTimeout(() => this.setState({
-                weatherInfo: response[0].data.current,
-                weatherCondition: response[0].data.current.condition,
-                airQuality: response[0].data.current.air_quality,
-                location: response[0].data.location,
-                astronomy: response[1].data.astronomy.astro,
-                modal: false,
-                spinner: false,
-                search: false,
-                forecast_3_days: response[2].data.forecast,
-                fetching: true
-            }), 3000, console.log("Fetching delay"));
+            // with a timeout delay for the request of 3sec, since the Api is too fast in fetching the data
+            setTimeout( () => {
+                // If the search is made and the cancel button is not pressed, the data is populating the various states
+                if(this.state.fetching && !this.state.cancelFetch){
+                    this.setState({
+                        weatherInfo: response[0].data.current,
+                        weatherCondition: response[0].data.current.condition,
+                        airQuality: response[0].data.current.air_quality,
+                        location: response[0].data.location,
+                        astronomy: response[1].data.astronomy.astro,
+                        modal: false,
+                        spinner: false,
+                        search: false,
+                        forecast_3_days: response[2].data.forecast,
+                        fetching: true
+                    });
+                }
+            }, 3000);
 
-
-            // if (!this.state.fetching) {
-            //     response.cancel();
-            //     console.log('Cancelled!')
-            // }
 
             // In case the request cannot be made, the error will be caught
         } catch(err) {
@@ -128,7 +109,7 @@ class App extends Component {
                 spinner: true,
                 modal: true,
                 search: true,
-                fetching: false
+                fetching: true
             });
 
             // Two timeouts on the state:
@@ -146,6 +127,7 @@ class App extends Component {
             document.querySelector('.scrollToMain').scrollIntoView({
                 behavior: 'smooth'
             });
+            console.log('Scroll to');
         }
     }
 
@@ -169,7 +151,7 @@ class App extends Component {
 
     // Interrupts the search and closes the modal window;
     // It does not cancel the request to the Api!
-    cancelSearch = () => {
+    abortSearch = () => {
         this.setState({
             text: '',
             weatherInfo: [],
@@ -183,7 +165,8 @@ class App extends Component {
             modal: false,
             search: false,
             forecast_3_days: [],
-            fetching: true
+            fetching: false,
+            cancelFetch: true
         });
     }
 
@@ -192,7 +175,7 @@ class App extends Component {
 
         const { text, weatherInfo, weatherCondition, airQuality, location, astronomy,
             spinner, errorMessage, errorCode, modal, search, forecast_3_days } = this.state;
-        const { searchCity, clearContent, clearError, cancelSearch } = this;
+        const { searchCity, clearContent, clearError, abortSearch } = this;
 
         const locationResponseSize = _.size(location);
         const weatherResponseSize = _.size(weatherInfo);
@@ -215,7 +198,7 @@ class App extends Component {
                                        clearError={ clearError }
                                        modal={ modal }
                                        search={ search }
-                                       cancelSearch={ cancelSearch }
+                                       abortSearch={ abortSearch }
                                    />
                                    <Search
                                        searchCity={ searchCity }

@@ -57,5 +57,6 @@ https://weather-app-veronahub.netlify.app/
 #### Fixes:
 
 - [ ] fix process.env for development and production (hide Api key to back end ?)
-- [ ] fix Modal cannot cancel the fetching once started
+- [x] fix Modal cannot cancel the fetching once started
 - [ ] fix detect click outside of modal
+- [ ] fix scroll into view after a search is made

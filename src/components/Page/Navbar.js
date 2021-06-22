@@ -8,7 +8,7 @@ import logo from '../../img/sun.svg';
 import Modal from '../Utility/Modal';
 
 
-const Navbar = ({ text, emptyContent, spinner, errorMessage, errorCode, clearError, modal, search, cancelSearch }) => {
+const Navbar = ({ text, emptyContent, spinner, errorMessage, errorCode, clearError, modal, search, abortSearch }) => {
 
     const homePage = window.location.pathname === '/';
     const aboutPage = window.location.pathname === '/about';
@@ -40,7 +40,7 @@ const Navbar = ({ text, emptyContent, spinner, errorMessage, errorCode, clearErr
                             errorCode={ errorCode }
                             clearError={ clearError }
                             search={ search }
-                            cancelSearch={ cancelSearch }
+                            abortSearch={ abortSearch }
                         />
                     )
                 }
