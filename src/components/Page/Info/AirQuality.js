@@ -2,8 +2,11 @@ import React, { useState } from 'react';
 
 // Air Quality Data
 import { data } from './AirQualityData/AirQualityData';
-import carbonMonoxideChecker from './AirQualityData/CarbonMonoxideData';
+import carbonMonoxideChecker from './AirQualityData/CarbonMonoxide';
 import nitrogenDioxideChecker from './AirQualityData/NitrogenDioxide';
+import ozoneChecker from './AirQualityData/Ozone';
+import sulphurDioxideChecker from './AirQualityData/SulphurDioxide';
+import pm2_5_Checker from './AirQualityData/Pm2_5';
 
 
 const AirQuality = ({ airQuality }) => {
@@ -40,183 +43,45 @@ const AirQuality = ({ airQuality }) => {
     */
 
     const carbonMonoxideData = carbonMonoxideChecker(co);
-    let bgCo = carbonMonoxideData.bgCo;
-    let indexCo = carbonMonoxideData.indexCo;
-    let textCoColor = carbonMonoxideData.textCoColor;
+    const bgCo = carbonMonoxideData.bgCo;
+    const indexCo = carbonMonoxideData.indexCo;
+    const textCoColor = carbonMonoxideData.textCoColor;
 
     /*
     + no2 = Nitrogen Dioxide
     */
 
     const nitrogenDioxideData = nitrogenDioxideChecker(no2);
-    let bgNo2 = nitrogenDioxideData.bgNo2;
-    let indexNo2 = nitrogenDioxideData.indexNo2;
-    let textNo2Color = nitrogenDioxideData.textNo2Color;
+    const bgNo2 = nitrogenDioxideData.bgNo2;
+    const indexNo2 = nitrogenDioxideData.indexNo2;
+    const textNo2Color = nitrogenDioxideData.textNo2Color;
 
     /*
      + o3 = Ozone
     */
-    let bgO3;
-    let indexO3;
-    let textO3Color;
-    switch (true) {
-        case o3 <= 33:
-            bgO3 = case1.color;
-            indexO3 = case1.index;
-            break;
-        case o3 <= 66:
-            bgO3 = case2.color;
-            indexO3 = case2.index;
-            break;
-        case o3 <= 100:
-            bgO3 = case3.color;
-            indexO3 = case3.index;
-            break;
-        case o3 <= 120:
-            bgO3 = case4.color;
-            indexO3 = case4.index;
-            break;
-        case o3 <= 140:
-            bgO3 = case5.color;
-            indexO3 = case5.index;
-            break;
-        case o3 <= 160:
-            bgO3 = case6.color;
-            indexO3 = case6.index;
-            break;
-        case o3 <= 187:
-            bgO3 = case7.color;
-            indexO3 = case7.index;
-            textO3Color = mix.white;
-            break;
-        case o3 <= 213:
-            bgO3 = case8.color;
-            indexO3 = case8.index;
-            textO3Color = mix.white;
-            break;
-        case o3 <= 240:
-            bgO3 = case9.color;
-            indexO3 = case9.index;
-            textO3Color = mix.white;
-            break;
-        case o3 > 240:
-            bgO3 = case10.color;
-            indexO3 = case10.index;
-            textO3Color = mix.white;
-            break;
-        default:
-            break;
-    }
+
+    const ozoneData = ozoneChecker(o3);
+    const bgO3 = ozoneData.bgO3;
+    const indexO3 = ozoneData.indexO3;
+    const textO3Color = ozoneData.textO3Color;
 
     /*
      + so2 = Sulphur dioxide
     */
-    let bgSo2;
-    let indexSo2;
-    let textSo2Color;
-    switch (true) {
-        case so2 <= 88:
-            bgSo2 = case1.color;
-            indexSo2 = case1.index;
-            break;
-        case so2 <= 177:
-            bgSo2 = case2.color;
-            indexSo2 = case2.index;
-            break;
-        case so2 <= 266:
-            bgSo2 = case3.color;
-            indexSo2 = case3.index;
-            break;
-        case so2 <= 354:
-            bgSo2 = case4.color;
-            indexSo2 = case4.index;
-            break;
-        case so2 <= 443:
-            bgSo2 = case5.color;
-            indexSo2 = case5.index;
-            break;
-        case so2 <= 532:
-            bgSo2 = case6.color;
-            indexSo2 = case6.index;
-            break;
-        case so2 <= 710:
-            bgSo2 = case7.color;
-            indexSo2 = case7.index;
-            textSo2Color = mix.white;
-            break;
-        case so2 <= 887:
-            bgSo2 = case8.color;
-            indexSo2 = case8.index;
-            textSo2Color = mix.white;
-            break;
-        case so2 <= 1064:
-            bgSo2 = case9.color;
-            indexSo2 = case9.index;
-            textSo2Color = mix.white;
-            break;
-        case so2 > 1064:
-            bgSo2 = case10.color;
-            indexSo2 = case10.index;
-            textSo2Color = mix.white;
-            break;
-        default:
-            break;
-    }
+
+    const sulphurDioxideData = sulphurDioxideChecker(so2);
+    const bgSo2 = sulphurDioxideData.bgSo2;
+    const indexSo2 = sulphurDioxideData.indexSo2;
+    const textSo2Color = sulphurDioxideData.textSo2Color;
 
     /*
      + pm2_5 = PM2.5
     */
-    let bgPm2_5;
-    let indexPm2_5;
-    let textPm2_5Color;
-    switch (true) {
-        case pm2_5 <= 11:
-            bgPm2_5 = case1.color;
-            indexPm2_5 = case1.index;
-            break;
-        case pm2_5 <= 23:
-            bgPm2_5 = case2.color;
-            indexPm2_5 = case2.index;
-            break;
-        case pm2_5 <= 35:
-            bgPm2_5 = case3.color;
-            indexPm2_5 = case3.index;
-            break;
-        case pm2_5 <= 41:
-            bgPm2_5 = case4.color;
-            indexPm2_5 = case4.index;
-            break;
-        case pm2_5 <= 47:
-            bgPm2_5 = case5.color;
-            indexPm2_5 = case5.index;
-            break;
-        case pm2_5 <= 53:
-            bgPm2_5 = case6.color;
-            indexPm2_5 = case6.index;
-            break;
-        case pm2_5 <= 58:
-            bgPm2_5 = case7.color;
-            indexPm2_5 = case7.index;
-            textPm2_5Color = mix.white;
-            break;
-        case pm2_5 <= 64:
-            bgPm2_5 = case8.color;
-            indexPm2_5 = case8.index;
-            textPm2_5Color = mix.white;
-            break;
-        case pm2_5 <= 70:
-            bgPm2_5 = case9.color;
-            indexPm2_5 = case9.index;
-            textPm2_5Color = mix.white;
-            break;
-        case pm2_5 > 70:
-            bgPm2_5 = case10.color;
-            indexPm2_5 = case10.index;
-            textPm2_5Color = mix.white;
-            break;
-        default:
-            break;
-    }
+
+    const pm2_5_Data = pm2_5_Checker(pm2_5);
+    const bgPm2_5 = pm2_5_Data.bgPm2_5;
+    const indexPm2_5 = pm2_5_Data.indexPm2_5;
+    const textPm2_5Color = pm2_5_Data.textPm2_5Color;
 
     /*
      + pm10 = PM10

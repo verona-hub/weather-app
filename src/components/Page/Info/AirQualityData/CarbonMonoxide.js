@@ -7,7 +7,7 @@ import { data } from "./AirQualityData";
 const carbonMonoxideChecker = (co) => {
 
     // Destructuring the data object for colors and parameters
-    const { case1, case2, case3, case4, case5, case6, case7, case8, case9, case10, mix} = data;
+    const { case1, case2, case3, case4, case5, case6, case7, case8, case9, case10, mix } = data;
 
     let bgCo;
     let indexCo;

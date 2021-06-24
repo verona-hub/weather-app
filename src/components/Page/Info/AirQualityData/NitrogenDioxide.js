@@ -2,12 +2,12 @@
 import { data } from './AirQualityData';
 
 
-// Function that takes co as a parameter and displays the matching background color, text color, and index level
-// depending on the fetched co values
+// Function that takes no2 as a parameter and displays the matching background color, text color, and index level
+// depending on the fetched no2 values
 const nitrogenDioxideChecker = (no2) => {
 
     // Destructuring the data object for colors and parameters
-    const { case1, case2, case3, case4, case5, case6, case7, case8, case9, case10, mix} = data;
+    const { case1, case2, case3, case4, case5, case6, case7, case8, case9, case10, mix } = data;
 
     let bgNo2;
     let indexNo2;
@@ -64,6 +64,6 @@ const nitrogenDioxideChecker = (no2) => {
 
     return { bgNo2, indexNo2, textNo2Color };
 
-}
+};
 
 export default nitrogenDioxideChecker;
