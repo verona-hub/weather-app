@@ -24,7 +24,7 @@ https://weather-app-veronahub.netlify.app/
 
 ### Implementations: 
 
-- [ ] AirQualityData to be checked what is exported
+- [x] ~~AirQualityData to be checked what is exported~~
 - [ ] refactor AirQuality component and move the logic to a new Component, use props to access it ( or remove AirQualityData.js)
 - [ ] different props => to be done inside Forecast.js component
 - [ ] started Context folder => continue or remove from project
@@ -49,7 +49,6 @@ https://weather-app-veronahub.netlify.app/
 - [ ] add fahrenheit converter ( add toggle celsius -> fahrenheit at the top)
 - [ ] refactor Navbar to be used with props (header 70, 100 -- add switch case for all the options?)
 - [ ] 127.0.0.1/?react_perf   ==> then Chrome Performance tab inside inspector
-- [ ] move axios inside useEffect() ?
 - [ ] add Dark Mode: #2f2f2f as bgc, marine blue as color ?
 - [ ] translate website to croatian and italian
 
@@ -57,7 +56,8 @@ https://weather-app-veronahub.netlify.app/
 #### Fixes:
 
 - [ ] fix process.env for development and production (hide Api key to back end ?)
-- [x] fix Modal cannot cancel the fetching once started
-- [ ] fix detect click outside of modal
-- [x] fix scroll into view after a search is made
-- [x] fix footer is visible when modal is on
+- [ ] fix after aborting a search and making a new one, the new search is buggy
+- [x] ~~fix Modal cannot cancel the fetching once started~~
+- [x] ~~fix detect click outside of modal~~
+- [x] ~~fix scroll into view after a search is made~~
+- [x] ~~fix footer is visible when modal is on~~

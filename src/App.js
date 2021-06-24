@@ -64,6 +64,7 @@ class App extends Component {
 
         try {
             // Three calls are made and requested with Axios: current weather data, astronomy data, and forecast data;
+            // with a timeout delay for the request of 3sec, since the Api is too fast in fetching the data
             const response = await axios.all
             ([
                 axios.get(`https://api.weatherapi.com/v1/current.json?key=
@@ -82,8 +83,6 @@ class App extends Component {
             ]).then(x => new Promise(resolve => setTimeout(() => resolve(x), 3000)));
 
             // State is updating once the response is back, the data is populating the various states
-            // with a timeout delay for the request of 3sec, since the Api is too fast in fetching the data
-
             // If the search is made and the cancel button is not pressed, the data is populating the various states
             if(this.state.fetching && !this.state.cancelFetch){
                 this.setState({
@@ -98,8 +97,7 @@ class App extends Component {
                     forecast_3_days: response[2].data.forecast
                 });
             }
-
-
+            
             // In case the request cannot be made, the error will be caught
         } catch(err) {
 

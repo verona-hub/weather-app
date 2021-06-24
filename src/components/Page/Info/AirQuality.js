@@ -1,10 +1,14 @@
 import React, { useState } from 'react';
-import { data } from '../../Utility/AirQualityData';
+import { data } from './AirQualityData/AirQualityData';
+import carbonMonoxideChecker from './AirQualityData/CarbonMonoxideData';
 
 const AirQuality = ({ airQuality }) => {
     // Setting initial state: the air quality index box is set to be invisible
     const [indexInfoVisible, setIndexInfoVisible] = useState(false);
 
+     /*
+     + Remove this when refactor for data will be done!
+     */
     // Destructuring from the AirQualityData.js component in Utility
     const { case1, case2, case3, case4, case5, case6, case7, case8, case9, case10, mix } = data;
 
@@ -24,61 +28,18 @@ const AirQuality = ({ airQuality }) => {
     pm2_5 = floor(pm2_5);
     pm10 = floor(pm10);
 
-    // Switch statement to handle all the various parameters
+
+    // All the fetched data is passed through a function that contains a switch to determine which category the data belongs to:
+    // index level, background color, and text color
     /*
     + co = Carbon Monoxide
     */
-    let bgCo;
-    let indexCo;
-    let textCoColor;
-    switch (true) {
-        case co <= 10:
-            bgCo = case1.color;
-            indexCo = case1.index;
-            break;
-        case co <= 25:
-            bgCo = case2.color;
-            indexCo = case2.index;
-            break;
-        case co <= 50:
-            bgCo = case3.color;
-            indexCo = case3.index;
-            break;
-        case co <= 200:
-            bgCo = case4.color;
-            indexCo = case4.index;
-            break;
-        case co <= 400:
-            bgCo = case5.color;
-            indexCo = case5.index;
-            break;
-        case co <= 600:
-            bgCo = case6.color;
-            indexCo = case6.index;
-            break;
-        case co <= 800:
-            bgCo = case7.color;
-            indexCo = case7.index;
-            textCoColor = mix.white;
-            break;
-        case co <= 1200:
-            bgCo = case8.color;
-            indexCo = case8.index;
-            textCoColor = mix.white;
-            break;
-        case co <= 1600:
-            bgCo = case9.color;
-            indexCo = case9.index;
-            textCoColor = mix.white;
-            break;
-        case co > 1600:
-            bgCo = case10.color;
-            indexCo = case10.index;
-            textCoColor = mix.white;
-            break;
-        default:
-            break;
-    }
+
+    const carbonMonoxideData = carbonMonoxideChecker(co);
+    let bgCo = carbonMonoxideData.bgCo;
+    let indexCo = carbonMonoxideData.indexCo;
+    let textCoColor = carbonMonoxideData.textCoColor;
+
 
     /*
     + no2 = Nitrogen Dioxide
@@ -354,7 +315,7 @@ const AirQuality = ({ airQuality }) => {
             break;
     }
 
-    // Function to toggle the index box visibility to the opposite of what it currently is
+    // Function to toggle the index box visibility
     const toggleIndexInfo = () => setIndexInfoVisible(!indexInfoVisible);
 
 
@@ -400,50 +361,50 @@ const AirQuality = ({ airQuality }) => {
 
             {
                 <div className={ indexInfoVisible ? "index_wrapper visible" : "index_wrapper hidden"} >
-                        <h2 className="title"> Air Quality Index: </h2>
-                        <div className="index_levels">
-                            <div className="index_box">
-                                <div className="item" style={ { backgroundColor: case1.color } }>{ case1.index } </div>
-                                <div className="item-text"> { case1.level } </div>
-                            </div>
-                            <div className="index_box">
-                                <div className="item" style={ { backgroundColor: case2.color } }> { case2.index } </div>
-                                <div className="item_text"> { case2.level } </div>
-                            </div>
-                            <div className="index_box">
-                                <div className="item" style={ { backgroundColor: case3.color } }> { case3.index } </div>
-                                <div className="item_text"> { case3.level } </div>
-                            </div>
-                            <div className="index_box">
-                                <div className="item" style={ { backgroundColor: case4.color } }> { case4.index } </div>
-                                <div className="item_text"> { case4.level } </div>
-                            </div>
-                            <div className="index_box">
-                                <div className="item" style={ { backgroundColor: case5.color } }> { case5.index } </div>
-                                <div className="item_text"> { case5.level } </div>
-                            </div>
-                            <div className="index_box">
-                                <div className="item" style={ { backgroundColor: case6.color } }> { case6.index } </div>
-                                <div className="item_text"> { case6.level } </div>
-                            </div>
-                            <div className="index_box">
-                                <div className="item" style={ { backgroundColor: case7.color } }> { case7.index } </div>
-                                <div className="item_text"> { case7.level } </div>
-                            </div>
-                            <div className="index_box">
-                                <div className="item" style={ { backgroundColor: case8.color } }> { case8.index } </div>
-                                <div className="item_text"> { case8.level } </div>
-                            </div>
-                            <div className="index_box">
-                                <div className="item" style={ { backgroundColor: case9.color } }> { case9.index } </div>
-                                <div className="item_text">  { case9.level } </div>
-                            </div>
-                            <div className="index_box">
-                                <div className="item" style={ { backgroundColor: case10.color } }> { case10.index } </div>
-                                <div className="item_text"> { case10.level } </div>
-                            </div>
+                    <h2 className="title"> Air Quality Index: </h2>
+                    <div className="index_levels">
+                        <div className="index_box">
+                            <div className="item" style={ { backgroundColor: case1.color } }>{ case1.index } </div>
+                            <div className="item-text"> { case1.level } </div>
+                        </div>
+                        <div className="index_box">
+                            <div className="item" style={ { backgroundColor: case2.color } }> { case2.index } </div>
+                            <div className="item_text"> { case2.level } </div>
+                        </div>
+                        <div className="index_box">
+                            <div className="item" style={ { backgroundColor: case3.color } }> { case3.index } </div>
+                            <div className="item_text"> { case3.level } </div>
+                        </div>
+                        <div className="index_box">
+                            <div className="item" style={ { backgroundColor: case4.color } }> { case4.index } </div>
+                            <div className="item_text"> { case4.level } </div>
+                        </div>
+                        <div className="index_box">
+                            <div className="item" style={ { backgroundColor: case5.color } }> { case5.index } </div>
+                            <div className="item_text"> { case5.level } </div>
+                        </div>
+                        <div className="index_box">
+                            <div className="item" style={ { backgroundColor: case6.color } }> { case6.index } </div>
+                            <div className="item_text"> { case6.level } </div>
+                        </div>
+                        <div className="index_box">
+                            <div className="item" style={ { backgroundColor: case7.color } }> { case7.index } </div>
+                            <div className="item_text"> { case7.level } </div>
+                        </div>
+                        <div className="index_box">
+                            <div className="item" style={ { backgroundColor: case8.color } }> { case8.index } </div>
+                            <div className="item_text"> { case8.level } </div>
+                        </div>
+                        <div className="index_box">
+                            <div className="item" style={ { backgroundColor: case9.color } }> { case9.index } </div>
+                            <div className="item_text">  { case9.level } </div>
+                        </div>
+                        <div className="index_box">
+                            <div className="item" style={ { backgroundColor: case10.color } }> { case10.index } </div>
+                            <div className="item_text"> { case10.level } </div>
                         </div>
                     </div>
+                </div>
             }
         </div>
     )
