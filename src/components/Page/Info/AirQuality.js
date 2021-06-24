@@ -1,6 +1,10 @@
 import React, { useState } from 'react';
+
+// Air Quality Data
 import { data } from './AirQualityData/AirQualityData';
 import carbonMonoxideChecker from './AirQualityData/CarbonMonoxideData';
+import nitrogenDioxideChecker from './AirQualityData/NitrogenDioxide';
+
 
 const AirQuality = ({ airQuality }) => {
     // Setting initial state: the air quality index box is set to be invisible
@@ -40,60 +44,14 @@ const AirQuality = ({ airQuality }) => {
     let indexCo = carbonMonoxideData.indexCo;
     let textCoColor = carbonMonoxideData.textCoColor;
 
-
     /*
     + no2 = Nitrogen Dioxide
     */
-    let bgNo2;
-    let indexNo2;
-    let textNo2Color;
-    switch (true) {
-        case no2 <= 67:
-            bgNo2 = case1.color;
-            indexNo2 = case1.index;
-            break;
-        case no2 <= 134:
-            bgNo2 = case2.color;
-            indexNo2 = case2.index;
-            break;
-        case no2 <= 200:
-            bgNo2 = case3.color;
-            indexNo2 = case3.index;
-            break;
-        case no2 <= 267:
-            bgNo2 = case4.color;
-            indexNo2 = case4.index;
-            break;
-        case no2 <= 334:
-            bgNo2 = case5.color;
-            indexNo2 = case5.index;
-            break;
-        case no2 <= 400:
-            bgNo2 = case6.color;
-            indexNo2 = case6.index;
-            break;
-        case no2 <= 467:
-            bgNo2 = case7.color;
-            indexNo2 = case7.index;
-            textNo2Color = mix.white;
-            break;
-        case no2 <= 534:
-            bgNo2 = case8.color;
-            indexNo2 = case8.index;
-            textNo2Color = mix.white;
-            break;
-        case no2 <= 600:
-            bgNo2 = case9.color;
-            indexNo2 = case9.index;
-            break;
-        case no2 > 600:
-            bgNo2 = case10.color;
-            indexNo2 = case10.index;
-            textNo2Color = mix.white;
-            break;
-        default:
-            break;
-    }
+
+    const nitrogenDioxideData = nitrogenDioxideChecker(no2);
+    let bgNo2 = nitrogenDioxideData.bgNo2;
+    let indexNo2 = nitrogenDioxideData.indexNo2;
+    let textNo2Color = nitrogenDioxideData.textNo2Color;
 
     /*
      + o3 = Ozone

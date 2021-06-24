@@ -1,10 +1,6 @@
-
-/*
-+ co = Carbon Monoxide Data component
-*/
-
 // Import the data parameters
 import { data } from "./AirQualityData";
+
 
 // Function that takes co as a parameter and displays the matching background color, text color, and index level
 // depending on the fetched co values
@@ -12,6 +8,7 @@ const carbonMonoxideChecker = (co) => {
 
     // Destructuring the data object for colors and parameters
     const { case1, case2, case3, case4, case5, case6, case7, case8, case9, case10, mix} = data;
+
     let bgCo;
     let indexCo;
     let textCoColor;
