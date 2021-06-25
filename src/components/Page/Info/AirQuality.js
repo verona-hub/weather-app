@@ -1,21 +1,23 @@
 import React, { useState } from 'react';
+import AirQualityItem from "./AirQualityData/AirQualityItem";
 
-// Air Quality Data
+// Air Quality Data and checker functions
 import { data } from './AirQualityData/AirQualityData';
 import carbonMonoxideChecker from './AirQualityData/CarbonMonoxide';
 import nitrogenDioxideChecker from './AirQualityData/NitrogenDioxide';
 import ozoneChecker from './AirQualityData/Ozone';
 import sulphurDioxideChecker from './AirQualityData/SulphurDioxide';
 import pm2_5_Checker from './AirQualityData/Pm2_5';
+import pm10_Checker from './AirQualityData/Pm10';
 
 
 const AirQuality = ({ airQuality }) => {
     // Setting initial state: the air quality index box is set to be invisible
     const [indexInfoVisible, setIndexInfoVisible] = useState(false);
 
-     /*
-     + Remove this when refactor for data will be done!
-     */
+    // Function to toggle the index box visibility
+    const toggleIndexInfo = () => setIndexInfoVisible(!indexInfoVisible);
+
     // Destructuring from the AirQualityData.js component in Utility
     const { case1, case2, case3, case4, case5, case6, case7, case8, case9, case10, mix } = data;
 
@@ -27,7 +29,7 @@ const AirQuality = ({ airQuality }) => {
         return Math.floor(num);
     }
 
-    // Each value is floored
+    // Each value is floored downward to the closest integer
     co = floor(co);
     no2 = floor(no2);
     o3 = floor(o3);
@@ -86,66 +88,26 @@ const AirQuality = ({ airQuality }) => {
     /*
      + pm10 = PM10
     */
-    let bgPm10;
-    let indexPm10;
-    let textPm10Color;
-    switch (true) {
-        case pm10 <= 16:
-            bgPm10 = case1.color;
-            indexPm10 = case1.index;
-            break;
-        case pm10 <= 33:
-            bgPm10 = case2.color;
-            indexPm10 = case2.index;
-            break;
-        case pm10 <= 50:
-            bgPm10 = case3.color;
-            indexPm10 = case3.index;
-            break;
-        case pm10 <= 58:
-            bgPm10 = case4.color;
-            indexPm10 = case4.index;
-            break;
-        case pm10 <= 66:
-            bgPm10 = case5.color;
-            indexPm10 = case5.index;
-            break;
-        case pm10 <= 75:
-            bgPm10 = case6.color;
-            indexPm10 = case6.index;
-            break;
-        case pm10 <= 83:
-            bgPm10 = case7.color;
-            indexPm10 = case7.index;
-            textPm10Color = mix.white;
-            break;
-        case pm10 <= 91:
-            bgPm10 = case8.color;
-            indexPm10 = case8.index;
-            textPm10Color = mix.white;
-            break;
-        case pm10 <= 100:
-            bgPm10 = case9.color;
-            indexPm10 = case9.index;
-            textPm10Color = mix.white;
-            break;
-        case pm10 > 100:
-            bgPm10 = case10.color;
-            indexPm10 = case10.index;
-            textPm10Color = mix.white;
-            break;
-        default:
-            break;
-    }
 
-    // Function to toggle the index box visibility
-    const toggleIndexInfo = () => setIndexInfoVisible(!indexInfoVisible);
+    const pm10_Data = pm10_Checker(pm10);
+    const bgPm10 = pm10_Data.bgPm10;
+    const indexPm10 = pm10_Data.indexPm10;
+    const textPm10Color = pm10_Data.textPm10Color;
 
 
     return (
         <div className="AirQuality card">
             <h1 className="title">Air Quality</h1>
             <div className="main">
+
+                <AirQualityItem
+                    backgroundColor={ bgCo }
+                    color={ textCoColor }
+                    name="Carbon Monoxide:"
+                    index={ indexCo }
+                    level={ co }
+                />
+
                 <div className="box" style={ { backgroundColor: bgCo, color: textCoColor } }>
                     <span> Carbon Monoxide: </span>
                     <span> { indexCo } </span>
