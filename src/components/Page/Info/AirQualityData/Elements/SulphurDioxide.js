@@ -1,5 +1,5 @@
 // Import the data parameters
-import { data } from './AirQualityData';
+import { data } from '../AirQualityData';
 
 // Function that takes so2 as a parameter and displays the matching background color, text color, and index level
 // depending on the fetched so2 values

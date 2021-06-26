@@ -1,5 +1,5 @@
 // Import the data parameters
-import { data } from './AirQualityData';
+import { data } from '../AirQualityData';
 
 
 // Function that takes pm10 as a parameter and displays the matching background color, text color, and index level

@@ -396,6 +396,10 @@ button {
     min-width: 20%;
 }
 
+.button_index {
+    margin: 50px auto;
+}
+
 .button_home {
     display: inline-block;
     margin: 0;
@@ -809,13 +813,12 @@ button {
 
 .AirQuality .main {
     border: 1px solid;
-    margin-bottom: 10vh;
+    /*margin-bottom: 10vh;*/
     width: 70%;
 }
 
 .AirQuality .box {
     align-items: center;
-
     display: flex;
     justify-content: space-between;
     padding: 2vh;
@@ -881,7 +884,7 @@ button {
 
 .visible {
     height: 100%;
-    margin: auto auto 10vh;
+    margin-bottom: 10vh;
     opacity: 1;
     transition: opacity 1.2s ease-out, margin 500ms ease-out;
     visibility: visible;
