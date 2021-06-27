@@ -53,6 +53,7 @@ const AirQualityCollection = ({ airQuality }) => {
     const bgO3 = ozoneData.bgO3;
     const indexO3 = ozoneData.indexO3;
     const textO3Color = ozoneData.textO3Color;
+    const border03Color = ozoneData.border03Color;
 
     /*
      + so2 = Sulphur dioxide
@@ -82,7 +83,7 @@ const AirQualityCollection = ({ airQuality }) => {
     const textPm10Color = pm10_Data.textPm10Color;
 
     return (
-        <div>
+        <div className="AirQualityCollection">
             <AirQualityItem
                 backgroundColor={ bgCo }
                 color={ textCoColor }
@@ -126,7 +127,6 @@ const AirQualityCollection = ({ airQuality }) => {
                 index={ indexPm10 }
                 level={ pm10 }
             />
-
 
         </div>
     );

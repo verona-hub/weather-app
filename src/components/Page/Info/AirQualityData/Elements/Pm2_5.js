@@ -1,5 +1,5 @@
 // Import the data parameters
-import { data } from '../AirQualityData';
+import { data } from '../AirQualityColors';
 
 
 // Function that takes pm2_5 as a parameter and displays the matching background color, text color, and index level

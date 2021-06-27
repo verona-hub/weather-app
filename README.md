@@ -25,7 +25,7 @@ https://weather-app-veronahub.netlify.app/
 ### Implementations: 
 
 - [x] ~~AirQualityData to be checked what is exported~~
-- [ ] refactor AirQuality component and move the logic to a new Component, use props to access it ( or remove AirQualityData.js)
+- [ ] refactor AirQuality component and move the logic to a new Component, use props to access it ( or remove AirQualityColors.js)
 - [ ] different props => to be done inside Forecast.js component
 - [ ] started Context folder => continue or remove from project
 - [ ] comment all the functions and code 
@@ -33,6 +33,7 @@ https://weather-app-veronahub.netlify.app/
 
 #### Css:
 
+- [ ] AirQualityItem fix white border on high value
 - [x] ~~fixed hourly forecast subtitle (time, weather forecast, temperature)~~
 - [x] ~~fixed slider height on max-width 380px~~
 - [x] ~~move arrows up on mobile~~

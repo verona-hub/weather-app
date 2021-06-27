@@ -397,7 +397,7 @@ button {
 }
 
 .button_index {
-    margin: 50px auto;
+    margin: 100px auto;
 }
 
 .button_home {
@@ -493,7 +493,6 @@ button {
 .Location .title,
 .Astronomy .title {
     border-bottom: 1px solid var(--dark_blue);
-    font-family: 'Dosis', sans-serif;
     font-family: 'Red Hat Display', sans-serif;
     font-size: 2.4rem;
     letter-spacing: 0.2rem;
@@ -811,58 +810,59 @@ button {
 +  AirQuality
 */
 
-.AirQuality .main {
+.AirQualityCollection {
     border: 1px solid;
-    /*margin-bottom: 10vh;*/
+    border-bottom: none;
+    margin: 40px auto 0;
     width: 70%;
 }
 
-.AirQuality .box {
+.AirQualityItem .element {
     align-items: center;
+    /*border-bottom: 1px solid;*/
     display: flex;
     justify-content: space-between;
     padding: 2vh;
 }
 
-.AirQuality .box:not(:last-child) {
-    border-bottom: 1px solid var(--dim_grey);
+.AirQualityItem .element:not(:last-child) {
+    /*border-bottom: 1px solid var(--dim_grey);*/
+    /*border-bottom: 1px solid;*/
 }
 
-.AirQuality .box span {
+.AirQualityItem .element span {
     font-size: 1rem;
     text-align: center;
     width: 50%;
 }
 
-.AirQuality .box span:first-child {
+.AirQualityItem .element span:first-child {
     text-align: left;
     width: 25%;
 }
 
-.AirQuality .box span:last-child {
+.AirQualityItem .element span:last-child {
     text-align: right;
     width: 30%;
 }
 
-.AirQuality .index_wrapper {
+.AirQualityIndex .index_wrapper {
     border: 1px solid;
-    width: 90%;
 }
 
-.AirQuality .index_wrapper .title {
+.AirQualityIndex .index_wrapper .title {
     display: inline-block;
     font-size: 1.6rem;
 }
 
-.AirQuality .index_levels {
+.AirQualityIndex .index_levels {
     display: flex;
     justify-content: space-evenly;
     align-items: center;
-    margin: 2vh auto 4vh;
-    width: 90%;
+    margin: 40px 40px 80px;
 }
 
-.AirQuality .index_box {
+.AirQualityIndex .index_box {
     align-items: center;
     display: flex;
     flex-direction: column;
@@ -870,7 +870,7 @@ button {
     width: 80px;
 }
 
-.AirQuality .item {
+.AirQualityIndex .item {
     align-items: center;
     border: 1px solid;
     display: flex;
@@ -878,13 +878,13 @@ button {
     width: 50px;
 }
 
-.AirQuality .item_text {
+.AirQualityIndex .item_text {
     margin-top: 5px;
 }
 
 .visible {
     height: 100%;
-    margin-bottom: 10vh;
+    margin: 0 auto 100px;
     opacity: 1;
     transition: opacity 1.2s ease-out, margin 500ms ease-out;
     visibility: visible;
@@ -892,6 +892,7 @@ button {
 .hidden {
     height: 0;
     opacity: 0;
+    margin: 0 auto;
     transition: visibility 1200ms ease-out, opacity 1000ms ease-out, height 400ms 800ms ease, margin 400ms 800ms ease;
     visibility: hidden;
 }
@@ -1629,6 +1630,8 @@ button {
 
     .AirQuality .index_levels {
         flex-direction: row;
+        /*margin: auto;*/
+        /*width: 100%;*/
     }
 
     .AirQuality .item_wrapper {
@@ -1819,8 +1822,11 @@ button {
     }
 
     .ForecastHeader {
-        /*background-color: lightcoral;*/
         width: 75%;
+    }
+
+    .AirQualityCollection {
+        width: 100%;
     }
 
 }
@@ -1923,11 +1929,11 @@ button {
         width: 90%;
     }
 
-    .AirQuality .box {
+    .AirQualityItem .element {
         height: 70px;
     }
 
-    .AirQuality .index_wrapper {
+    .AirQualityIndex .index_wrapper {
         width: 90%;
     }
 
