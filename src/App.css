@@ -817,7 +817,7 @@ button {
     width: 70%;
 }
 
-.AirQualityItem .element {
+.AirQualityElement .element {
     align-items: center;
     /*border-bottom: 1px solid;*/
     display: flex;
@@ -825,23 +825,23 @@ button {
     padding: 2vh;
 }
 
-.AirQualityItem .element:not(:last-child) {
+.AirQualityElement .element:not(:last-child) {
     /*border-bottom: 1px solid var(--dim_grey);*/
     /*border-bottom: 1px solid;*/
 }
 
-.AirQualityItem .element span {
+.AirQualityElement .element span {
     font-size: 1rem;
     text-align: center;
     width: 50%;
 }
 
-.AirQualityItem .element span:first-child {
+.AirQualityElement .element span:first-child {
     text-align: left;
     width: 25%;
 }
 
-.AirQualityItem .element span:last-child {
+.AirQualityElement .element span:last-child {
     text-align: right;
     width: 30%;
 }
@@ -1402,7 +1402,6 @@ button {
         flex-direction: row;
         justify-content: space-evenly;
         flex-wrap: wrap;
-        min-height: 500px;
     }
 
     .AirQuality .index_box {
@@ -1630,8 +1629,6 @@ button {
 
     .AirQuality .index_levels {
         flex-direction: row;
-        /*margin: auto;*/
-        /*width: 100%;*/
     }
 
     .AirQuality .item_wrapper {
@@ -1929,7 +1926,7 @@ button {
         width: 90%;
     }
 
-    .AirQualityItem .element {
+    .AirQualityElement .element {
         height: 70px;
     }
 

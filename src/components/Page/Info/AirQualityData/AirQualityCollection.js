@@ -1,11 +1,13 @@
 import React from 'react';
-import AirQualityItem from "./AirQualityItem";
+
+import AirQualityElement from "./AirQualityElement";
 import carbonMonoxideChecker from "./Elements/CarbonMonoxide";
 import nitrogenDioxideChecker from "./Elements/NitrogenDioxide";
 import ozoneChecker from "./Elements/Ozone";
 import sulphurDioxideChecker from "./Elements/SulphurDioxide";
 import pm2_5_Checker from "./Elements/Pm2_5";
 import pm10_Checker from "./Elements/Pm10";
+
 
 const AirQualityCollection = ({ airQuality }) => {
 
@@ -53,7 +55,6 @@ const AirQualityCollection = ({ airQuality }) => {
     const bgO3 = ozoneData.bgO3;
     const indexO3 = ozoneData.indexO3;
     const textO3Color = ozoneData.textO3Color;
-    const border03Color = ozoneData.border03Color;
 
     /*
      + so2 = Sulphur dioxide
@@ -84,7 +85,7 @@ const AirQualityCollection = ({ airQuality }) => {
 
     return (
         <div className="AirQualityCollection">
-            <AirQualityItem
+            <AirQualityElement
                 backgroundColor={ bgCo }
                 color={ textCoColor }
                 name="Carbon Monoxide:"
@@ -92,35 +93,35 @@ const AirQualityCollection = ({ airQuality }) => {
                 level={ co }
             />
 
-            <AirQualityItem
+            <AirQualityElement
                 backgroundColor={ bgNo2 }
                 color={ textNo2Color }
                 name="Nitrogen Dioxide:"
                 index={ indexNo2 }
                 level={ no2 }
             />
-            <AirQualityItem
+            <AirQualityElement
                 backgroundColor={ bgO3 }
                 color={ textO3Color }
                 name="Ozone:"
                 index={ indexO3 }
                 level={ o3  }
             />
-            <AirQualityItem
+            <AirQualityElement
                 backgroundColor={ bgSo2 }
                 color={ textSo2Color }
                 name="Sulphur Dioxide:"
                 index={ indexSo2 }
                 level={ so2 }
             />
-            <AirQualityItem
+            <AirQualityElement
                 backgroundColor={ bgPm2_5 }
                 color={ textPm2_5Color }
                 name="PM2.5 Particles:"
                 index={ indexPm2_5 }
                 level={ pm2_5 }
             />
-            <AirQualityItem
+            <AirQualityElement
                 backgroundColor={ bgPm10 }
                 color={ textPm10Color }
                 name="PM10 Particles:"

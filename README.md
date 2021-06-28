@@ -33,7 +33,7 @@ https://weather-app-veronahub.netlify.app/
 
 #### Css:
 
-- [ ] AirQualityItem fix white border on high value
+- [x] ~~AirQualityItem fix white border on high value~~
 - [x] ~~fixed hourly forecast subtitle (time, weather forecast, temperature)~~
 - [x] ~~fixed slider height on max-width 380px~~
 - [x] ~~move arrows up on mobile~~
@@ -58,6 +58,7 @@ https://weather-app-veronahub.netlify.app/
 
 - [ ] fix process.env for development and production (hide Api key to back end ?)
 - [ ] fix after aborting a search and making a new one, the new search is buggy
+- [ ] fix click outside of modal to leave modal on
 - [x] ~~fix Modal cannot cancel the fetching once started~~
 - [x] ~~fix detect click outside of modal~~
 - [x] ~~fix scroll into view after a search is made~~
