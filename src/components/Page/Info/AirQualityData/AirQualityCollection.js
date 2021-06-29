@@ -83,6 +83,7 @@ const AirQualityCollection = ({ airQuality }) => {
     const indexPm10 = pm10_Data.indexPm10;
     const textPm10Color = pm10_Data.textPm10Color;
 
+
     return (
         <div className="AirQualityCollection">
             <AirQualityElement

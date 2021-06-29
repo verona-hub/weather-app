@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 
-// Air Quality Data and checker functions
+// Components
 import AirQualityCollection from "./AirQualityData/AirQualityCollection";
 import AirQualityIndex from "./AirQualityData/AirQualityIndex";
 

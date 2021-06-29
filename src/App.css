@@ -862,7 +862,7 @@ button {
     margin: 40px 40px 80px;
 }
 
-.AirQualityIndex .index_box {
+.AirQualityIndexItem {
     align-items: center;
     display: flex;
     flex-direction: column;
@@ -1296,7 +1296,7 @@ button {
 */
 
 @media (min-width: 760px) {
-    .AirQuality .index_box {
+    .AirQualityIndexItem{
         min-width: 80px;
         width: 80px;
     }
@@ -1398,13 +1398,13 @@ button {
         width: 100%;
     }
 
-    .AirQuality .index_levels {
+    .AirQualityIndex .index_levels {
         flex-direction: row;
         justify-content: space-evenly;
         flex-wrap: wrap;
     }
 
-    .AirQuality .index_box {
+    .AirQualityIndexItem {
         align-items: center;
         display: flex;
         justify-content: flex-start;
@@ -1623,11 +1623,11 @@ button {
     }
 
     .AirQuality .main,
-    .AirQuality .index_wrapper {
+    .AirQualityIndex .index_wrapper {
         width: 80%;
     }
 
-    .AirQuality .index_levels {
+    .AirQualityIndex .index_levels {
         flex-direction: row;
     }
 

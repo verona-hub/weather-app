@@ -1,5 +1,6 @@
 import React  from 'react';
 import { data } from './AirQualityColors';
+import AirQualityIndexItem from "./AirQualityIndexItem";
 
 
 const AirQualityIndex = ({ indexInfoVisible }) => {
@@ -12,46 +13,66 @@ const AirQualityIndex = ({ indexInfoVisible }) => {
             <div className={ indexInfoVisible ? "index_wrapper visible" : "index_wrapper hidden" } >
                 <h2 className="title"> Air Quality Index: </h2>
                 <div className="index_levels">
-                    <div className="index_box">
-                        <div className="item" style={ { backgroundColor: case1.color } }>{ case1.index } </div>
-                        <div className="item-text"> { case1.level } </div>
-                    </div>
-                    <div className="index_box">
-                        <div className="item" style={ { backgroundColor: case2.color } }> { case2.index } </div>
-                        <div className="item_text"> { case2.level } </div>
-                    </div>
-                    <div className="index_box">
-                        <div className="item" style={ { backgroundColor: case3.color } }> { case3.index } </div>
-                        <div className="item_text"> { case3.level } </div>
-                    </div>
-                    <div className="index_box">
-                        <div className="item" style={ { backgroundColor: case4.color } }> { case4.index } </div>
-                        <div className="item_text"> { case4.level } </div>
-                    </div>
-                    <div className="index_box">
-                        <div className="item" style={ { backgroundColor: case5.color } }> { case5.index } </div>
-                        <div className="item_text"> { case5.level } </div>
-                    </div>
-                    <div className="index_box">
-                        <div className="item" style={ { backgroundColor: case6.color } }> { case6.index } </div>
-                        <div className="item_text"> { case6.level } </div>
-                    </div>
-                    <div className="index_box">
-                        <div className="item" style={ { backgroundColor: case7.color } }> { case7.index } </div>
-                        <div className="item_text"> { case7.level } </div>
-                    </div>
-                    <div className="index_box">
-                        <div className="item" style={ { backgroundColor: case8.color } }> { case8.index } </div>
-                        <div className="item_text"> { case8.level } </div>
-                    </div>
-                    <div className="index_box">
-                        <div className="item" style={ { backgroundColor: case9.color } }> { case9.index } </div>
-                        <div className="item_text">  { case9.level } </div>
-                    </div>
-                    <div className="index_box">
-                        <div className="item" style={ { backgroundColor: case10.color } }> { case10.index } </div>
-                        <div className="item_text"> { case10.level } </div>
-                    </div>
+
+                    <AirQualityIndexItem
+                        backgroundColor={ case1.color }
+                        indexText={ case1.index }
+                        indexLevel={ case1.level }
+                    />
+
+                    <AirQualityIndexItem
+                        backgroundColor={ case2.color }
+                        indexText={ case2.index }
+                        indexLevel={ case2.level }
+                    />
+
+                    <AirQualityIndexItem
+                        backgroundColor={ case3.color }
+                        indexText={ case3.index }
+                        indexLevel={ case3.level }
+                    />
+
+                    <AirQualityIndexItem
+                        backgroundColor={ case4.color }
+                        indexText={ case4.index }
+                        indexLevel={ case4.level }
+                    />
+
+                    <AirQualityIndexItem
+                        backgroundColor={ case5.color }
+                        indexText={ case5.index }
+                        indexLevel={ case5.level }
+                    />
+
+                    <AirQualityIndexItem
+                        backgroundColor={ case6.color }
+                        indexText={ case6.index }
+                        indexLevel={ case6.level }
+                    />
+
+                    <AirQualityIndexItem
+                        backgroundColor={ case7.color }
+                        indexText={ case7.index }
+                        indexLevel={ case7.level }
+                    />
+
+                    <AirQualityIndexItem
+                        backgroundColor={ case8.color }
+                        indexText={ case8.index }
+                        indexLevel={ case8.level }
+                    />
+
+                    <AirQualityIndexItem
+                        backgroundColor={ case9.color }
+                        indexText={ case9.index }
+                        indexLevel={ case9.level }
+                    />
+
+                    <AirQualityIndexItem
+                        backgroundColor={ case10.color }
+                        indexText={ case10.index }
+                        indexLevel={ case10.level }
+                    />
                 </div>
             </div>
         </div>
