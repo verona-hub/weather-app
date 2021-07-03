@@ -14,23 +14,23 @@ const AirQuality = ({ airQuality }) => {
     const toggleIndexInfo = () => setIndexInfoVisible(!indexInfoVisible);
 
     return (
-        <div className="AirQuality card">
-            <h1> Refactor in progress... </h1>
-            <h1 className="title"> Air Quality </h1>
+        <div className="AirQuality_wrapper">
+            <div className="AirQuality card">
+                <h1 className="title"> Air Quality </h1>
 
-            <div className="main">
-                <AirQualityCollection
-                    airQuality={ airQuality }
-                />
+                <div className="main">
+                    <AirQualityCollection
+                        airQuality={ airQuality }
+                    />
 
-                <button onClick={ toggleIndexInfo } className="button_index">
-                    { indexInfoVisible ? 'Hide Air Quality Index' : 'Show Air Quality Index' }
-                </button>
+                    <button onClick={ toggleIndexInfo } className="button_index">
+                        { indexInfoVisible ? 'Hide Air Quality Index' : 'Show Air Quality Index' }
+                    </button>
 
-                <AirQualityIndex
-                    indexInfoVisible={ indexInfoVisible }
-                />
-
+                    <AirQualityIndex
+                        indexInfoVisible={ indexInfoVisible }
+                    />
+                </div>
             </div>
         </div>
     );

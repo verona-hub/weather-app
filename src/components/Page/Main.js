@@ -17,7 +17,7 @@ const Main = ({ weatherInfo, weatherCondition, location, airQuality, astronomy, 
 
     else {
         return (
-            <div className="container">
+            <div className="Main">
                 {
                     ( locationResponseSize > 0 || weatherResponseSize > 0 ) && (
                         <div>
