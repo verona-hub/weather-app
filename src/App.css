@@ -470,13 +470,12 @@ button {
 .AirQuality.card,
 .Location.card,
 .Astronomy.card {
-    padding: 10px;
-    margin: auto;
+    /*padding: 10px;*/
+    margin: 0 auto;
 }
 
-.WeatherCurrent.card,
-.AirQuality.card {
-    min-height: 100vh;
+.WeatherCurrent.card {
+    /*min-height: 100vh;*/
 }
 
 .spaced {
@@ -500,20 +499,24 @@ button {
     word-spacing: 0.2rem;
 }
 
-.Forecast .title {
-    margin: 10vh 0 1vh;
-}
-
-.AirQuality .title,
 .Location .title,
 .Astronomy .title {
-    margin: 5vh;
+    margin: 80px;
 }
 
-.sub_title_main {
+.Forecast .title {
+    margin: 100px 0 20px;
+}
+
+.WeatherCurrent .sub_title_main,
+.ForecastHeader .sub_title_main {
     font-size: 2rem;
     font-weight: 300;
     letter-spacing: 0.2rem;
+}
+
+.ForecastHeader .sub_title_main {
+    font-size: 1.6rem;
 }
 
 
@@ -521,12 +524,21 @@ button {
 + Weather Current
 */
 
+.WeatherCurrent .title {
+    margin-top: 100px;
+}
+
 .Weather_current_main {
+    height: 800px;
     width: 100%;
 }
 
+.WeatherCurrent .top_content {
+    height: 400px;
+}
+
 .WeatherCurrent .top_content_header {
-    margin: 10px 10px 0 10px;
+    margin: 20px 0;
     text-align: center;
 }
 
@@ -560,7 +572,7 @@ button {
 }
 
 .WeatherCurrent .bottom_content {
-    margin: 60px 0 100px;
+    /*margin: 80px 0 100px;*/
 }
 
 .WeatherCurrent .bottom_left,
@@ -582,16 +594,25 @@ button {
 + Slider
 */
 
-.awssld {
+.Forecast {
     padding: 300px 0;
-    height: 1700px;
     background: url(img/beach.jpg) no-repeat right;
+    height: 1700px;
+}
+
+.awssld {
+    /*height: 1700px;*/
+    /*padding-top: 100px;*/
     --slider-transition-duration: 1000ms !important;
 }
 
 .awssld__content {
     background-color: var(--white) !important;
     display: block !important;
+}
+
+.awssld--fallAnimation {
+    height: 100%;
 }
 
 .awssld__prev,
@@ -733,7 +754,7 @@ button {
 .ForecastHeader .date {
     bottom: 25px;
     display: inline-block;
-    font-size: 1.3rem;
+    font-size: 1.2rem;
     font-weight: 300;
     letter-spacing: 0.1rem;
     position: relative;
@@ -747,12 +768,12 @@ button {
 
 .ForecastDailyInfo_wrapper h2,
 .ForecastHourlyInfo_wrapper h2 {
-    border-radius: 4px;
-    border: 3px solid var(--blue);
+    border-radius: 8px;
+    border: 2px solid var(--blue);
     display: inline-block;
     font-size: 1.8rem;
     font-weight: normal;
-    padding: 10px 25px;
+    padding: 10px 30px;
 }
 
 .ForecastDailyInfo_wrapper h2.daily_summary {
@@ -800,7 +821,6 @@ button {
 .AirQuality_wrapper {
     background: url(img/beach.jpg) no-repeat top;
     padding-bottom: 300px;
-
 }
 
 .AirQualityCollection {
@@ -840,6 +860,7 @@ button {
 .AirQualityIndex .index_wrapper .title {
     display: inline-block;
     font-size: 1.6rem;
+    margin: 30px;
 }
 
 .AirQualityIndex .index_levels {
@@ -935,6 +956,10 @@ button {
     right: 0;
     text-align: center;
     top: 10vh;
+}
+
+.About .main {
+    text-align: center;
 }
 
 .About .title_wrapper {
