@@ -1,8 +1,5 @@
 import React from 'react';
-import feels_logo from '../../../img/feels.png';
-
-// Components
-import ForecastHeader from "./ForecastData/ForecastHeader";
+import feels_logo from '../../../img/feels.png'
 
 
 // Current weather component

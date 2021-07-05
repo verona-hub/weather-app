@@ -260,6 +260,49 @@ p.close {
     margin-top: 3vh;
 }
 
+
+
+/*
++ Image Separator
+*/
+
+.ImageSeparator {
+    background: url(img/beach.jpg) fixed no-repeat center;
+    background-size: cover;
+    height: 500px;
+    width: 100%;
+}
+
+.ImageSeparatorSunny {
+    background: url(img/sunny.jpg) fixed no-repeat;
+    background-size: cover;
+    height: 500px;
+    width: 100%;
+}
+
+.ImageSeparatorPartlyCloudy {
+    background: url(img/partly-cloudy.jpg) fixed no-repeat top;
+    background-size: 100vw 140vh;
+    height: 500px;
+    width: 100%;
+}
+
+.ImageSeparatorCloudy {
+    background: url(img/cloudy.jpg) fixed no-repeat bottom;
+    background-size: cover;
+    height: 500px;
+    width: 100%;
+}
+
+.ImageSeparatorThunder {
+    background: url(img/thunder.jpg) fixed no-repeat top;
+    background-size: 100vw 120vh;
+    height: 500px;
+    width: 100%;
+}
+
+
+
 /*
 + Search
 */
@@ -470,12 +513,7 @@ button {
 .AirQuality.card,
 .Location.card,
 .Astronomy.card {
-    /*padding: 10px;*/
     margin: 0 auto;
-}
-
-.WeatherCurrent.card {
-    /*min-height: 100vh;*/
 }
 
 .spaced {
@@ -492,20 +530,19 @@ button {
 .Location .title,
 .Astronomy .title {
     border-bottom: 1px solid var(--dark_blue);
+    display: inline-block;
     font-family: 'Red Hat Display', sans-serif;
     font-size: 2.4rem;
     letter-spacing: 0.2rem;
+    margin: 100px 0 20px;
     text-transform: uppercase;
     word-spacing: 0.2rem;
 }
 
+.AirQuality .title,
 .Location .title,
 .Astronomy .title {
-    margin: 80px;
-}
-
-.Forecast .title {
-    margin: 100px 0 20px;
+    margin-bottom: 100px;
 }
 
 .WeatherCurrent .sub_title_main,
@@ -520,13 +557,10 @@ button {
 }
 
 
+
 /*
 + Weather Current
 */
-
-.WeatherCurrent .title {
-    margin-top: 100px;
-}
 
 .Weather_current_main {
     height: 800px;
@@ -571,10 +605,6 @@ button {
     width: 100%;
 }
 
-.WeatherCurrent .bottom_content {
-    /*margin: 80px 0 100px;*/
-}
-
 .WeatherCurrent .bottom_left,
 .WeatherCurrent .bottom_right {
     margin: 20px 60px;
@@ -595,14 +625,10 @@ button {
 */
 
 .Forecast {
-    padding: 300px 0;
-    background: url(img/beach.jpg) no-repeat right;
-    height: 1700px;
+    height: 1100px;
 }
 
 .awssld {
-    /*height: 1700px;*/
-    /*padding-top: 100px;*/
     --slider-transition-duration: 1000ms !important;
 }
 
@@ -649,29 +675,6 @@ button {
 .awssld--fallAnimation {
     --fall-animation-angle: 20deg !important;
     --fall-scaling-in-from: 1.0 !important;
-}
-
-
-
-/*  Bullets  */
-.awssld__bullets {
-    bottom: -90px !important;
-    right: 2px;
-}
-
-.awssld__bullets button {
-    background-color: var(--dim_grey) !important;
-    margin: 0 35px !important;
-    padding: 20px !important;
-    transition: background-color 200ms linear 200ms, transform 300ms ease !important;
-}
-
-.awssld__bullets button.awssld__bullets--active {
-    background-color: var(--blue) !important;
-}
-
-.awssld__bullets button:hover:not(.awssld__bullets--active) {
-    opacity: 0.9;
 }
 
 
@@ -727,10 +730,6 @@ button {
 /*
 + Weather Forecast
 */
-
-.Forecast .title {
-    display: inline-block;
-}
 
 .ForecastHeader .sub_title_main {
     align-items: center;
@@ -818,15 +817,10 @@ button {
 +  AirQuality
 */
 
-.AirQuality_wrapper {
-    background: url(img/beach.jpg) no-repeat top;
-    padding-bottom: 300px;
-}
-
 .AirQualityCollection {
     border: 1px solid;
     border-bottom: none;
-    margin: 40px auto 0;
+    margin: auto;
     width: 70%;
 }
 
@@ -916,7 +910,7 @@ button {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
-    margin: 5vh auto;
+    /*margin: 5vh auto;*/
     width: 100%;
 }
 
@@ -1112,8 +1106,11 @@ button {
 
 .Footer {
     background-color: var(--dark_grey);
-    margin-top: 15vh;
     width: 100%;
+}
+
+.Footer_About {
+    margin-top: 15vh;
 }
 
 .footer_content {

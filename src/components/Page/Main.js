@@ -5,12 +5,12 @@ import ScrollToTop from '../Utility/ScrollToTop';
 import AirQuality from "./Info/AirQuality";
 import Astronomy from './Info/Astronomy';
 import Forecast from './Info/Forecast';
+import WeatherCurrentImageSeparator from '../Utility/WeatherCurrentImageSeparator';
 import Location from "./Info/Location";
 import WeatherCurrent from "./Info/WeatherCurrent";
 
 
 const Main = ({ weatherInfo, weatherCondition, location, airQuality, astronomy, spinner, locationResponseSize, weatherResponseSize, forecast_3_days }) => {
-
     if (spinner) {
         return null;
     }
@@ -27,13 +27,22 @@ const Main = ({ weatherInfo, weatherCondition, location, airQuality, astronomy, 
                                 forecast_3_days={ forecast_3_days }
                                 location={ location }
                             />
+                            <WeatherCurrentImageSeparator
+                                weatherCondition={ weatherCondition }
+                            />
                             <Forecast
                                 forecast_3_days={ forecast_3_days }
                                 location={ location }
                             />
+
+                            {/*<WeatherCurrentImageSeparator />*/}
+
                             <AirQuality
                                 airQuality={ airQuality }
                             />
+
+                            {/*<WeatherCurrentImageSeparator />*/}
+
                             <div className="city_astro">
                                 <Location
                                     location={ location }
@@ -44,6 +53,8 @@ const Main = ({ weatherInfo, weatherCondition, location, airQuality, astronomy, 
                             </div>
 
                             <ScrollToTop />
+
+                            {/*<WeatherCurrentImageSeparator />*/}
 
                         </div>
                     )
