@@ -270,36 +270,58 @@ p.close {
     background: url(img/beach.jpg) fixed no-repeat center;
     background-size: cover;
     height: 500px;
-    width: 100%;
 }
-
+/* Good weather - Day */
 .ImageSeparatorSunny {
     background: url(img/sunny.jpg) fixed no-repeat;
     background-size: cover;
     height: 500px;
-    width: 100%;
+}
+
+/* Good weather - Night */
+.ImageSeparatorClear {
+    background: url(img/clear.jpg) fixed no-repeat top;
+    background-size: cover;
+    height: 500px;
 }
 
 .ImageSeparatorPartlyCloudy {
     background: url(img/partly-cloudy.jpg) fixed no-repeat top;
     background-size: 100vw 140vh;
     height: 500px;
-    width: 100%;
 }
 
 .ImageSeparatorCloudy {
-    background: url(img/cloudy.jpg) fixed no-repeat bottom;
+    background: url(img/cloudy.jpg) fixed no-repeat top;
     background-size: cover;
     height: 500px;
-    width: 100%;
+}
+
+.ImageSeparatorRainy {
+    background: url(img/rain.jpg) fixed no-repeat top;
+    background-size: cover;
+    height: 500px;
 }
 
 .ImageSeparatorThunder {
     background: url(img/thunder.jpg) fixed no-repeat top;
     background-size: 100vw 120vh;
     height: 500px;
-    width: 100%;
 }
+
+.ImageSeparatorFog {
+    background: url(img/mist.jpg) fixed no-repeat top;
+    background-size: cover;
+    height: 500px;
+}
+
+.ImageSeparatorMist {
+    background: url(img/mist.jpg) fixed no-repeat top;
+    background-size: cover;
+    height: 500px;
+}
+
+
 
 
 
