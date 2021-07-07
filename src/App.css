@@ -285,14 +285,14 @@ p.close {
     height: 500px;
 }
 
-.ImageSeparatorPartlyCloudy {
-    background: url(img/partly-cloudy.jpg) fixed no-repeat top;
-    background-size: 100vw 140vh;
+.ImageSeparatorCloudy {
+    background: url(img/cloudy.jpg) fixed no-repeat top;
+    background-size: cover;
     height: 500px;
 }
 
-.ImageSeparatorCloudy {
-    background: url(img/cloudy.jpg) fixed no-repeat top;
+.ImageSeparatorFog {
+    background: url(img/mist.jpg) fixed no-repeat top;
     background-size: cover;
     height: 500px;
 }
@@ -303,21 +303,27 @@ p.close {
     height: 500px;
 }
 
+.ImageSeparatorRainShower {
+    background: url(img/rain-shower.jpg) fixed no-repeat center;
+    background-size: cover;
+    height: 500px;
+}
+
+.ImageSeparatorSleet {
+    background: url(img/sleet.jpg) fixed no-repeat center;
+    background-size: cover;
+    height: 500px;
+}
+
+.ImageSeparatorSnow {
+    background: url(img/snow.jpg) fixed no-repeat center;
+    background-size: cover;
+    height: 500px;
+}
+
 .ImageSeparatorThunder {
     background: url(img/thunder.jpg) fixed no-repeat top;
     background-size: 100vw 120vh;
-    height: 500px;
-}
-
-.ImageSeparatorFog {
-    background: url(img/mist.jpg) fixed no-repeat top;
-    background-size: cover;
-    height: 500px;
-}
-
-.ImageSeparatorMist {
-    background: url(img/mist.jpg) fixed no-repeat top;
-    background-size: cover;
     height: 500px;
 }
 

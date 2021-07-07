@@ -24,6 +24,7 @@ https://weather-app-veronahub.netlify.app/
 
 ### Implementations: 
 
+- [ ] image optimization
 - [ ] refactor AirQuality component and move the logic to a new Component, use props to access it ( or remove AirQualityColors.js)
 - [ ] different props => to be done inside Forecast.js component
 - [ ] started Context folder => continue or remove from project

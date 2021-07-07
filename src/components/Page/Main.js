@@ -5,7 +5,7 @@ import ScrollToTop from '../Utility/ScrollToTop';
 import AirQuality from "./Info/AirQuality";
 import Astronomy from './Info/Astronomy';
 import Forecast from './Info/Forecast';
-import WeatherCurrentImageSeparator from '../Utility/WeatherCurrentImageSeparator';
+import ImageSeparatorWeatherCurrent from '../Utility/ImageSeparatorWeatherCurrent';
 import Location from "./Info/Location";
 import WeatherCurrent from "./Info/WeatherCurrent";
 
@@ -27,7 +27,7 @@ const Main = ({ weatherInfo, weatherCondition, location, airQuality, astronomy, 
                                 forecast_3_days={ forecast_3_days }
                                 location={ location }
                             />
-                            <WeatherCurrentImageSeparator
+                            <ImageSeparatorWeatherCurrent
                                 weatherCondition={ weatherCondition }
                             />
                             <Forecast
@@ -35,13 +35,13 @@ const Main = ({ weatherInfo, weatherCondition, location, airQuality, astronomy, 
                                 location={ location }
                             />
 
-                            {/*<WeatherCurrentImageSeparator />*/}
+                            {/*<ImageSeparatorWeatherCurrent />*/}
 
                             <AirQuality
                                 airQuality={ airQuality }
                             />
 
-                            {/*<WeatherCurrentImageSeparator />*/}
+                            {/*<ImageSeparatorWeatherCurrent />*/}
 
                             <div className="city_astro">
                                 <Location
@@ -54,7 +54,7 @@ const Main = ({ weatherInfo, weatherCondition, location, airQuality, astronomy, 
 
                             <ScrollToTop />
 
-                            {/*<WeatherCurrentImageSeparator />*/}
+                            {/*<ImageSeparatorWeatherCurrent />*/}
 
                         </div>
                     )
