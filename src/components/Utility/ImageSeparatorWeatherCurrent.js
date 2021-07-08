@@ -12,7 +12,7 @@ const ImageSeparatorWeatherCurrent = ({ weatherCondition }) => {
     if (text === 'Sunny') return <div className="ImageSeparatorSunny"> </div>;
     if (text === 'Clear') return <div className="ImageSeparatorClear"> </div>;
     if (cloud.includes(text)) return <div className="ImageSeparatorCloudy"> </div>;
-    if (fogAndMist.includes(text)) return <div className="ImageSeparatorFog"> </div>;
+    if (fogAndMist.includes(text)) return <div className="ImageSeparatorFogAndMist"> </div>;
     if (rain.includes(text)) return <div className="ImageSeparatorRainy"> </div>;
     if (rainShower.includes(text)) return <div className="ImageSeparatorRainShower"> </div>;
     if (sleet.includes(text)) return <div className="ImageSeparatorSleet"> </div>;

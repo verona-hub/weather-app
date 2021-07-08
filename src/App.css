@@ -266,68 +266,78 @@ p.close {
 + Image Separator
 */
 
+.ImageSeparator,
+.ImageSeparatorSunny,
+.ImageSeparatorClear,
+.ImageSeparatorCloudy,
+.ImageSeparatorFogAndMist,
+.ImageSeparatorRainy,
+.ImageSeparatorRainShower,
+.ImageSeparatorSleet,
+.ImageSeparatorSnow,
+.ImageSeparatorThunder {
+    border-radius: 22px;
+    height: 500px;
+    margin: 0 25px 0;
+}
+
 .ImageSeparator {
     background: url(img/beach.jpg) fixed no-repeat center;
     background-size: cover;
-    height: 500px;
+
 }
 /* Good weather - Day */
 .ImageSeparatorSunny {
     background: url(img/sunny.jpg) fixed no-repeat;
     background-size: cover;
-    height: 500px;
+    background-position: 0 20%;
 }
 
 /* Good weather - Night */
 .ImageSeparatorClear {
-    background: url(img/clear.jpg) fixed no-repeat top;
+    background: url(img/clear.jpg) fixed no-repeat;
     background-size: cover;
-    height: 500px;
+    background-position: 0 60%;
 }
 
 .ImageSeparatorCloudy {
-    background: url(img/cloudy.jpg) fixed no-repeat top;
+    background: url(img/cloudy.jpg) fixed no-repeat;
     background-size: cover;
-    height: 500px;
+    background-position: 0 80%;
 }
 
-.ImageSeparatorFog {
-    background: url(img/mist.jpg) fixed no-repeat top;
+.ImageSeparatorFogAndMist {
+    background: url(img/fogandmist.jpg) fixed no-repeat;
     background-size: cover;
-    height: 500px;
 }
 
 .ImageSeparatorRainy {
-    background: url(img/rain.jpg) fixed no-repeat top;
+    background: url(img/rain.jpg) fixed no-repeat;
     background-size: cover;
-    height: 500px;
 }
 
 .ImageSeparatorRainShower {
     background: url(img/rain-shower.jpg) fixed no-repeat center;
     background-size: cover;
-    height: 500px;
 }
 
 .ImageSeparatorSleet {
     background: url(img/sleet.jpg) fixed no-repeat center;
     background-size: cover;
-    height: 500px;
+    background-position: 0 30%;
 }
 
 .ImageSeparatorSnow {
     background: url(img/snow.jpg) fixed no-repeat center;
     background-size: cover;
-    height: 500px;
+    background-position: 0 80%;
 }
 
 .ImageSeparatorThunder {
     background: url(img/thunder.jpg) fixed no-repeat top;
-    background-size: 100vw 120vh;
-    height: 500px;
+    background-size: cover;
+    background-position: 0 50%;
 }
-
-
 
 
 
@@ -1504,8 +1514,17 @@ button {
         margin: 0;
     }
 
-    .Main {
-        padding: 0 10px;
+    .ImageSeparator,
+    .ImageSeparatorSunny,
+    .ImageSeparatorClear,
+    .ImageSeparatorCloudy,
+    .ImageSeparatorFog,
+    .ImageSeparatorRainy,
+    .ImageSeparatorRainShower,
+    .ImageSeparatorSleet,
+    .ImageSeparatorSnow,
+    .ImageSeparatorThunder {
+        height: 40vh;
     }
 
     .Modal {
