@@ -1548,6 +1548,14 @@ button {
         width: 85%;
     }
 
+    .WeatherCurrent.card,
+    .Forecast.card,
+    .AirQuality.card,
+    .Location.card,
+    .Astronomy.card {
+        margin: 0 auto 100px;
+    }
+
     .Forecast.card,
     .AirQuality.card,
     .Location.card,
@@ -1893,10 +1901,6 @@ button {
 
     .dot_slide_wrapper {
         margin-top: 70px;
-    }
-
-    .ForecastDailyInfo .bottom_content {
-        width: 100%;
     }
 
     .AirQualityCollection {

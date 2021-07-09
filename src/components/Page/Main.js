@@ -6,6 +6,7 @@ import AirQuality from "./Info/AirQuality";
 import Astronomy from './Info/Astronomy';
 import Forecast from './Info/Forecast';
 import ImageSeparatorWeatherCurrent from '../Utility/ImageSeparatorWeatherCurrent';
+import ImageSeparatorWeatherForecast from "../Utility/ImageSeparatorWeatherForecast";
 import Location from "./Info/Location";
 import WeatherCurrent from "./Info/WeatherCurrent";
 
@@ -35,7 +36,10 @@ const Main = ({ weatherInfo, weatherCondition, location, airQuality, astronomy, 
                                 location={ location }
                             />
 
-                            {/*<ImageSeparatorWeatherCurrent />*/}
+                            <ImageSeparatorWeatherForecast
+                                forecast_3_days={ forecast_3_days }
+                                location={ location }
+                            />
 
                             <AirQuality
                                 airQuality={ airQuality }
