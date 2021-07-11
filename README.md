@@ -24,11 +24,11 @@ https://weather-app-veronahub.netlify.app/
 
 ### Implementations: 
 
-- [ ] image optimization
 - [ ] refactor AirQuality component and move the logic to a new Component, use props to access it ( or remove AirQualityColors.js)
 - [ ] different props => to be done inside Forecast.js component
 - [ ] started Context folder => continue or remove from project
 - [ ] comment all the functions and code 
+- [x] ~~image optimization~~
 - [x] ~~AirQualityData to be checked what is exported~~
 
 
@@ -47,7 +47,7 @@ https://weather-app-veronahub.netlify.app/
 
 #### Additions:
 
-- [ ] add different pictures for image separators (sunny, cloudy, rainy, night sky) - switch cases
+- [ ] add different pictures for image separators (sunny, cloudy, rainy, night sky) - switch cases or one function
 - [ ] add fahrenheit converter ( add toggle celsius -> fahrenheit at the top)
 - [ ] refactor Navbar to be used with props (header 70, 100 -- add switch case for all the options?)
 - [ ] 127.0.0.1/?react_perf   ==> then Chrome Performance tab inside inspector
@@ -56,6 +56,7 @@ https://weather-app-veronahub.netlify.app/
 
 
 #### Fixes:
+- [ ] fix blue arrows height on mobile
 - [ ] scroll to top is not smooth on the homepage
 - [ ] fix process.env for development and production (hide Api key to back end ?)
 - [ ] fix after aborting a search and making a new one, the new search is buggy

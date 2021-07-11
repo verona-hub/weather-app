@@ -5,8 +5,8 @@ import ScrollToTop from '../Utility/ScrollToTop';
 import AirQuality from "./Info/AirQuality";
 import Astronomy from './Info/Astronomy';
 import Forecast from './Info/Forecast';
-import ImageSeparatorWeatherCurrent from '../Utility/ImageSeparatorWeatherCurrent';
-import ImageSeparatorWeatherForecast from "../Utility/ImageSeparatorWeatherForecast";
+import ImageSeparatorWeatherCurrent from '../Utility/ImageSeparator/ImageSeparatorWeatherCurrent';
+import ImageSeparatorWeatherForecast from "../Utility/ImageSeparator/ImageSeparatorWeatherForecast";
 import Location from "./Info/Location";
 import WeatherCurrent from "./Info/WeatherCurrent";
 

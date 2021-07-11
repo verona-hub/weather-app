@@ -1384,12 +1384,15 @@ button {
 
     .awssld {
         height: 1300px;
-        padding: 100px 0;
+        /*padding: 100px 0;*/
+    }
+
+    .Forecast {
+        height: 1200px;
     }
 
     .AirQuality_wrapper {
-        padding-bottom: 100px;
-
+        /*padding-bottom: 100px;*/
     }
 
     .ForecastDailyInfo .bottom_left,
@@ -1550,7 +1553,6 @@ button {
 
     .WeatherCurrent.card,
     .Forecast.card,
-    .AirQuality.card,
     .Location.card,
     .Astronomy.card {
         margin: 0 auto 100px;
@@ -1604,6 +1606,10 @@ button {
     .awssld {
         height: 1700px;
         background-size: 100% 100%;
+    }
+
+    .Forecast {
+        height: 1400px;
     }
 
     .awssld__controls__arrow-left,
@@ -1690,13 +1696,11 @@ button {
     }
 
     .dot_slide_wrapper {
-        margin-top: 100px;
+        /*margin-top: 100px;*/
     }
 
-    .AirQuality .title,
     .Location .title,
     .Astronomy .title {
-        font-size: 1.8rem;
         letter-spacing: 0.1rem;
         margin: 45px;
         word-spacing: 0.1rem;

@@ -1,17 +1,10 @@
 import React from 'react';
-
 // All possible weather forecast conditions fetched from Api
 import { cloud, fogAndMist, rain, rainShower, sleet, snow, thunder } from "./ImageSeparatorData";
 
 
-const ImageSeparatorWeatherForecast = ({ forecast_3_days }) => {
-
-    // Destructuring the fetched forecastday into separate days: day1, day2, and day3
-    const { forecastday } = forecast_3_days;
-    const [forecast1day] = forecastday;
-
-    // Destructured the fetched weather forecast conditions
-    const { text } = forecast1day.day.condition;
+// Function that takes the text as parameter and outputs the according picture
+const imageSeparatorFunc = (text) => {
 
     if (text === 'Sunny') return <div className="ImageSeparatorSunny"> </div>;
     if (text === 'Clear') return <div className="ImageSeparatorClear"> </div>;
@@ -26,4 +19,4 @@ const ImageSeparatorWeatherForecast = ({ forecast_3_days }) => {
     else return <div className="ImageSeparator"> </div>;
 };
 
-export default ImageSeparatorWeatherForecast;
+export default imageSeparatorFunc;
