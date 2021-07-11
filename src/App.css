@@ -275,17 +275,21 @@ p.close {
 .ImageSeparatorRainShower,
 .ImageSeparatorSleet,
 .ImageSeparatorSnow,
-.ImageSeparatorThunder {
-    border-radius: 22px;
-    height: 500px;
-    margin: 0 25px 0;
+.ImageSeparatorThunder,
+.ImageSeparatorAirQualityLow,
+.ImageSeparatorAirQualityMed,
+.ImageSeparatorAirQualityHigh,
+.ImageSeparatorAirQualityVeryHigh {
+    /*border-radius: 22px;*/
+    height: 600px;
+    /*margin: 0 25px 0;*/
 }
 
 .ImageSeparator {
     background: url(img/beach.jpg) fixed no-repeat center;
     background-size: cover;
-
 }
+
 /* Good weather - Day */
 .ImageSeparatorSunny {
     background: url(img/sunny.jpg) fixed no-repeat;
@@ -339,6 +343,25 @@ p.close {
     background-position: 0 50%;
 }
 
+.ImageSeparatorAirQualityLow {
+    background: url(img/air-low.jpg) fixed no-repeat bottom;
+    background-size: cover;
+}
+
+.ImageSeparatorAirQualityMed {
+    background: url(img/air-med.jpg) fixed no-repeat;
+    background-size: cover;
+}
+
+.ImageSeparatorAirQualityHigh {
+    background: url(img/air-high.jpg) fixed no-repeat;
+    background-size: cover;
+}
+
+.ImageSeparatorAirQualityVeryHigh {
+    background: url(img/air-low.jpg) fixed no-repeat bottom;
+    background-size: cover;
+}
 
 
 /*

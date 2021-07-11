@@ -1,12 +1,12 @@
 import React from 'react';
 
 import AirQualityElement from "./AirQualityElement";
-import carbonMonoxideChecker from "./Elements/CarbonMonoxide";
-import nitrogenDioxideChecker from "./Elements/NitrogenDioxide";
-import ozoneChecker from "./Elements/Ozone";
-import sulphurDioxideChecker from "./Elements/SulphurDioxide";
-import pm2_5_Checker from "./Elements/Pm2_5";
-import pm10_Checker from "./Elements/Pm10";
+import carbonMonoxideChecker from "./ElementsChecker/CarbonMonoxide";
+import nitrogenDioxideChecker from "./ElementsChecker/NitrogenDioxide";
+import ozoneChecker from "./ElementsChecker/Ozone";
+import sulphurDioxideChecker from "./ElementsChecker/SulphurDioxide";
+import pm2_5_Checker from "./ElementsChecker/Pm2_5";
+import pm10_Checker from "./ElementsChecker/Pm10";
 
 
 const AirQualityCollection = ({ airQuality }) => {
