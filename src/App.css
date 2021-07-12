@@ -279,9 +279,18 @@ p.close {
 .ImageSeparatorAirQualityLow,
 .ImageSeparatorAirQualityMed,
 .ImageSeparatorAirQualityHigh,
-.ImageSeparatorAirQualityVeryHigh {
+.ImageSeparatorAirQualityVeryHigh,
+.ImageSeparator-Astronomy-NewMoon,
+.ImageSeparator-Astronomy-WaxingCrescent,
+.ImageSeparator-Astronomy-FirstQuarter,
+.ImageSeparator-Astronomy-WaxingGibbous,
+.ImageSeparator-Astronomy-FullMoon,
+.ImageSeparator-Astronomy-WaningGibbous,
+.ImageSeparator-Astronomy-LastQuarter,
+.ImageSeparator-Astronomy-WaningCrescent {
     /*border-radius: 22px;*/
     height: 600px;
+    height: 80vh;
     /*margin: 0 25px 0;*/
 }
 
@@ -351,6 +360,7 @@ p.close {
 .ImageSeparatorAirQualityMed {
     background: url(img/air-med.jpg) fixed no-repeat;
     background-size: cover;
+    background-position: 50% 50%;
 }
 
 .ImageSeparatorAirQualityHigh {
@@ -362,6 +372,58 @@ p.close {
     background: url(img/air-low.jpg) fixed no-repeat bottom;
     background-size: cover;
 }
+
+.ImageSeparator-Astronomy-NewMoon {
+    background: url(img/new-moon.jpg) fixed no-repeat bottom;
+    background-size: cover;
+}
+
+.ImageSeparator-Astronomy-WaxingCrescent {
+    background: url(img/moon-waxing-crescent.jpg) fixed no-repeat top;
+    background-size: cover;
+    background-position: 50% 30%;
+}
+
+.ImageSeparator-Astronomy-FirstQuarter {
+    background: url(img/moon-first-quarter.jpg) fixed no-repeat;
+    background-size: cover;
+}
+
+.ImageSeparator-Astronomy-WaxingGibbous {
+    background: url(img/moon-waxing-gibbous.jpg) fixed no-repeat;
+    background-size: cover;
+    background-position: 50% 50%;
+}
+
+.ImageSeparator-Astronomy-FullMoon {
+    background: url(img/moon-full.jpg) fixed no-repeat;
+    background-size: cover;
+    background-position: 25% 25%;
+}
+
+.ImageSeparator-Astronomy-WaningGibbous {
+    background: url(img/moon-waning-gibbous.jpg) fixed no-repeat;
+    background-size: cover;
+    background-position: 50% 50%;
+}
+
+.ImageSeparator-Astronomy-LastQuarter {
+    background: url(img/moon-last-quarter.jpg) fixed no-repeat;
+    background-size: cover;
+    background-position: 75% 55%;
+}
+
+.ImageSeparator-Astronomy-WaningCrescent {
+    background: url(img/moon-waning-crescent.jpg) fixed no-repeat;
+    background-size: cover;
+    background-position: 80% 75%;
+}
+
+
+
+
+
+
 
 
 /*
@@ -1549,8 +1611,17 @@ button {
     .ImageSeparatorRainShower,
     .ImageSeparatorSleet,
     .ImageSeparatorSnow,
-    .ImageSeparatorThunder {
-        height: 40vh;
+    .ImageSeparatorThunder,
+    .ImageSeparatorAirQualityLow,
+    .ImageSeparatorAirQualityMed,
+    .ImageSeparatorAirQualityHigh,
+    .ImageSeparatorAirQualityVeryHigh,
+    .ImageSeparator-Astronomy-NewMoon,
+    .ImageSeparator-Astronomy-WaxingCrescent,
+    .ImageSeparator-Astronomy-FirstQuarter,
+    .ImageSeparator-Astronomy-WaxingGibbous {
+        /*height: 40vh;*/
+        /*height: 500px;*/
     }
 
     .Modal {

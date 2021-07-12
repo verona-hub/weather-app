@@ -1,4 +1,4 @@
-import { imageSeparatorFunc } from './ImageSeparatorFunction';
+import { imageSeparatorFunc } from './ImageSeparatorFunctions';
 
 
 const ImageSeparatorWeatherCurrent = ({ weatherCondition }) => {

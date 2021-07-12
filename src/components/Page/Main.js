@@ -6,6 +6,7 @@ import AirQuality from "./Info/AirQuality";
 import Astronomy from './Info/Astronomy';
 import Forecast from './Info/Forecast';
 import ImageSeparatorAirQuality from '../Utility/ImageSeparator/ImageSeparatorAirQuality';
+import ImageSeparatorAstronomy from '../Utility/ImageSeparator/ImageSeparatorAstronomy';
 import ImageSeparatorWeatherCurrent from '../Utility/ImageSeparator/ImageSeparatorWeatherCurrent';
 import ImageSeparatorWeatherForecast from "../Utility/ImageSeparator/ImageSeparatorWeatherForecast";
 import Location from "./Info/Location";
@@ -58,7 +59,9 @@ const Main = ({ weatherInfo, weatherCondition, location, airQuality, astronomy, 
 
                             <ScrollToTop />
 
-                            {/*<ImageSeparatorWeatherCurrent />*/}
+                            <ImageSeparatorAstronomy
+                                astronomy={ astronomy }
+                            />
 
                         </div>
                     )

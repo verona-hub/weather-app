@@ -72,4 +72,5 @@ const med = ['Index 4', 'Index 5', 'Index 6'];
 const high = ['Index 7', 'Index 8', 'Index 9'];
 const veryHigh = ['Index 10'];
 
+
 export { cloud, fogAndMist, rain, rainShower, sleet, snow, thunder, low, med, high, veryHigh };

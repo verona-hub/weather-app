@@ -1,4 +1,4 @@
-import { imageSeparatorFunc } from './ImageSeparatorFunction';
+import { imageSeparatorFunc } from './ImageSeparatorFunctions';
 
 
 const ImageSeparatorWeatherForecast = ({ forecast_3_days }) => {

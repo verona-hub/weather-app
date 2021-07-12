@@ -1,4 +1,4 @@
-import { imageSeparatorAirQualityFunc } from './ImageSeparatorFunction';
+import { imageSeparatorAirQualityFunc } from './ImageSeparatorFunctions';
 
 
 const ImageSeparatorAirQuality = ({ airQuality }) => {
