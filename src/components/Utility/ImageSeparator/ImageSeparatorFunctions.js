@@ -7,17 +7,17 @@ import carbonMonoxideChecker from '../../Page/Info/AirQualityData/ElementsChecke
 // Function that takes the text as a parameter and outputs the according picture
 const imageSeparatorFunc = (text) => {
 
-    if (text === 'Sunny') return <div className="ImageSeparatorSunny"> </div>;
-    if (text === 'Clear') return <div className="ImageSeparatorClear"> </div>;
-    if (cloud.includes(text)) return <div className="ImageSeparatorCloudy"> </div>;
-    if (fogAndMist.includes(text)) return <div className="ImageSeparatorFogAndMist"> </div>;
-    if (rain.includes(text)) return <div className="ImageSeparatorRainy"> </div>;
-    if (rainShower.includes(text)) return <div className="ImageSeparatorRainShower"> </div>;
-    if (sleet.includes(text)) return <div className="ImageSeparatorSleet"> </div>;
-    if (snow.includes(text)) return <div className="ImageSeparatorSnow"> </div>;
-    if (thunder.includes(text)) return <div className="ImageSeparatorThunder"> </div>;
+    if (text === 'Sunny') return <div className="ImageSeparator Sunny"> </div>;
+    if (text === 'Clear') return <div className="ImageSeparator Clear"> </div>;
+    if (cloud.includes(text)) return <div className="ImageSeparator Cloudy"> </div>;
+    if (fogAndMist.includes(text)) return <div className="ImageSeparator FogAndMist"> </div>;
+    if (rain.includes(text)) return <div className="ImageSeparator Rainy"> </div>;
+    if (rainShower.includes(text)) return <div className="ImageSeparator Rain-Shower"> </div>;
+    if (sleet.includes(text)) return <div className="ImageSeparator Sleet"> </div>;
+    if (snow.includes(text)) return <div className="ImageSeparator Snow"> </div>;
+    if (thunder.includes(text)) return <div className="ImageSeparator Thunder"> </div>;
 
-    else return <div className="ImageSeparator"> </div>;
+    else return <div className="ImageSeparatorDefault"> </div>;
 };
 
 
@@ -34,27 +34,28 @@ const imageSeparatorAirQualityFunc = (co) => {
     const coText = carbonMonoxideData.indexCo;
 
     // Check if the extracted string is included in the array and then displays the image
-    if (low.includes(coText)) return <div className="ImageSeparatorAirQualityLow"> </div>;
-    if (med.includes(coText)) return <div className="ImageSeparatorAirQualityMed"> </div>;
-    if (high.includes(coText)) return <div className="ImageSeparatorAirQualityHigh"> </div>;
-    if (veryHigh.includes(coText)) return <div className="ImageSeparatorAirQualityVeryHigh"> </div>;
+    if (low.includes(coText)) return <div className="ImageSeparator AirQuality-Low"> </div>;
+    if (med.includes(coText)) return <div className="ImageSeparator AirQuality-Med"> </div>;
+    if (high.includes(coText)) return <div className="ImageSeparator AirQuality-High"> </div>;
+    if (veryHigh.includes(coText)) return <div className="ImageSeparator AirQuality-VeryHigh"> </div>;
 
-    else return <div className="ImageSeparatorAirQualityLow"> </div>;
+    else return <div className="ImageSeparatorDefault"> </div>;
 };
 
 
 // Function that takes the fetched moon phase as a parameter and outputs the according picture
 const imageSeparatorAstronomyFunc = (moon_phase) => {
 
-    if (moon_phase === 'New Moon') return <div className="ImageSeparator-Astronomy-NewMoon"> </div>;
-    if (moon_phase === 'Waxing Crescent') return <div className="ImageSeparator-Astronomy-WaxingCrescent"> </div>;
-    if (moon_phase === 'First Quarter') return <div className="ImageSeparator-Astronomy-FirstQuarter"> </div>;
-    if (moon_phase === 'Waxing Gibbous') return <div className="ImageSeparator-Astronomy-WaxingGibbous"> </div>;
-    if (moon_phase === 'Full Moon') return <div className="ImageSeparator-Astronomy-FullMoon"> </div>;
-    if (moon_phase === 'Waning Gibbous') return <div className="ImageSeparator-Astronomy-WaningGibbous"> </div>;
-    if (moon_phase === 'Last Quarter') return <div className="ImageSeparator-Astronomy-LastQuarter"> </div>;
-    if (moon_phase === 'Waning Crescent') return <div className="ImageSeparator-Astronomy-WaningCrescent"> </div>;
-    else return <div className="ImageSeparator"> </div>;
+    if (moon_phase === 'New Moon') return <div className="ImageSeparator Astronomy-NewMoon"> </div>;
+    if (moon_phase === 'Waxing Crescent') return <div className="ImageSeparator Astronomy-WaxingCrescent"> </div>;
+    if (moon_phase === 'First Quarter') return <div className="ImageSeparator Astronomy-FirstQuarter"> </div>;
+    if (moon_phase === 'Waxing Gibbous') return <div className="ImageSeparator Astronomy-WaxingGibbous"> </div>;
+    if (moon_phase === 'Full Moon') return <div className="ImageSeparator Astronomy-FullMoon"> </div>;
+    if (moon_phase === 'Waning Gibbous') return <div className="ImageSeparator Astronomy-WaningGibbous"> </div>;
+    if (moon_phase === 'Last Quarter') return <div className="ImageSeparator Astronomy-LastQuarter"> </div>;
+    if (moon_phase === 'Waning Crescent') return <div className="ImageSeparator Astronomy-WaningCrescent"> </div>;
+
+    else return <div className="ImageSeparatorDefault"> </div>;
 };
 
 

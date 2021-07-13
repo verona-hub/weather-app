@@ -267,162 +267,137 @@ p.close {
 */
 
 .ImageSeparator,
-.ImageSeparatorSunny,
-.ImageSeparatorClear,
-.ImageSeparatorCloudy,
-.ImageSeparatorFogAndMist,
-.ImageSeparatorRainy,
-.ImageSeparatorRainShower,
-.ImageSeparatorSleet,
-.ImageSeparatorSnow,
-.ImageSeparatorThunder,
-.ImageSeparatorAirQualityLow,
-.ImageSeparatorAirQualityMed,
-.ImageSeparatorAirQualityHigh,
-.ImageSeparatorAirQualityVeryHigh,
-.ImageSeparator-Astronomy-NewMoon,
-.ImageSeparator-Astronomy-WaxingCrescent,
-.ImageSeparator-Astronomy-FirstQuarter,
-.ImageSeparator-Astronomy-WaxingGibbous,
-.ImageSeparator-Astronomy-FullMoon,
-.ImageSeparator-Astronomy-WaningGibbous,
-.ImageSeparator-Astronomy-LastQuarter,
-.ImageSeparator-Astronomy-WaningCrescent {
-    /*border-radius: 22px;*/
-    height: 600px;
+.ImageSeparatorDefault {
     height: 80vh;
-    /*margin: 0 25px 0;*/
 }
 
-.ImageSeparator {
+.ImageSeparatorDefault {
     background: url(img/beach.jpg) fixed no-repeat center;
     background-size: cover;
 }
 
 /* Good weather - Day */
-.ImageSeparatorSunny {
+.ImageSeparator.Sunny {
     background: url(img/sunny.jpg) fixed no-repeat;
     background-size: cover;
     background-position: 0 20%;
 }
 
 /* Good weather - Night */
-.ImageSeparatorClear {
+.ImageSeparator.Clear {
     background: url(img/clear.jpg) fixed no-repeat;
     background-size: cover;
     background-position: 0 60%;
 }
 
-.ImageSeparatorCloudy {
+.ImageSeparator.Cloudy {
     background: url(img/cloudy.jpg) fixed no-repeat;
     background-size: cover;
     background-position: 0 80%;
 }
 
-.ImageSeparatorFogAndMist {
+.ImageSeparator.FogAndMist {
     background: url(img/fogandmist.jpg) fixed no-repeat;
     background-size: cover;
 }
 
-.ImageSeparatorRainy {
+.ImageSeparator.Rainy {
     background: url(img/rain.jpg) fixed no-repeat;
     background-size: cover;
 }
 
-.ImageSeparatorRainShower {
+.ImageSeparator.Rain-Shower {
     background: url(img/rain-shower.jpg) fixed no-repeat center;
     background-size: cover;
 }
 
-.ImageSeparatorSleet {
+.ImageSeparator.Sleet {
     background: url(img/sleet.jpg) fixed no-repeat center;
     background-size: cover;
     background-position: 0 30%;
 }
 
-.ImageSeparatorSnow {
+.ImageSeparator.Snow {
     background: url(img/snow.jpg) fixed no-repeat center;
     background-size: cover;
     background-position: 0 80%;
 }
 
-.ImageSeparatorThunder {
+.ImageSeparator.Thunder {
     background: url(img/thunder.jpg) fixed no-repeat top;
     background-size: cover;
     background-position: 0 50%;
 }
 
-.ImageSeparatorAirQualityLow {
+.ImageSeparator.AirQuality-Low {
     background: url(img/air-low.jpg) fixed no-repeat bottom;
     background-size: cover;
+    background-position: 40% 85%;
 }
 
-.ImageSeparatorAirQualityMed {
+.ImageSeparator.AirQuality-Med {
     background: url(img/air-med.jpg) fixed no-repeat;
     background-size: cover;
-    background-position: 50% 50%;
+    background-position: 70% 60%;
 }
 
-.ImageSeparatorAirQualityHigh {
+.ImageSeparator.AirQuality-High {
     background: url(img/air-high.jpg) fixed no-repeat;
     background-size: cover;
+    background-position: 60% 50%;
 }
 
-.ImageSeparatorAirQualityVeryHigh {
-    background: url(img/air-low.jpg) fixed no-repeat bottom;
+.ImageSeparator.AirQuality-VeryHigh {
+    background: url(img/air-veryHigh.jpg) fixed no-repeat bottom;
     background-size: cover;
+    background-position: 20% 100%;
 }
 
-.ImageSeparator-Astronomy-NewMoon {
+.Astronomy-NewMoon {
     background: url(img/new-moon.jpg) fixed no-repeat bottom;
     background-size: cover;
 }
 
-.ImageSeparator-Astronomy-WaxingCrescent {
+.Astronomy-WaxingCrescent {
     background: url(img/moon-waxing-crescent.jpg) fixed no-repeat top;
     background-size: cover;
     background-position: 50% 30%;
 }
 
-.ImageSeparator-Astronomy-FirstQuarter {
+.Astronomy-FirstQuarter {
     background: url(img/moon-first-quarter.jpg) fixed no-repeat;
     background-size: cover;
 }
 
-.ImageSeparator-Astronomy-WaxingGibbous {
+.Astronomy-WaxingGibbous {
     background: url(img/moon-waxing-gibbous.jpg) fixed no-repeat;
     background-size: cover;
     background-position: 50% 50%;
 }
 
-.ImageSeparator-Astronomy-FullMoon {
+.Astronomy-FullMoon {
     background: url(img/moon-full.jpg) fixed no-repeat;
     background-size: cover;
     background-position: 25% 25%;
 }
 
-.ImageSeparator-Astronomy-WaningGibbous {
+.Astronomy-WaningGibbous {
     background: url(img/moon-waning-gibbous.jpg) fixed no-repeat;
     background-size: cover;
     background-position: 50% 50%;
 }
 
-.ImageSeparator-Astronomy-LastQuarter {
+.Astronomy-LastQuarter {
     background: url(img/moon-last-quarter.jpg) fixed no-repeat;
     background-size: cover;
     background-position: 75% 55%;
 }
 
-.ImageSeparator-Astronomy-WaningCrescent {
+.Astronomy-WaningCrescent {
     background: url(img/moon-waning-crescent.jpg) fixed no-repeat;
     background-size: cover;
     background-position: 80% 75%;
 }
-
-
-
-
-
 
 
 
@@ -1602,24 +1577,24 @@ button {
         margin: 0;
     }
 
-    .ImageSeparator,
-    .ImageSeparatorSunny,
-    .ImageSeparatorClear,
-    .ImageSeparatorCloudy,
+    .ImageSeparatorDefault,
+    .Sunny,
+    .Clear,
+    .Cloudy,
     .ImageSeparatorFog,
-    .ImageSeparatorRainy,
-    .ImageSeparatorRainShower,
-    .ImageSeparatorSleet,
-    .ImageSeparatorSnow,
-    .ImageSeparatorThunder,
-    .ImageSeparatorAirQualityLow,
-    .ImageSeparatorAirQualityMed,
-    .ImageSeparatorAirQualityHigh,
-    .ImageSeparatorAirQualityVeryHigh,
-    .ImageSeparator-Astronomy-NewMoon,
-    .ImageSeparator-Astronomy-WaxingCrescent,
-    .ImageSeparator-Astronomy-FirstQuarter,
-    .ImageSeparator-Astronomy-WaxingGibbous {
+    .Rainy,
+    .Rain-Shower,
+    .Sleet,
+    .Snow,
+    .Thunder,
+    .AirQuality-Low,
+    .AirQuality-Med,
+    .AirQuality-High,
+    .AirQuality-VeryHigh,
+    .Astronomy-NewMoon,
+    .Astronomy-WaxingCrescent,
+    .Astronomy-FirstQuarter,
+    .Astronomy-WaxingGibbous {
         /*height: 40vh;*/
         /*height: 500px;*/
     }
