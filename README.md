@@ -47,12 +47,13 @@ https://weather-app-veronahub.netlify.app/
 
 #### Additions:
 
-- [ ] add different pictures for image separators (sunny, cloudy, rainy, night sky) - switch cases or one function
 - [ ] add fahrenheit converter ( add toggle celsius -> fahrenheit at the top)
 - [ ] refactor Navbar to be used with props (header 70, 100 -- add switch case for all the options?)
 - [ ] 127.0.0.1/?react_perf   ==> then Chrome Performance tab inside inspector
 - [ ] add Dark Mode: #2f2f2f as bgc, marine blue as color ?
 - [ ] translate website to croatian and italian
+- [x] ~~add different pictures for image separators (sunny, cloudy, rainy, night sky) - switch cases or one function~~
+
 
 
 #### Fixes:

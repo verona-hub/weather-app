@@ -713,7 +713,7 @@ button {
 .AirQuality span,
 .Location span,
 .Astronomy span {
-    font-size: 18px;
+    font-size: 1rem;
 }
 
 
@@ -1699,15 +1699,21 @@ button {
         width: 80%;
     }
 
+    .ForecastDailyInfo {
+        width: 90%;
+        margin: 0 auto;
+    }
+
     .ForecastDailyInfo .bottom_content {
         flex-wrap: wrap;
         line-height: 1.2;
         margin: 0 auto;
-        width: 75%;
+        width: 90%;
     }
 
     .ForecastDailyInfo .bottom_left,
     .ForecastDailyInfo .bottom_right {
+        margin: 0 auto;
         width: 100%;
     }
 
