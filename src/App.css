@@ -356,17 +356,19 @@ p.close {
 .Astronomy-NewMoon {
     background: url(img/new-moon.jpg) fixed no-repeat bottom;
     background-size: cover;
+    background-position: 50% 30%;
 }
 
 .Astronomy-WaxingCrescent {
     background: url(img/moon-waxing-crescent.jpg) fixed no-repeat top;
     background-size: cover;
-    background-position: 50% 30%;
+    background-position: 45% 10%;
 }
 
 .Astronomy-FirstQuarter {
     background: url(img/moon-first-quarter.jpg) fixed no-repeat;
     background-size: cover;
+    background-position: 25% 100%;
 }
 
 .Astronomy-WaxingGibbous {
@@ -584,6 +586,13 @@ button {
     font-weight: bold;
     letter-spacing: 0.05rem;
     margin: 5px;
+}
+
+.ScrollToTopHomepage {
+    border: none;
+    cursor: pointer;
+    padding: 20px;
+    width: 100%;
 }
 
 

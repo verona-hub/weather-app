@@ -1,5 +1,4 @@
 import React from 'react';
-import ScrollToTop from '../Utility/ScrollToTop';
 
 // Components
 import AirQuality from "./Info/AirQuality";
@@ -10,6 +9,7 @@ import ImageSeparatorAstronomy from '../Utility/ImageSeparator/ImageSeparatorAst
 import ImageSeparatorWeatherCurrent from '../Utility/ImageSeparator/ImageSeparatorWeatherCurrent';
 import ImageSeparatorWeatherForecast from "../Utility/ImageSeparator/ImageSeparatorWeatherForecast";
 import Location from "./Info/Location";
+import ScrollToTopHomepage from "../Utility/ScrollToTopHomepage";
 import WeatherCurrent from "./Info/WeatherCurrent";
 
 
@@ -57,11 +57,11 @@ const Main = ({ weatherInfo, weatherCondition, location, airQuality, astronomy, 
                                 />
                             </div>
 
-                            <ScrollToTop />
-
                             <ImageSeparatorAstronomy
                                 astronomy={ astronomy }
                             />
+
+                            <ScrollToTopHomepage />
 
                         </div>
                     )
