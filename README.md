@@ -35,7 +35,7 @@ https://weather-app-veronahub.netlify.app/
 #### Css:
 - [ ] test on mobile and tablet
 - [ ] create a menu navigation, to display which sections of the landing page you are on (vertical loader bar?, desktop only?)
-- [ ] move scroll to top to be dynamic on the lower right side, full width and flashing
+- [ ] move scroll to top to be full width and flashing; scroll to top on About page up arrow to be above left arrow
 - [x] ~~AirQualityItem fix white border on high value~~
 - [x] ~~fixed hourly forecast subtitle (time, weather forecast, temperature)~~
 - [x] ~~fixed slider height on max-width 380px~~
