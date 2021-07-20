@@ -1,5 +1,6 @@
 import React from 'react';
-import arrow_up from '../../img/arrow-up.png';
+import image from '../../img/arrow-up.svg';
+
 
 const ScrollToTopHomepage = () => {
     const scrollToTop = () => window.scrollTo({
@@ -9,8 +10,15 @@ const ScrollToTopHomepage = () => {
 
     return (
         <div className="ScrollToTopHomepage">
-            <div className="box"> </div>
+            <div className="main">
+                <img src={image} alt=""/>
+                {/*<div className="box"> </div>*/}
+                <p> Scroll to Top </p>
+                <img src={image} alt=""/>
+                {/*<div className="box"> </div>*/}
+            </div>
         </div>
+
         /*<button onClick={ scrollToTop } className='ScrollToTopHomepage'>
             <div className="box">
                 <img src={arrow_up} alt="scroll to top arrow"/>

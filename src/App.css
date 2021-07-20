@@ -588,72 +588,70 @@ button {
     margin: 5px;
 }
 
-/*.ScrollToTopHomepage {
-    align-items: center;
-    border: none;
-    cursor: pointer;
-    display: flex;
-    justify-content: space-around;
-    padding: 20px;
+.ScrollToTopHomepage {
+    /*align-items: center;*/
+    background-color: var(--white);
+    /*display: flex;*/
+    /*justify-content: center;*/
     width: 100%;
+    /*min-height: 300px;*/
 }
 
 .ScrollToTopHomepage img {
-    padding: 5px;
     width: 64px;
 }
 
-.ScrollToTopHomepage p {
-    font-size: 1.6rem;
-    text-transform: uppercase;
-}*/
-
-.ScrollToTopHomepage {
-    display: flex;
+.ScrollToTopHomepage .main {
     align-items: center;
-    justify-content: center;
-    background-color: var(--white);
-    width: 100%;
-    min-height: 300px;
-}
+    /*background-color: var(--blue);*/
+    display: flex;
+    justify-content: space-around;
+    padding: 25px;
 
-.ScrollToTopHomepage .box {
-    background-color: #2cb363;
-    border: 0.2rem solid var(--dark_grey);
-    height: 6rem;
+    height: 150px;
     outline: 0;
     overflow: hidden;
     position: relative;
-    width: 6rem;
+    width: 100vw;
 }
 
-.ScrollToTopHomepage .box::before {
+
+.ScrollToTopHomepage .main::before {
     align-items: center;
-    content: url(./img/arrow-up.svg);
+    /*content: url(./img/arrow-up.svg);*/
     color: white;
     display: flex;
     justify-content: center;
     width: 100%;
 }
 
-.ScrollToTopHomepage .box::after {
-    animation: scrollAnimation 6s ease-in-out infinite;
+.ScrollToTopHomepage .main::after {
+    animation: scrollAnimation 6s linear infinite;
     background-color: var(--white);
-    border-radius: 45%;
-    bottom: -50%;
+    border-radius: 35%;
+    bottom: -20%;
     content: "";
-    height: 200%;
-    left: -50%;
+    height: 500px;
+    left: -10%;
     position: absolute;
-    width: 200%;
+    width: 500px;
 }
+
+
+
+.ScrollToTopHomepage p {
+    font-size: 1.6rem;
+    text-transform: uppercase;
+}
+
+
 
 @keyframes scrollAnimation {
     0% {
         transform: translateY(0) rotate(0deg);
     }
     100% {
-        transform: translateY(-100%) rotate(500deg);
+        transform: translateX(100vw) rotate(500deg);
     }
 }
 
