@@ -35,7 +35,8 @@ https://weather-app-veronahub.netlify.app/
 #### Css:
 - [ ] test on mobile and tablet
 - [ ] create a menu navigation, to display which sections of the landing page you are on (vertical loader bar?, desktop only?)
-- [ ] move scroll to top to be full width and flashing; scroll to top on About page up arrow to be above left arrow
+- [ ] scroll to top on About page up arrow to be above left arrow
+- [x] ~~move scroll to top to be full width and flashing~~
 - [x] ~~AirQualityItem fix white border on high value~~
 - [x] ~~fixed hourly forecast subtitle (time, weather forecast, temperature)~~
 - [x] ~~fixed slider height on max-width 380px~~
@@ -57,11 +58,11 @@ https://weather-app-veronahub.netlify.app/
 
 
 #### Fixes:
-- [ ] fix blue arrows height on mobile
 - [ ] scroll to top is not smooth on the homepage
 - [ ] fix process.env for development and production (hide Api key to back end ?)
 - [ ] fix after aborting a search and making a new one, the new search is buggy
 - [ ] fix click outside of modal to leave modal on
+- [x] ~~fix blue arrows height on mobile~~
 - [x] ~~fix Modal cannot cancel the fetching once started~~
 - [x] ~~fix detect click outside of modal~~
 - [x] ~~fix scroll into view after a search is made~~

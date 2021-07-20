@@ -374,7 +374,7 @@ p.close {
 .Astronomy-WaxingGibbous {
     background: url(img/moon-waxing-gibbous.jpg) fixed no-repeat;
     background-size: cover;
-    background-position: 50% 50%;
+    background-position: 50% 70%;
 }
 
 .Astronomy-FullMoon {
@@ -614,14 +614,14 @@ button {
 .ScrollToTopHomepage .arrow::before {
     align-items: center;
     content: url(./img/arrow-up.svg);
-    color: white;
+    color: var(--white);
     display: flex;
     justify-content: center;
     width: 100%;
 }
 
 .ScrollToTopHomepage .arrow::after {
-    animation: arrowAnimation 5s linear infinite;
+    animation: arrowAnimation 6s ease-in-out infinite;
     background-color: var(--white);
     border-radius: 45%;
     bottom: -50%;
@@ -651,8 +651,6 @@ button {
     position: absolute;
     width: 250px;
 }
-
-
 
 
 
@@ -1664,28 +1662,6 @@ button {
         margin: 0;
     }
 
-    .ImageSeparatorDefault,
-    .Sunny,
-    .Clear,
-    .Cloudy,
-    .ImageSeparatorFog,
-    .Rainy,
-    .Rain-Shower,
-    .Sleet,
-    .Snow,
-    .Thunder,
-    .AirQuality-Low,
-    .AirQuality-Med,
-    .AirQuality-High,
-    .AirQuality-VeryHigh,
-    .Astronomy-NewMoon,
-    .Astronomy-WaxingCrescent,
-    .Astronomy-FirstQuarter,
-    .Astronomy-WaxingGibbous {
-        /*height: 40vh;*/
-        /*height: 500px;*/
-    }
-
     .Modal {
         top: 15vh;
     }
@@ -1770,7 +1746,7 @@ button {
 
     .awssld__controls__arrow-left,
     .awssld__controls__arrow-right {
-        bottom: 70px;
+        bottom: 40px;
     }
 
     .awssld__controls__arrow-left {
@@ -2031,7 +2007,7 @@ button {
 
     .awssld__controls__arrow-left,
     .awssld__controls__arrow-right {
-        bottom: 80px;
+        bottom: 50px;
     }
 
     .dot_slide_wrapper {
@@ -2090,11 +2066,6 @@ button {
         font-size: 1.6rem;
     }
 
-    .awssld__controls__arrow-left,
-    .awssld__controls__arrow-right {
-        bottom: 90px;
-    }
-
     .ForecastHeader img.right {
         display: inline-block;
         visibility: hidden;
@@ -2149,7 +2120,7 @@ button {
 
     .awssld__controls__arrow-left,
     .awssld__controls__arrow-right {
-        bottom: 45px;
+        bottom: 40px;
     }
 
     .awssld__controls__arrow-left {
@@ -2202,11 +2173,6 @@ button {
     .awssld {
         height: 1650px;
         background-size: 100% 100%;
-    }
-
-    .awssld__controls__arrow-left,
-    .awssld__controls__arrow-right {
-        bottom: 75px;
     }
 
     .dot_slide_wrapper {
