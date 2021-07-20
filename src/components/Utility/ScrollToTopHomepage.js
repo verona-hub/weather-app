@@ -1,5 +1,4 @@
 import React from 'react';
-import image from '../../img/arrow-up.svg';
 
 
 const ScrollToTopHomepage = () => {
@@ -9,23 +8,13 @@ const ScrollToTopHomepage = () => {
     });
 
     return (
-        <div className="ScrollToTopHomepage">
+        <div onClick={scrollToTop} className="ScrollToTopHomepage">
             <div className="main">
-                <img src={image} alt=""/>
-                {/*<div className="box"> </div>*/}
+                <div className="arrow"> </div>
                 <p> Scroll to Top </p>
-                <img src={image} alt=""/>
-                {/*<div className="box"> </div>*/}
+                <div className="arrow"> </div>
             </div>
         </div>
-
-        /*<button onClick={ scrollToTop } className='ScrollToTopHomepage'>
-            <div className="box">
-                <img src={arrow_up} alt="scroll to top arrow"/>
-            </div>
-            <p> Scroll to Top </p>
-            <img src={arrow_up} alt="scroll to top arrow"/>
-        </button>*/
     );
 };
 
