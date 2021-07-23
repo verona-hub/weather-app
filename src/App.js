@@ -15,17 +15,6 @@ import PageNotFound404 from "./components/Page/PageNotFound404";
 import Search from "./components/Utility/Search";
 
 
-let weatherApiKey;
-
-if (process.env.NODE_ENV !== 'production') {
-    weatherApiKey = process.env.REACT_APP_WEATHER_API_KEY;
-} else {
-    weatherApiKey = process.env.WEATHER_API_KEY;
-}
-console.log(process.env);
-console.log(weatherApiKey);
-
-
 class App extends Component {
 
     // Initial state
@@ -69,15 +58,15 @@ class App extends Component {
             const response = await axios.all
             ([
                 axios.get(`https://api.weatherapi.com/v1/current.json?key=
-                ${weatherApiKey}
+                ${process.env.REACT_APP_WEATHER_API_KEY}
                 &q=${text}
                 &aqi=yes`),
                 axios.get(`https://api.weatherapi.com/v1/astronomy.json?key=
-                ${weatherApiKey}
+                ${process.env.REACT_APP_WEATHER_API_KEY}
                 &q=${text}
                 `),
                 axios.get(`https://api.weatherapi.com/v1/forecast.json?key=
-                ${weatherApiKey}
+                ${process.env.REACT_APP_WEATHER_API_KEY}
                 &q=${text}
                 &days=3
                 `), {}
