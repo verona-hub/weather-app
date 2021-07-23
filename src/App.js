@@ -23,7 +23,7 @@ if (process.env.NODE_ENV !== 'production') {
     weatherApiKey = process.env.WEATHER_API_KEY;
 }
 console.log(process.env);
-console.log(weatherApiKey)
+console.log(weatherApiKey);
 
 
 class App extends Component {
