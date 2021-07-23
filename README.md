@@ -58,10 +58,9 @@ https://weather-app-veronahub.netlify.app/
 
 
 #### Fixes:
-- [ ] scroll to top is not smooth on the homepage
 - [ ] fix process.env for development and production (hide Api key to back end ?)
-- [ ] fix after aborting a search and making a new one, the new search is buggy
-- [ ] fix click outside of modal to leave modal on
+- [x] ~~fix after aborting a search and making a new one, the new search is buggy~~
+- [x] ~~fix click outside of modal to leave modal on~~
 - [x] ~~fix blue arrows height on mobile~~
 - [x] ~~fix Modal cannot cancel the fetching once started~~
 - [x] ~~fix detect click outside of modal~~

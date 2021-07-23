@@ -82,22 +82,19 @@ class App extends Component {
                 `), {}
             ]).then(x => new Promise(resolve => setTimeout(() => resolve(x), 3000)));
 
-            // State is updating once the response is back, the data is populating the various states
-            // If the search is made and the cancel button is not pressed, the data is populating the various states
-            if(this.state.fetching && !this.state.cancelFetch){
-                this.setState({
-                    weatherInfo: response[0].data.current,
-                    weatherCondition: response[0].data.current.condition,
-                    airQuality: response[0].data.current.air_quality,
-                    location: response[0].data.location,
-                    astronomy: response[1].data.astronomy.astro,
-                    modal: false,
-                    spinner: false,
-                    search: false,
-                    forecast_3_days: response[2].data.forecast
-                });
-            }
-            
+            // If fetching is active the state is updated once the response is back, the data is populating the various states
+            this.state.fetching && this.setState({
+                weatherInfo: response[0].data.current,
+                weatherCondition: response[0].data.current.condition,
+                airQuality: response[0].data.current.air_quality,
+                location: response[0].data.location,
+                astronomy: response[1].data.astronomy.astro,
+                modal: false,
+                spinner: false,
+                search: false,
+                forecast_3_days: response[2].data.forecast
+            });
+
             // In case the request cannot be made, the error will be caught
         } catch(err) {
 

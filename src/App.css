@@ -29,6 +29,10 @@
     padding: 0;
 }
 
+html {
+    scroll-behavior: smooth;
+}
+
 body {
     background-color: var(--white);
     color: var(--dark_grey);
@@ -137,6 +141,7 @@ img {
 .navbar_dark {
     background-color: var(--navbar_dark);
 }
+
 .navbar_other {
     background-color: rgba(7, 13, 17, 0.9);
     box-shadow: none;
@@ -616,7 +621,6 @@ button {
     content: url(./img/arrow-up.svg);
     color: var(--white);
     display: flex;
-    justify-content: center;
     width: 100%;
 }
 
