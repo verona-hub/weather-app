@@ -15,15 +15,15 @@ import PageNotFound404 from "./components/Page/PageNotFound404";
 import Search from "./components/Utility/Search";
 
 
-
 let weatherApiKey;
+
 if (process.env.NODE_ENV !== 'production') {
-    weatherApiKey = process.env.REACT_APP_WEATHER_API_KEY_DEVELOPMENT;
+    weatherApiKey = process.env.REACT_APP_WEATHER_API_KEY;
 } else {
-    weatherApiKey = process.env.REACT_APP_WEATHER_API_KEY_PRODUCTION;
+    weatherApiKey = process.env.WEATHER_API_KEY;
 }
 console.log(process.env);
-console.log(weatherApiKey);
+console.log(weatherApiKey)
 
 
 class App extends Component {
