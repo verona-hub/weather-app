@@ -1,17 +1,20 @@
-import React  from 'react';
+import React, { useState }  from 'react';
 
 
 const DarkMode = ({ toggleDarkMode }) => {
 
-    const handleToggle = () => {
-        toggleDarkMode();
-    }
+    const [mode, setMode] = useState(true);
+
+    const toggleMode = () => {
+        setMode(!mode);
+        toggleDarkMode(mode);
+    };
 
 
     return (
         <div className="DarkMode">
             <div className="darkMode-button-wrapper">
-                <button onClick={ handleToggle }> Dark Mode </button>
+                <button onClick={toggleMode}> Dark Mode </button>
             </div>
         </div>
     );

@@ -8,20 +8,20 @@ import AwesomeSliderStyles from 'react-awesome-slider/src/styled/fall-animation/
 // Components
 import ForecastSlider from './ForecastData/ForecastSlider';
 
-const Forecast = ({ location, forecast_3_days }) => {
+const Forecast = ({ location, forecast_3_days, darkMode }) => {
 
     // Destructuring the fetched forecastday into separate days: day1, day2, and day3
     const { forecastday } = forecast_3_days;
     const [forecast1day, forecast2days, forecast3days] = forecastday;
 
     return (
-            <div className="card Forecast">
+            <div className='card Forecast'>
                 <AwesomeSlider
                     className="slider "
                     animation="fallAnimation"
                     bullets={false}
                 >
-                    <div>
+                    <div className={ darkMode && 'dark-mode'}>
                         <ForecastSlider
                             forecast={ forecast1day }
                             which_day='Day 1'
@@ -30,7 +30,7 @@ const Forecast = ({ location, forecast_3_days }) => {
                         />
                     </div>
 
-                    <div>
+                    <div className={ darkMode && 'dark-mode'}>
                         <ForecastSlider
                             forecast={ forecast2days }
                             which_day='Day 2'
@@ -39,7 +39,7 @@ const Forecast = ({ location, forecast_3_days }) => {
                         />
                     </div>
 
-                    <div>
+                    <div className={ darkMode && 'dark-mode'}>
                         <ForecastSlider
                             forecast={ forecast3days }
                             which_day='Day 3'

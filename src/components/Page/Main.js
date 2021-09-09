@@ -13,14 +13,14 @@ import ScrollToTopHomepage from "../Utility/ScrollToTopHomepage";
 import WeatherCurrent from "./Info/WeatherCurrent";
 
 
-const Main = ({ weatherInfo, weatherCondition, location, airQuality, astronomy, spinner, locationResponseSize, weatherResponseSize, forecast_3_days, toggleDarkMode }) => {
+const Main = ({ weatherInfo, weatherCondition, location, airQuality, astronomy, spinner, locationResponseSize, weatherResponseSize, forecast_3_days, toggleDarkMode, darkMode }) => {
     if (spinner) {
         return null;
     }
 
     else {
         return (
-            <div className="Main">
+            <div className={ darkMode ? 'dark-mode Main' : 'Main'}>
                 {
                     ( locationResponseSize > 0 || weatherResponseSize > 0 ) && (
                         <div>
@@ -37,6 +37,7 @@ const Main = ({ weatherInfo, weatherCondition, location, airQuality, astronomy, 
                             <Forecast
                                 forecast_3_days={ forecast_3_days }
                                 location={ location }
+                                darkMode={ darkMode }
                             />
                             <ImageSeparatorWeatherForecast
                                 forecast_3_days={ forecast_3_days }
@@ -62,7 +63,9 @@ const Main = ({ weatherInfo, weatherCondition, location, airQuality, astronomy, 
                                 astronomy={ astronomy }
                             />
 
-                            <ScrollToTopHomepage />
+                            <ScrollToTopHomepage
+                                darkMode={ darkMode }
+                            />
 
                         </div>
                     )
