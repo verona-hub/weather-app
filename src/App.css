@@ -179,6 +179,27 @@ img {
 
 
 /*
++ DarkMode
+*/
+
+.DarkMode {
+    background-color: lightcoral;
+    position: relative;
+    width: 100%;
+}
+
+.darkMode-button-wrapper {
+    position: absolute;
+    right: 30px;
+    top: 30px;
+}
+
+.darkMode-button-wrapper button {
+    cursor: pointer;
+}
+
+
+/*
 + Modal
 */
 
@@ -1437,6 +1458,11 @@ button {
     100% {
         transform: translateX(300%);
     }
+}
+
+
+.dark-mode {
+    background-color: red !important;
 }
 
 

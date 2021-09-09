@@ -32,7 +32,8 @@ class App extends Component {
         search: false,
         forecast_3_days: [],
         fetching: false,
-        cancelFetch: false
+        cancelFetch: false,
+        darkMode: false
     }
 
     // After a location search is made from the input, the call will be made to the Api with the input text
@@ -136,8 +137,7 @@ class App extends Component {
         });
     }
 
-    // Interrupts the search and closes the modal window;
-    // It does not cancel the request to the Api!
+    // Interrupts the search and closes the modal window
     abortSearch = () => {
         this.setState({
             text: '',
@@ -157,12 +157,20 @@ class App extends Component {
         });
     }
 
+    toggleDarkMode = () => {
+        this.setState( prevState => ({
+            toggleMode: !prevState.toggleMode
+        }));
+
+        console.log(this.state.toggleMode);
+    }
+
 
     render () {
 
         const { text, weatherInfo, weatherCondition, airQuality, location, astronomy,
-            spinner, errorMessage, errorCode, modal, search, forecast_3_days } = this.state;
-        const { searchCity, clearContent, clearError, abortSearch } = this;
+            spinner, errorMessage, errorCode, modal, search, forecast_3_days, darkMode } = this.state;
+        const { searchCity, clearContent, clearError, abortSearch, toggleDarkMode  } = this;
 
         const locationResponseSize = _.size(location);
         const weatherResponseSize = _.size(weatherInfo);
@@ -193,7 +201,7 @@ class App extends Component {
                                        showClearButton={ locationResponseSize > 0 && weatherResponseSize > 0 && !spinner }
                                        spinner={ spinner }
                                    />
-                                   <div className="scrollToMain">
+                                   <div className={ darkMode ? 'dark-mode scrollToMain' : 'scrollToMain' }>
                                        <Main
                                            weatherInfo={ weatherInfo }
                                            weatherCondition={ weatherCondition }
@@ -204,6 +212,7 @@ class App extends Component {
                                            locationResponseSize={ locationResponseSize }
                                            weatherResponseSize={ weatherResponseSize }
                                            forecast_3_days={ forecast_3_days }
+                                           toggleDarkMode={ toggleDarkMode }
                                        />
                                    </div>
                                    { contentIsPresent && <Footer/> }
