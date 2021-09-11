@@ -625,16 +625,13 @@ button {
 }
 
 .ScrollToTopHomepage {
+    background-color: var(--white);
     cursor: pointer;
     width: 100%;
 }
 
-.ScrollToTopHomepage_light {
-    background-color: var(--white);
-}
-
 .ScrollToTopHomepage_dark {
-    /*background: #360D4B;*/
+    background: #360D4B;
 }
 
 .ScrollToTopHomepage .main {
@@ -644,17 +641,8 @@ button {
     justify-content: space-between;
 }
 
-.ScrollToTopHomepage .arrow {
-    /*display: flex;*/
-    /*height: 100%;*/
-    /*outline: 0;*/
-    /*overflow: hidden;*/
-    /*padding: 20px;*/
-    /*position: relative;*/
-    /*width: 100px;*/
-}
 
-.ScrollToTopHomepage_light .arrow {
+.ScrollToTopHomepage .arrow {
     display: flex;
     height: 100%;
     outline: 0;
@@ -665,19 +653,17 @@ button {
 }
 
 .ScrollToTopHomepage_dark .arrow {
-    /*display: flex;*/
-    /*height: 80px;*/
+    background-color: #360D4B;
+    display: flex;
     height: 100%;
     outline: 0;
     overflow: hidden;
-    /*padding: 20px;*/
+    padding: 20px;
     position: relative;
-    /*width: 50px;*/
     width: 100px;
-    /*margin-bottom: 80px;*/
 }
 
-.ScrollToTopHomepage_light .arrow::before {
+.ScrollToTopHomepage .arrow::before {
     align-items: center;
     content: url(./img/arrow-up.svg);
     color: var(--white);
@@ -687,18 +673,13 @@ button {
 
 .ScrollToTopHomepage_dark .arrow::before {
     align-items: center;
-    content: url(./img/arrow-up-dark.svg);
+    content: url(./img/arrow-up-dark.png);
     display: flex;
-    width: 100%;
-    /*background: #360D4B;*/
 }
 
 .ScrollToTopHomepage .arrow::after {
-}
-
-.ScrollToTopHomepage_light .arrow::after {
-    background-color: var(--white);
     animation: arrowAnimation 6s ease-in-out infinite;
+    background-color: var(--white);
     border-radius: 45%;
     bottom: -50%;
     content: "";
@@ -709,16 +690,8 @@ button {
 }
 
 .ScrollToTopHomepage_dark .arrow::after {
-    /*background: #360D4B;*/
-    animation: arrowAnimation 6s ease-in-out infinite;
-    border-radius: 45%;
-    bottom: -50%;
-    content: "";
-    height: 200%;
-    left: -50%;
-    position: absolute;
-    width: 200%;
-
+    background: #360D4B;
+    /*background: pink;*/
 }
 
 .ScrollToTopHomepage p {
@@ -727,6 +700,13 @@ button {
     overflow: hidden;
     position: relative;
     text-transform: uppercase;
+}
+
+.ScrollToTopHomepage_dark p {
+    /*background: #0C1E3A;*/
+    /*background: -webkit-linear-gradient(top left, #0C1E3A, #360D4B);*/
+    /*background: -moz-linear-gradient(top left, #0C1E3A, #360D4B);*/
+    /*background: linear-gradient(to bottom right, #0C1E3A, #360D4B);*/
 }
 
 .ScrollToTopHomepage p::before {
@@ -742,7 +722,10 @@ button {
 }
 
 .ScrollToTopHomepage_dark p::before {
-    /*background: #360D4B;*/
+    background: #360D4B;
+    /*background: -webkit-linear-gradient(top left, #0C1E3A, #360D4B);*/
+    /*background: -moz-linear-gradient(top left, #0C1E3A, #360D4B);*/
+    /*background: linear-gradient(to bottom right, #0C1E3A, #360D4B);*/
 }
 
 

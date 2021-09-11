@@ -9,7 +9,7 @@ const ScrollToTopHomepage = ({ darkMode }) => {
 
 
     return (
-        <div onClick={scrollToTop} className={ darkMode ? 'ScrollToTopHomepage ScrollToTopHomepage_dark' : 'ScrollToTopHomepage ScrollToTopHomepage_light' }>
+        <div onClick={scrollToTop} className={ darkMode ? 'ScrollToTopHomepage ScrollToTopHomepage_dark' : 'ScrollToTopHomepage' }>
             <div className="main">
                 <div className="arrow"> </div>
                 <p> Scroll to Top </p>
