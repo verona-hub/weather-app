@@ -10,6 +10,8 @@
     --blue: #00A7D8;
     --dark_blue: #286ba2;
     --marine_blue: #2a6bcc;
+    --dark_mode_blue: #0C1E3A;
+    --dark_mode_purple: #360D4B;
     --dark_grey: #333333;
     --dim_grey: #696969;
     --light_grey: #d3d3d3;
@@ -183,14 +185,11 @@ img {
 */
 
 .dark-mode {
-    /*background-color: #11052C;*/
-    /*background-color: #0A1931;*/
-    color: var(--light_grey);
-
     background: #0C1E3A;
     background: -webkit-linear-gradient(top left, #0C1E3A, #360D4B);
     background: -moz-linear-gradient(top left, #0C1E3A, #360D4B);
     background: linear-gradient(to bottom right, #0C1E3A, #360D4B);
+    color: var(--light_grey);
 }
 
 .DarkMode {
@@ -464,21 +463,35 @@ form {
 + Input
 */
 
-.search_icon,
-.close_icon {
+.form_content .search_icon,
+.form_content_dark .search_icon,
+.form_content .close_icon,
+.form_content_dark .close_icon {
     cursor: pointer;
     position: absolute;
 }
 
-.search_icon {
+.form_content .search_icon {
     left: 14px;
     top: 10px;
     width: 35px;
 }
 
-.close_icon {
+.form_content_dark .search_icon {
+    left: 14px;
+    top: 29px;
+    width: 35px;
+}
+
+.form_content .close_icon {
     right: 14px;
     top: 18px;
+    width: 20px;
+}
+
+.form_content_dark .close_icon {
+    right: 14px;
+    top: 37px;
     width: 20px;
 }
 
@@ -497,7 +510,12 @@ input[type='text'] {
     width: 100%;
 }
 
-input[type='text']:focus {
+.form_content_dark input[type='text'] {
+    background-color: var(--dark_mode_blue);
+    color: var(--light_grey);
+}
+
+.form_content input[type='text']:focus {
     background-color: rgb(245, 235, 245);
 }
 
@@ -631,7 +649,7 @@ button {
 }
 
 .ScrollToTopHomepage_dark {
-    background: #360D4B;
+    background: var(--dark_mode_purple);
 }
 
 .ScrollToTopHomepage .main {
@@ -691,7 +709,6 @@ button {
 
 .ScrollToTopHomepage_dark .arrow::after {
     background: #360D4B;
-    /*background: pink;*/
 }
 
 .ScrollToTopHomepage p {
@@ -700,13 +717,6 @@ button {
     overflow: hidden;
     position: relative;
     text-transform: uppercase;
-}
-
-.ScrollToTopHomepage_dark p {
-    /*background: #0C1E3A;*/
-    /*background: -webkit-linear-gradient(top left, #0C1E3A, #360D4B);*/
-    /*background: -moz-linear-gradient(top left, #0C1E3A, #360D4B);*/
-    /*background: linear-gradient(to bottom right, #0C1E3A, #360D4B);*/
 }
 
 .ScrollToTopHomepage p::before {
@@ -723,9 +733,6 @@ button {
 
 .ScrollToTopHomepage_dark p::before {
     background: #360D4B;
-    /*background: -webkit-linear-gradient(top left, #0C1E3A, #360D4B);*/
-    /*background: -moz-linear-gradient(top left, #0C1E3A, #360D4B);*/
-    /*background: linear-gradient(to bottom right, #0C1E3A, #360D4B);*/
 }
 
 
@@ -826,10 +833,17 @@ button {
     font-weight: 400;
 }
 
-.WeatherCurrent .top_content_main .feels_like img {
+.WeatherCurrent .top_content_main img {
     margin: 10px 20px 10px 10px;
-    transform: rotate(20deg);
     width: 32px;
+}
+
+.WeatherCurrent .top_content_main .feels_like img {
+    transform: rotate(20deg);
+}
+
+.WeatherCurrent .top_content_main .feels_like_dark img {
+    transform: rotate(100deg);
 }
 
 .WeatherCurrent .top_content_main .feels_like h3 {

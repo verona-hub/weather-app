@@ -1,10 +1,11 @@
 import React from 'react';
-import feels_logo from '../../../img/feels.png'
+import feels_logo from '../../../img/feels.png';
+import feels_logo_dark from '../../../img/arrow-feels-like-dark.svg';
 import DarkMode from "../../Utility/DarkMode";
 
 
 // Current weather component
-const WeatherCurrent = ({ weatherInfo, weatherCondition, location, toggleDarkMode }) => {
+const WeatherCurrent = ({ weatherInfo, weatherCondition, location, toggleDarkMode, darkMode }) => {
 
     // Destructuring the fetched weather data
     const { cloud, temp_c, feelslike_c, humidity, precip_mm, uv, vis_km,
@@ -30,8 +31,8 @@ const WeatherCurrent = ({ weatherInfo, weatherCondition, location, toggleDarkMod
                     </div>
                     <div className="top_content_main">
                         <h2 className="current_weather_text">  { text } { temp_c } &#8451; </h2>
-                        <div className="feels_like">
-                            <img src={ feels_logo } alt="feels like icon"/>
+                        <div className={ darkMode ? 'feels_like_dark' : 'feels_like' }>
+                            <img src={ darkMode ? feels_logo_dark : feels_logo } alt="feels like icon"/>
                             <h3> Feels like: { feelslike_c } &#8451; </h3>
                         </div>
                     </div>

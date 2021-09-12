@@ -1,10 +1,11 @@
 import React, { useState } from 'react';
 import icon from '../../img/search.svg';
 import x from '../../img/x.svg';
+import x_dark from '../../img/x-dark.svg';
 
 
 // Search component
-const Search = ({ searchCity, showClearButton, clearContent }) => {
+const Search = ({ searchCity, showClearButton, clearContent, darkMode }) => {
     // Setting the initial state: the input text is set to empty
     const [ text, setText ] = useState('');
 
@@ -35,7 +36,7 @@ const Search = ({ searchCity, showClearButton, clearContent }) => {
     return (
         <div className="Search">
             <form onSubmit={ onSubmit } className="form">
-                <div className="form_content">
+                <div className={ darkMode ? "form_content_dark" : "form_content"}>
                     <img src={ icon } alt="search icon" className="search_icon"
                          onClick={ onSubmit } />
                     <input
@@ -57,7 +58,7 @@ const Search = ({ searchCity, showClearButton, clearContent }) => {
                     X icon appears only if the input contains at least 1 letter
                     Clicking the X icon will remove any text and set the input to be empty
                     */}
-                    { text.length > 0 &&  <img src={x} alt="close icon" className="close_icon" onClick={ clearInput }/> }
+                    { text.length > 0 &&  <img src={ darkMode ? x_dark : x} alt="close icon" className="close_icon" onClick={ clearInput }/> }
                 </div>
             </form>
         </div>

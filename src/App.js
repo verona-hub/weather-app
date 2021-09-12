@@ -165,8 +165,6 @@ class App extends Component {
 
     render () {
 
-        console.log(this.state.darkMode);
-
         const { text, weatherInfo, weatherCondition, airQuality, location, astronomy,
             spinner, errorMessage, errorCode, modal, search, forecast_3_days, darkMode } = this.state;
         const { searchCity, clearContent, clearError, abortSearch, toggleDarkMode  } = this;
@@ -199,8 +197,9 @@ class App extends Component {
                                        clearContent={ clearContent }
                                        showClearButton={ locationResponseSize > 0 && weatherResponseSize > 0 && !spinner }
                                        spinner={ spinner }
+                                       darkMode={ darkMode }
                                    />
-                                   <div className={ darkMode ? 'dark-mode scrollToMain' : 'scrollToMain' }>
+                                   <div className='scrollToMain'>
                                        <Main
                                            weatherInfo={ weatherInfo }
                                            weatherCondition={ weatherCondition }
