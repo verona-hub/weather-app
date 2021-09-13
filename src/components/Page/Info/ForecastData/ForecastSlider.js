@@ -10,7 +10,7 @@ import 'pure-react-carousel/dist/react-carousel.es.css';
 
 
 // The slider component
-const ForecastSlider = ({ forecast, which_day, when }) => {
+const ForecastSlider = ({ forecast, which_day, when, darkMode }) => {
 
     // Destructuring the fetched forecast data
     const { day, astro, hour } = forecast;
@@ -18,6 +18,10 @@ const ForecastSlider = ({ forecast, which_day, when }) => {
         avghumidity, maxwind_kph, daily_chance_of_snow, avgvis_km
     } = day;
     const { sunrise, sunset } = astro;
+
+    // Dark mode
+    const forecastDailyInfoDark = darkMode && 'ForecastDailyInfo_wrapper_dark';
+    const forecastHourlyInfoDark = darkMode && 'ForecastHourlyInfo_wrapper_dark';
 
     return (
         <div className="ForecastEachDay">
@@ -39,8 +43,8 @@ const ForecastSlider = ({ forecast, which_day, when }) => {
                 {/* Little tab slider for daily and hourly summary */}
                 <Slider>
                     {/* Daily summary */}
-                    <Slide index={0} className="ForecastDailyInfo_wrapper">
-                        <h2 className="daily_summary"> Daily Summary </h2>
+                    <Slide index={0} className={ `ForecastDailyInfo_wrapper ${forecastDailyInfoDark}` }>
+                        <h2 className='daily_summary'> Daily Summary </h2>
                         <ForecastDailyInfo
                             condition={ condition }
                             maxtemp_c={ maxtemp_c }
@@ -58,7 +62,7 @@ const ForecastSlider = ({ forecast, which_day, when }) => {
                     </Slide>
 
                     {/* Hourly summary */}
-                    <Slide index={1}  className="ForecastHourlyInfo_wrapper">
+                    <Slide index={1}  className={ `ForecastHourlyInfo_wrapper ${forecastHourlyInfoDark}` }>
                         <h2> Hourly Summary </h2>
                         <ForecastHourlyInfo
                             hour={ hour }

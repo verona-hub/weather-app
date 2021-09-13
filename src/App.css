@@ -571,6 +571,7 @@ button {
 }
 
 .button_index,
+.button_index_dark,
 .button_home {
     background: var(--blue);
     border: none;
@@ -585,8 +586,14 @@ button {
     min-width: 20%;
 }
 
-.button_index {
+.button_index,
+.button_index_dark {
     margin: 100px auto;
+}
+
+.button_index_dark {
+    background: linear-gradient(to top left, #8664FF, #FF01D3 );
+    color: white;
 }
 
 .button_home {
@@ -891,6 +898,14 @@ button {
     display: block !important;
 }
 
+.Forecast_dark .awssld__content {
+    background: #0C1E3A;
+    background: -webkit-linear-gradient(top left, #0C1E3A, #360D4B);
+    background: -moz-linear-gradient(top left, #0C1E3A, #360D4B);
+    background: linear-gradient(to bottom right, #0C1E3A, #360D4B);
+    display: block !important;
+}
+
 .awssld--fallAnimation {
     height: 100%;
 }
@@ -952,6 +967,11 @@ button {
     width: 180px;
 }
 
+.Forecast_dark .dot_slide {
+    background-color: #91035b;
+    color: var(--white);
+}
+
 .dot_slide:first-child {
     border-top-left-radius: 4px;
     border-bottom-left-radius: 4px;
@@ -970,6 +990,10 @@ button {
     opacity: 0.85;
 }
 
+.Forecast_dark .dot_slide_wrapper button:not(.carousel__dot--selected) {
+    opacity: 0.95;
+}
+
 .dot_slide_wrapper button:hover:not(.carousel__dot--selected) {
     opacity: 1;
 }
@@ -977,6 +1001,11 @@ button {
 .carousel__dot--selected {
     background-color: var(--blue);
     color: var(--white);
+}
+
+.Forecast_dark .carousel__dot--selected {
+    background: linear-gradient(to top left, #8664FF, #FF01D3 );
+    color: white;
 }
 
 
@@ -1029,6 +1058,13 @@ button {
     padding: 10px 30px;
 }
 
+.ForecastDailyInfo_wrapper_dark h2,
+.ForecastHourlyInfo_wrapper_dark h2{
+    border-image-slice: 1;
+    border-width: 1px;
+    border-image-source: linear-gradient(to top left, #4876fe, #FF01D3);
+}
+
 .ForecastDailyInfo_wrapper h2.daily_summary {
     margin: 50px 0 20px;
 }
@@ -1078,6 +1114,10 @@ button {
     width: 70%;
 }
 
+.AirQualityCollection_dark {
+    color: var(--dark_mode_blue);
+}
+
 .AirQualityElement .element {
     align-items: center;
     display: flex;
@@ -1105,6 +1145,12 @@ button {
     border: 1px solid;
 }
 
+.AirQualityIndex .index_wrapper_dark {
+    border-image-slice: 1;
+    border-width: 1px;
+    border-image-source: linear-gradient(to top left, #4876fe, #FF01D3);
+}
+
 .AirQualityIndex .index_wrapper .title {
     display: inline-block;
     font-size: 1.6rem;
@@ -1124,6 +1170,10 @@ button {
     flex-direction: column;
     height: 150px;
     width: 80px;
+}
+
+.AirQualityIndex .index_wrapper_dark p:first-child {
+    color: var(--black);
 }
 
 .AirQualityIndex .item {
@@ -1361,6 +1411,10 @@ button {
 .Footer {
     background-color: var(--dark_grey);
     width: 100%;
+}
+
+.Footer_dark {
+    background-color: var(--dark_mode_blue);
 }
 
 .Footer_About {

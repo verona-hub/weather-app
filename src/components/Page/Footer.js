@@ -1,15 +1,17 @@
 import React from 'react';
 
 
-const Footer = () => {
+const Footer = ({ darkMode }) => {
 
     // About Page location
     const aboutPage = window.location.pathname === '/about';
     // Add the css rule which contains a margin-top value only to the Footer located in the About page
-    const aboutFooter = aboutPage && 'Footer_About'
+    const aboutFooter = aboutPage && 'Footer_About';
+    // Dark mode
+    const darkFooter = darkMode && 'Footer_dark';
 
     return (
-        <div className={`Footer ${aboutFooter}`}>
+        <div className={`Footer ${aboutFooter} ${darkFooter}`}>
             <div className="footer_content">
                 <div className="text">
                     <p><span>Powered by&nbsp;</span>

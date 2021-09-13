@@ -3,14 +3,17 @@ import { data } from './AirQualityColors';
 import AirQualityIndexItem from "./AirQualityIndexItem";
 
 
-const AirQualityIndex = ({ indexInfoVisible }) => {
+const AirQualityIndex = ({ indexInfoVisible, darkMode }) => {
 
     // Destructuring from the AirQualityColors.js component in Utility
     const { case1, case2, case3, case4, case5, case6, case7, case8, case9, case10, mix } = data;
 
+    const indexVisible = indexInfoVisible ? "visible" : "hidden";
+    const darkIndex = darkMode && 'index_wrapper_dark';
+
     return (
         <div className="AirQualityIndex">
-            <div className={ indexInfoVisible ? "index_wrapper visible" : "index_wrapper hidden" } >
+            <div className={`index_wrapper ${indexVisible} ${darkIndex}`} >
                 <h2 className="title"> Air Quality Index: </h2>
                 <div className="index_levels">
 

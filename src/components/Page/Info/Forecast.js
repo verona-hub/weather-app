@@ -14,37 +14,44 @@ const Forecast = ({ location, forecast_3_days, darkMode }) => {
     const { forecastday } = forecast_3_days;
     const [forecast1day, forecast2days, forecast3days] = forecastday;
 
+    // Dark mode classes
+    const darkForecast = darkMode && 'Forecast_dark';
+    const darkSlider = darkMode && 'dark-mode';
+
     return (
-            <div className='card Forecast'>
+            <div className={`card Forecast ${darkForecast}`}>
                 <AwesomeSlider
-                    className="slider "
-                    animation="fallAnimation"
+                    className='slider'
+                    animation='fallAnimation'
                     bullets={false}
                 >
-                    <div className={ darkMode && 'dark-mode'}>
+                    <div className={ darkSlider }>
                         <ForecastSlider
                             forecast={ forecast1day }
                             which_day='Day 1'
                             when=' Today '
                             location={ location }
+                            darkMode={darkMode}
                         />
                     </div>
 
-                    <div className={ darkMode && 'dark-mode'}>
+                    <div className={ darkSlider }>
                         <ForecastSlider
                             forecast={ forecast2days }
                             which_day='Day 2'
                             when=' Tomorrow '
                             location={ location }
+                            darkMode={darkMode}
                         />
                     </div>
 
-                    <div className={ darkMode && 'dark-mode'}>
+                    <div className={ darkSlider }>
                         <ForecastSlider
                             forecast={ forecast3days }
                             which_day='Day 3'
                             when=' The day after tomorrow '
                             location={ location }
+                            darkMode={darkMode}
                         />
                     </div>
 

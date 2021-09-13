@@ -214,7 +214,7 @@ class App extends Component {
                                            darkMode={ darkMode }
                                        />
                                    </div>
-                                   { contentIsPresent && <Footer/> }
+                                   { contentIsPresent && <Footer darkMode={ darkMode }/> }
                                </Fragment>
                            )}
                     />

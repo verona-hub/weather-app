@@ -9,7 +9,7 @@ import pm2_5_Checker from "./ElementsChecker/Pm2_5";
 import pm10_Checker from "./ElementsChecker/Pm10";
 
 
-const AirQualityCollection = ({ airQuality }) => {
+const AirQualityCollection = ({ airQuality, darkMode }) => {
 
     // Destructuring the fetched air quality data
     let { co, no2, o3, so2, pm2_5, pm10 } = airQuality;
@@ -83,9 +83,11 @@ const AirQualityCollection = ({ airQuality }) => {
     const indexPm10 = pm10_Data.indexPm10;
     const textPm10Color = pm10_Data.textPm10Color;
 
+    // Dark mode
+    const darkAirQualityCollection = 'AirQualityCollection_dark';
 
     return (
-        <div className="AirQualityCollection">
+        <div className={`AirQualityCollection ${darkAirQualityCollection}`}>
             <AirQualityElement
                 backgroundColor={ bgCo }
                 color={ textCoColor }
