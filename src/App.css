@@ -119,6 +119,10 @@ img {
     height: 10vh;
 }
 
+.header_dark_mode {
+    filter: brightness(65%);
+}
+
 .header_404 {
     background: url(img/404.jpg) no-repeat top;
     height: 100vh;
@@ -555,7 +559,14 @@ button {
     margin: 4vh auto 2vh;
 }
 
-.button_search:hover {
+.button_search_dark {
+    background: linear-gradient(to right, var(--blue), #0085B5 );
+    background: linear-gradient(to right, var(--blue), #0085B5 );
+    color: white;
+}
+
+.button_search:hover,
+.button_search_dark:hover {
     opacity: 0.95;
 }
 
@@ -566,7 +577,13 @@ button {
     padding: 0.6rem;
 }
 
-.button_clear:hover {
+.button_clear_dark {
+    background: linear-gradient(to bottom right, var(--orange), #F26A69 );
+    color: white;
+}
+
+.button_clear:hover,
+.button_clear_dark:hover {
     opacity: 0.9;
 }
 
@@ -791,6 +808,28 @@ button {
     margin: 100px 0 20px;
     text-transform: uppercase;
     word-spacing: 0.2rem;
+}
+
+.WeatherCurrent .title_dark,
+.Forecast .title_dark,
+.AirQuality .title_dark,
+.Location .title_dark {
+    background: linear-gradient(to right, #8664FF, #FF01D3 );
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    border-image-slice: 1;
+    border-width: 1px;
+    border-image-source: linear-gradient(to left, #4876fe, #FF01D3);
+}
+
+.Astronomy .title_dark,
+.AirQualityIndex .title_dark {
+    background: linear-gradient(to left, #8664FF, #FF01D3 );
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    border-image-slice: 1;
+    border-width: 1px;
+    border-image-source: linear-gradient(to right, #4876fe, #FF01D3);
 }
 
 .AirQuality .title,

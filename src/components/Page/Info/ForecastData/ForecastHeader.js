@@ -2,11 +2,14 @@ import React from 'react';
 import right_arrow from '../../../../img/right-arrow.png';
 
 
-const ForecastHeader = ({ which_day, day, date, when }) => {
+const ForecastHeader = ({ which_day, day, date, when, darkMode }) => {
+
+    // Dark mode
+    const titleDark = darkMode && 'title_dark';
 
     return (
         <div className="ForecastHeader">
-            <h2 className="title"> Weather Forecast </h2>
+            <h2 className={ `title ${titleDark}` }> Weather Forecast </h2>
             <div>
                 <h2 className="sub_title_main">
                     { which_day }

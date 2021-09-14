@@ -15,6 +15,9 @@ const WeatherCurrent = ({ weatherInfo, weatherCondition, location, toggleDarkMod
     // Destructuring the fetched location data
     const { name, country } = location;
 
+    // Dark mode
+    const titleDark = darkMode && 'title_dark';
+
     return (
         <div className="WeatherCurrent card">
 
@@ -22,7 +25,7 @@ const WeatherCurrent = ({ weatherInfo, weatherCondition, location, toggleDarkMod
                 toggleDarkMode={ toggleDarkMode }
             />
 
-            <h1 className="title"> Current Weather </h1>
+            <h1 className={ `title ${titleDark}` }> Current Weather </h1>
             <div className="Weather_current_main">
                 <h2 className="sub_title_main"> { name }, { country } </h2>
                 <div className="top_content">

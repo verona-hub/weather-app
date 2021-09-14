@@ -191,6 +191,7 @@ class App extends Component {
                                        modal={ modal }
                                        search={ search }
                                        abortSearch={ abortSearch }
+                                       darkMode={ darkMode }
                                    />
                                    <Search
                                        searchCity={ searchCity }

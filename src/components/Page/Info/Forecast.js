@@ -31,7 +31,7 @@ const Forecast = ({ location, forecast_3_days, darkMode }) => {
                             which_day='Day 1'
                             when=' Today '
                             location={ location }
-                            darkMode={darkMode}
+                            darkMode={ darkMode }
                         />
                     </div>
 
@@ -41,7 +41,7 @@ const Forecast = ({ location, forecast_3_days, darkMode }) => {
                             which_day='Day 2'
                             when=' Tomorrow '
                             location={ location }
-                            darkMode={darkMode}
+                            darkMode={ darkMode }
                         />
                     </div>
 
@@ -51,7 +51,7 @@ const Forecast = ({ location, forecast_3_days, darkMode }) => {
                             which_day='Day 3'
                             when=' The day after tomorrow '
                             location={ location }
-                            darkMode={darkMode}
+                            darkMode={ darkMode }
                         />
                     </div>
 

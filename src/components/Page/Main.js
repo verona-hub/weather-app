@@ -59,9 +59,11 @@ const Main = ({ weatherInfo, weatherCondition, location, airQuality, astronomy, 
                             <div className="city_astro">
                                 <Location
                                     location={ location }
+                                    darkMode={ darkMode }
                                 />
                                 <Astronomy
                                     astronomy={ astronomy }
+                                    darkMode={ darkMode }
                                 />
                             </div>
 

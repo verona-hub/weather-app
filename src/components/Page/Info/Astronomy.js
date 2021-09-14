@@ -1,14 +1,17 @@
 import React from 'react';
 
 
-const Astronomy = ({ astronomy }) => {
+const Astronomy = ({ astronomy, darkMode }) => {
 
     // Destructuring the fetched astronomy data
     const { sunrise, sunset, moonrise, moonset, moon_phase, moon_illumination } = astronomy;
 
+    // Dark mode
+    const titleDark = darkMode && 'title_dark';
+
     return (
         <div className="Astronomy card">
-            <h2 className="title"> Astronomy </h2>
+            <h2 className={ `title ${titleDark}` }> Astronomy </h2>
             <div className="main">
                 <div className="spaced"><span> Sunrise:</span> { sunrise } </div>
                 <div className="spaced"><span> Sunset:</span> { sunset } </div>

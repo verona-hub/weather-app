@@ -10,11 +10,12 @@ const AirQualityIndex = ({ indexInfoVisible, darkMode }) => {
 
     const indexVisible = indexInfoVisible ? "visible" : "hidden";
     const darkIndex = darkMode && 'index_wrapper_dark';
+    const darkTitle = darkMode && 'title_dark';
 
     return (
         <div className="AirQualityIndex">
             <div className={`index_wrapper ${indexVisible} ${darkIndex}`} >
-                <h2 className="title"> Air Quality Index: </h2>
+                <h2 className={ `title ${darkTitle}` }> Air Quality Index: </h2>
                 <div className="index_levels">
 
                     <AirQualityIndexItem

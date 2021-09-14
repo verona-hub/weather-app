@@ -29,6 +29,7 @@ const ForecastSlider = ({ forecast, which_day, when, darkMode }) => {
                 which_day= { which_day }
                 when= { when }
                 date={ timeForecast(forecast) }
+                darkMode={ darkMode }
             />
 
             {/* Main slider for switching between: day 1, day2, and day 3 */}

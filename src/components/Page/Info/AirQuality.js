@@ -15,11 +15,12 @@ const AirQuality = ({ airQuality, darkMode }) => {
 
     // Dark mode
     const darkIndexButton = darkMode ? 'button_index_dark' : "button_index";
+    const titleDark = darkMode && 'title_dark';
 
     return (
         <div className="AirQuality_wrapper">
             <div className="AirQuality card">
-                <h1 className="title"> Air Quality </h1>
+                <h1 className={ `title ${titleDark}` }> Air Quality </h1>
 
                 <div className="main">
                     <AirQualityCollection
