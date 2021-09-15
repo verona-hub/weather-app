@@ -1,4 +1,5 @@
 import React, { useState }  from 'react';
+import moon from '../../img/dark-mode-moon.svg';
 
 
 const DarkMode = ({ toggleDarkMode }) => {
@@ -13,8 +14,8 @@ const DarkMode = ({ toggleDarkMode }) => {
 
     return (
         <div className="DarkMode">
-            <div className="darkMode-button-wrapper">
-                <button onClick={toggleMode}> Dark Mode </button>
+            <div className="darkMode-wrapper">
+                <img src={ moon } onClick={ toggleMode} alt="Dark mode toggle"/>
             </div>
         </div>
     );

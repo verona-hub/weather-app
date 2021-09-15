@@ -11,6 +11,8 @@
     --dark_blue: #286ba2;
     --marine_blue: #2a6bcc;
     --dark_mode_blue: #0C1E3A;
+    --dark_mode_light_blue: #00F9FF;
+    --dark_mode_pink: #E0DAED;
     --dark_mode_purple: #360D4B;
     --dark_grey: #333333;
     --dim_grey: #696969;
@@ -193,22 +195,24 @@ img {
     background: -webkit-linear-gradient(top left, #0C1E3A, #360D4B);
     background: -moz-linear-gradient(top left, #0C1E3A, #360D4B);
     background: linear-gradient(to bottom right, #0C1E3A, #360D4B);
-    color: var(--light_grey);
+    color: var(--dark_mode_pink);
 }
 
 .DarkMode {
-    position: relative;
+    position: absolute;
+    right: 25px;
+    top: 25px;
     width: 100%;
 }
 
-.darkMode-button-wrapper {
+.darkMode-wrapper {
     position: absolute;
-    right: 30px;
-    top: 30px;
+    right: 0;
 }
 
-.darkMode-button-wrapper button {
+.DarkMode img {
     cursor: pointer;
+    width: 32px;
 }
 
 
@@ -236,6 +240,14 @@ img {
     border-radius: 8px;
     margin: 10vh auto auto;
     width: 35vw;
+}
+
+.modal_content_dark {
+    background: #0C1E3A;
+    background: -webkit-linear-gradient(top left, #0C1E3A, #360D4B);
+    background: -moz-linear-gradient(top left, #0C1E3A, #360D4B);
+    background: linear-gradient(to bottom right, #0C1E3A, #360D4B);
+    color: var(--dark_mode_pink);
 }
 
 .modal_text {
@@ -832,7 +844,7 @@ button {
     border-image-source: linear-gradient(to right, #4876fe, #FF01D3);
 }
 
-.AirQuality .title,
+.AirQuality .title,sub_title_main
 .Location .title,
 .Astronomy .title {
     margin-bottom: 100px;
@@ -843,6 +855,11 @@ button {
     font-size: 2rem;
     font-weight: 300;
     letter-spacing: 0.2rem;
+}
+
+.WeatherCurrent .sub_title_main_dark,
+.ForecastHeader .sub_title_main_dark {
+    color: var(--dark_mode_light_blue);
 }
 
 .ForecastHeader .sub_title_main {
@@ -1079,6 +1096,10 @@ button {
     font-weight: 300;
     letter-spacing: 0.1rem;
     position: relative;
+}
+
+.ForecastHeader .date_dark {
+    color: var(--dark_mode_light_blue);
 }
 
 .ForecastHeader .sub_title {
@@ -1479,6 +1500,9 @@ button {
     font-size: 1.2rem;
 }
 
+.footer_content_dark p {
+    color: var(--dark_mode_pink);
+}
 
 
 /*
