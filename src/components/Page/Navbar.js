@@ -6,10 +6,9 @@ import logo from '../../img/sun.svg';
 
 // Components
 import Modal from '../Utility/Modal';
-import DarkMode from "../Utility/DarkMode";
 
 
-const Navbar = ({ text, emptyContent, spinner, errorMessage, errorCode, clearError, modal, search, abortSearch, toggleDarkMode, darkMode }) => {
+const Navbar = ({ text, emptyContent, spinner, errorMessage, errorCode, clearError, modal, search, abortSearch, }) => {
 
     const homePage = window.location.pathname === '/';
     const aboutPage = window.location.pathname === '/about';
@@ -22,12 +21,10 @@ const Navbar = ({ text, emptyContent, spinner, errorMessage, errorCode, clearErr
     const otherNavbar = otherPages ? 'navbar_other' : 'navbar';
     const navbar = modal ? 'navbar navbar_dark' : `navbar ${otherNavbar}`;
 
-    // Dark mode
-    const headerDarkMode = darkMode && !modal && 'header_dark_mode';
 
 
     return (
-        <div className={`header ${headerChange} ${headerDarkMode} `}>
+        <div className={`header ${headerChange} `}>
             <nav className= { navbar }>
                 <NavLink to='/' activeClassName='active' exact className='logo_wrapper'>
                     <img src={ logo } alt="logo icon" className="logo_img"/>
@@ -36,11 +33,6 @@ const Navbar = ({ text, emptyContent, spinner, errorMessage, errorCode, clearErr
                 <NavLink to='/about' activeClassName='active' exact>
                     <div className='nav_link_item about'>About</div>
                 </NavLink>
-
-                {/*<DarkMode*/}
-                {/*    toggleDarkMode={ toggleDarkMode }*/}
-                {/*    darkMode={ darkMode }*/}
-                {/*/>*/}
 
                 {
                     modal && (
@@ -52,7 +44,6 @@ const Navbar = ({ text, emptyContent, spinner, errorMessage, errorCode, clearErr
                             clearError={ clearError }
                             search={ search }
                             abortSearch={ abortSearch }
-                            darkMode={ darkMode }
                         />
                     )
                 }

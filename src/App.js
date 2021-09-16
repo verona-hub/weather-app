@@ -33,7 +33,6 @@ class App extends Component {
         forecast_3_days: [],
         fetching: false,
         cancelFetch: false,
-        darkMode: null
     }
 
     // After a location search is made from the input, the call will be made to the Api with the input text
@@ -212,10 +211,9 @@ class App extends Component {
                                            locationResponseSize={ locationResponseSize }
                                            weatherResponseSize={ weatherResponseSize }
                                            forecast_3_days={ forecast_3_days }
-                                           darkMode={ darkMode }
                                        />
                                    </div>
-                                   { contentIsPresent && <Footer darkMode={ darkMode }/> }
+                                   { contentIsPresent && <Footer/> }
                                </Fragment>
                            )}
                     />
