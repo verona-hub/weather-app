@@ -33,6 +33,7 @@ class App extends Component {
         forecast_3_days: [],
         fetching: false,
         cancelFetch: false,
+        darkMode: null
     }
 
     // After a location search is made from the input, the call will be made to the Api with the input text
@@ -156,9 +157,9 @@ class App extends Component {
         });
     }
 
-    // toggleDarkMode = (mode) => {
-    //     this.setState({ darkMode: mode });
-    // }
+    toggleDarkMode = (mode) => {
+        this.setState({ darkMode: mode });
+    }
 
 
 
@@ -211,9 +212,11 @@ class App extends Component {
                                            locationResponseSize={ locationResponseSize }
                                            weatherResponseSize={ weatherResponseSize }
                                            forecast_3_days={ forecast_3_days }
+                                           toggleDarkMode={ toggleDarkMode }
+                                           darkMode={ darkMode }
                                        />
                                    </div>
-                                   { contentIsPresent && <Footer/> }
+                                   { contentIsPresent && <Footer darkMode={ darkMode }/> }
                                </Fragment>
                            )}
                     />
@@ -221,7 +224,10 @@ class App extends Component {
                     <Route exact path="/about" render={ () => (
                         <Fragment>
                             <Navbar/>
-                            <About />
+                            <About
+                                toggleDarkMode={ toggleDarkMode }
+                                darkMode={ darkMode }
+                            />
                             <Footer />
                         </Fragment>
                     )} />

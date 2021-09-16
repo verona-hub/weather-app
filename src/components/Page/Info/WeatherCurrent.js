@@ -5,7 +5,7 @@ import DarkMode from "../../Utility/DarkMode";
 
 
 // Current weather component
-const WeatherCurrent = ({ weatherInfo, weatherCondition, location, darkMode }) => {
+const WeatherCurrent = ({ weatherInfo, weatherCondition, location, toggleDarkMode, darkMode }) => {
 
     // Destructuring the fetched weather data
     const { cloud, temp_c, feelslike_c, humidity, precip_mm, uv, vis_km,
@@ -21,6 +21,10 @@ const WeatherCurrent = ({ weatherInfo, weatherCondition, location, darkMode }) =
 
     return (
         <div className="WeatherCurrent card">
+            <DarkMode
+                toggleDarkMode={ toggleDarkMode }
+                darkMode={ darkMode }
+            />
             <h1 className={ `title ${titleDark}` }> Current Weather </h1>
             <div className="Weather_current_main">
                 <h2 className={ `sub_title_main ${subTitleDark}` }> { name }, { country } </h2>
