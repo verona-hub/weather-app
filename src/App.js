@@ -157,7 +157,7 @@ class App extends Component {
         });
     }
 
-    toggleDarkMode = (mode) => {
+     toggleDarkMode (mode){
         this.setState({ darkMode: mode });
     }
 
