@@ -191,7 +191,6 @@ class App extends Component {
                                        modal={ modal }
                                        search={ search }
                                        abortSearch={ abortSearch }
-                                       toggleDarkMode={ toggleDarkMode }
                                        darkMode={ darkMode }
                                    />
                                    <Search
@@ -224,10 +223,7 @@ class App extends Component {
                     <Route exact path="/about" render={ () => (
                         <Fragment>
                             <Navbar/>
-                            <About
-                                toggleDarkMode={ toggleDarkMode }
-                                darkMode={ darkMode }
-                            />
+                            <About/>
                             <Footer />
                         </Fragment>
                     )} />

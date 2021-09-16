@@ -8,7 +8,7 @@
     "@testing-library/react": "^11.2.5",
     "@testing-library/user-event": "^12.7.1",
     "immer": "^9.0.1",
-    "netlify-cli": "^3.39.4",
+    "netlify-cli": "^3.28.0",
     "node-sass": "^4.14.1",
     "pure-react-carousel": "^1.27.6",
     "react": "^17.0.1",
@@ -47,6 +47,5 @@
   "devDependencies": {
     "@emotion/core": "^11.0.0",
     "axios": "^0.21.1"
-  },
-  "sideEffects": ["*.css", "*.scss", "*.sass"]
+  }
 }

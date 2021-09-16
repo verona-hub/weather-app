@@ -6,10 +6,9 @@ import logo from '../../img/sun.svg';
 
 // Components
 import Modal from '../Utility/Modal';
-import DarkMode from "../Utility/DarkMode";
 
 
-const Navbar = ({ text, emptyContent, spinner, errorMessage, errorCode, clearError, modal, search, abortSearch, toggleDarkMode, darkMode }) => {
+const Navbar = ({ text, emptyContent, spinner, errorMessage, errorCode, clearError, modal, search, abortSearch, darkMode }) => {
 
     const homePage = window.location.pathname === '/';
     const aboutPage = window.location.pathname === '/about';
@@ -37,11 +36,6 @@ const Navbar = ({ text, emptyContent, spinner, errorMessage, errorCode, clearErr
                     <div className='nav_link_item about'>About</div>
                 </NavLink>
 
-                {/*<DarkMode*/}
-                {/*    toggleDarkMode={ toggleDarkMode }*/}
-                {/*    darkMode={ darkMode }*/}
-                {/*/>*/}
-
                 {
                     modal && (
                         <Modal
@@ -52,7 +46,6 @@ const Navbar = ({ text, emptyContent, spinner, errorMessage, errorCode, clearErr
                             clearError={ clearError }
                             search={ search }
                             abortSearch={ abortSearch }
-                            darkMode={ darkMode }
                         />
                     )
                 }

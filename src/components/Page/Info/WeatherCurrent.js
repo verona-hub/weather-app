@@ -17,17 +17,17 @@ const WeatherCurrent = ({ weatherInfo, weatherCondition, location, toggleDarkMod
 
     // Dark mode
     const titleDark = darkMode && 'title_dark';
-    const subTitleDark = darkMode && 'sub_title_main_dark';
 
     return (
         <div className="WeatherCurrent card">
+
             <DarkMode
                 toggleDarkMode={ toggleDarkMode }
-                darkMode={ darkMode }
             />
+
             <h1 className={ `title ${titleDark}` }> Current Weather </h1>
             <div className="Weather_current_main">
-                <h2 className={ `sub_title_main ${subTitleDark}` }> { name }, { country } </h2>
+                <h2 className="sub_title_main"> { name }, { country } </h2>
                 <div className="top_content">
                     <div className="top_content_header">
                         <img src={ icon } alt="weather conditions icon"/>
