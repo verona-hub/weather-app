@@ -33,7 +33,7 @@ class App extends Component {
         forecast_3_days: [],
         fetching: false,
         cancelFetch: false,
-        darkMode: false
+        darkMode: null
     }
 
     // After a location search is made from the input, the call will be made to the Api with the input text
@@ -157,9 +157,9 @@ class App extends Component {
         });
     }
 
-     toggleDarkMode (mode){
-        this.setState({ darkMode: mode });
-    }
+    // toggleDarkMode = (mode) => {
+    //     this.setState({ darkMode: mode });
+    // }
 
 
 

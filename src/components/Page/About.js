@@ -7,14 +7,12 @@ import react_logo from '../../img/react-logo.png';
 // Components
 import BackToSearch from "../Utility/BackToSearch";
 import ScrollToTop from '../Utility/ScrollToTop';
-import DarkMode from "../Utility/DarkMode";
 
 
-const About = ({ toggleDarkMode, darkMode }) => {
+const About = () => {
 
     return (
         <div className="container">
-
             <div className="About card">
                 <div className="welcome">
                     <div className="title_wrapper">
