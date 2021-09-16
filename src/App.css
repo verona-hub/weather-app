@@ -12,6 +12,7 @@
     --marine_blue: #2a6bcc;
     --dark_mode_blue: #0C1E3A;
     --dark_mode_light_blue: #00F9FF;
+    --dark_mode_magenta: #FF01D3;
     --dark_mode_pink: #E0DAED;
     --dark_mode_purple: #360D4B;
     --dark_grey: #333333;
@@ -201,18 +202,91 @@ img {
 .DarkMode {
     position: absolute;
     right: 25px;
-    top: 25px;
-    width: 100%;
 }
 
-.darkMode-wrapper {
+.darkMode_container {
+    align-items: center;
+    align-content: center;
+    display: flex;
+    justify-content: space-around;
+    width: 160px;
+}
+
+.darkMode_toggle_wrapper label {
+    display: inline-block;
+    height: 44px;
+    position: relative;
+    width: 80px;
+}
+
+.darkMode_toggle_wrapper input {
+    height: 0;
+    opacity: 0;
+    width: 0;
+}
+
+.darkMode_toggle_wrapper input:checked + .slider:before {
+    transform: translateX(26px);
+    -webkit-transform: translateX(26px);
+    -ms-transform: translateX(26px);
+}
+
+.slider {
+    background-color: #ccc;
+    bottom: 0;
+    cursor: pointer;
+    left: 0;
     position: absolute;
     right: 0;
+    top: 0;
+    transition: 0.4s;
+    -webkit-transition: 0.4s;
 }
 
-.DarkMode img {
-    cursor: pointer;
-    width: 32px;
+.slider_dark {
+    background: linear-gradient(to top left, #8664FF, #FF01D3 );
+}
+
+/*.slider:before {*/
+/*    background-color: white;
+/*    bottom: 4px;*/
+/*    content: "";*/
+/*    height: 20px;*/
+/*    left: 6px;*/
+/*    position: absolute;*/
+/*    transition: 0.4s;*/
+/*    width: 20px;*/
+/*    -webkit-transition: 0.4s;*/
+/*}*/
+
+.slider:before {
+    bottom: 8px;
+    content: url(img/day-mode.svg);
+    height: 28px;
+    left: 10px;
+    position: absolute;
+    transition: 0.4s;
+    width: 28px;
+    -webkit-transition: 0.4s;
+}
+
+.slider_dark:before {
+    bottom: 6px;
+    content: url(img/dark-mode-moon.svg);
+    height: 28px;
+    left: 18px;
+    position: absolute;
+    transition: 0.4s;
+    width: 24px;
+    -webkit-transition: 0.4s;
+}
+
+.round {
+    border-radius: 20px;
+}
+
+.round:before {
+    border-radius: 50%;
 }
 
 
@@ -572,7 +646,6 @@ button {
 }
 
 .button_search_dark {
-    background: linear-gradient(to right, var(--blue), #0085B5 );
     background: linear-gradient(to right, var(--blue), #0085B5 );
     color: white;
 }
@@ -2038,10 +2111,6 @@ button {
     .ForecastHourlyInfo .sub_title {
         font-size: 1.2rem;
         width: 90%;
-    }
-
-    .dot_slide_wrapper {
-        /*margin-top: 100px;*/
     }
 
     .Location .title,

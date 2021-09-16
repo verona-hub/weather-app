@@ -14,12 +14,6 @@ const About = ({ toggleDarkMode, darkMode }) => {
 
     return (
         <div className="container">
-
-            <DarkMode
-                toggleDarkMode={ toggleDarkMode }
-                darkMode={ darkMode }
-            />
-
             <div className="About card">
                 <div className="welcome">
                     <div className="title_wrapper">
