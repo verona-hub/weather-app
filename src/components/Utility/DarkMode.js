@@ -5,24 +5,25 @@ const DarkMode = ({ toggleDarkMode, darkMode }) => {
 
     const [mode, setMode] = useState(true);
 
-    // const toggleMode = (mode) => {
-    //     setMode(!mode);
-    //     toggleDarkMode(mode);
-    // };
+    const toggleMode = () => {
+        setMode(!mode);
+        toggleDarkMode(mode);
+    };
 
-    const darkSlider = darkMode && 'slider_dark';
+    // const darkSlider = darkMode && 'slider_dark';
 
 
     return (
         <div className="DarkMode">
-            <div className="darkMode_container">
-                <div className="darkMode_toggle_wrapper">
-                    <label>
-                        <input type="checkbox" onChange={ () => setMode(!mode) }/>
-                        <span className={`slider ${darkSlider} round`}> </span>
-                    </label>
-                </div>
-            </div>
+            {/*<div className="darkMode_container">*/}
+            {/*    <div className="darkMode_toggle_wrapper">*/}
+            {/*        <label>*/}
+            {/*            <input type="checkbox" onChange={ () => setMode(!mode) }/>*/}
+            {/*            <span className={`slider ${darkSlider} round`}> </span>*/}
+            {/*        </label>*/}
+            {/*    </div>*/}
+            {/*</div>*/}
+            <button onClick={toggleMode}> Dark Mode </button>
         </div>
     );
 };
