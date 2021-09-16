@@ -5,7 +5,7 @@ const DarkMode = ({ toggleDarkMode, darkMode }) => {
 
     const [mode, setMode] = useState(true);
 
-    const toggleMode = () => {
+    const toggleMode = (mode) => {
         setMode(!mode);
         toggleDarkMode(mode);
     };
