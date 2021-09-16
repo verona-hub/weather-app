@@ -33,7 +33,7 @@ class App extends Component {
         forecast_3_days: [],
         fetching: false,
         cancelFetch: false,
-        darkMode: null
+        darkMode: false
     }
 
     // After a location search is made from the input, the call will be made to the Api with the input text
@@ -223,10 +223,7 @@ class App extends Component {
                     <Route exact path="/about" render={ () => (
                         <Fragment>
                             <Navbar/>
-                            <About
-                                toggleDarkMode={ toggleDarkMode }
-                                darkMode={ darkMode }
-                            />
+                            <About />
                             <Footer />
                         </Fragment>
                     )} />

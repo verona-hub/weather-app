@@ -13,7 +13,7 @@ import ScrollToTopHomepage from "../Utility/ScrollToTopHomepage";
 import WeatherCurrent from "./Info/WeatherCurrent";
 
 
-const Main = ({ weatherInfo, weatherCondition, location, airQuality, astronomy, spinner, locationResponseSize, weatherResponseSize, forecast_3_days, toggleDarkMode, darkMode }) => {
+const Main = ({ weatherInfo, weatherCondition, location, airQuality, astronomy, spinner, locationResponseSize, weatherResponseSize, forecast_3_days, darkMode }) => {
 
     // Dark mode
     const darkMain = darkMode && 'dark-mode';

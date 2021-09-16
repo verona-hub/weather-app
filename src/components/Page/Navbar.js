@@ -37,10 +37,10 @@ const Navbar = ({ text, emptyContent, spinner, errorMessage, errorCode, clearErr
                     <div className='nav_link_item about'>About</div>
                 </NavLink>
 
-                <DarkMode
-                    toggleDarkMode={ toggleDarkMode }
-                    darkMode={ darkMode }
-                />
+                {/*<DarkMode*/}
+                {/*    toggleDarkMode={ toggleDarkMode }*/}
+                {/*    darkMode={ darkMode }*/}
+                {/*/>*/}
 
                 {
                     modal && (
