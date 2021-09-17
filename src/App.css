@@ -854,6 +854,11 @@ button {
     letter-spacing: 0.2rem;
 }
 
+.WeatherCurrent .sub_title_main_dark,
+.ForecastHeader .sub_title_main_dark {
+    color: var(--dark_mode_light_blue);
+}
+
 .ForecastHeader .sub_title_main {
     font-size: 1.6rem;
 }
