@@ -7,20 +7,27 @@ import react_logo from '../../img/react-logo.png';
 // Components
 import BackToSearch from "../Utility/BackToSearch";
 import ScrollToTop from '../Utility/ScrollToTop';
+import DarkMode from "../Utility/DarkMode";
 
 
-const About = () => {
+const About = ({ toggleDarkMode, darkMode}) => {
+
+    const welcomeDark = darkMode && 'darkMode_About';
 
     return (
         <div className="container">
             <div className="About card">
                 <div className="welcome">
+                    {/*<DarkMode*/}
+                    {/*    toggleDarkMode={ toggleDarkMode }*/}
+                    {/*    darkMode={ darkMode }*/}
+                    {/*/>*/}
                     <div className="title_wrapper">
                         <h1 className="title"> Welcome! </h1>
                     </div>
                 </div>
 
-                <div className="main">
+                <div className={ `main ${welcomeDark}` }>
                     <section className="about_react">
                         <h2> This App was made with ReactJS </h2>
                         <p> A JavaScript library for building user interfaces. </p>
