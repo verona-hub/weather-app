@@ -10,12 +10,13 @@ const Modal = ({ text, spinner, errorMessage, errorCode, clearError, search, abo
     // Function that cancels the search
     const handleAbortSearch = () => abortSearch();
     // Dark mode
-    const modalContentDark = darkMode ? 'modal_content_dark' : undefined;
+    const modalContentDark = darkMode && 'modal_content_dark';
+    const modalContent = `modal_content ${modalContentDark}`;
 
     return (
         <div className="Modal">
             { search && (
-                <div className={ `modal_content ${modalContentDark}` }>
+                <div className={ modalContent }>
                     <div className="modal_text">
                         <h1> Search in progress <span className="dots"> </span> </h1>
 
