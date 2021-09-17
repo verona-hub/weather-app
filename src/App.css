@@ -1095,6 +1095,10 @@ button {
     position: relative;
 }
 
+.ForecastHeader .date_dark {
+    color: var(--dark_mode_light_blue);
+}
+
 .ForecastHeader .sub_title {
     font-family: 'Nunito', sans-serif;
     font-size: 1.6rem;
@@ -1491,6 +1495,10 @@ button {
 .footer_content p {
     color: var(--white);
     font-size: 1.2rem;
+}
+
+.footer_content_dark p {
+    color: var(--dark_mode_pink);
 }
 
 
