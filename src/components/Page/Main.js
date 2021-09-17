@@ -16,7 +16,8 @@ import WeatherCurrent from "./Info/WeatherCurrent";
 const Main = ({ weatherInfo, weatherCondition, location, airQuality, astronomy, spinner, locationResponseSize, weatherResponseSize, forecast_3_days, toggleDarkMode, darkMode }) => {
 
     // Dark mode
-    const darkMain = darkMode ? 'dark-mode' : undefined;
+    const darkMain = darkMode && 'dark-mode';
+    const Main = `Main ${darkMain}`;
 
     if (spinner) {
         return null;
@@ -24,7 +25,7 @@ const Main = ({ weatherInfo, weatherCondition, location, airQuality, astronomy, 
 
     else {
         return (
-            <div className={`Main ${darkMain}`}>
+            <div className={ Main }>
                 {
                     ( locationResponseSize > 0 || weatherResponseSize > 0 ) && (
                         <div>

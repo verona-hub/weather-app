@@ -5,9 +5,9 @@ import right_arrow from '../../../../img/right-arrow.png';
 const ForecastHeader = ({ which_day, day, date, when, darkMode }) => {
 
     // Dark mode
-    const titleDark = darkMode ? 'title_dark' : undefined;
-    const subTitleDark = darkMode ? 'sub_title_main_dark' : undefined;
-    const dateDark = darkMode ? 'date_dark' : undefined;
+    const titleDark = darkMode && 'title_dark';
+    const subTitleDark = darkMode && 'sub_title_main_dark';
+    const dateDark = darkMode && 'date_dark';
 
     return (
         <div className="ForecastHeader">

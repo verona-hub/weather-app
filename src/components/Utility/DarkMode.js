@@ -1,7 +1,7 @@
 import React, { useState }  from 'react';
 
 
-const DarkMode = ({ toggleDarkMode, darkMode }) => {
+const DarkMode = ({ toggleDarkMode }) => {
 
     const [mode, setMode] = useState(true);
 
@@ -9,7 +9,6 @@ const DarkMode = ({ toggleDarkMode, darkMode }) => {
         setMode(!mode);
         toggleDarkMode(mode);
     };
-
 
 
     return (

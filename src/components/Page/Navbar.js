@@ -22,11 +22,12 @@ const Navbar = ({ text, emptyContent, spinner, errorMessage, errorCode, clearErr
     const navbar = modal ? 'navbar navbar_dark' : `navbar ${otherNavbar}`;
 
     // Dark mode
-    const headerDarkMode = (darkMode && !modal) ? 'header_dark_mode' : undefined;
+    const headerDarkMode = darkMode && !modal && 'header_dark_mode';
+    const header = `header ${headerChange} ${headerDarkMode}`;
 
 
     return (
-        <div className={`header ${headerChange} ${headerDarkMode} `}>
+        <div className={ header }>
             <nav className= { navbar }>
                 <NavLink to='/' activeClassName='active' exact className='logo_wrapper'>
                     <img src={ logo } alt="logo icon" className="logo_img"/>
