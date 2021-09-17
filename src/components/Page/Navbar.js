@@ -46,6 +46,7 @@ const Navbar = ({ text, emptyContent, spinner, errorMessage, errorCode, clearErr
                             clearError={ clearError }
                             search={ search }
                             abortSearch={ abortSearch }
+                            darkMode={ darkMode }
                         />
                     )
                 }
