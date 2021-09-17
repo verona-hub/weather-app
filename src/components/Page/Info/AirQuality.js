@@ -15,7 +15,7 @@ const AirQuality = ({ airQuality, darkMode }) => {
 
     // Dark mode
     const darkIndexButton = darkMode ? 'button_index_dark' : "button_index";
-    const titleDark = darkMode ? 'title_dark' : undefined;
+    const titleDark = darkMode && 'title_dark';
 
     return (
         <div className="AirQuality_wrapper">

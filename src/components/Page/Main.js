@@ -17,7 +17,6 @@ const Main = ({ weatherInfo, weatherCondition, location, airQuality, astronomy, 
 
     // Dark mode
     const darkMain = darkMode && 'dark-mode';
-    const Main = `Main ${darkMain}`;
 
     if (spinner) {
         return null;
@@ -25,7 +24,7 @@ const Main = ({ weatherInfo, weatherCondition, location, airQuality, astronomy, 
 
     else {
         return (
-            <div className={ Main }>
+            <div className={`Main ${darkMain}`}>
                 {
                     ( locationResponseSize > 0 || weatherResponseSize > 0 ) && (
                         <div>
