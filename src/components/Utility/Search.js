@@ -34,8 +34,11 @@ const Search = ({ searchCity, showClearButton, clearContent, darkMode }) => {
     const clearInput = () => setText('');
 
     // Dark mode
-    const buttonSearchDark = darkMode ? 'button_search_dark' : undefined;
-    const buttonClearDark = darkMode ? 'button_clear_dark' : undefined;
+    const buttonSearchDark = darkMode && 'button_search_dark';
+    const buttonSearch = `button button_search button_block ${buttonSearchDark}`;
+
+    const buttonClearDark = darkMode && 'button_clear_dark';
+    const buttonClear = `button button_clear button_block ${buttonClearDark}`;
     const closeIcon = darkMode ? x_dark : x;
 
     return (
@@ -54,10 +57,10 @@ const Search = ({ searchCity, showClearButton, clearContent, darkMode }) => {
                     <input
                         type="submit"
                         value="Search"
-                        className={ `button button_search button_block ${buttonSearchDark}` }
+                        className={ buttonSearch }
                     />
                     {/* If showClearButton from App.js is true, show the Clear button */}
-                    { showClearButton && <button className={ `button button_clear button_block ${buttonClearDark}` } onClick={ clearAllContent }> Clear </button> }
+                    { showClearButton && <button className={ buttonClear } onClick={ clearAllContent }> Clear </button> }
 
                     {/*
                     X icon appears only if the input contains at least 1 letter
