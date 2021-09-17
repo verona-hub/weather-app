@@ -7,7 +7,6 @@ import react_logo from '../../img/react-logo.png';
 // Components
 import BackToSearch from "../Utility/BackToSearch";
 import ScrollToTop from '../Utility/ScrollToTop';
-import DarkMode from "../Utility/DarkMode";
 
 
 const About = ({ toggleDarkMode, darkMode}) => {
@@ -18,10 +17,6 @@ const About = ({ toggleDarkMode, darkMode}) => {
         <div className="container">
             <div className="About card">
                 <div className="welcome">
-                    {/*<DarkMode*/}
-                    {/*    toggleDarkMode={ toggleDarkMode }*/}
-                    {/*    darkMode={ darkMode }*/}
-                    {/*/>*/}
                     <div className="title_wrapper">
                         <h1 className="title"> Welcome! </h1>
                     </div>

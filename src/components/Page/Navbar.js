@@ -6,7 +6,6 @@ import logo from '../../img/sun.svg';
 
 // Components
 import Modal from '../Utility/Modal';
-import DarkMode from "../Utility/DarkMode";
 
 
 const Navbar = ({ text, emptyContent, spinner, errorMessage, errorCode, clearError, modal, search, abortSearch, toggleDarkMode, darkMode }) => {
@@ -37,10 +36,6 @@ const Navbar = ({ text, emptyContent, spinner, errorMessage, errorCode, clearErr
                     <div className='nav_link_item about'>About</div>
                 </NavLink>
 
-                {/*<DarkMode*/}
-                {/*    toggleDarkMode={ toggleDarkMode }*/}
-                {/*    darkMode={ darkMode }*/}
-                {/*/>*/}
 
                 {
                     modal && (
