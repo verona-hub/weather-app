@@ -1,9 +1,8 @@
 import React, { useState }  from 'react';
 
 
-const DarkMode = ({ toggleDarkMode, darkMode }) => {
+const DarkMode = ({ toggleDarkMode }) => {
 
-    const homePage = window.location.pathname === '/';
     const [mode, setMode] = useState(true);
 
     const toggleMode = () => {
@@ -11,21 +10,12 @@ const DarkMode = ({ toggleDarkMode, darkMode }) => {
         toggleDarkMode(mode);
     };
 
-    const darkSlider = darkMode && 'slider_dark';
-
 
     return (
-        <div className="DarkMode_Homepage">
-            { homePage && (
-                <div className="darkMode_container">
-                    <div className="darkMode_toggle_wrapper">
-                        <label>
-                            <input type="checkbox" onChange={ toggleMode }/>
-                            <span className={`slider ${darkSlider} round`}> </span>
-                        </label>
-                    </div>
-                </div> )
-            }
+        <div className="DarkMode">
+            <div className="darkMode-button-wrapper">
+                <button onClick={toggleMode}> Dark Mode </button>
+            </div>
         </div>
     );
 };

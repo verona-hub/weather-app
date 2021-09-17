@@ -33,6 +33,7 @@ const Main = ({ weatherInfo, weatherCondition, location, airQuality, astronomy, 
                                 weatherCondition={ weatherCondition }
                                 forecast_3_days={ forecast_3_days }
                                 location={ location }
+                                toggleDarkMode={ toggleDarkMode }
                                 darkMode={ darkMode }
                             />
                             <ImageSeparatorWeatherCurrent

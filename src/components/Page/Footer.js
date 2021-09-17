@@ -9,11 +9,10 @@ const Footer = ({ darkMode }) => {
     const aboutFooter = aboutPage && 'Footer_About';
     // Dark mode
     const darkFooter = darkMode && 'Footer_dark';
-    const darkFooterPar = darkMode && 'footer_content_dark';
 
     return (
         <div className={`Footer ${aboutFooter} ${darkFooter}`}>
-            <div className={ `footer_content ${darkFooterPar}` }>
+            <div className="footer_content">
                 <div className="text">
                     <p><span>Powered by&nbsp;</span>
                         <a href="https://www.weatherapi.com/" title="Free Weather API" target="_blank" rel="noreferrer">

@@ -9,9 +9,7 @@ import BackToSearch from "../Utility/BackToSearch";
 import ScrollToTop from '../Utility/ScrollToTop';
 
 
-const About = ({ toggleDarkMode, darkMode}) => {
-
-    const welcomeDark = darkMode && 'darkMode_About';
+const About = () => {
 
     return (
         <div className="container">
@@ -22,7 +20,7 @@ const About = ({ toggleDarkMode, darkMode}) => {
                     </div>
                 </div>
 
-                <div className={ `main ${welcomeDark}` }>
+                <div className="main">
                     <section className="about_react">
                         <h2> This App was made with ReactJS </h2>
                         <p> A JavaScript library for building user interfaces. </p>
