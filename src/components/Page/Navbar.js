@@ -22,7 +22,7 @@ const Navbar = ({ text, emptyContent, spinner, errorMessage, errorCode, clearErr
     const navbar = modal ? 'navbar navbar_dark' : `navbar ${otherNavbar}`;
 
     // Dark mode
-    const headerDarkMode = darkMode && !modal && 'header_dark_mode';
+    const headerDarkMode = (darkMode && !modal) ? 'header_dark_mode' : undefined;
 
 
     return (

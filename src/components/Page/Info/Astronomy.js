@@ -7,7 +7,7 @@ const Astronomy = ({ astronomy, darkMode }) => {
     const { sunrise, sunset, moonrise, moonset, moon_phase, moon_illumination } = astronomy;
 
     // Dark mode
-    const titleDark = darkMode && 'title_dark';
+    const titleDark = darkMode ? 'title_dark' : undefined;
 
     return (
         <div className="Astronomy card">

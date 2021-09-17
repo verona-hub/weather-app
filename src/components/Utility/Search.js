@@ -34,8 +34,8 @@ const Search = ({ searchCity, showClearButton, clearContent, darkMode }) => {
     const clearInput = () => setText('');
 
     // Dark mode
-    const buttonSearchDark = darkMode && 'button_search_dark';
-    const buttonClearDark = darkMode && 'button_clear_dark';
+    const buttonSearchDark = darkMode ? 'button_search_dark' : undefined;
+    const buttonClearDark = darkMode ? 'button_clear_dark' : undefined;
     const closeIcon = darkMode ? x_dark : x;
 
     return (

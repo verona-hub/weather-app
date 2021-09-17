@@ -10,7 +10,7 @@ const DarkMode = ({ toggleDarkMode, darkMode }) => {
         toggleDarkMode(mode);
     };
 
-    const darkSlider = darkMode && 'slider_dark';
+    const darkSlider = darkMode ? 'slider_dark' : undefined;
 
 
 

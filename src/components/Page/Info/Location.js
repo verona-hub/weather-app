@@ -8,7 +8,7 @@ const Location = ({ location, darkMode }) => {
     const { name, region, country, lat, lon, localtime, tz_id } = location;
 
     // Dark mode
-    const titleDark = darkMode && 'title_dark';
+    const titleDark = darkMode ? 'title_dark' : undefined;
 
     return (
         <div className="Location card">

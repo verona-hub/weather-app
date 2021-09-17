@@ -16,7 +16,7 @@ import WeatherCurrent from "./Info/WeatherCurrent";
 const Main = ({ weatherInfo, weatherCondition, location, airQuality, astronomy, spinner, locationResponseSize, weatherResponseSize, forecast_3_days, toggleDarkMode, darkMode }) => {
 
     // Dark mode
-    const darkMain = darkMode && 'dark-mode';
+    const darkMain = darkMode ? 'dark-mode' : undefined;
 
     if (spinner) {
         return null;

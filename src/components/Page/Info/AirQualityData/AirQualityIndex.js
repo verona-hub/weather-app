@@ -9,8 +9,8 @@ const AirQualityIndex = ({ indexInfoVisible, darkMode }) => {
     const { case1, case2, case3, case4, case5, case6, case7, case8, case9, case10, mix } = data;
 
     const indexVisible = indexInfoVisible ? "visible" : "hidden";
-    const darkIndex = darkMode && 'index_wrapper_dark';
-    const darkTitle = darkMode && 'title_dark';
+    const darkIndex = darkMode ? 'index_wrapper_dark' : undefined;
+    const darkTitle = darkMode ? 'title_dark' : undefined;
 
     return (
         <div className="AirQualityIndex">

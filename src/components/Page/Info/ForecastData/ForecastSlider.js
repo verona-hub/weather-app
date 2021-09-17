@@ -20,8 +20,8 @@ const ForecastSlider = ({ forecast, which_day, when, darkMode }) => {
     const { sunrise, sunset } = astro;
 
     // Dark mode
-    const forecastDailyInfoDark = darkMode && 'ForecastDailyInfo_wrapper_dark';
-    const forecastHourlyInfoDark = darkMode && 'ForecastHourlyInfo_wrapper_dark';
+    const forecastDailyInfoDark = darkMode ? 'ForecastDailyInfo_wrapper_dark' : undefined;
+    const forecastHourlyInfoDark = darkMode ? 'ForecastHourlyInfo_wrapper_dark' : undefined;
 
     return (
         <div className="ForecastEachDay">

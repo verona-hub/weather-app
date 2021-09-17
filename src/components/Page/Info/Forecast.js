@@ -15,8 +15,8 @@ const Forecast = ({ location, forecast_3_days, darkMode }) => {
     const [forecast1day, forecast2days, forecast3days] = forecastday;
 
     // Dark mode classes
-    const darkForecast = darkMode && 'Forecast_dark';
-    const darkSlider = darkMode && 'dark-mode';
+    const darkForecast = darkMode ? 'Forecast_dark' : undefined;
+    const darkSlider = darkMode ? 'dark-mode' : undefined;
 
     return (
             <div className={`card Forecast ${darkForecast}`}>

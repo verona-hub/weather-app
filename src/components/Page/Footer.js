@@ -8,8 +8,8 @@ const Footer = ({ darkMode }) => {
     // Add the css rule which contains a margin-top value only to the Footer located in the About page
     const aboutFooter = aboutPage && 'Footer_About';
     // Dark mode
-    const darkFooter = darkMode && 'Footer_dark';
-    const darkFooterPar = darkMode && 'footer_content_dark';
+    const darkFooter = darkMode ? 'Footer_dark' : undefined;
+    const darkFooterPar = darkMode ? 'footer_content_dark' : undefined;
 
     return (
         <div className={`Footer ${aboutFooter} ${darkFooter}`}>

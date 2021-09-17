@@ -10,7 +10,7 @@ const Modal = ({ text, spinner, errorMessage, errorCode, clearError, search, abo
     // Function that cancels the search
     const handleAbortSearch = () => abortSearch();
     // Dark mode
-    const modalContentDark = darkMode && 'modal_content_dark';
+    const modalContentDark = darkMode ? 'modal_content_dark' : undefined;
 
     return (
         <div className="Modal">
