@@ -10,8 +10,6 @@ const DarkMode = ({ toggleDarkMode, darkMode }) => {
         toggleDarkMode(mode);
     };
 
-    // const darkSlider = darkMode ? 'slider slider_dark' : 'slider';
-
 
 
     return (
@@ -19,14 +17,6 @@ const DarkMode = ({ toggleDarkMode, darkMode }) => {
             <div className="darkMode-button-wrapper">
                 <button onClick={toggleMode}> Dark Mode </button>
             </div>
-            {/*<div className="darkMode_container">*/}
-            {/*    <div className="darkMode_toggle_wrapper">*/}
-            {/*        <label>*/}
-            {/*            <input type="checkbox" onChange={ toggleMode }/>*/}
-            {/*            <span className={`${darkSlider} round`}> </span>*/}
-            {/*        </label>*/}
-            {/*    </div>*/}
-            {/*</div>*/}
         </div>
     );
 };
