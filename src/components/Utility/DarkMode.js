@@ -1,7 +1,7 @@
 import React, { useState }  from 'react';
 
 
-const DarkMode = ({ toggleDarkMode }) => {
+const DarkMode = ({ toggleDarkMode, darkMode }) => {
 
     const [mode, setMode] = useState(true);
 
@@ -10,11 +10,22 @@ const DarkMode = ({ toggleDarkMode }) => {
         toggleDarkMode(mode);
     };
 
+    const darkSlider = darkMode && 'slider_dark';
+
+
 
     return (
         <div className="DarkMode">
             <div className="darkMode-button-wrapper">
                 <button onClick={toggleMode}> Dark Mode </button>
+            </div>
+            <div className="darkMode_container">
+                <div className="darkMode_toggle_wrapper">
+                    <label>
+                        <input type="checkbox" onChange={ toggleMode }/>
+                        <span className={`slider ${darkSlider} round`}> </span>
+                    </label>
+                </div>
             </div>
         </div>
     );
