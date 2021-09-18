@@ -21,7 +21,9 @@ const ForecastSlider = ({ forecast, which_day, when, darkMode }) => {
 
     // Dark mode
     const forecastDailyInfoDark = darkMode && 'ForecastDailyInfo_wrapper_dark';
+    const forecastDailyInfo = `ForecastDailyInfo_wrapper ${forecastDailyInfoDark}`;
     const forecastHourlyInfoDark = darkMode && 'ForecastHourlyInfo_wrapper_dark';
+    const forecastHourlyInfo = `ForecastHourlyInfo_wrapper ${forecastHourlyInfoDark}`;
 
     return (
         <div className="ForecastEachDay">
@@ -44,7 +46,7 @@ const ForecastSlider = ({ forecast, which_day, when, darkMode }) => {
                 {/* Little tab slider for daily and hourly summary */}
                 <Slider>
                     {/* Daily summary */}
-                    <Slide index={0} className={ `ForecastDailyInfo_wrapper ${forecastDailyInfoDark}` }>
+                    <Slide index={0} className={ forecastDailyInfo }>
                         <h2 className='daily_summary'> Daily Summary </h2>
                         <ForecastDailyInfo
                             condition={ condition }
@@ -63,7 +65,7 @@ const ForecastSlider = ({ forecast, which_day, when, darkMode }) => {
                     </Slide>
 
                     {/* Hourly summary */}
-                    <Slide index={1}  className={ `ForecastHourlyInfo_wrapper ${forecastHourlyInfoDark}` }>
+                    <Slide index={1}  className={ forecastHourlyInfo }>
                         <h2> Hourly Summary </h2>
                         <ForecastHourlyInfo
                             hour={ hour }

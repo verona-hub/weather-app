@@ -7,12 +7,12 @@ const Location = ({ location, darkMode }) => {
     // Destructuring the fetched location data
     const { name, region, country, lat, lon, localtime, tz_id } = location;
 
-    // Dark mode
     const titleDark = darkMode && 'title_dark';
+    const title = `title ${titleDark}`;
 
     return (
         <div className="Location card">
-            <h2 className={ `title ${titleDark}` }> Location </h2>
+            <h2 className={ title }> Location </h2>
             <div className="main">
                 <div className="spaced">
                     <span> City:</span>

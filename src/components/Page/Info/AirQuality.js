@@ -13,14 +13,15 @@ const AirQuality = ({ airQuality, darkMode }) => {
     // Function to toggle the index box visibility
     const toggleIndexInfo = () => setIndexInfoVisible(!indexInfoVisible);
 
-    // Dark mode
-    const darkIndexButton = darkMode ? 'button_index_dark' : "button_index";
     const titleDark = darkMode && 'title_dark';
+    const title = `title ${titleDark}`;
+    const indexButton = darkMode ? 'button_index_dark' : "button_index";
+    const infoVisibility = indexInfoVisible ? 'Hide Air Quality Index' : 'Show Air Quality Index';
 
     return (
         <div className="AirQuality_wrapper">
             <div className="AirQuality card">
-                <h1 className={ `title ${titleDark}` }> Air Quality </h1>
+                <h1 className={ title }> Air Quality </h1>
 
                 <div className="main">
                     <AirQualityCollection
@@ -28,8 +29,8 @@ const AirQuality = ({ airQuality, darkMode }) => {
                         darkMode={ darkMode }
                     />
 
-                    <button onClick={ toggleIndexInfo } className={darkIndexButton}>
-                        { indexInfoVisible ? 'Hide Air Quality Index' : 'Show Air Quality Index' }
+                    <button onClick={ toggleIndexInfo } className={ indexButton }>
+                        { infoVisibility }
                     </button>
 
                     <AirQualityIndex

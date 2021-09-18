@@ -7,13 +7,15 @@ const Footer = ({ darkMode }) => {
     const aboutPage = window.location.pathname === '/about';
     // Add the css rule which contains a margin-top value only to the Footer located in the About page
     const aboutFooter = aboutPage && 'Footer_About';
-    // Dark mode
-    const darkFooter = darkMode && 'Footer_dark';
-    const darkFooterPar = darkMode && 'footer_content_dark';
+
+    const FooterDark = darkMode && 'Footer_dark';
+    const Footer = `Footer ${aboutFooter} ${FooterDark}`;
+    const footerContentDark = darkMode && 'footer_content_dark';
+    const footerContent = `footer_content ${footerContentDark}`;
 
     return (
-        <div className={`Footer ${aboutFooter} ${darkFooter}`}>
-            <div className={ `footer_content ${darkFooterPar}` }>
+        <div className={ Footer }>
+            <div className={ footerContent }>
                 <div className="text">
                     <p><span>Powered by&nbsp;</span>
                         <a href="https://www.weatherapi.com/" title="Free Weather API" target="_blank" rel="noreferrer">

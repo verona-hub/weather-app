@@ -17,24 +17,30 @@ const WeatherCurrent = ({ weatherInfo, weatherCondition, location, toggleDarkMod
 
     // Dark mode
     const titleDark = darkMode && 'title_dark';
+    const title = `title ${titleDark}`;
     const subTitleDark = darkMode && 'sub_title_main_dark';
+    const subTitle = `sub_title_main ${subTitleDark}`;
+    const feelsLikeText = darkMode ? 'feels_like_dark' : 'feels_like';
+    const feelsLikeLogo = darkMode ? feels_logo_dark : feels_logo;
 
     return (
         <div className="WeatherCurrent card">
 
-            <DarkMode toggleDarkMode={ toggleDarkMode } />
+            <DarkMode
+                toggleDarkMode={ toggleDarkMode }
+            />
 
-            <h1 className={ `title ${titleDark}` }> Current Weather </h1>
+            <h1 className={ title }> Current Weather </h1>
             <div className="Weather_current_main">
-                <h2 className={ `sub_title_main ${subTitleDark}` }> { name }, { country } </h2>
+                <h2 className={ subTitle }> { name }, { country } </h2>
                 <div className="top_content">
                     <div className="top_content_header">
                         <img src={ icon } alt="weather conditions icon"/>
                     </div>
                     <div className="top_content_main">
                         <h2 className="current_weather_text">  { text } { temp_c } &#8451; </h2>
-                        <div className={ darkMode ? 'feels_like_dark' : 'feels_like' }>
-                            <img src={ darkMode ? feels_logo_dark : feels_logo } alt="feels like icon"/>
+                        <div className={ feelsLikeText }>
+                            <img src={ feelsLikeLogo } alt="feels like icon"/>
                             <h3> Feels like: { feelslike_c } &#8451; </h3>
                         </div>
                     </div>

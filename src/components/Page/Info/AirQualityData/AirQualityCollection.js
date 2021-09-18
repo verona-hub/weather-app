@@ -84,10 +84,11 @@ const AirQualityCollection = ({ airQuality, darkMode }) => {
     const textPm10Color = pm10_Data.textPm10Color;
 
     // Dark mode
-    const darkAirQualityCollection = 'AirQualityCollection_dark';
+    const AirQualityCollectionDark = darkMode && 'AirQualityCollection_dark';
+    const AirQualityCollection = `AirQualityCollection ${AirQualityCollectionDark}`;
 
     return (
-        <div className={`AirQualityCollection ${darkAirQualityCollection}`}>
+        <div className={ AirQualityCollection }>
             <AirQualityElement
                 backgroundColor={ bgCo }
                 color={ textCoColor }

@@ -14,18 +14,18 @@ const Forecast = ({ location, forecast_3_days, darkMode }) => {
     const { forecastday } = forecast_3_days;
     const [forecast1day, forecast2days, forecast3days] = forecastday;
 
-    // Dark mode classes
     const darkForecast = darkMode && 'Forecast_dark';
-    const darkSlider = darkMode && 'dark-mode';
+    const Forecast = `card Forecast ${darkForecast}`;
+    const slider = darkMode && 'dark-mode';
 
     return (
-            <div className={`card Forecast ${darkForecast}`}>
+            <div className={ Forecast }>
                 <AwesomeSlider
                     className='slider'
                     animation='fallAnimation'
                     bullets={false}
                 >
-                    <div className={ darkSlider }>
+                    <div className={ slider }>
                         <ForecastSlider
                             forecast={ forecast1day }
                             which_day='Day 1'
@@ -35,7 +35,7 @@ const Forecast = ({ location, forecast_3_days, darkMode }) => {
                         />
                     </div>
 
-                    <div className={ darkSlider }>
+                    <div className={ slider }>
                         <ForecastSlider
                             forecast={ forecast2days }
                             which_day='Day 2'
@@ -45,7 +45,7 @@ const Forecast = ({ location, forecast_3_days, darkMode }) => {
                         />
                     </div>
 
-                    <div className={ darkSlider }>
+                    <div className={ slider }>
                         <ForecastSlider
                             forecast={ forecast3days }
                             which_day='Day 3'

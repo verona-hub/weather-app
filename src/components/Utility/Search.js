@@ -33,15 +33,17 @@ const Search = ({ searchCity, showClearButton, clearContent, darkMode }) => {
     // Function that removes any text from input and leaves it empty
     const clearInput = () => setText('');
 
-    // Dark mode
+    const formContent = darkMode ? "form_content_dark" : "form_content";
     const buttonSearchDark = darkMode && 'button_search_dark';
+    const buttonSearch = `button button_search button_block ${buttonSearchDark}`;
     const buttonClearDark = darkMode && 'button_clear_dark';
+    const buttonClear = `button button_clear button_block ${buttonClearDark}`;
     const closeIcon = darkMode ? x_dark : x;
 
     return (
         <div className="Search">
             <form onSubmit={ onSubmit } className="form">
-                <div className={ darkMode ? "form_content_dark" : "form_content"}>
+                <div className={ formContent }>
                     <img src={ icon } alt="search icon" className="search_icon"
                          onClick={ onSubmit } />
                     <input
@@ -54,10 +56,10 @@ const Search = ({ searchCity, showClearButton, clearContent, darkMode }) => {
                     <input
                         type="submit"
                         value="Search"
-                        className={ `button button_search button_block ${buttonSearchDark}` }
+                        className={ buttonSearch }
                     />
                     {/* If showClearButton from App.js is true, show the Clear button */}
-                    { showClearButton && <button className={ `button button_clear button_block ${buttonClearDark}` } onClick={ clearAllContent }> Clear </button> }
+                    { showClearButton && <button className={ buttonClear } onClick={ clearAllContent }> Clear </button> }
 
                     {/*
                     X icon appears only if the input contains at least 1 letter
