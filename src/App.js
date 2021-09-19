@@ -165,7 +165,8 @@ class App extends Component {
 
     toggleNew = () => {
         this.setState( prevState => ({
-            isToggled: !prevState.isToggled
+            isToggled: !prevState.isToggled,
+            darkMode: true
         }));
     }
 
@@ -173,7 +174,8 @@ class App extends Component {
 
     render () {
 
-        console.log(this.state.isToggled)
+        console.log(`isToggled: ${this.state.isToggled}`);
+        console.log(`Dark mode: ${ this.state.darkMode }`);
 
         const { text, weatherInfo, weatherCondition, airQuality, location, astronomy,
             spinner, errorMessage, errorCode, modal, search, forecast_3_days, darkMode, isToggled } = this.state;
