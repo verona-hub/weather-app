@@ -159,10 +159,6 @@ class App extends Component {
         });
     }
 
-    toggleDarkMode = (mode) => {
-        this.setState({ darkMode: mode });
-    }
-
     toggleNew = () => {
         this.setState( prevState => ({
             isToggled: !prevState.isToggled,
@@ -172,12 +168,10 @@ class App extends Component {
 
 
     render () {
-        console.log(this.state.isToggled);
-        console.log(this.state.darkMode);
 
         const { text, weatherInfo, weatherCondition, airQuality, location, astronomy,
             spinner, errorMessage, errorCode, modal, search, forecast_3_days, isToggled, darkMode } = this.state;
-        const { searchCity, clearContent, clearError, abortSearch, toggleDarkMode, toggleNew  } = this;
+        const { searchCity, clearContent, clearError, abortSearch, toggleNew  } = this;
 
         const locationResponseSize = _.size(location);
         const weatherResponseSize = _.size(weatherInfo);
@@ -194,6 +188,7 @@ class App extends Component {
                                    <DarkModeNew
                                        isToggled={ isToggled }
                                        toggleNew={ toggleNew }
+                                       darkMode={ darkMode }
                                    />
                                    <Navbar
                                        emptyContent={ locationResponseSize <= 0 && weatherResponseSize <= 0 }
@@ -225,7 +220,6 @@ class App extends Component {
                                            locationResponseSize={ locationResponseSize }
                                            weatherResponseSize={ weatherResponseSize }
                                            forecast_3_days={ forecast_3_days }
-                                           toggleDarkMode={ toggleDarkMode }
                                            darkMode={ darkMode }
                                        />
                                    </div>
