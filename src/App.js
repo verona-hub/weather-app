@@ -164,12 +164,16 @@ class App extends Component {
     }
 
     toggleNew = () => {
-        console.log('passed prop to DarkModeNew')
+        this.setState( prevState => ({
+            isToggled: !prevState.isToggled
+        }));
     }
 
 
 
     render () {
+
+        console.log(this.state.isToggled)
 
         const { text, weatherInfo, weatherCondition, airQuality, location, astronomy,
             spinner, errorMessage, errorCode, modal, search, forecast_3_days, darkMode, isToggled } = this.state;
