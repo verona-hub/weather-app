@@ -8,6 +8,7 @@ import * as _ from 'underscore';
 
 // Components
 import About from './components/Page/About';
+import DarkModeNew from './components/Utility/DarkModeNew';
 import Footer from "./components/Page/Footer";
 import Main from './components/Page/Main';
 import Navbar from './components/Page/Navbar';
@@ -181,6 +182,7 @@ class App extends Component {
                     <Route exact path="/"
                            render={ () => (
                                <Fragment>
+                                   <DarkModeNew />
                                    <Navbar
                                        emptyContent={ locationResponseSize <= 0 && weatherResponseSize <= 0 }
                                        spinner={ spinner }
