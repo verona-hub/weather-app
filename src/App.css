@@ -230,18 +230,12 @@ img {
 .slider {
     background-color: lightblue;
     cursor: pointer;
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    right: 0;
-    top: 0;
 
     transition: all 0.5s;
 }
 
 .slider:before {
     background-color: blue;
-    position: absolute;
     content:"";
 
     height: 26px;
