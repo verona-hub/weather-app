@@ -215,7 +215,7 @@ img {
 
 .switch {
     background-color: orange;
-    display: inline-block;
+    display: block;
     height: 34px;
     position: relative;
     width: 60px;
