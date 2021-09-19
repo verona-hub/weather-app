@@ -170,12 +170,16 @@ class App extends Component {
     //     }));
     // }
 
-    // toggleNew = (newMode) => {
-    //         this.setState( prevState => ({
-    //             isToggled : !prevState.isToggled,
-    //             darkMode: newMode
-    //         }));
-    // }
+    toggleNew = (newMode, isToggled) => {
+            // this.setState( prevState => ({
+            //     isToggled : !prevState.isToggled,
+            //     darkMode: newMode
+            // }));
+        this.setState({
+            darkMode: newMode,
+            isToggled: isToggled
+        });
+    }
 
 
 
@@ -197,10 +201,10 @@ class App extends Component {
                     <Route exact path="/"
                            render={ () => (
                                <Fragment>
-                                   {/*<DarkModeNew*/}
-                                   {/*    isToggled={ isToggled }*/}
-                                   {/*    toggleNew={ toggleNew }*/}
-                                   {/*/>*/}
+                                   <DarkModeNew
+                                       isToggled={ isToggled }
+                                       toggleNew={ toggleNew }
+                                   />
                                    <Navbar
                                        emptyContent={ locationResponseSize <= 0 && weatherResponseSize <= 0 }
                                        spinner={ spinner }
