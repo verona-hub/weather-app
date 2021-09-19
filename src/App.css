@@ -238,6 +238,7 @@ img {
     height: 26px;
     width: 26px;
     transition: all 0.5s;
+    z-index: 100;
 }
 
 .slider:before {
@@ -250,6 +251,7 @@ img {
     bottom: 4px;
     left: 4px;
     transition: 0.5s;
+    z-index: 100;
 }
 
 /*
