@@ -4,7 +4,7 @@ import React from 'react';
 const DarkMode = ({ isToggled, toggleNew }) => {
 
     return (
-        <div className="DarkMode">
+        <div className="">
             <label className="switch">
                 <input
                     type="checkbox"
