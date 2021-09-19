@@ -34,7 +34,7 @@ class App extends Component {
         forecast_3_days: [],
         fetching: false,
         cancelFetch: false,
-        darkMode: null,
+        darkMode: false,
         isToggled: false
     }
 
@@ -163,27 +163,17 @@ class App extends Component {
         this.setState({ darkMode: mode });
     }
 
-    // onToggle = (isToggled) => {
-    //     this.setState( prevState => ({
-    //         isToggled : !prevState.isToggled,
-    //         darkMode: isToggled
-    //     }));
-    // }
-
-    toggleNew = (newMode, isToggled) => {
-            // this.setState( prevState => ({
-            //     isToggled : !prevState.isToggled,
-            //     darkMode: newMode
-            // }));
-        this.setState({
-            darkMode: newMode,
-            isToggled: isToggled
-        });
+    toggleNew = () => {
+        this.setState( prevState => ({
+            isToggled: !prevState.isToggled,
+            darkMode: !prevState.darkMode
+        }));
     }
 
 
-
     render () {
+        console.log(this.state.isToggled);
+        console.log(this.state.darkMode);
 
         const { text, weatherInfo, weatherCondition, airQuality, location, astronomy,
             spinner, errorMessage, errorCode, modal, search, forecast_3_days, isToggled, darkMode } = this.state;

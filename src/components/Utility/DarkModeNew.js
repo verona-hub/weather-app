@@ -1,14 +1,7 @@
-import React, {useState} from 'react';
+import React from 'react';
 
 
 const DarkMode = ({ isToggled, toggleNew }) => {
-
-    const [ newMode, setNewMode ] = useState(true);
-
-    const onToggle = () => {
-        setNewMode(!newMode);
-        toggleNew(newMode);
-    };
 
     return (
         <div className="DarkMode">
@@ -16,7 +9,7 @@ const DarkMode = ({ isToggled, toggleNew }) => {
                 <input
                     type="checkbox"
                     checked={ isToggled }
-                    onChange={ onToggle }
+                    onChange={ toggleNew }
                 />
                 <span className="slider round"> </span>
             </label>
