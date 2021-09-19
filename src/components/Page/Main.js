@@ -13,7 +13,7 @@ import ScrollToTopHomepage from "../Utility/ScrollToTopHomepage";
 import WeatherCurrent from "./Info/WeatherCurrent";
 
 
-const Main = ({ weatherInfo, weatherCondition, location, airQuality, astronomy, spinner, locationResponseSize, weatherResponseSize, forecast_3_days, toggleDarkMode, darkMode }) => {
+const Main = ({ weatherInfo, weatherCondition, location, airQuality, astronomy, spinner, locationResponseSize, weatherResponseSize, forecast_3_days, darkMode }) => {
 
     const contentPresent = locationResponseSize > 0 || weatherResponseSize > 0;
 
@@ -35,7 +35,6 @@ const Main = ({ weatherInfo, weatherCondition, location, airQuality, astronomy, 
                                 weatherCondition={ weatherCondition }
                                 forecast_3_days={ forecast_3_days }
                                 location={ location }
-                                toggleDarkMode={ toggleDarkMode }
                                 darkMode={ darkMode }
                             />
                             <ImageSeparatorWeatherCurrent

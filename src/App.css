@@ -200,19 +200,87 @@ img {
 
 .DarkMode {
     position: relative;
+}
+
+.darkMode_container {
+    align-items: center;
+    align-content: center;
+    display: flex;
+    justify-content: center;
+    position: absolute;
+    right: 20px;
+    top: 20px;
+    width: 100px;
+}
+
+.DarkMode label {
+    display: inline-block;
+    height: 44px;
+    position: relative;
     width: 100%;
 }
 
-.darkMode-button-wrapper {
-    position: absolute;
-    right: 30px;
-    top: 30px;
+.DarkMode input {
+    height: 0;
+    opacity: 0;
+    width: 0;
 }
 
-.darkMode-button-wrapper button {
+.DarkMode input:checked + .slider:before {
+    transform: translateX(42px);
+    -webkit-transform: translateX(42px);
+    -ms-transform: translateX(42px);
+}
+
+.DarkMode .slider {
+    background-color: #ccc;
+    bottom: 0;
     cursor: pointer;
+    left: 0;
+    position: absolute;
+    right: 0;
+    top: 0;
+    transition: 0.4s;
+    -webkit-transition: 0.4s;
+    z-index: 100;
 }
 
+.DarkMode .slider_dark {
+    background: linear-gradient(to top left, #8664FF, #FF01D3 );
+}
+
+.DarkMode .slider:before {
+    bottom: 6px;
+    content: url(img/day-mode.svg);
+    height: 30px;
+    left: 14px;
+    position: absolute;
+    transition: 0.4s;
+    width: 28px;
+    -webkit-transition: 0.4s;
+}
+
+.DarkMode .slider_dark:before {
+    bottom: 6px;
+    content: url(img/dark-mode-moon.svg);
+    height: 28px;
+    left: 18px;
+    position: absolute;
+    transition: 0.4s;
+    width: 24px;
+    -webkit-transition: 0.4s;
+}
+
+.round {
+    border-radius: 30px;
+}
+
+.round:before {
+    border-radius: 50%;
+}
+
+
+/*
 .switch {
     background-color: orange;
     display: inline-block;
@@ -226,6 +294,8 @@ img {
     opacity: 0;
     width: 0;
 }
+
+
 
 .DarkMode .slider {
     background-color: lightblue;
@@ -268,7 +338,7 @@ img {
 
 .slider.round:before {
     border-radius: 50%;
-}
+}*/
 
 /*
 + Modal

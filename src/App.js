@@ -8,7 +8,7 @@ import * as _ from 'underscore';
 
 // Components
 import About from './components/Page/About';
-import DarkModeNew from './components/Utility/DarkModeNew';
+import DarkMode from './components/Utility/DarkMode';
 import Footer from "./components/Page/Footer";
 import Main from './components/Page/Main';
 import Navbar from './components/Page/Navbar';
@@ -159,11 +159,7 @@ class App extends Component {
         });
     }
 
-    toggleDarkMode = (mode) => {
-        this.setState({ darkMode: mode });
-    }
-
-    toggleNew = () => {
+    toggleDarkMode = () => {
         this.setState( prevState => ({
             isToggled: !prevState.isToggled,
             darkMode: !this.state.darkMode
@@ -174,12 +170,9 @@ class App extends Component {
 
     render () {
 
-        console.log(`isToggled: ${this.state.isToggled}`);
-        console.log(`Dark mode: ${ this.state.darkMode }`);
-
         const { text, weatherInfo, weatherCondition, airQuality, location, astronomy,
             spinner, errorMessage, errorCode, modal, search, forecast_3_days, darkMode, isToggled } = this.state;
-        const { searchCity, clearContent, clearError, abortSearch, toggleDarkMode, toggleNew  } = this;
+        const { searchCity, clearContent, clearError, abortSearch, toggleDarkMode  } = this;
 
         const locationResponseSize = _.size(location);
         const weatherResponseSize = _.size(weatherInfo);
@@ -193,9 +186,10 @@ class App extends Component {
                     <Route exact path="/"
                            render={ () => (
                                <Fragment>
-                                   <DarkModeNew
+                                   <DarkMode
                                        isToggled={ isToggled }
-                                       toggleNew={ toggleNew }
+                                       toggleDarkMode={ toggleDarkMode }
+                                       darkMode={ darkMode }
                                    />
                                    <Navbar
                                        emptyContent={ locationResponseSize <= 0 && weatherResponseSize <= 0 }
@@ -227,7 +221,6 @@ class App extends Component {
                                            locationResponseSize={ locationResponseSize }
                                            weatherResponseSize={ weatherResponseSize }
                                            forecast_3_days={ forecast_3_days }
-                                           toggleDarkMode={ toggleDarkMode }
                                            darkMode={ darkMode }
                                        />
                                    </div>

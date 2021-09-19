@@ -1,20 +1,23 @@
-import React, { useState }  from 'react';
+import React from 'react';
 
 
-const DarkMode = ({ toggleDarkMode }) => {
+const DarkMode = ({ isToggled, toggleDarkMode, darkMode }) => {
 
-    const [mode, setMode] = useState(true);
 
-    const toggleMode = () => {
-        setMode(!mode);
-        toggleDarkMode(mode);
-    };
-
+    const darkSlider = darkMode && 'slider_dark';
+    const slider = `slider ${darkSlider} round`;
 
     return (
         <div className="DarkMode">
-            <div className="darkMode-button-wrapper">
-                <button onClick={toggleMode}> Dark Mode </button>
+            <div className="darkMode_container">
+                <label>
+                    <input
+                        type="checkbox"
+                        checked={ isToggled }
+                        onChange={ toggleDarkMode }
+                    />
+                    <span className={ slider }> </span>
+                </label>
             </div>
         </div>
     );
