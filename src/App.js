@@ -164,7 +164,7 @@ class App extends Component {
     }
 
     toggleNew = () => {
-
+        console.log('passed prop to DarkModeNew')
     }
 
 
@@ -187,7 +187,10 @@ class App extends Component {
                     <Route exact path="/"
                            render={ () => (
                                <Fragment>
-                                   <DarkModeNew />
+                                   <DarkModeNew
+                                       isToggled={ isToggled }
+                                       toggleNew={ toggleNew }
+                                   />
                                    <Navbar
                                        emptyContent={ locationResponseSize <= 0 && weatherResponseSize <= 0 }
                                        spinner={ spinner }
