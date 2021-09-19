@@ -215,11 +215,10 @@ img {
 
 .switch {
     background-color: orange;
-    display: block;
+    display: inline-block;
     height: 34px;
     position: relative;
     width: 60px;
-    flex:1
 }
 
 .switch input {
@@ -236,6 +235,9 @@ img {
     left: 0;
     right: 0;
     top: 0;
+
+    height: 100%;
+    width: 100%;
 
     transition: all 0.5s;
 }
