@@ -166,7 +166,7 @@ class App extends Component {
     toggleNew = () => {
         this.setState( prevState => ({
             isToggled: !prevState.isToggled,
-            darkMode: true
+            darkMode: !this.state.darkMode
         }));
     }
 
