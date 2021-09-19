@@ -227,7 +227,7 @@ img {
     width: 0;
 }
 
-.slider {
+.DarkMode .slider {
     background-color: lightblue;
     cursor: pointer;
     position: absolute;
@@ -241,7 +241,7 @@ img {
     z-index: 100;
 }
 
-.slider:before {
+.DarkMode .slider:before {
     background-color: blue;
     position: absolute;
     content:"";
@@ -262,7 +262,7 @@ img {
     transform: translateX(26px);
 }
 
-.slider.round {
+.DarkMode .slider.round {
     border-radius: 34px;
 }
 
@@ -1016,7 +1016,7 @@ button {
 }
 
 .awssld--fallAnimation {
-    /*height: 100%;*/
+    height: 100%;
 }
 
 .awssld__prev,
