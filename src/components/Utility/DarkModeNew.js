@@ -11,7 +11,7 @@ const DarkMode = ({ isToggled, toggleNew }) => {
                     checked={ isToggled }
                     onChange={ toggleNew }
                 />
-                <span className="slider round"> </span>
+                <div className="slider round"> </div>
             </label>
         </div>
     );
