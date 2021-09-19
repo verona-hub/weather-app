@@ -1,10 +1,11 @@
 import React from 'react';
 import feels_logo from '../../../img/feels.png';
 import feels_logo_dark from '../../../img/arrow-feels-like-dark.svg';
+import DarkMode from "../../Utility/DarkMode";
 
 
 // Current weather component
-const WeatherCurrent = ({ weatherInfo, weatherCondition, location, darkMode }) => {
+const WeatherCurrent = ({ weatherInfo, weatherCondition, location, toggleDarkMode, darkMode }) => {
 
     // Destructuring the fetched weather data
     const { cloud, temp_c, feelslike_c, humidity, precip_mm, uv, vis_km,
@@ -24,6 +25,11 @@ const WeatherCurrent = ({ weatherInfo, weatherCondition, location, darkMode }) =
 
     return (
         <div className="WeatherCurrent card">
+
+            <DarkMode
+                toggleDarkMode={ toggleDarkMode }
+            />
+
             <h1 className={ title }> Current Weather </h1>
             <div className="Weather_current_main">
                 <h2 className={ subTitle }> { name }, { country } </h2>

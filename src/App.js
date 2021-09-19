@@ -8,7 +8,6 @@ import * as _ from 'underscore';
 
 // Components
 import About from './components/Page/About';
-import DarkModeNew from './components/Utility/DarkModeNew';
 import Footer from "./components/Page/Footer";
 import Main from './components/Page/Main';
 import Navbar from './components/Page/Navbar';
@@ -34,8 +33,7 @@ class App extends Component {
         forecast_3_days: [],
         fetching: false,
         cancelFetch: false,
-        darkMode: false,
-        isToggled: false
+        darkMode: null
     }
 
     // After a location search is made from the input, the call will be made to the Api with the input text
@@ -159,19 +157,17 @@ class App extends Component {
         });
     }
 
-    toggleNew = () => {
-        this.setState( prevState => ({
-            isToggled: !prevState.isToggled,
-            darkMode: !prevState.darkMode
-        }));
+    toggleDarkMode = (mode) => {
+        this.setState({ darkMode: mode });
     }
+
 
 
     render () {
 
         const { text, weatherInfo, weatherCondition, airQuality, location, astronomy,
-            spinner, errorMessage, errorCode, modal, search, forecast_3_days, isToggled, darkMode } = this.state;
-        const { searchCity, clearContent, clearError, abortSearch, toggleNew  } = this;
+            spinner, errorMessage, errorCode, modal, search, forecast_3_days, darkMode } = this.state;
+        const { searchCity, clearContent, clearError, abortSearch, toggleDarkMode  } = this;
 
         const locationResponseSize = _.size(location);
         const weatherResponseSize = _.size(weatherInfo);
@@ -185,11 +181,6 @@ class App extends Component {
                     <Route exact path="/"
                            render={ () => (
                                <Fragment>
-                                   <DarkModeNew
-                                       isToggled={ isToggled }
-                                       toggleNew={ toggleNew }
-                                       darkMode={ darkMode }
-                                   />
                                    <Navbar
                                        emptyContent={ locationResponseSize <= 0 && weatherResponseSize <= 0 }
                                        spinner={ spinner }
@@ -220,6 +211,7 @@ class App extends Component {
                                            locationResponseSize={ locationResponseSize }
                                            weatherResponseSize={ weatherResponseSize }
                                            forecast_3_days={ forecast_3_days }
+                                           toggleDarkMode={ toggleDarkMode }
                                            darkMode={ darkMode }
                                        />
                                    </div>
