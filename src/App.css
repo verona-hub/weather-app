@@ -12,6 +12,7 @@
     --marine_blue: #2a6bcc;
     --dark_mode_blue: #0C1E3A;
     --dark_mode_light_blue: #00F9FF;
+    --dark_mode_magenta: #FF01D3;
     --dark_mode_pink: #E0DAED;
     --dark_mode_purple: #360D4B;
     --dark_grey: #333333;
@@ -280,65 +281,6 @@ img {
 }
 
 
-/*
-.switch {
-    background-color: orange;
-    display: inline-block;
-    height: 34px;
-    position: relative;
-    width: 60px;
-}
-
-.switch input {
-    height: 0;
-    opacity: 0;
-    width: 0;
-}
-
-
-
-.DarkMode .slider {
-    background-color: lightblue;
-    cursor: pointer;
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    right: 0;
-    top: 0;
-    height: 26px;
-    width: 26px;
-    transition: all 0.5s;
-    z-index: 100;
-}
-
-.DarkMode .slider:before {
-    background-color: blue;
-    position: absolute;
-    content:"";
-
-    height: 26px;
-    width: 26px;
-    bottom: 4px;
-    left: 4px;
-    transition: 0.5s;
-    z-index: 100;
-}
-
-.DarkMode input:checked + .slider {
-    background-color: green;
-}
-
-.DarkMode input:checked + .slider:before {
-    transform: translateX(26px);
-}
-
-.DarkMode .slider.round {
-    border-radius: 34px;
-}
-
-.slider.round:before {
-    border-radius: 50%;
-}*/
 
 /*
 + Modal
@@ -928,6 +870,10 @@ button {
     display: flex;
     justify-content: space-between;
     padding: 5px 0;
+}
+
+.spaced_dark {
+    border-bottom: 1px solid var(--dark_mode_light_blue);
 }
 
 .WeatherCurrent .title,

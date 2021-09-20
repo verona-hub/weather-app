@@ -231,6 +231,11 @@ class App extends Component {
 
                     <Route exact path="/about" render={ () => (
                         <Fragment>
+                            <DarkMode
+                                isToggled={ isToggled }
+                                toggleDarkMode={ toggleDarkMode }
+                                darkMode={ darkMode }
+                            />
                             <Navbar/>
                             <About/>
                             <Footer darkMode={ darkMode } />

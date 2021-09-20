@@ -16,7 +16,7 @@ const DarkMode = ({ isToggled, toggleDarkMode, darkMode }) => {
                         checked={ isToggled }
                         onChange={ toggleDarkMode }
                     />
-                    <span className={ slider }> </span>
+                    <span className={ slider.toString() }> </span>
                 </label>
             </div>
         </div>

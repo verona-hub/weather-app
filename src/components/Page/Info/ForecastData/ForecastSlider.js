@@ -61,6 +61,7 @@ const ForecastSlider = ({ forecast, which_day, when, darkMode }) => {
                             avgvis_km={ avgvis_km }
                             sunrise={ sunrise }
                             sunset={ sunset }
+                            darkMode={ darkMode }
                         />
                     </Slide>
 

@@ -8,17 +8,19 @@ const Astronomy = ({ astronomy, darkMode }) => {
 
     const titleDark = darkMode && 'title_dark';
     const title = `title ${titleDark}`;
+    const spacedDark = darkMode && 'spaced_dark';
+    const spaced = `spaced ${spacedDark}`;
 
     return (
         <div className="Astronomy card">
             <h2 className={ title }> Astronomy </h2>
             <div className="main">
-                <div className="spaced"><span> Sunrise:</span> { sunrise } </div>
-                <div className="spaced"><span> Sunset:</span> { sunset } </div>
-                <div className="spaced"><span> Moonrise:</span> { moonrise } </div>
-                <div className="spaced"><span> Moonset:</span> { moonset } </div>
-                <div className="spaced"><span> Moon Phase:</span> { moon_phase } </div>
-                <div className="spaced"><span> Moon Illumination:</span> {moon_illumination }&#37; </div>
+                <div className={ spaced }><span> Sunrise:</span> { sunrise } </div>
+                <div className={ spaced }><span> Sunset:</span> { sunset } </div>
+                <div className={ spaced }><span> Moonrise:</span> { moonrise } </div>
+                <div className={ spaced }><span> Moonset:</span> { moonset } </div>
+                <div className={ spaced }><span> Moon Phase:</span> { moon_phase } </div>
+                <div className={ spaced }><span> Moon Illumination:</span> {moon_illumination }&#37; </div>
             </div>
         </div>
     )

@@ -21,6 +21,8 @@ const WeatherCurrent = ({ weatherInfo, weatherCondition, location, darkMode }) =
     const subTitle = `sub_title_main ${subTitleDark}`;
     const feelsLikeText = darkMode ? 'feels_like_dark' : 'feels_like';
     const feelsLikeLogo = darkMode ? feels_logo_dark : feels_logo;
+    const spacedDark = darkMode && 'spaced_dark';
+    const spaced = `spaced ${spacedDark}`;
 
     return (
         <div className="WeatherCurrent card">
@@ -41,16 +43,16 @@ const WeatherCurrent = ({ weatherInfo, weatherCondition, location, darkMode }) =
                 </div>
                 <div className="bottom_content">
                     <div className="bottom_left">
-                        <div className="spaced"><span> Cloud Cover:</span> { cloud }&#37;</div>
-                        <div className="spaced"><span> Wind Speed:</span> { wind_kph }km/h</div>
-                        <div className="spaced"><span> Atmospheric Pressure:</span> { pressure_mb }mbar</div>
-                        <div className="spaced"><span> Humidity:</span> { humidity }&#37; </div>
+                        <div className={ spaced }><span> Cloud Cover:</span> { cloud }&#37;</div>
+                        <div className={ spaced }><span> Wind Speed:</span> { wind_kph }km/h</div>
+                        <div className={ spaced }><span> Atmospheric Pressure:</span> { pressure_mb }mbar</div>
+                        <div className={ spaced }><span> Humidity:</span> { humidity }&#37; </div>
                     </div>
                     <div className="bottom_right">
-                        <div className="spaced"><span> Precipitation:</span> { precip_mm }mm</div>
-                        <div className="spaced"><span> Wind Direction:</span> from { wind_dir } </div>
-                        <div className="spaced"><span> Visibility:</span> { vis_km }km</div>
-                        <div className="spaced"><span> Uv Index:</span> { uv } of 10</div>
+                        <div className={ spaced }><span> Precipitation:</span> { precip_mm }mm</div>
+                        <div className={ spaced }><span> Wind Direction:</span> from { wind_dir } </div>
+                        <div className={ spaced }><span> Visibility:</span> { vis_km }km</div>
+                        <div className={ spaced }><span> Uv Index:</span> { uv } of 10</div>
                     </div>
                 </div>
             </div>
