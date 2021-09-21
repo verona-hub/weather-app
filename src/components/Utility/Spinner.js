@@ -3,15 +3,17 @@ import { css } from '@emotion/react';
 import PuffLoader from "react-spinners/PuffLoader";
 
 
-const Spinner = () => {
+const Spinner = ({ darkMode }) => {
     const override = css`
         display: inline-block;
         margin: 3vh auto;
         `;
 
+    const spinnerColor = darkMode ? '#FF01D3' : '#00A7D8';
+
     return (
         <Fragment>
-            <PuffLoader color={'#00A7D8'} css={override} size={120}/>
+            <PuffLoader color={spinnerColor} css={override} size={120}/>
         </Fragment>
     )
 }

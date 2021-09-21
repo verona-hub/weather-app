@@ -12,6 +12,8 @@ const Modal = ({ text, spinner, errorMessage, errorCode, clearError, search, abo
 
     const modalContentDark = darkMode && 'modal_content_dark';
     const modalContent = `modal_content ${modalContentDark}`;
+    const buttonAbortDark = darkMode && 'button_abort_search_dark';
+    const buttonAbort = `button button_abort_search ${buttonAbortDark}`;
 
     return (
         <div className="Modal">
@@ -20,11 +22,11 @@ const Modal = ({ text, spinner, errorMessage, errorCode, clearError, search, abo
                     <div className="modal_text">
                         <h1> Search in progress <span className="dots"> </span> </h1>
 
-                        { spinner && ( <Spinner/> ) }
+                        { spinner && ( <Spinner darkMode={darkMode} /> ) }
 
                         <h2 className="location"> Location: <span> { text } </span></h2>
                         <h2 className="wait"> Please wait... </h2>
-                        <button onClick={ handleAbortSearch } className="button button_abort_search"> Abort search </button>
+                        <button onClick={ handleAbortSearch } className={ buttonAbort }> Abort search </button>
                     </div>
                 </div>
             )}

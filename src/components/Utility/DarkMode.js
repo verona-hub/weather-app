@@ -3,7 +3,6 @@ import React from 'react';
 
 const DarkMode = ({ isToggled, toggleDarkMode, darkMode }) => {
 
-
     const darkSlider = darkMode && 'slider_dark';
     const slider = `slider ${darkSlider} round`;
 

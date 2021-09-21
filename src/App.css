@@ -192,7 +192,7 @@ img {
 */
 
 .dark-mode {
-    background: #0C1E3A;
+    background: var(--dark_mode_blue);
     background: -webkit-linear-gradient(top left, #0C1E3A, #360D4B);
     background: -moz-linear-gradient(top left, #0C1E3A, #360D4B);
     background: linear-gradient(to bottom right, #0C1E3A, #360D4B);
@@ -209,16 +209,15 @@ img {
     display: flex;
     justify-content: center;
     position: absolute;
-    right: 20px;
-    top: 20px;
-    width: 100px;
+    right: 25px;
+    top: 25px;
 }
 
 .DarkMode label {
     display: inline-block;
-    height: 44px;
+    height: 36px;
     position: relative;
-    width: 100%;
+    width: 80px;
 }
 
 .DarkMode input {
@@ -228,9 +227,9 @@ img {
 }
 
 .DarkMode input:checked + .slider:before {
-    transform: translateX(42px);
-    -webkit-transform: translateX(42px);
-    -ms-transform: translateX(42px);
+    transform: translateX(40px);
+    -webkit-transform: translateX(40px);
+    -ms-transform: translateX(40px);
 }
 
 .DarkMode .slider {
@@ -253,22 +252,22 @@ img {
 .DarkMode .slider:before {
     bottom: 6px;
     content: url(img/day-mode.svg);
-    height: 30px;
-    left: 14px;
+    height: 24px;
+    left: 10px;
     position: absolute;
     transition: 0.4s;
-    width: 28px;
+    width: 24px;
     -webkit-transition: 0.4s;
 }
 
 .DarkMode .slider_dark:before {
-    bottom: 6px;
+    bottom: 8px;
     content: url(img/dark-mode-moon.svg);
-    height: 28px;
-    left: 18px;
+    height: 20px;
+    left: 8px;
     position: absolute;
     transition: 0.4s;
-    width: 24px;
+    width: 20px;
     -webkit-transition: 0.4s;
 }
 
@@ -309,10 +308,11 @@ img {
 }
 
 .modal_content_dark {
-    background: #0C1E3A;
+    background: var(--dark_mode_blue);
     background: -webkit-linear-gradient(top left, #0C1E3A, #360D4B);
     background: -moz-linear-gradient(top left, #0C1E3A, #360D4B);
     background: linear-gradient(to bottom right, #0C1E3A, #360D4B);
+    box-shadow: 1px 1px 86px 10px rgba(247, 45, 212, 0.25);
     color: var(--dark_mode_pink);
 }
 
@@ -340,6 +340,14 @@ img {
 
 .modal_content span {
     text-transform: capitalize;
+}
+
+.spinner {
+    color: #00A7D8;
+}
+
+.spinner_dark {
+    color: #FF01D3 !important;
 }
 
 
@@ -705,6 +713,12 @@ button {
     min-width: 20%;
 }
 
+.button_abort_search_dark {
+    background: linear-gradient(to top left, #8664FF, #FF01D3 );
+    color: white;
+}
+
+
 .button_to_top,
 .button_to_left {
     background-color: rgba(255, 255, 255, 0.01);
@@ -1024,7 +1038,7 @@ button {
 }
 
 .Forecast_dark .awssld__content {
-    background: #0C1E3A;
+    background: var(--dark_mode_blue);
     background: -webkit-linear-gradient(top left, #0C1E3A, #360D4B);
     background: -moz-linear-gradient(top left, #0C1E3A, #360D4B);
     background: linear-gradient(to bottom right, #0C1E3A, #360D4B);
