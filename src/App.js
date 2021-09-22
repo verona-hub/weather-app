@@ -237,7 +237,7 @@ class App extends Component {
                                 darkMode={ darkMode }
                             />
                             <Navbar/>
-                            <About/>
+                            <About darkMode={ darkMode } />
                             <Footer darkMode={ darkMode } />
                         </Fragment>
                     )} />

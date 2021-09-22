@@ -1,26 +1,33 @@
 import React from 'react';
 
 // Logos
-import github from '../../img/github.png';
 import react_logo from '../../img/react-logo.png';
+import github_logo from '../../img/github.png';
+import github_logo_dark from '../../img/github-dark.png';
 
 // Components
 import BackToSearch from "../Utility/BackToSearch";
 import ScrollToTop from '../Utility/ScrollToTop';
 
 
-const About = () => {
+const About = ({ darkMode }) => {
+
+    const AboutDark = darkMode && 'dark-mode';
+    const About = `About card ${AboutDark}`;
+    const mainDark = darkMode && 'main_dark';
+    const main = `main ${mainDark} test`;
+    const githubLogo = darkMode ? github_logo_dark : github_logo;
 
     return (
         <div className="container">
-            <div className="About card">
+            <div className={ About }>
                 <div className="welcome">
                     <div className="title_wrapper">
                         <h1 className="title"> Welcome! </h1>
                     </div>
                 </div>
 
-                <div className="main">
+                <div className={ main }>
                     <section className="about_react">
                         <h2> This App was made with ReactJS </h2>
                         <p> A JavaScript library for building user interfaces. </p>
@@ -42,7 +49,7 @@ const About = () => {
                         <div className="github">
                             <a href="https://github.com/verona-hub/weather-app" target="_blank" rel="noreferrer">
                                 <abbr title="Click to see the repository on Github">
-                                    <img src={ github } alt="github icon" className="github_logo"/>
+                                    <img src={ githubLogo } alt="github icon" className="github_logo"/>
                                 </abbr>
                                 <span> verona-hub </span>
                             </a>
@@ -133,13 +140,45 @@ const About = () => {
                                         </a>
                                     </div>
                                 </li>
+
+                                <li> Github dark logo by:&nbsp;
+                                    <a
+                                        href="https://www.flaticon.com/authors/pixel-perfect" title="Pixel perfect"
+                                        target="_blank" rel="noreferrer"
+                                    >
+                                        Pixel perfect
+                                    </a>
+                                    <span> from&nbsp;</span>
+                                    <a
+                                        href="https://www.flaticon.com/" title="Flaticon" target="_blank"
+                                        rel="noreferrer"
+                                    >
+                                        www.flaticon.com
+                                    </a>
+                                </li>
+
+                                <li> Dark mode left and top arrow by:&nbsp;
+                                    <a
+                                        href="https://www.flaticon.com/authors/icongeek26" title="Icongeek26"
+                                        target="_blank" rel="noreferrer"
+                                    >
+                                        Icongeek26
+                                    </a>
+                                    <span> from&nbsp;</span>
+                                    <a
+                                        href="https://www.flaticon.com/" title="Flaticon" target="_blank"
+                                        rel="noreferrer"
+                                    >
+                                        www.flaticon.com
+                                    </a>
+                                </li>
                             </ul>
                         </div>
                     </section>
 
                     <div className="scroll_buttons">
-                        <BackToSearch/>
-                        <ScrollToTop/>
+                        <BackToSearch darkMode={ darkMode } />
+                        <ScrollToTop darkMode={ darkMode } />
                     </div>
                 </div>
             </div>

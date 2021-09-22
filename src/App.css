@@ -137,7 +137,7 @@ img {
     box-shadow: inset 0 0 5rem rgb(10, 22, 29);
     display: flex;
     font-size: 1.2rem;
-    height: 10vh;
+    height: 100px;
     justify-content: center;
     padding: 0.7rem;
     -webkit-user-select: none;
@@ -204,13 +204,9 @@ img {
 }
 
 .darkMode_container {
-    align-items: center;
-    align-content: center;
-    display: flex;
-    justify-content: center;
     position: absolute;
     right: 25px;
-    top: 25px;
+    top: 32px;
 }
 
 .DarkMode label {
@@ -726,6 +722,10 @@ button {
     padding: 0;
 }
 
+.button_to_top_dark {
+    transform: rotate(90deg);
+}
+
 .button_to_top a,
 .button_to_left a {
     display: inline-block;
@@ -741,6 +741,14 @@ button {
 .scroll_buttons {
     display: flex;
     justify-content: center;
+}
+
+.BackToSearch {
+    background: rgba(255, 255, 255, 0);
+}
+
+.BackToSearch .test {
+    background: rgba(255, 255, 255, 0);
 }
 
 .BackToSearch img,
@@ -1396,17 +1404,18 @@ button {
     position: absolute;
     right: 0;
     text-align: center;
-    top: 10vh;
+    top: 100px;
 }
 
 .About .main {
+    margin-bottom: 10vh;
     text-align: center;
 }
 
 .About .title_wrapper {
     align-items: center;
     display: flex;
-    height: 90vh;
+    height: calc(100vh - 100px);
     justify-content: center;
     padding: 10vh 0;
 }
@@ -1427,7 +1436,12 @@ button {
     margin-top: 10vh;
 }
 
-.About h2 {
+.About .main_dark {
+    width: 70vw;
+}
+
+
+.About .main h2 {
     border: solid var(--dim_grey);
     border-width: 1px 0 1px;
     display: inline-block;
@@ -1436,10 +1450,26 @@ button {
     margin-bottom: 30px;
 }
 
+.About .main_dark h2 {
+    background: linear-gradient(to left, #8664FF, #FF01D3 );
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    border-image-slice: 1;
+    border-width: 1px;
+    border-image-source: linear-gradient(to right, #4876fe, #FF01D3);
+    border-left: none;
+    border-right: none;
+}
+
 .About .about_react p,
 .About .source p {
     color: var(--black);
     font-size: 1.3rem;
+}
+
+.About .main_dark p,
+.About .main_dark li {
+    color: var(--dark_mode_pink);
 }
 
 .github a {
@@ -1558,10 +1588,6 @@ button {
 
 .Footer_dark {
     background-color: var(--dark_mode_blue);
-}
-
-.Footer_About {
-    margin-top: 15vh;
 }
 
 .footer_content {
