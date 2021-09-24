@@ -48,12 +48,6 @@ body {
 
 a {
     color: var(--blue);
-}
-
-.header a,
-.Main a,
-.BackToSearch a,
-.ScrollToTop a {
     text-decoration: none;
 }
 
@@ -69,18 +63,24 @@ a {
     color: var(--alert);
 }
 
+.About .main_dark a:visited,
+.Footer_dark a:visited {
+    color: var(--light_alert);
+}
+
 .BackToSearch a:visited,
 .ScrollToTop a:visited {
     color: var(--dark_grey);
 }
 
-.About a:visited:hover,
-.Footer a:visited:hover {
-    color: var(--light_alert);
-}
-
 a:hover {
     color: var(--marine_blue);
+    outline: none;
+}
+
+.About .main_dark a:hover,
+.Footer_dark a:hover {
+    color: var(--dark_mode_magenta);
 }
 
 .BackToSearch a:hover,
@@ -89,6 +89,15 @@ a:hover {
 .ScrollToTop a:visited:hover {
     color: var(--marine_blue);
     opacity: 0.8;
+}
+
+.About a:visited:hover,
+.Footer a:visited:hover {
+    color: var(--light_alert);
+}
+
+.Footer_dark a:visited:hover {
+    color: var(--dark_mode_magenta);
 }
 
 a:active {
@@ -717,7 +726,7 @@ button {
 
 .button_to_top,
 .button_to_left {
-    background-color: rgba(255, 255, 255, 0.01);
+    background: rgba(255, 255, 255, 0);
     font-size: 1rem;
     padding: 0;
 }
@@ -741,14 +750,6 @@ button {
 .scroll_buttons {
     display: flex;
     justify-content: center;
-}
-
-.BackToSearch {
-    background: rgba(255, 255, 255, 0);
-}
-
-.BackToSearch .test {
-    background: rgba(255, 255, 255, 0);
 }
 
 .BackToSearch img,
@@ -1499,6 +1500,14 @@ button {
     display: inline-block;
     opacity: 0.7;
     width: 100px;
+}
+
+.github a {
+    transition: transform 0.3s ease;
+}
+
+.github a:hover {
+    transform: translateX(4px) translateY(-4px);
 }
 
 .github span {

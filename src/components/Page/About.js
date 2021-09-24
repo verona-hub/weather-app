@@ -50,8 +50,8 @@ const About = ({ darkMode }) => {
                             <a href="https://github.com/verona-hub/weather-app" target="_blank" rel="noreferrer">
                                 <abbr title="Click to see the repository on Github">
                                     <img src={ githubLogo } alt="github icon" className="github_logo"/>
+                                    <span> verona-hub </span>
                                 </abbr>
-                                <span> verona-hub </span>
                             </a>
                         </div>
                     </section>

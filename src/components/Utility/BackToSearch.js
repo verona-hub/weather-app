@@ -17,7 +17,7 @@ const BackToSearch = ({ darkMode }) => {
     return (
         <div className="BackToSearch">
             <button onClick={ scrollToTop } className="button button_to_left">
-                <NavLink to='/' className="test">
+                <NavLink to='/'>
                     <img src={ leftArrow } alt="back to search icon"/>
                     <p> Back to search </p>
                 </NavLink>
