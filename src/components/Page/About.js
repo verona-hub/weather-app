@@ -12,7 +12,7 @@ import ScrollToTop from '../Utility/ScrollToTop';
 
 const About = ({ darkMode }) => {
 
-    const AboutDark = darkMode && 'dark-mode';
+    const AboutDark = darkMode && 'dark-mode About_dark';
     const About = `About card ${AboutDark}`;
     const mainDark = darkMode && 'main_dark';
     const main = `main ${mainDark} test`;

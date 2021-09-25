@@ -10,13 +10,17 @@ import Modal from '../Utility/Modal';
 
 const Navbar = ({ text, emptyContent, spinner, errorMessage, errorCode, clearError, modal, search, abortSearch, darkMode }) => {
 
-    const homePage = window.location.pathname === '/';
+    const headerHomePage = window.location.pathname === '/';
     const aboutPage = window.location.pathname === '/about';
     const otherPages = window.location.pathname !== '/' && window.location.pathname !== '/about';
 
     const headerChange = aboutPage ? 'header_100'
-        : ( homePage && emptyContent  ? ' header_100'
+        : ( headerHomePage && emptyContent  ? ' header_100'
             : (window.location.pathname !== ('/' || '/about') ? ' header_404' : 'header_70'));
+
+
+    // const homepageOrAboutpage = (headerHomePage && emptyContent) && window.location.pathname === '/about';
+    // const headerChange = homepageOrAboutpage ? 'header_100' : 'header_404';
 
     const otherNavbar = otherPages ? 'navbar_other' : 'navbar';
     const navbar = modal ? 'navbar navbar_dark' : `navbar ${otherNavbar}`;
