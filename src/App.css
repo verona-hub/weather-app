@@ -19,8 +19,7 @@
     --dim_grey: #696969;
     --light_grey: #d3d3d3;
     --light_alert: #df7474;
-    --navbar: rgba(0,0,0, 0.5);
-    --navbar_dark: rgba(0,0,0, 0.8);
+    --navbar: rgba(0,0,0, 0.8);
     --orange: #FA9138;
     --red: #c4231d;
     --sand: #f9d89c;
@@ -158,7 +157,7 @@ img {
 }
 
 .navbar_dark {
-    background-color: var(--navbar_dark);
+    background-color: var(--navbar);
 }
 
 .navbar_other {
@@ -292,7 +291,7 @@ img {
 */
 
 .Modal {
-    background-color: var(--navbar_dark);
+    background-color: var(--navbar);
     height: 100%;
     left: 0;
     margin-left: auto;
@@ -874,7 +873,6 @@ button {
 
 .card {
     align-items: center;
-    /*background-color: var(--white);*/
     display: flex;
     flex-direction: column;
     flex-wrap: wrap;
@@ -1397,12 +1395,8 @@ button {
     font-family: 'Dosis', sans-serif;
 }
 
-.About_dark {
-    /*filter: brightness(65%);*/
-}
-
 .About .welcome {
-    /*background-color: rgba(0,0,0, 0.3);*/
+    background-color: rgba(0,0,0, 0.3);
     color: var(--white);
     left: 0;
     margin-left: auto;
@@ -1414,7 +1408,15 @@ button {
 }
 
 .About_dark .welcome {
-    /*background-color: transparent;*/
+    background-color: rgba(0, 0, 0, 0.7);
+}
+
+.About .title_wrapper {
+    align-items: center;
+    display: flex;
+    height: calc(100vh - 100px);
+    justify-content: center;
+    padding: 10vh 0;
 }
 
 .About .title {
@@ -1425,18 +1427,18 @@ button {
     text-transform: uppercase;
 }
 
+.About_dark .title {
+    background: linear-gradient(to right, #8664FF, #FF01D3 );
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    border-image-slice: 1;
+    border-width: 2px;
+    border-image-source: linear-gradient(to left, #4876fe, #FF01D3);
+}
+
 .About .main {
     margin-bottom: 10vh;
     text-align: center;
-}
-
-
-.About .title_wrapper {
-    align-items: center;
-    display: flex;
-    height: calc(100vh - 100px);
-    justify-content: center;
-    padding: 10vh 0;
 }
 
 .About section {
@@ -1654,15 +1656,14 @@ button {
 }
 
 .About {
-    -webkit-animation: fadeToAbout 1000ms ease;
-    animation: fadeToAbout 1000ms ease;
+    /*-webkit-animation: fadeIn 700ms ease;*/
+    /*animation: fadeIn 700ms ease;*/
 }
 
 .alert .counter:after {
     animation: counter 10s;
     content: "now";
 }
-
 
 @keyframes fadeIn {
     0% { opacity: 0; }
@@ -1675,30 +1676,6 @@ button {
     70% { opacity: 0.7; }
     80% { opacity: 0.8; }
     90% { opacity: 0.9; }
-    100% { opacity: 1; }
-}
-
-@keyframes fadeToAbout {
-    0% { opacity: 0; }
-    5% { opacity: 0.05; }
-    10% { opacity: 0.1; }
-    15% { opacity: 0.15; }
-    20% { opacity: 0.2; }
-    25% { opacity: 0.25; }
-    30% { opacity: 0.3; }
-    35% { opacity: 0.35; }
-    40% { opacity: 0.4; }
-    45% { opacity: 0.45; }
-    50% { opacity: 0.5; }
-    55% { opacity: 0.55; }
-    60% { opacity: 0.6; }
-    65% { opacity: 0.65; }
-    70% { opacity: 0.7; }
-    75% { opacity: 0.75; }
-    80% { opacity: 0.8; }
-    85% { opacity: 0.85; }
-    90% { opacity: 0.9; }
-    95% { opacity: 0.95; }
     100% { opacity: 1; }
 }
 
